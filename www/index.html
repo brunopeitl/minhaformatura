@@ -12,28 +12,26 @@
 
 <body>
     <div class="app">
-		<div id="titulo"></div>
-		<div id="formulario">
-			<p>Essa é a primeira vez que você acessa o Minha Formatura por este dispositivo. Por isso você precisa se identificar para baixar o seu álbum no seu aparelho e assim poder visualizá-lo mesmo quando não estiver conectado à internet.</p>
-
-			<div id="campos">
-				<input type="text" id="empresa" name="empresa" placeholder="Empresa" autofocus required>
+		<div id="principal">
+			<div id="logo"><img src="img/logo.png" width="68%" /></div>
+			<div id="formulario">
+			
+				<input type="text" id="empresa" name="empresa" placeholder="COD. DA EMPRESA" autofocus required>
 				<br>
-				<input type="text" id="contrato" name="contrato" placeholder="Contrato" required>
+				<input type="text" id="contrato" name="contrato" placeholder="CONTRATO" required>
 				<br>
-				<input type="text" id="album" name="album" placeholder="Album" required>
+				<input type="text" id="album" name="album" placeholder="ALBUM" required>
 				<br>
-				<input type="password" id="senha" name="senha" placeholder="Senha" required>
+				<input type="password" id="senha" name="senha" placeholder="SENHA" required>
 				<br>
 				<button id="baixarAlbum">BAIXAR ÁLBUM</button>
-			</div>
 			
-			<div id="resposta"></div>
+			</div>
+			<div id="resposta"><p>Empresa não encontrada</p></div>
+			<div id="rodape"><p>Não tem as informações necessárias para baixar o seu álbum? Entre em contato com a empresa contratada.</p>
+</div>
 		</div>
-
-		<div id="rodape">
-		<p>Não tem as informações necessárias para baixar o seu álbum? Entre em contato com a empresa contratada.</p>
-		</div>
+		<div id="inferior">teste</div>
     </div>
     <script type="text/javascript" src="cordova.js"></script>
     <script type="text/javascript" src="js/index.js"></script>
