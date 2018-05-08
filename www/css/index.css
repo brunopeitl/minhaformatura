@@ -1,16 +1,17 @@
-body { font-family:Tahoma; text-align:center; padding:0; margin:0; background-color: #fbd323; }
+body { font-family:Tahoma; text-align:center; padding:0; margin:0; background-color: #000; }
 
-#principal { width: 100%; height: 400px; background-image: url('../img/bg.jpg'); background-repeat: no-repeat; background-size: 100%; background-position:bottom center; }
+#principal { width: 100%; height: 450px; background-image: url('../img/bg.jpg'); background-repeat: no-repeat; background-size: 100%; background-position:bottom center; }
 #logo { float:left; width:100%; margin-top: 35px; }
-#inferior { float:left; margin-top:10px; }
+#inferior { float:left; width:100%;  background-color: #fbd323; }
+#inferior p { font-size:9pt; text-align: center; color:#614e02; }
 
 #formulario { float: left; width:100%; text-align:center; margin-top:25px; }
-input { font-family:Tahoma; width:85%; margin-top: 10px; padding:3px 7px; background-color:rgba(255, 255, 255, 0.5); color:#fff; border:2px solid white; font-size:12pt; }
+input { font-family:Tahoma; width:85%; margin-top: 10px; padding:3px 7px; background-color:rgba(255, 255, 255, 0.2); color:#fff; border:2px solid white; font-size:15pt; }
 ::placeholder {color: #fff;}
-button { font-family:Tahoma; width:88%; margin-top: 10px; padding:3px 7px; background-color:#fff; color:#272820; border:2px solid white; font-size:12pt; font-weight:bold; }
+button { font-family:Tahoma; width:88%; margin-top: 10px; padding:3px 7px; background-color:#fff; color:#272820; border:2px solid white; font-size:15pt; font-weight:bold; }
 
-#resposta { float: left; width:100%; text-align:center; margin-top:15px; }
-#resposta p {color:#fbd323; font-size:9pt;}
+#resposta { float: left; width:100%; margin-top:15px; }
+#resposta p {color:#fbd323; font-size:9pt; text-align:center; }
 
-#rodape { float: left; width:100%; text-align:center; }
-#rodape p {color:#fff; font-size:9pt;}
+#rodape { float: left; width:100%; }
+#rodape p {color:#fff; font-size:9pt; text-align:center; }
