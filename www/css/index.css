@@ -10,6 +10,8 @@ input { font-family:Tahoma; width:85%; margin-top: 10px; padding:3px 7px; backgr
 textarea:focus, input:focus, button:focus { outline: none; }
 ::placeholder {color: #fff;}
 button { font-family:Tahoma; width:88%; margin-top: 10px; padding:3px 7px; background-color:#fff; color:#272820; border:2px solid white; font-size:15pt; font-weight:bold; }
+button:active { color:#fff; background-color:#272820; }
+
 
 #resposta { float: left; width:100%; margin-top:15px; }
 #resposta p {color:#fbd323; font-size:9pt; text-align:center; }
