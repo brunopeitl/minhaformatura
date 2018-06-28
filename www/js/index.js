@@ -16,6 +16,13 @@
  * specific language governing permissions and limitations
  * under the License.
  */
+
+ //Essa é a função que você criou
+function enviar() {
+	$("#resposta").html("");
+	$("#resposta").html("<p>Java Script funcionando.</p>");
+}
+ 
 var app = {
     // Application Constructor
     initialize: function() {
@@ -37,6 +44,9 @@ var app = {
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
+		//Aqui chama a função que você criou
+		document.getElementById("baixarAlbum").addEventListener("click", enviar);
+		
         var parentElement = document.getElementById(id);
         var listeningElement = parentElement.querySelector('.listening');
         var receivedElement = parentElement.querySelector('.received');
