@@ -16,13 +16,13 @@
 			<div id="logo"><img src="img/logo.png" width="68%" /></div>
 			<div id="formulario">
 			
-				<input type="text" id="empresa" name="empresa" placeholder="COD. DA EMPRESA" autofocus required>
+				<input type="text" id="empresa" name="empresa" value="COD. DA EMPRESA" onclick="if(this.value=='COD. DA EMPRESA')this.value='';" onblur="if(this.value=='')this.value='COD. DA EMPRESA'">
 				<br>
-				<input type="text" id="contrato" name="contrato" placeholder="Nº DO CONTRATO" required>
+				<input type="text" id="contrato" name="contrato" value="Nº DO CONTRATO" onclick="if(this.value=='Nº DO CONTRATO')this.value='';" onblur="if(this.value=='')this.value='Nº DO CONTRATO'">
 				<br>
-				<input type="text" id="album" name="album" placeholder="Nº DO ALBUM" required>
+				<input type="text" id="album" name="album" value="Nº DO ALBUM" onclick="if(this.value=='Nº DO ALBUM')this.value='';" onblur="if(this.value=='')this.value='Nº DO ALBUM'">
 				<br>
-				<input type="password" id="senha" name="senha" placeholder="SENHA" required>
+				<input type="password" id="senha" name="senha" placeholder="SENHA" onclick="if(this.placeholder=='SENHA')this.placeholder='';" onblur="if(this.placeholder=='')this.placeholder='SENHA'">
 				<br>
 				<button id="baixarAlbum">BAIXAR ÁLBUM</button>
 			
