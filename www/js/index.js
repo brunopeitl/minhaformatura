@@ -19,8 +19,33 @@
 
  //Essa é a função que você criou
 function enviar() {
-	$("#resposta").html("");
-	$("#resposta").html("<p>Java Script funcionando.</p>");
+	//PEGAR VARIÁVEIS
+	var empresa = $("#empresa").val();
+	var contrato = $("#contrato").val();
+	var album = $("#album").val();
+	var senha = $("#senha").val();
+	var response;
+	
+	if (empresa == '') {
+		$("#resposta").html("");
+		$("#resposta").html("<p>Preencha o campo Empresa</p>");
+	}
+	else if (contrato == '') {
+		$("#resposta").html("");
+		$("#resposta").html("<p>Preencha o campo Contrato</p>");
+	}
+	else if (album == '') {
+		$("#resposta").html("");
+		$("#resposta").html("<p>Preencha o campo Album</p>");
+	}
+	else if (senha == '') {
+		$("#resposta").html("");
+		$("#resposta").html("<p>Preencha o campo Senha</p>");
+	}
+	else {
+		$("#resposta").html("");
+		$("#resposta").html("<p>Deu certo!</p>");
+	}
 }
  
 var app = {
