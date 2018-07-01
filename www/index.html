@@ -8,32 +8,18 @@
     <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline' gap:; style-src 'self' 'unsafe-inline'; media-src *" />
     <link rel="stylesheet" type="text/css" href="css/index.css" />
     <title>Minha Formatura</title>
+	
+	
+	
 </head>
 
 <body>
     <div class="app">
-		<div id="principal">
-			<div id="logo"><img src="img/logo.png" width="68%" /></div>
-			<div id="formulario">
-			
-				<input type="text" id="empresa" name="empresa" value="COD. DA EMPRESA" onclick="if(this.value=='COD. DA EMPRESA')this.value='';" onblur="if(this.value=='')this.value='COD. DA EMPRESA'">
-				<br>
-				<input type="text" id="contrato" name="contrato" value="Nº DO CONTRATO" onclick="if(this.value=='Nº DO CONTRATO')this.value='';" onblur="if(this.value=='')this.value='Nº DO CONTRATO'">
-				<br>
-				<input type="text" id="album" name="album" value="Nº DO ALBUM" onclick="if(this.value=='Nº DO ALBUM')this.value='';" onblur="if(this.value=='')this.value='Nº DO ALBUM'">
-				<br>
-				<input type="password" id="senha" name="senha" placeholder="SENHA" onclick="if(this.placeholder=='SENHA')this.placeholder='';" onblur="if(this.placeholder=='')this.placeholder='SENHA'">
-				<br>
-				<button id="baixarAlbum">BAIXAR ÁLBUM</button>
-			
-			</div>
-			<div id="resposta"><p></p></div>
-			<div id="rodape"><p>Não tem as informações necessárias para baixar o seu álbum? Entre em contato com a empresa contratada.</p></div>
+	
+		<div id="fundo_entrada">
+			<div id="logo_entrada"><img src="img/logo_abertura.png" width="100%" /></div>
 		</div>
-		<div id="inferior">
-			<p>Essa é a primeira vez que você acessa o Minha Formatura por este dispositivo. Por isso você precisa se identificar para baixar o seu álbum no seu aparelho e assim poder visualizá-lo mesmo quando não estiver conectado à internet.</p>
-			<img class="logo" src="img/logomain.png" width="25%" />
-		</div>
+	
     </div>
 	<script type="text/javascript" src="js/jquery.min.js"></script>
     <script type="text/javascript" src="cordova.js"></script>
