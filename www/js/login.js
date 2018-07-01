@@ -17,6 +17,36 @@
  * under the License.
  */
 
+ //Essa é a função que você criou
+function enviar() {
+	//PEGAR VARIÁVEIS
+	var empresa = $("#empresa").val();
+	var contrato = $("#contrato").val();
+	var album = $("#album").val();
+	var senha = $("#senha").val();
+	var response;
+	
+	if (empresa == 'COD. DA EMPRESA') {
+		$("#resposta").html("");
+		$("#resposta").html("<p>Preencha o campo Cod. da Empresa</p>");
+	}
+	else if (contrato == 'Nº DO CONTRATO') {
+		$("#resposta").html("");
+		$("#resposta").html("<p>Preencha o campo Nº do Contrato</p>");
+	}
+	else if (album == 'Nº DO ALBUM') {
+		$("#resposta").html("");
+		$("#resposta").html("<p>Preencha o campo Nº do Album</p>");
+	}
+	else if (senha == '') {
+		$("#resposta").html("");
+		$("#resposta").html("<p>Preencha o campo Senha</p>");
+	}
+	else {
+		$("#resposta").html("");
+		$("#resposta").html("<p>Deu certo!</p>");
+	}
+}
  
 var app = {
     // Application Constructor
@@ -39,15 +69,8 @@ var app = {
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
-		//---------------------------Aqui vai tudo o que interessa
-		$(document).ready(function(){
-
-			$("#logo_entrada").fadeIn(1500, function(){
-				$("#logo_entrada").delay(1500).fadeOut(1500, function(){window.location = "../login.html";});
-			})
-    
-		});
-		//---------------------------
+		//Aqui chama a função que você criou
+		document.getElementById("baixarAlbum").addEventListener("click", enviar);
 		
         var parentElement = document.getElementById(id);
         var listeningElement = parentElement.querySelector('.listening');
