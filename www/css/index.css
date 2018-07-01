@@ -39,4 +39,5 @@ img.logo { margin-top: 10px; }
     left: 27%;
     width: 45%;
     text-align: center;
+	display:none; 
 }
