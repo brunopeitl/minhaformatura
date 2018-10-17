@@ -45,9 +45,7 @@ var app = {
 			$("#logo_entrada").fadeIn(1500, function(){
 				//$("#logo_entrada").delay(1500).fadeOut(1500, function(){window.location.href = window.open("../login.html", '_self ', 'location=yes');});
 				
-				$("#logo_entrada").delay(1500).fadeOut(1500, function(){
-					window.location.href = "../login.html";
-				});
+				$("#logo_entrada").delay(1500).fadeOut(1500, function(){window.location.href = window.open("login.html", '_self ', 'location=yes');});
 			})
     
 		});
