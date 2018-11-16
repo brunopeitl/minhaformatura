@@ -102,10 +102,3 @@
     <allow-intent href="itms-apps:*"/>
   </platform>
 </widget>
-
-<config-file platform="android" parent="/manifest" mode="merge">
-  <supports-screens
-    android:xlargeScreens="false"
-    android:largeScreens="false"
-    android:smallScreens="false" />
-</config-file>
