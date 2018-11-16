@@ -41,3 +41,5 @@ img.logo { margin-top: 10px; }
     text-align: center;
 	display:none; 
 }
+
+#pagina_login { display:none; }
