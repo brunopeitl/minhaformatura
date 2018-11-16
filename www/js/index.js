@@ -43,9 +43,10 @@ var app = {
 		$(document).ready(function(){
 
 			$("#logo_entrada").fadeIn(1500, function(){
-				//$("#logo_entrada").delay(1500).fadeOut(1500, function(){window.location.href = window.open("../login.html", '_self ', 'location=yes');});
-				
-				$("#logo_entrada").delay(1500).fadeOut(1500, function(){window.location.href = window.open("login.html", '_self ', 'location=yes');});
+				$("#logo_entrada").delay(1500).fadeOut(1500, function(){ 
+					document.getElementById("fundo_entrada").style.display = "none";
+					document.getElementById("pagina_login").style.display = "block";
+				});
 			})
     
 		});
