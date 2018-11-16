@@ -102,7 +102,7 @@
     <allow-intent href="itms-apps:*"/>
   </platform>
   
-  <gap:config-file platform="android" parent="/manifest">
+  <config-file platform="android" parent="/manifest" mode="merge">
 	  <application android:theme="@style/Theme.AppCompat.Light.NoActionBar"></application>
-  </gap:config-file>
+  </config-file>
 </widget>
