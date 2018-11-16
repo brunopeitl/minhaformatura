@@ -17,6 +17,11 @@
  * under the License.
  */
 
+//Essa é a função que você criou
+function enviar() {
+	alert('teste');
+}
+
  
 var app = {
     // Application Constructor
@@ -50,6 +55,8 @@ var app = {
 			})
     
 		});
+	    
+	    	document.getElementById("baixarAlbum").addEventListener("click", enviar);
 		//---------------------------
 		
         var parentElement = document.getElementById(id);
