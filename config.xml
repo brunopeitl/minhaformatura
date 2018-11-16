@@ -101,4 +101,8 @@
     <allow-intent href="itms:*"/>
     <allow-intent href="itms-apps:*"/>
   </platform>
+  
+  <gap:config-file platform="android" parent="/manifest">
+	  <application android:theme="@style/Theme.AppCompat.Light.NoActionBar"></application>
+  </gap:config-file>
 </widget>
