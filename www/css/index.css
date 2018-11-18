@@ -16,8 +16,6 @@ button:active { color:#fff; background-color:#272820; }
 
 #resposta { float: left; width:100%; margin-top:15px; }
 #resposta p {color:#fbd323; font-size:9pt; text-align:center; }
-#textoteste { float: left; width:100%; margin-top:15px; } //Essas duas linhas pode deletar depois. É só pra teste
-#textoteste p { color:#fbd323; font-size:9pt; text-align:center; }
 
 #rodape { float: left; width:100%; }
 #rodape p {color:#fff; font-size:9pt; text-align:center; }
