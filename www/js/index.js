@@ -83,13 +83,6 @@ var app = {
 		});
 	    
 	    	document.getElementById("baixarAlbum").addEventListener("click", enviar);
-	    
-	    
-	    	//ACHO QUE ISSO DAQUI É SÓ UM TESTE - PODE APAGAR AS PRÓXIMAS 4 LINHAS DEPOIS
-		var camin = LocalFileSystem.PERSISTENT;
-		var caminh = cordova.file.externalRootDirectory;
-	    	var caminhoo = cordova.file.dataDirectory;
-		document.getElementById("textoteste").innerHTML = "<p>"+camin+" || "+caminh+" || "+caminhoo+"</p>";
 		//---------------------------
 		
         var parentElement = document.getElementById(id);
