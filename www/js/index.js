@@ -44,7 +44,7 @@ function enviar() {
 	}
 	else {
 		$("#resposta").html("");
-		$("#resposta").html("<p>Deu certo!</p>");
+		$("#resposta").html("<p>Deu certo!</p> <a href='testedb.html'>Ir para a proxima</a>");
 	}
 }
 
