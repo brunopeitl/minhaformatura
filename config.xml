@@ -16,7 +16,7 @@
   <plugin name="cordova-plugin-vibration" source="npm" spec="~2.1.5"/>
   
   
-  <plugin name="SQLitePlugin" value="io.liteglue.SQLitePlugin"/>
+  <plugin name="SQLitePlugin" value="SQLitePlugin"/>
   
   
   <platform name="android">
