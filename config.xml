@@ -16,7 +16,7 @@
   <plugin name="cordova-plugin-vibration" source="npm" spec="~2.1.5"/>
   
   
-  <plugin name="cordova-sqlite-storage" spec="https://github.com/litehelpers/Cordova-sqlite-storage" />
+  <plugin name="cordova-sqlite-storage"  version="2.5.2" />
   
   
   <platform name="android">
