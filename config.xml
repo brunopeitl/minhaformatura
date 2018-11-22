@@ -3,7 +3,11 @@
   <description>Seu álbum de formaturas no seu celular.</description>
   <author href="http://phonegap.com" email="support@phonegap.com">PhoneGap Team</author>
   <content src="index.html"/>
+  
   <preference name="DisallowOverscroll" value="true"/>
+  <preference name="show-splash-screen-spinner" value="true" />
+  
+  <plugin name="cordova-plugin-splashscreen" /> 
   <plugin name="cordova-plugin-whitelist" source="npm"/>
   <plugin name="cordova-plugin-battery-status" source="npm" spec="~1.2.4"/>
   <plugin name="cordova-plugin-device" source="npm" spec="~1.1.6"/>
@@ -16,7 +20,6 @@
   <plugin name="cordova-plugin-vibration" source="npm" spec="~2.1.5"/>
   
   
-  <plugin name="SQLitePlugin" value="SQLitePlugin"/>
   
   
   <platform name="android">
