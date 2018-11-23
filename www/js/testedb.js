@@ -39,7 +39,6 @@ var app = {
     // Update DOM on a Received Event
     receivedEvent: function(id) {
 	    //---------------------------Aqui vai tudo o que interessa
-	    var quantidade = [42];
 	    document.getElementById("teste").innerHTML = quantidade[0];
 	    //---------------------------------------------------------
 		
