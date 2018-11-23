@@ -33,6 +33,17 @@ var app = {
     //
     // The scope of 'this' is the event. In order to call the 'receivedEvent'
     // function, we must explicitly call 'app.receivedEvent(...);'
+	
+	
+	//----------- Aqui vai uma parte das coisas
+	document.addEventListener('deviceready', onDeviceReady, false);
+	var logOb;
+	function fail(e) {
+		console.log("FileSystem Error");
+		console.dir(e);
+	}
+	//-----------
+	
     onDeviceReady: function() {
         app.receivedEvent('deviceready');
     },
@@ -41,16 +52,6 @@ var app = {
 	//---------------------------Aqui vai tudo o que interessa
 	//document.getElementById("teste").innerHTML = quantidade[0];
 	//-------------------------------- A Coisa toda vai aqui
-
-	/* globals console,document,window,cordova */
-	document.addEventListener('deviceready', onDeviceReady, false);
-	var logOb;
-	function fail(e) {
-		console.log("FileSystem Error");
-		console.dir(e);
-	}
-
-	function onDeviceReady() {
 
 		window.resolveLocalFileSystemURL(cordova.file.dataDirectory, function(dir) {
 			console.log("got main dir",dir);
@@ -101,8 +102,6 @@ var app = {
 
 			reader.readAsText(file);
 		}, fail);
-
-	}
 
 	//-------------------------------- Aqui termina a coisa toda
 	//---------------------------------------------------------
