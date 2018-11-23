@@ -17,7 +17,6 @@
  * under the License.
  */
 
-var db; 
 var app = {
     // Application Constructor
     initialize: function() {
@@ -40,21 +39,8 @@ var app = {
     // Update DOM on a Received Event
     receivedEvent: function(id) {
 	    //---------------------------Aqui vai tudo o que interessa
-	    db = window.sqlitePlugin.openDatabase({name: "DB"});
-	    db.transaction(function(tx) {
-            	// Cria a Tabela "tabela_testes"
-            	tx.executeSql('CREATE TABLE IF NOT EXISTS tabela_teste (id integer primary key, titulo text)');
-            	// Adiciona um elemento a tabela
-            	tx.executeSql("INSERT INTO tabela_teste (titulo) VALUES (?)", ["Meu primeiro post."]);
-             
-            	// Faz uma busca na tabela
-            	tx.executeSql("SELECT * FROM tabela_teste;", [], function(tx, res) {
-                	alert("Quantidade Resultados: " + res.rows.length);
-                	for (var i = 0;i<res.rows.length;i++){
-                    		alert("Linha "+i+": "+res.rows.item(i).titulo);
-			}
-		});
-	    });
+	    var quantidade = [42];
+	    document.getElementById("teste").innerHTML = quantidade[0];
 	    //---------------------------------------------------------
 		
         var parentElement = document.getElementById(id);
