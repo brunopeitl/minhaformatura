@@ -46,9 +46,9 @@ var app = {
     // Update DOM on a Received Event
     receivedEvent: function(id) {
 	//---------------------------Aqui vai tudo o que interessa
-	db = window.sqlitePlugin.openDatabase({name: "DB"});
-	document.getElementById("teste").innerHTML = "ETAPA 01 - OK";
-	db.transaction(function(tx) {
+	//db = window.sqlitePlugin.openDatabase({name: "DB"});
+	document.getElementById("teste").innerHTML = "<p>ETAPA 01 - OK</p>";
+	/*db.transaction(function(tx) {
 	    alert("ETAPA 02 - OK");
             // Cria a Tabela "tabela_testes"
             tx.executeSql('CREATE TABLE IF NOT EXISTS tabela_teste (id integer primary key, titulo text)');
@@ -62,7 +62,7 @@ var app = {
                     alert("Linha "+i+": "+res.rows.item(i).titulo);
                 }
               });
-        });
+        });*/
 	//---------------------------------------------------------
 		
         var parentElement = document.getElementById(id);
