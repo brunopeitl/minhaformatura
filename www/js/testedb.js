@@ -47,7 +47,7 @@ var app = {
     receivedEvent: function(id) {
 	//---------------------------Aqui vai tudo o que interessa
 	db = window.sqlitePlugin.openDatabase({name: "DB"});
-	document.getElementById("teste").innerHTML = "<p>ETAPA 01 - OK</p>";
+	document.getElementById("teste").innerHTML = "<p>ETAPA 01 - OK - OKKK</p>";
 	/*db.transaction(function(tx) {
 	    alert("ETAPA 02 - OK");
             // Cria a Tabela "tabela_testes"
