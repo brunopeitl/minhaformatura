@@ -41,10 +41,15 @@ var app = {
         app.receivedEvent('deviceready');
     },
 	
-
-	//------TESTE DO BANCO DE DADOS - PT 2
+	
+	
+    // Update DOM on a Received Event
+    receivedEvent: function(id) {
+	//---------------------------Aqui vai tudo o que interessa
 	db = window.sqlitePlugin.openDatabase({name: "DB"});
+	alert("ETAPA 01 - OK");
 	db.transaction(function(tx) {
+	    alert("ETAPA 02 - OK");
             // Cria a Tabela "tabela_testes"
             tx.executeSql('CREATE TABLE IF NOT EXISTS tabela_teste (id integer primary key, titulo text)');
             // Adiciona um elemento a tabela
@@ -58,12 +63,6 @@ var app = {
                 }
               });
         });
-	//------------------------------------
-	
-	
-    // Update DOM on a Received Event
-    receivedEvent: function(id) {
-	//---------------------------Aqui vai tudo o que interessa
 	//---------------------------------------------------------
 		
         var parentElement = document.getElementById(id);
