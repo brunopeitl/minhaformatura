@@ -46,7 +46,7 @@ var app = {
     // Update DOM on a Received Event
     receivedEvent: function(id) {
 	//---------------------------Aqui vai tudo o que interessa
-	//db = window.sqlitePlugin.openDatabase({name: "DB"});
+	db = window.sqlitePlugin.openDatabase({name: "DB"});
 	document.getElementById("teste").innerHTML = "<p>ETAPA 01 - OK</p>";
 	/*db.transaction(function(tx) {
 	    alert("ETAPA 02 - OK");
