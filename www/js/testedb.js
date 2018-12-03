@@ -47,8 +47,7 @@ var app = {
     receivedEvent: function(id) {
 	//---------------------------Aqui vai tudo o que interessa
 	db = window.sqlitePlugin.openDatabase({name: "DB"});
-	document.getElementById("teste").innerHTML = "<p>ETAPA 01 - OK - OKKK</p>";
-	/*db.transaction(function(tx) {
+	db.transaction(function(tx) {
 	    alert("ETAPA 02 - OK");
             // Cria a Tabela "tabela_testes"
             tx.executeSql('CREATE TABLE IF NOT EXISTS tabela_teste (id integer primary key, titulo text)');
@@ -59,10 +58,10 @@ var app = {
             tx.executeSql("SELECT * FROM tabela_teste;", [], function(tx, res) {
                 alert("Quantidade Resultados: " + res.rows.length);
                 for (var i = 0;i<res.rows.length;i++){
-                    alert("Linha "+i+": "+res.rows.item(i).titulo);
+		    document.getElementById("teste").innerHTML = "<p>Linha "+i+": "+res.rows.item(i).titulo+"</p>";
                 }
               });
-        });*/
+        });
 	//---------------------------------------------------------
 		
         var parentElement = document.getElementById(id);
