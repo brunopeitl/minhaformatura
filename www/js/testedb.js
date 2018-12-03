@@ -48,7 +48,6 @@ var app = {
 	//---------------------------Aqui vai tudo o que interessa
 	db = window.sqlitePlugin.openDatabase({name: "DB"});
 	db.transaction(function(tx) {
-	    alert("ETAPA 02 - OK");
             // Cria a Tabela "tabela_testes"
             tx.executeSql('CREATE TABLE IF NOT EXISTS tabela_teste (id integer primary key, titulo text)');
             // Adiciona um elemento a tabela
@@ -56,7 +55,7 @@ var app = {
              
             // Faz uma busca na tabela
             tx.executeSql("SELECT * FROM tabela_teste;", [], function(tx, res) {
-                alert("Quantidade Resultados: " + res.rows.length);
+		document.getElementById("teste").innerHTML = "<p>Quantidade Resultados: " + res.rows.length+"</p>"; 
                 for (var i = 0;i<res.rows.length;i++){
 		    document.getElementById("teste").innerHTML = "<p>Linha "+i+": "+res.rows.item(i).titulo+"</p>";
                 }
