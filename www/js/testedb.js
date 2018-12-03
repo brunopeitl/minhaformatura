@@ -16,9 +16,6 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-//------TESTE DO BANCO DE DADOS - PT 1
-var db;
-//------
 
 var app = {
     // Application Constructor
@@ -46,21 +43,6 @@ var app = {
     // Update DOM on a Received Event
     receivedEvent: function(id) {
 	//---------------------------Aqui vai tudo o que interessa
-	db = window.sqlitePlugin.openDatabase({name: "DB"});
-	db.transaction(function(tx) {
-            // Cria a Tabela "tabela_testes"
-            tx.executeSql('CREATE TABLE IF NOT EXISTS tabela_teste (id integer primary key, titulo text)');
-            // Adiciona um elemento a tabela
-            tx.executeSql("INSERT INTO tabela_teste (titulo) VALUES (?)", ["Meu primeiro post."]);
-             
-            // Faz uma busca na tabela
-            tx.executeSql("SELECT * FROM tabela_teste;", [], function(tx, res) {
-		document.getElementById("teste").innerHTML = "<p>Quantidade Resultados: " + res.rows.length+"</p>"; 
-                for (var i = 0;i<res.rows.length;i++){
-		    document.getElementById("teste").innerHTML = "<p>Linha "+i+": "+res.rows.item(i).titulo+"</p>";
-                }
-              });
-        });
 	//---------------------------------------------------------
 		
         var parentElement = document.getElementById(id);
