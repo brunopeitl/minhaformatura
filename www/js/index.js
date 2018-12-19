@@ -77,7 +77,9 @@ var app = {
 			
 			//---TELA ABERTURA
 			//---CHECAR SE ALBUM JÁ FOI BAIXADO
-			if (localStorage.getItem("album") == null or "") {
+			var albumBaixado = localStorage.getItem("album");
+			alert(albumBaixado);
+			if (albumBaixado == null or "") {
 				//---ANIMAÇÃO
 				$("#logo_entrada").fadeIn(1500, function(){
 					$("#logo_entrada").delay(1500).fadeOut(1500, function(){ 
