@@ -74,24 +74,28 @@ var app = {
     receivedEvent: function(id) {
 		//---------------------------Aqui vai tudo o que interessa
 		$(document).ready(function(){
-
-			$("#logo_entrada").fadeIn(1500, function(){
-				$("#logo_entrada").delay(1500).fadeOut(1500, function(){ 
-					document.getElementById("fundo_entrada").style.display = "none";
-					document.getElementById("pagina_login").style.display = "block";
-				});
-			})
+			
+			//---TELA ABERTURA
+			//---CHECAR SE ALBUM JÁ FOI BAIXADO
+			if (localStorage.getItem("album") == null or "") {
+				//---ANIMAÇÃO
+				$("#logo_entrada").fadeIn(1500, function(){
+					$("#logo_entrada").delay(1500).fadeOut(1500, function(){ 
+						document.getElementById("fundo_entrada").style.display = "none";
+						document.getElementById("pagina_login").style.display = "block";
+					});
+				})
+				//---FIM ANIMAÇÃO
+			}
+			else {
+				alert("Já baixado");
+			}	
     
 		});
 	    
-	    	document.getElementById("baixarAlbum").addEventListener("click", enviar);
+		//--- TELA LOGIN
+	    document.getElementById("baixarAlbum").addEventListener("click", enviar);
 			
-			
-		window.addEventListener("batterystatus", onBatteryStatus, false);
-
-		function onBatteryStatus(status) {
-			alert("Level: " + status.level + " isPlugged: " + status.isPlugged);
-		}
 		//---------------------------
 		
         var parentElement = document.getElementById(id);
