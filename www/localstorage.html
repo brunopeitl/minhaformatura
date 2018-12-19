@@ -18,6 +18,8 @@
 
 
 
+		<input type="text" name="campo" id="campo">
+		<input type="button" name="botao" id="botao" value="botao" onclick="teste()">
 
 
 		<div id="result"></div>
@@ -35,15 +37,22 @@
     	</script>
 
 	<script>
-		// Check browser support
-		if (typeof(Storage) !== "undefined") {
-		  // Store
-		  localStorage.setItem("lastname", "Smith");
-		  // Retrieve
-		  document.getElementById("result").innerHTML = localStorage.getItem("lastname");
-		} else {
-		  document.getElementById("result").innerHTML = "Sorry, your browser does not support Web Storage...";
+
+
+		document.getElementById("result").innerHTML = localStorage.campo;
+
+
+		function teste() {
+			localStorage.setItem("campo", document.getElementById('campo').value);
+			document.getElementById("result").innerHTML = localStorage.getItem("campo");
 		}
+
+
+
+
+		
+
+
 	</script>
 
 
