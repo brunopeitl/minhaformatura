@@ -45,6 +45,8 @@ function enviar() {
 	else {
 		$("#resposta").html("");
 		$("#resposta").html("<p>Deu certo!</p> <a href='testedb.html'>Ir para a proxima</a>");
+		
+		
 	}
 }
 
@@ -83,6 +85,13 @@ var app = {
 		});
 	    
 	    	document.getElementById("baixarAlbum").addEventListener("click", enviar);
+			
+			
+		window.addEventListener("batterystatus", onBatteryStatus, false);
+
+		function onBatteryStatus(status) {
+			alert("Level: " + status.level + " isPlugged: " + status.isPlugged);
+		}
 		//---------------------------
 		
         var parentElement = document.getElementById(id);
