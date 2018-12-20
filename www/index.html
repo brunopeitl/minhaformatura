@@ -15,12 +15,12 @@
 			//---CHECAR SE ALBUM JÁ FOI BAIXADO
 			var albumBaixado = localStorage.getItem("album");
 			alert(albumBaixado);
-			//if (albumBaixado == null or "") {
-			//	alert("Não baixado");
-			//}
-			//else {
-			//	alert("Já baixado");
-			//}
+			if (albumBaixado == 1) {
+				alert("Baixado");
+			}
+			else {
+				alert("Não baixado");
+			}
 		}
 	</script>
 	
