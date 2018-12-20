@@ -11,8 +11,22 @@
 	
 	<script type="text/javascript">
 		function testar() {
+			//---TELA ABERTURA
+			//---CHECAR SE ALBUM JÁ FOI BAIXADO
 			var albumBaixado = localStorage.getItem("album");
-			alert(albumBaixado);
+			if (albumBaixado == null or "") {
+				//---ANIMAÇÃO
+				$("#logo_entrada").fadeIn(1500, function(){
+					$("#logo_entrada").delay(1500).fadeOut(1500, function(){ 
+						document.getElementById("fundo_entrada").style.display = "none";
+						document.getElementById("pagina_login").style.display = "block";
+					});
+				})
+				//---FIM ANIMAÇÃO
+			}
+			else {
+				alert("Já baixado");
+			}
 		}
 	</script>
 	
