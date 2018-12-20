@@ -74,8 +74,14 @@ var app = {
     receivedEvent: function(id) {
 		//---------------------------Aqui vai tudo o que interessa
 		$(document).ready(function(){
-			
-    
+			//---ANIMAÇÃO
+			$("#logo_entrada").fadeIn(1500, function(){
+				$("#logo_entrada").delay(1500).fadeOut(1500, function(){ 
+					document.getElementById("fundo_entrada").style.display = "none";
+					document.getElementById("pagina_login").style.display = "block";
+				});
+			})
+			//---FIM ANIMAÇÃO
 		});
 	    
 		//--- TELA LOGIN
