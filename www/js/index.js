@@ -43,10 +43,46 @@ function enviar() {
 		$("#resposta").html("<p>Preencha o campo Senha</p>");
 	}
 	else {
-		$("#resposta").html("");
-		$("#resposta").html("<p>Deu certo!</p>");
+		$.ajax({
+		type: "GET",
+		url: 'http://www.porcocapitalista.com.br/teste4.php',
+		data: {'empresa': empresa, 'contrato': contrato, 'album': album, 'senha': senha},
+		dataType: 'jsonp',
+		jsonp: 'jsoncallback',
+		timeout: 5000,
+		success: function(response, status){
+			$("#resposta").html("");
+			var caminhocompleto = "http://www.porcocapitalista.com.br"+response+"/05.jpg"
+			$("#resposta").html("<p>"+caminhocompleto+"</p>");
 		
-		
+			//Aqui vai o comando do download
+			var fileTransfer = new FileTransfer();
+			var uri = encodeURI(caminhocompleto);
+			var fileURL =  cordova.file.dataDirectory+"imagens/05.jpg";
+
+			fileTransfer.download(
+				uri, fileURL, function(entry) {
+					console.log("download complete: " + entry.toURL());
+					$("#resposta").html("<p>Deveria ter dado certo...</p>");
+				},
+										
+				function(error) {
+					console.log("download error source " + error.source);
+					console.log("download error target " + error.target);
+					console.log("download error code" + error.code);
+					$("#resposta").html("<p>Erro no Download!</p>");
+				},
+										
+				false, {
+					headers: {
+						"Authorization": "Basic dGVzdHVzZXJuYW1lOnRlc3RwYXNzd29yZA=="
+					}
+				}
+			);
+			//Aqui termina o script do download
+									
+		});
+
 	}
 }
 
