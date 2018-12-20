@@ -10,12 +10,15 @@
     <title>Minha Formatura</title>
 	
 	<script type="text/javascript">
-		var albumBaixado = localStorage.getItem("album");
+		function testar() {
+			var albumBaixado = localStorage.getItem("album");
+			alert(albumBaixado);
+		}
 	</script>
 	
 </head>
 
-<body>
+<body onload="testar()">
     <div class="app">
 		<!-- ///////////////////////////////////////// -->
 		<!-- //////// PÁGINA ENTRADA : INICIO //////// -->
