@@ -43,7 +43,6 @@ function enviar() {
 		$("#resposta").html("<p>Preencha o campo Senha</p>");
 	}
 	else {
-		alert("A treta era aqui");
 		
 		
 		
