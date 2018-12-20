@@ -75,27 +75,11 @@ var app = {
 		//---------------------------Aqui vai tudo o que interessa
 		$(document).ready(function(){
 			
-			//---TELA ABERTURA
-			//---CHECAR SE ALBUM JÁ FOI BAIXADO
-			//var albumBaixado = localStorage.getItem("album");
-			if (albumBaixado == null or "") {
-				//---ANIMAÇÃO
-				$("#logo_entrada").fadeIn(1500, function(){
-					$("#logo_entrada").delay(1500).fadeOut(1500, function(){ 
-						document.getElementById("fundo_entrada").style.display = "none";
-						document.getElementById("pagina_login").style.display = "block";
-					});
-				})
-				//---FIM ANIMAÇÃO
-			}
-			else {
-				alert("Já baixado");
-			}	
     
 		});
 	    
 		//--- TELA LOGIN
-	    document.getElementById("baixarAlbum").addEventListener("click", enviar);
+	        document.getElementById("baixarAlbum").addEventListener("click", enviar);
 			
 		//---------------------------
 		
