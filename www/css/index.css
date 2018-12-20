@@ -43,3 +43,11 @@ img.logo { margin-top: 10px; }
 }
 
 #pagina_login { display:none; }
+
+#pagina_download {
+	display:none;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background: #fff;
+}
