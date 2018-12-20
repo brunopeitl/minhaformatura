@@ -127,7 +127,7 @@ var app = {
 		var camin = LocalFileSystem.PERSISTENT;
 		var caminh = cordova.file.externalRootDirectory;
 	    	var caminhoo = cordova.file.dataDirectory;
-		document.getElementById("textoteste").innerHTML = "<p>"+camin+" || "+caminh+" || "+caminhoo+"</p>";
+		//document.getElementById("textoteste").innerHTML = "<p>"+camin+" || "+caminh+" || "+caminhoo+"</p>";
 			
 		//---------------------------
 		
