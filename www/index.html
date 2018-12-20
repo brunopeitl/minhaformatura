@@ -10,11 +10,11 @@
     <title>Minha Formatura</title>
     <script type="text/javascript" src="js/jquery.min.js"></script>
 	<script type="text/javascript">
+		baixado = "";
 		function testar() {
 			//---TELA ABERTURA
 			//---CHECAR SE ALBUM JÁ FOI BAIXADO
 			var albumBaixado = localStorage.getItem("album");
-			var baixado;
 			if (albumBaixado == 1) {
 				var baixado = "sim";
 			}
