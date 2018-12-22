@@ -52,7 +52,7 @@ function enviar() {
 		
 		$.ajax({
 		type: "GET",
-		url: 'http://www.porcocapitalista.com.br/teste4.php',
+		url: 'http://www.porcocapitalista.com.br/minhaformatura/teste4.php',
 		data: {'empresa': empresa, 'contrato': contrato, 'album': album, 'senha': senha},
 		dataType: 'jsonp',
 		jsonp: 'jsoncallback',
