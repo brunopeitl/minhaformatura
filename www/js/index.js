@@ -77,7 +77,7 @@ function enviar() {
 					console.log("download error source " + error.source);
 					console.log("download error target " + error.target);
 					console.log("download error code" + error.code);
-					$("#resposta").html("<p>Erro no Download!</p>");
+					$("#resposta").html("<p>"+response+"</p>");
 				},
 										
 				false, {
