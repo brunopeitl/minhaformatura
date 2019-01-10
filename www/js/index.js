@@ -19,6 +19,7 @@
 
 //Função que baixa as fotos
 function baixarfotos() {
+	alert("passou por aqui");
 	$.ajax({
 		type: "GET",
 		url: 'http://www.porcocapitalista.com.br/minhaformatura/teste4.php',
@@ -27,6 +28,7 @@ function baixarfotos() {
 		jsonp: 'jsoncallback',
 		timeout: 5000,
 		success: function(response, status){
+			alert("e até aqui também");
 			$("#resposta").html("");
 			var caminhocompleto = "http://www.porcocapitalista.com.br"+response+"/05.jpg"
 			$("#resposta").html("<p>"+caminhocompleto+"</p>");
