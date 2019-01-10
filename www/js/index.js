@@ -19,7 +19,6 @@
 
 //Função que baixa as fotos
 function baixarfotos(empresa,contrato,album,senha) {
-	alert("passou por aqui");
 	$.ajax({
 		type: "GET",
 		url: 'http://www.porcocapitalista.com.br/minhaformatura/teste4.php',
@@ -28,7 +27,6 @@ function baixarfotos(empresa,contrato,album,senha) {
 		jsonp: 'jsoncallback',
 		timeout: 5000,
 		success: function(response, status){
-			alert("e até aqui também");
 			$("#resposta").html("");
 			var caminhocompleto = "http://www.porcocapitalista.com.br"+response+"/05.jpg"
 			$("#resposta").html("<p>"+caminhocompleto+"</p>");
@@ -129,11 +127,6 @@ var app = {
 	    
 		//--- TELA LOGIN
 	        document.getElementById("baixarAlbum").addEventListener("click", enviar);
-	    	//ACHO QUE ISSO DAQUI É SÓ UM TESTE QUE IMPRIME O CAMINHO DA IMAGEM DENTRO DA DIV TEXTOTESTE
-		/*var camin = LocalFileSystem.PERSISTENT;
-		var caminh = cordova.file.externalRootDirectory;
-	    	var caminhoo = cordova.file.dataDirectory;
-		document.getElementById("textoteste").innerHTML = "<p>"+camin+" || "+caminh+" || "+caminhoo+"</p>";*/
 			
 		//--- FIM DA TELA LOGIN
 		
