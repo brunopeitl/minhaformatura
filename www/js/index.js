@@ -58,6 +58,10 @@ function baixarfotos(empresa,contrato,album,senha) {
 			//Aqui termina o script do download
 		}						
 	});
+	
+	//Passa para a próxima tela
+	document.getElementById("pagina_login").style.display = "none";
+	document.getElementById("pagina_download").style.display = "block";
 }
 
 //Essa é a função para validar o formulário
