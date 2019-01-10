@@ -139,10 +139,10 @@ var app = {
 		//--- TELA LOGIN
 	        document.getElementById("baixarAlbum").addEventListener("click", enviar);
 	    	//ACHO QUE ISSO DAQUI É SÓ UM TESTE QUE IMPRIME O CAMINHO DA IMAGEM DENTRO DA DIV TEXTOTESTE
-		var camin = LocalFileSystem.PERSISTENT;
+		/*var camin = LocalFileSystem.PERSISTENT;
 		var caminh = cordova.file.externalRootDirectory;
 	    	var caminhoo = cordova.file.dataDirectory;
-		document.getElementById("textoteste").innerHTML = "<p>"+camin+" || "+caminh+" || "+caminhoo+"</p>";
+		document.getElementById("textoteste").innerHTML = "<p>"+camin+" || "+caminh+" || "+caminhoo+"</p>";*/
 			
 		//---------------------------
 		
