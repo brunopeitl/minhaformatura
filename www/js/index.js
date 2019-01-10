@@ -18,7 +18,7 @@
  */
 
 //Função que baixa as fotos
-function baixarfotos() {
+function baixarfotos(empresa,contrato,album,senha) {
 	alert("passou por aqui");
 	$.ajax({
 		type: "GET",
@@ -88,7 +88,7 @@ function enviar() {
 		$("#resposta").html("<p>Preencha o campo Senha</p>");
 	}
 	else {
-		baixarfotos();
+		baixarfotos(empresa,contrato,album,senha);
 	}
 }
 
