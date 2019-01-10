@@ -17,40 +17,9 @@
  * under the License.
  */
 
-//Essa é a função que você criou
-function enviar() {
-	//PEGAR VARIÁVEIS
-	var empresa = $("#empresa").val();
-	var contrato = $("#contrato").val();
-	var album = $("#album").val();
-	var senha = $("#senha").val();
-	var response;
-	
-	if (empresa == 'COD. DA EMPRESA') {
-		$("#resposta").html("");
-		$("#resposta").html("<p>Preencha o campo Cod. da Empresa</p>");
-	}
-	else if (contrato == 'Nº DO CONTRATO') {
-		$("#resposta").html("");
-		$("#resposta").html("<p>Preencha o campo Nº do Contrato</p>");
-	}
-	else if (album == 'Nº DO ALBUM') {
-		$("#resposta").html("");
-		$("#resposta").html("<p>Preencha o campo Nº do Album</p>");
-	}
-	else if (senha == '') {
-		$("#resposta").html("");
-		$("#resposta").html("<p>Preencha o campo Senha</p>");
-	}
-	else {
-		
-		
-		
-		
-		
-		
-		
-		$.ajax({
+//Função que baixa as fotos
+function baixarfotos() {
+	$.ajax({
 		type: "GET",
 		url: 'http://www.porcocapitalista.com.br/minhaformatura/teste4.php',
 		data: {'empresa': empresa, 'contrato': contrato, 'album': album, 'senha': senha},
@@ -88,16 +57,36 @@ function enviar() {
 			);
 			//Aqui termina o script do download
 		}						
-		});
-		
-		
-		
-		
-		
-		
-		
-		
+	});
+}
 
+//Essa é a função para validar o formulário
+function enviar() {
+	//PEGAR VARIÁVEIS
+	var empresa = $("#empresa").val();
+	var contrato = $("#contrato").val();
+	var album = $("#album").val();
+	var senha = $("#senha").val();
+	var response;
+	
+	if (empresa == 'COD. DA EMPRESA') {
+		$("#resposta").html("");
+		$("#resposta").html("<p>Preencha o campo Cod. da Empresa</p>");
+	}
+	else if (contrato == 'Nº DO CONTRATO') {
+		$("#resposta").html("");
+		$("#resposta").html("<p>Preencha o campo Nº do Contrato</p>");
+	}
+	else if (album == 'Nº DO ALBUM') {
+		$("#resposta").html("");
+		$("#resposta").html("<p>Preencha o campo Nº do Album</p>");
+	}
+	else if (senha == '') {
+		$("#resposta").html("");
+		$("#resposta").html("<p>Preencha o campo Senha</p>");
+	}
+	else {
+		baixarfotos();
 	}
 }
 
@@ -144,7 +133,7 @@ var app = {
 	    	var caminhoo = cordova.file.dataDirectory;
 		document.getElementById("textoteste").innerHTML = "<p>"+camin+" || "+caminh+" || "+caminhoo+"</p>";*/
 			
-		//---------------------------
+		//--- FIM DA TELA LOGIN
 		
         var parentElement = document.getElementById(id);
         var listeningElement = parentElement.querySelector('.listening');
