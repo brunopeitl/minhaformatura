@@ -52,6 +52,7 @@ function baixarfotos(empresa,contrato,album,senha) {
 			//$("#resposta").html("");
 			//$("#resposta").html("<p>"+caminhocompleto+"</p>");
 			
+			//Só muda de tela caso o retorno do servidor não seja uma mensagem de erro na validação
 			if(response == "Álbum não encontrado.") {
 				$("#resposta").html("<p>"+response+"</p>");
 			}
@@ -59,17 +60,42 @@ function baixarfotos(empresa,contrato,album,senha) {
 				$("#resposta").html("<p>"+response+"</p>");
 			}
 			else {
-				
 				//Passa para a próxima tela
 				document.getElementById("pagina_login").style.display = "none";
 				document.getElementById("pagina_download").style.display = "block";
 				
-				var qtd_fotos = response[0];
+				var qtd_fotos = response[0]; //Lê a resposta do servidor que dá a quantidade de fotos a serem baixadas
 				var caminhocompleto = "http://www.porcocapitalista.com.br"+response[2];
 				var nome_arquivo = pega_nome_arquivo(response[2]);
-				/*var i;
+				/*var i; // Laço for para Baixar as imagens, uma por uma.
 				for (i = 1; i < qtd_fotos; i++) { 
 					var caminhocompleto = "http://www.porcocapitalista.com.br"+response[i];
+					var nome_arquivo = pega_nome_arquivo(response[i]);
+					
+					//Aqui vai o comando do download
+					var fileTransfer = new FileTransfer();
+					var uri = encodeURI(caminhocompleto);
+					var fileURL =  cordova.file.dataDirectory+"imagens/"+nome_arquivo;
+
+					fileTransfer.download(
+						uri, fileURL, function(entry) {
+							console.log("download complete: " + entry.toURL());
+							$("#resposta").html("<p>Preparando download...</p>");
+						},
+										
+						function(error) {
+							console.log("download error source " + error.source);
+							console.log("download error target " + error.target);
+							console.log("download error code" + error.code);
+							$("#resposta").html("<p>"+response+"</p>");
+						},
+										
+						false, {
+							headers: {
+								"Authorization": "Basic dGVzdHVzZXJuYW1lOnRlc3RwYXNzd29yZA=="
+							}
+						}
+					);
 				}*/
 			
 				//Aqui vai o comando do download
