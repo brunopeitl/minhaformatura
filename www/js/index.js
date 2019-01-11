@@ -28,14 +28,15 @@ function pega_nome_arquivo(resposta) {
 	        	barra++;
 	        	if (barra == 6) {
 	        		posicao_ultima_barra = a;
-	            	break;
+	            		break;
 	        	}
 	        	else {
 	        	}
 		}
 		else {
 		}
-	return valor_caminho.substring(posicao_ultima_barra+1, valor_caminho.length);
+	}	
+	return valor_caminho.substring(posicao_ultima_barra+1, valor_caminho.length);	
 }
 
 //Função que baixa as fotos
