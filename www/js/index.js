@@ -73,7 +73,7 @@ function baixarfotos(empresa,contrato,album,senha) {
 				//Aqui vai o comando do download
 				var fileTransfer = new FileTransfer();
 				var uri = encodeURI(caminhocompleto);
-				var fileURL =  cordova.file.dataDirectory+"imagens/+nome_arquivo;
+				var fileURL =  cordova.file.dataDirectory+"imagens/"+nome_arquivo;
 
 				fileTransfer.download(
 					uri, fileURL, function(entry) {
