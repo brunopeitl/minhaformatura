@@ -42,7 +42,12 @@ function baixarfotos(empresa,contrato,album,senha) {
 				document.getElementById("pagina_login").style.display = "none";
 				document.getElementById("pagina_download").style.display = "block";
 				
+				var qtd_fotos = response[0];
 				var caminhocompleto = "http://www.porcocapitalista.com.br"+response[2];
+				/*var i;
+				for (i = 1; i < qtd_fotos; i++) { 
+					var caminhocompleto = "http://www.porcocapitalista.com.br"+response[i];
+				}*/
 			
 				//Aqui vai o comando do download
 				var fileTransfer = new FileTransfer();
