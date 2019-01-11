@@ -65,9 +65,10 @@ function baixarfotos(empresa,contrato,album,senha) {
 				document.getElementById("pagina_download").style.display = "block";
 				
 				var qtd_fotos = response[0]; //Lê a resposta do servidor que dá a quantidade de fotos a serem baixadas
-				var caminhocompleto = "http://www.porcocapitalista.com.br"+response[2];
-				var nome_arquivo = pega_nome_arquivo(response[2]);
-				/*var i; // Laço for para Baixar as imagens, uma por uma.
+				//var caminhocompleto = "http://www.porcocapitalista.com.br"+response[2];
+				//var nome_arquivo = pega_nome_arquivo(response[2]);
+				
+				var i; // Laço for para Baixar as imagens, uma por uma.
 				for (i = 1; i < qtd_fotos; i++) { 
 					var caminhocompleto = "http://www.porcocapitalista.com.br"+response[i];
 					var nome_arquivo = pega_nome_arquivo(response[i]);
@@ -96,10 +97,10 @@ function baixarfotos(empresa,contrato,album,senha) {
 							}
 						}
 					);
-				}*/
+				}
 			
 				//Aqui vai o comando do download
-				var fileTransfer = new FileTransfer();
+				/*var fileTransfer = new FileTransfer();
 				var uri = encodeURI(caminhocompleto);
 				var fileURL =  cordova.file.dataDirectory+"imagens/"+nome_arquivo;
 
@@ -121,7 +122,7 @@ function baixarfotos(empresa,contrato,album,senha) {
 							"Authorization": "Basic dGVzdHVzZXJuYW1lOnRlc3RwYXNzd29yZA=="
 						}
 					}
-				);
+				);*/
 				//Aqui termina o script do download
 				
 				document.getElementById("link_proxima").style.display = "block";
