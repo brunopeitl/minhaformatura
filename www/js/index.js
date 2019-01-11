@@ -52,7 +52,7 @@ function baixarfotos(empresa,contrato,album,senha) {
 				fileTransfer.download(
 					uri, fileURL, function(entry) {
 						console.log("download complete: " + entry.toURL());
-						$("#resposta").html("<p>Deveria ter dado certo...</p>");
+						$("#resposta").html("<p>Preparando download...</p>");
 					},
 										
 					function(error) {
