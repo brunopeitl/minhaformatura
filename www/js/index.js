@@ -17,6 +17,26 @@
  * under the License.
  */
 
+//FUNÇÃO QUE EXTRAI O NOME DO ARQUIVO A PARTIR DO CAMINHO
+function pega_nome_arquivo(resposta) {
+	var barra = 0;
+	var posicao_ultima_barra;
+	var valor_caminho = resposta;
+	for (a = 0; a < valor_caminho.length; a++) {
+		var char_teste = valor_caminho.substring(a, a+1);
+		if (char_teste == "/") {
+	        barra++;
+	        if (barra == 6) {
+	        	posicao_ultima_barra = a;
+	            break;
+	        }
+	        else {
+	        }
+		}
+		else {
+		}
+}
+
 //Função que baixa as fotos
 function baixarfotos(empresa,contrato,album,senha) {
 	$.ajax({
@@ -44,6 +64,7 @@ function baixarfotos(empresa,contrato,album,senha) {
 				
 				var qtd_fotos = response[0];
 				var caminhocompleto = "http://www.porcocapitalista.com.br"+response[2];
+				var nome_arquivo = pega_nome_arquivo(response[2]);
 				/*var i;
 				for (i = 1; i < qtd_fotos; i++) { 
 					var caminhocompleto = "http://www.porcocapitalista.com.br"+response[i];
@@ -52,7 +73,7 @@ function baixarfotos(empresa,contrato,album,senha) {
 				//Aqui vai o comando do download
 				var fileTransfer = new FileTransfer();
 				var uri = encodeURI(caminhocompleto);
-				var fileURL =  cordova.file.dataDirectory+"imagens/05.jpg";
+				var fileURL =  cordova.file.dataDirectory+"imagens/+nome_arquivo;
 
 				fileTransfer.download(
 					uri, fileURL, function(entry) {
