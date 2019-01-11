@@ -25,16 +25,17 @@ function pega_nome_arquivo(resposta) {
 	for (a = 0; a < valor_caminho.length; a++) {
 		var char_teste = valor_caminho.substring(a, a+1);
 		if (char_teste == "/") {
-	        barra++;
-	        if (barra == 6) {
-	        	posicao_ultima_barra = a;
-	            break;
-	        }
-	        else {
-	        }
+	        	barra++;
+	        	if (barra == 6) {
+	        		posicao_ultima_barra = a;
+	            	break;
+	        	}
+	        	else {
+	        	}
 		}
 		else {
 		}
+	return valor_caminho.substring(posicao_ultima_barra+1, valor_caminho.length);
 }
 
 //Função que baixa as fotos
