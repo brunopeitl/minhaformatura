@@ -27,42 +27,55 @@ function baixarfotos(empresa,contrato,album,senha) {
 		jsonp: 'jsoncallback',
 		timeout: 5000,
 		success: function(response, status){
-			$("#resposta").html("");
-			var caminhocompleto = "http://www.porcocapitalista.com.br"+response+"/05.jpg"
-			$("#resposta").html("<p>"+caminhocompleto+"</p>");
-		
-			//Aqui vai o comando do download
-			var fileTransfer = new FileTransfer();
-			var uri = encodeURI(caminhocompleto);
-			var fileURL =  cordova.file.dataDirectory+"imagens/05.jpg";
+			//$("#resposta").html("");
+			//$("#resposta").html("<p>"+caminhocompleto+"</p>");
+			
+			if(response == "Álbum não encontrado.") {
+				$("#resposta").html("<p>"+response+"</p>");
+			}
+			else if (response == "Senha incorreta.") {
+				$("#resposta").html("<p>"+response+"</p>");
+			}
+			else {
+				
+				//Passa para a próxima tela
+				document.getElementById("pagina_login").style.display = "none";
+				document.getElementById("pagina_download").style.display = "block";
+				
+				var caminhocompleto = "http://www.porcocapitalista.com.br"+response+"/05.jpg"
+			
+				//Aqui vai o comando do download
+				var fileTransfer = new FileTransfer();
+				var uri = encodeURI(caminhocompleto);
+				var fileURL =  cordova.file.dataDirectory+"imagens/05.jpg";
 
-			fileTransfer.download(
-				uri, fileURL, function(entry) {
-					console.log("download complete: " + entry.toURL());
-					$("#resposta").html("<p>Deveria ter dado certo...</p>");
-				},
+				fileTransfer.download(
+					uri, fileURL, function(entry) {
+						console.log("download complete: " + entry.toURL());
+						$("#resposta").html("<p>Deveria ter dado certo...</p>");
+					},
 										
-				function(error) {
-					console.log("download error source " + error.source);
-					console.log("download error target " + error.target);
-					console.log("download error code" + error.code);
-					$("#resposta").html("<p>"+response+"</p>");
-				},
+					function(error) {
+						console.log("download error source " + error.source);
+						console.log("download error target " + error.target);
+						console.log("download error code" + error.code);
+						$("#resposta").html("<p>"+response+"</p>");
+					},
 										
-				false, {
-					headers: {
-						"Authorization": "Basic dGVzdHVzZXJuYW1lOnRlc3RwYXNzd29yZA=="
+					false, {
+						headers: {
+							"Authorization": "Basic dGVzdHVzZXJuYW1lOnRlc3RwYXNzd29yZA=="
+						}
 					}
-				}
-			);
-			//Aqui termina o script do download
-		}						
-	});
+				);
+				//Aqui termina o script do download
+				
+			}//fim do último else
+			
+		} //fim do success						
+	}); //fim do ajax
 	
-	//Passa para a próxima tela
-	document.getElementById("pagina_login").style.display = "none";
-	document.getElementById("pagina_download").style.display = "block";
-}
+} //Fim da função baixarfotos
 
 //Essa é a função para validar o formulário
 function enviar() {
