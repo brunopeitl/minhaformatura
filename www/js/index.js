@@ -70,6 +70,8 @@ function baixarfotos(empresa,contrato,album,senha) {
 				);
 				//Aqui termina o script do download
 				
+				document.getElementById("link_proxima").style.display = "block";
+				
 			}//fim do último else
 			
 		} //fim do success						
