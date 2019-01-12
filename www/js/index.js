@@ -65,7 +65,7 @@ function baixarfotos(empresa,contrato,album,senha) {
 				var qtd_fotos = response[0]; //Lê a resposta do servidor que dá a quantidade de fotos a serem baixadas
 				
 				var i; // Laço for para Baixar as imagens, uma por uma.
-				for (i = 1; i < qtd_fotos; i++) { 
+				for (i = 1; i <= qtd_fotos; i++) { 
 					var caminhocompleto = "http://www.porcocapitalista.com.br"+response[i];
 					var nome_arquivo = pega_nome_arquivo(response[i]);
 					
