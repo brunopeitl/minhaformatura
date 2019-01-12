@@ -49,8 +49,6 @@ function baixarfotos(empresa,contrato,album,senha) {
 		jsonp: 'jsoncallback',
 		timeout: 5000,
 		success: function(response, status){
-			//$("#resposta").html("");
-			//$("#resposta").html("<p>"+caminhocompleto+"</p>");
 			
 			//Só muda de tela caso o retorno do servidor não seja uma mensagem de erro na validação
 			if(response == "Álbum não encontrado.") {
@@ -65,8 +63,6 @@ function baixarfotos(empresa,contrato,album,senha) {
 				document.getElementById("pagina_download").style.display = "block";
 				
 				var qtd_fotos = response[0]; //Lê a resposta do servidor que dá a quantidade de fotos a serem baixadas
-				//var caminhocompleto = "http://www.porcocapitalista.com.br"+response[2];
-				//var nome_arquivo = pega_nome_arquivo(response[2]);
 				
 				var i; // Laço for para Baixar as imagens, uma por uma.
 				for (i = 1; i < qtd_fotos; i++) { 
@@ -97,44 +93,15 @@ function baixarfotos(empresa,contrato,album,senha) {
 							}
 						}
 					);
-				}
-			
-				//Aqui vai o comando do download
-				/*var fileTransfer = new FileTransfer();
-				var uri = encodeURI(caminhocompleto);
-				var fileURL =  cordova.file.dataDirectory+"imagens/"+nome_arquivo;
-
-				fileTransfer.download(
-					uri, fileURL, function(entry) {
-						console.log("download complete: " + entry.toURL());
-						$("#resposta").html("<p>Preparando download...</p>");
-					},
-										
-					function(error) {
-						console.log("download error source " + error.source);
-						console.log("download error target " + error.target);
-						console.log("download error code" + error.code);
-						$("#resposta").html("<p>"+response+"</p>");
-					},
-										
-					false, {
-						headers: {
-							"Authorization": "Basic dGVzdHVzZXJuYW1lOnRlc3RwYXNzd29yZA=="
-						}
-					}
-				);*/
-				//Aqui termina o script do download
-				
-				document.getElementById("link_proxima").style.display = "block";
-				
+				}//Aqui termina o script do download
+				//mostra o link ir para a próxima página somente depois que o download é concluído
+				document.getElementById("link_proxima").style.display = "block"; 			
 			}//fim do último else
-			
 		} //fim do success						
 	}); //fim do ajax
-	
 } //Fim da função baixarfotos
 
-//Essa é a função para validar o formulário
+//Função para validar o formulário
 function enviar() {
 	//PEGAR VARIÁVEIS
 	var empresa = $("#empresa").val();
