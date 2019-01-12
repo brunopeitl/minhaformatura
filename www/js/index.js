@@ -79,8 +79,9 @@ function baixarfotos(empresa,contrato,album,senha) {
 							console.log("download complete: " + entry.toURL());
 							//mostra o link ir para a próxima página somente depois que o download é concluído
 							//verificar se é a ultima foto, só mostra se é a última foto que baixou
+							document.getElementById("link_proxima").style.display = "block";
 							if(i == qtd_fotos) {
-								document.getElementById("link_proxima").style.display = "block";
+								alert("chegou até aqui");
 							}
 							else {
 							}
