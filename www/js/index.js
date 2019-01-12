@@ -40,7 +40,7 @@ function pega_nome_arquivo(resposta) {
 }
 
 //Função que baixa as fotos
-function baixarfotos(empresa,contrato,album,senha) {
+function obterRespostaServidor(empresa,contrato,album,senha) {
 	$.ajax({
 		type: "GET",
 		url: 'http://www.porcocapitalista.com.br/minhaformatura/teste4.php',
@@ -134,7 +134,7 @@ function enviar() {
 		$("#resposta").html("<p>Preencha o campo Senha</p>");
 	}
 	else {
-		baixarfotos(empresa,contrato,album,senha);
+		obterRespostaServidor(empresa,contrato,album,senha);
 	}
 }
 
