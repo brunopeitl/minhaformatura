@@ -22,11 +22,11 @@ var fotosBaixadas = 0;
 function download_concluido(qtd_fotos) {
 	fotosBaixadas++;
 	if(fotosBaixadas == qtd_fotos) {
-		alert("Download Concluído");
+		$("#fotos_baixadas").html("<p>Download Concluído.</p>");
 		document.getElementById("link_proxima").style.display = "block";
 	}
 	else {
-	alert(fotosBaixadas+" fotos baixadas de um total de "+qtd_fotos);
+		$("#fotos_baixadas").html("<p>"+fotosBaixadas+" fotos baixadas de um total de "+qtd_fotos+"</p>");
 	}
 }
 
