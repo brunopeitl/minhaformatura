@@ -99,9 +99,10 @@ function obterRespostaServidor(empresa,contrato,album,senha) {
 		jsonp: 'jsoncallback',
 		timeout: 5000,
 		success: function(response, status){
-			return response;
+			var respostaServer = response;
 		} //fim do success						
 	}); //fim do ajax
+	return respostaServer;
 } //Fim da função obterRespostaServidor
 
 //FUNÇÃO PARA ENVIAR E VALIDAR O FORMULÁRIO
