@@ -106,6 +106,7 @@ function baixarfotos(empresa,contrato,album,senha) {
 			}//fim do último else
 		} //fim do success						
 	}); //fim do ajax
+	return "download concluído";
 } //Fim da função baixarfotos
 
 //Função para validar o formulário
@@ -134,7 +135,8 @@ function enviar() {
 		$("#resposta").html("<p>Preencha o campo Senha</p>");
 	}
 	else {
-		baixarfotos(empresa,contrato,album,senha);
+		var baixadas = baixarfotos(empresa,contrato,album,senha);
+		alert(baixadas);
 	}
 }
 
