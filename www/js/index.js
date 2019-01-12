@@ -135,8 +135,7 @@ function enviar() {
 		$("#resposta").html("<p>Preencha o campo Senha</p>");
 	}
 	else {
-		var baixadas = baixarfotos(empresa,contrato,album,senha);
-		alert(baixadas);
+		baixarfotos(empresa,contrato,album,senha);
 	}
 }
 
