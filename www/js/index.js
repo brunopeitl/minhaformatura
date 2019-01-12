@@ -67,16 +67,14 @@ function baixarFotos(response) {
 
 			fileTransfer.download(
 				uri, fileURL, function(entry) {
-					alert(i+" - "+qtd_fotos);
 					console.log("download complete: " + entry.toURL());
 					//mostra o link ir para a próxima página somente depois que o download é concluído
 					//verificar se é a ultima foto, só mostra se é a última foto que baixou
-					document.getElementById("link_proxima").style.display = "block";
-					/*if(i == qtd_fotos) {
-						alert("chegou até aqui");
+					if(i == qtd_fotos+1) {
+						document.getElementById("link_proxima").style.display = "block";
 					}
 					else {
-					}*/
+					}
 				},
 										
 				function(error) {
@@ -94,6 +92,7 @@ function baixarFotos(response) {
 				}
 			);//Aqui termina o script do download
 		}//Aqui termina o laço for
+		
 		//COMANDO PARA MOSTRAR LINK NO FINAL DO DOWNLOAD ESTAVA AQUI ANTES ----------------------------		
 	}//fim do último else
 }//Fim da função baixarFotos
