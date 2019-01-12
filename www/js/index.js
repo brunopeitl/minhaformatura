@@ -23,6 +23,7 @@ function download_concluido(qtd_fotos) {
 	fotosBaixadas++;
 	if(fotosBaixadas == qtd_fotos) {
 		$("#fotos_baixadas").html("<p>Download Concluído.</p>");
+		localStorage.setItem("album", 1); //Grava no LocalStorage que algum já foi baixado
 		document.getElementById("pagina_download").style.display = "none";
 		document.getElementById("pagina_capa").style.display = "block";
 		//document.getElementById("link_proxima").style.display = "block"; //Antes era um link que aparecia que mandava para outra pagina de teste 
