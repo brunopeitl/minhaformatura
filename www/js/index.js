@@ -89,6 +89,7 @@ function baixarfotos(empresa,contrato,album,senha) {
 						},
 										
 						function(error) {
+							//Aqui vai os comandos a serem executados em caso de erro
 							console.log("download error source " + error.source);
 							console.log("download error target " + error.target);
 							console.log("download error code" + error.code);
