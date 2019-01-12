@@ -23,7 +23,9 @@ function download_concluido(qtd_fotos) {
 	fotosBaixadas++;
 	if(fotosBaixadas == qtd_fotos) {
 		$("#fotos_baixadas").html("<p>Download Concluído.</p>");
-		document.getElementById("link_proxima").style.display = "block";
+		document.getElementById("pagina_download").style.display = "none";
+		document.getElementById("pagina_capa").style.display = "block";
+		//document.getElementById("link_proxima").style.display = "block"; //Antes era um link que aparecia que mandava para outra pagina de teste 
 	}
 	else {
 		$("#fotos_baixadas").html("<p>"+fotosBaixadas+" fotos baixadas de um total de "+qtd_fotos+"</p>");
