@@ -17,6 +17,11 @@
  * under the License.
  */
 
+//FUNÇÃO DEPOIS QUE O DOWNLOAD DAS FOTOS É CONCLUÍDO
+function download_concluido() {
+	document.getElementById("link_proxima").style.display = "block";
+}
+
 //FUNÇÃO QUE EXTRAI O NOME DO ARQUIVO A PARTIR DO CAMINHO
 function pega_nome_arquivo(resposta) {
 	var barra = 0;
@@ -71,7 +76,7 @@ function baixarFotos(response) {
 					//mostra o link ir para a próxima página somente depois que o download é concluído
 					//verificar se é a ultima foto, só mostra se é a última foto que baixou
 					if(i == qtd_fotos+1) {
-						document.getElementById("link_proxima").style.display = "block";
+						download_concluido();
 					}
 					else {
 					}
