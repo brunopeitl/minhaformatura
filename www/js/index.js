@@ -180,9 +180,15 @@ var app = {
 			//---ANIMAÇÃO
 			$("#logo_entrada").fadeIn(1500, function(){
 				$("#logo_entrada").delay(1500).fadeOut(1500, function(){
-					alert(baixado);
+					//Apaga a tela de animação e verifica se album já foi baixado
+					//Se foi baixado, vai direto para a capa, se não, vai para o formulário
 					document.getElementById("fundo_entrada").style.display = "none";
-					document.getElementById("pagina_login").style.display = "block";
+					if(baixado == "nao") {
+						document.getElementById("pagina_login").style.display = "block";
+					}
+					else {
+						document.getElementById("pagina_capa").style.display = "block";
+					}
 				});
 			})
 			//---FIM ANIMAÇÃO
