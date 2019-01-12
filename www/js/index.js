@@ -19,6 +19,7 @@
 
 //FUNÇÃO DEPOIS QUE O DOWNLOAD DAS FOTOS É CONCLUÍDO
 function download_concluido() {
+	alert("e até aqui também");
 	document.getElementById("link_proxima").style.display = "block";
 }
 
@@ -75,7 +76,9 @@ function baixarFotos(response) {
 					console.log("download complete: " + entry.toURL());
 					//mostra o link ir para a próxima página somente depois que o download é concluído
 					//verificar se é a ultima foto, só mostra se é a última foto que baixou
-					if(i == qtd_fotos+1) {
+					var verifica = qtd_fotos + 1;
+					if(i == verifica) {
+						alert("chegou até aqui");
 						download_concluido();
 					}
 					else {
