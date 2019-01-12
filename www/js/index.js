@@ -21,8 +21,13 @@ var fotosBaixadas = 0;
 //FUNÇÃO DEPOIS QUE O DOWNLOAD DAS FOTOS É CONCLUÍDO
 function download_concluido(qtd_fotos) {
 	fotosBaixadas++;
+	if(fotosBaixadas == qtd_fotos) {
+		alert("Download Concluído");
+		document.getElementById("link_proxima").style.display = "block";
+	}
+	else {
 	alert(fotosBaixadas+" fotos baixadas de um total de "+qtd_fotos);
-	//document.getElementById("link_proxima").style.display = "block";
+	}
 }
 
 //FUNÇÃO QUE EXTRAI O NOME DO ARQUIVO A PARTIR DO CAMINHO
