@@ -77,7 +77,9 @@ function baixarfotos(empresa,contrato,album,senha) {
 					fileTransfer.download(
 						uri, fileURL, function(entry) {
 							console.log("download complete: " + entry.toURL());
-							$("#resposta").html("<p>Preparando download...</p>");
+							//mostra o link ir para a próxima página somente depois que o download é concluído
+							document.getElementById("link_proxima").style.display = "block"; 	
+							//$("#resposta").html("<p>Preparando download...</p>");
 						},
 										
 						function(error) {
@@ -94,8 +96,7 @@ function baixarfotos(empresa,contrato,album,senha) {
 						}
 					);
 				}//Aqui termina o script do download
-				//mostra o link ir para a próxima página somente depois que o download é concluído
-				document.getElementById("link_proxima").style.display = "block"; 			
+				//COMANDO PARA MOSTRAR LINK NO FINAL DO DOWNLOAD ESTAVA AQUI ANTES ----------------------------		
 			}//fim do último else
 		} //fim do success						
 	}); //fim do ajax
