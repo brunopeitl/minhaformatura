@@ -26,10 +26,9 @@ function download_concluido(qtd_fotos) {
 		localStorage.setItem("album", 1); //Grava no LocalStorage que album já foi baixado
 		document.getElementById("pagina_download").style.display = "none";
 		document.getElementById("pagina_capa").style.display = "block";
-		//document.getElementById("link_proxima").style.display = "block"; //Antes era um link que aparecia que mandava para outra pagina de teste 
 	}
 	else {
-		$("#fotos_baixadas").html("<p style='font-family:tahoma; font-size:9pt; color:#5f5f5f;'>"+fotosBaixadas+" fotos baixadas de um total de "+qtd_fotos+"</p>");
+		$("#fotos_baixadas").html("<p style='font-family:tahoma; font-size:9pt; color:#5f5f5f;'>"+fotosBaixadas+" FOTOS BAIXADAS <span style="font-weight:800">DE UM TOTAL DE "+qtd_fotos+"</span></p>");
 	}
 }
 
