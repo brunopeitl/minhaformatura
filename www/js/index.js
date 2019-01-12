@@ -39,57 +39,66 @@ function pega_nome_arquivo(resposta) {
 	return valor_caminho.substring(posicao_ultima_barra+1, valor_caminho.length);	
 }
 
-//FUNÇÃO PARA BAIXAR AS FOTOS
+//Função para baixar as fotos
 function baixarFotos(response) {
-	//Passa para a próxima tela
-	document.getElementById("pagina_login").style.display = "none";
-	document.getElementById("pagina_download").style.display = "block";
+	//Só muda de tela caso o retorno do servidor não seja uma mensagem de erro na validação
+	if(response == "Álbum não encontrado.") {
+		$("#resposta").html("<p>"+response+"</p>");
+	}
+	else if (response == "Senha incorreta.") {
+		$("#resposta").html("<p>"+response+"</p>");
+	}
+	else {
+		//Passa para a próxima tela
+		document.getElementById("pagina_login").style.display = "none";
+		document.getElementById("pagina_download").style.display = "block";
 				
-	var qtd_fotos = response[0]; //Lê a resposta do servidor que dá a quantidade de fotos a serem baixadas
+		var qtd_fotos = response[0]; //Lê a resposta do servidor que dá a quantidade de fotos a serem baixadas
 				
-	var i; // Laço for para Baixar as imagens, uma por uma.
-	for (i = 1; i <= qtd_fotos; i++) {
-		var caminhocompleto = "http://www.porcocapitalista.com.br"+response[i];
-		var nome_arquivo = pega_nome_arquivo(response[i]);
+		var i; // Laço for para Baixar as imagens, uma por uma.
+		for (i = 1; i <= qtd_fotos; i++) {
+			var caminhocompleto = "http://www.porcocapitalista.com.br"+response[i];
+			var nome_arquivo = pega_nome_arquivo(response[i]);
 					
-		//Aqui vai o comando do download
-		var fileTransfer = new FileTransfer();
-		var uri = encodeURI(caminhocompleto);
-		var fileURL =  cordova.file.dataDirectory+"imagens/"+nome_arquivo;
+			//Aqui vai o comando do download
+			var fileTransfer = new FileTransfer();
+			var uri = encodeURI(caminhocompleto);
+			var fileURL =  cordova.file.dataDirectory+"imagens/"+nome_arquivo;
 
-		fileTransfer.download(
-			uri, fileURL, function(entry) {
-				alert(i+" - "+qtd_fotos);
-				console.log("download complete: " + entry.toURL());
-				//mostra o link ir para a próxima página somente depois que o download é concluído
-				//verificar se é a ultima foto, só mostra se é a última foto que baixou
-				document.getElementById("link_proxima").style.display = "block";
-				/*if(i == qtd_fotos) {
-					alert("chegou até aqui");
-				}
-				else {
-				}*/
-			},
+			fileTransfer.download(
+				uri, fileURL, function(entry) {
+					alert(i+" - "+qtd_fotos);
+					console.log("download complete: " + entry.toURL());
+					//mostra o link ir para a próxima página somente depois que o download é concluído
+					//verificar se é a ultima foto, só mostra se é a última foto que baixou
+					document.getElementById("link_proxima").style.display = "block";
+					/*if(i == qtd_fotos) {
+						alert("chegou até aqui");
+					}
+					else {
+					}*/
+				},
 										
-			function(error) {
-				//Aqui vai os comandos a serem executados em caso de erro
-				console.log("download error source " + error.source);
-				console.log("download error target " + error.target);
-				console.log("download error code" + error.code);
-				$("#resposta").html("<p>"+response+"</p>");
-			},
+				function(error) {
+					//Aqui vai os comandos a serem executados em caso de erro
+					console.log("download error source " + error.source);
+					console.log("download error target " + error.target);
+					console.log("download error code" + error.code);
+					$("#resposta").html("<p>"+response+"</p>");
+				},
 										
-			false, {
-				headers: {
-					"Authorization": "Basic dGVzdHVzZXJuYW1lOnRlc3RwYXNzd29yZA=="
+				false, {
+					headers: {
+						"Authorization": "Basic dGVzdHVzZXJuYW1lOnRlc3RwYXNzd29yZA=="
+					}
 				}
-			}
-		);//Aqui termina o script do download
-	}//Aqui termina o laço for
-	//COMANDO PARA MOSTRAR LINK NO FINAL DO DOWNLOAD ESTAVA AQUI ANTES ----------------------------		
+			);//Aqui termina o script do download
+		}//Aqui termina o laço for
+		//COMANDO PARA MOSTRAR LINK NO FINAL DO DOWNLOAD ESTAVA AQUI ANTES ----------------------------		
+	}//fim do último else
 }//Fim da função baixarFotos
 
-//FUNÇÃO QUE ENVIA DADOS PARA O SERVIDOR E OBTÉM A RESPOSTA DELE
+//Função que envia dados para o servidor e obtém a resposta dele
 function obterRespostaServidor(empresa,contrato,album,senha) {
 	$.ajax({
 		type: "GET",
@@ -99,13 +108,12 @@ function obterRespostaServidor(empresa,contrato,album,senha) {
 		jsonp: 'jsoncallback',
 		timeout: 5000,
 		success: function(response, status){
-			var respostaServer = response;
+			baixarFotos(response);
 		} //fim do success						
 	}); //fim do ajax
-	return respostaServer;
-} //Fim da função obterRespostaServidor
+} //Fim da função baixarfotos
 
-//FUNÇÃO PARA ENVIAR E VALIDAR O FORMULÁRIO
+//Função para validar o formulário
 function enviar() {
 	//PEGAR VARIÁVEIS
 	var empresa = $("#empresa").val();
@@ -131,18 +139,7 @@ function enviar() {
 		$("#resposta").html("<p>Preencha o campo Senha</p>");
 	}
 	else {
-		var respostaServidor = obterRespostaServidor(empresa,contrato,album,senha);
-		//Só muda de tela caso o retorno do servidor não seja uma mensagem de erro na validação
-		alert(respostaServidor);
-		if(respostaServidor == "Álbum não encontrado.") {
-			$("#resposta").html("<p>"+respostaServidor+"</p>");
-		}
-		else if (respostaServidor == "Senha incorreta.") {
-			$("#resposta").html("<p>"+respostaServidor+"</p>");
-		}
-		else {
-			baixarFotos(respostaServidor);
-		}
+		obterRespostaServidor(empresa,contrato,album,senha);
 	}
 }
 
