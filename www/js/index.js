@@ -78,8 +78,12 @@ function baixarfotos(empresa,contrato,album,senha) {
 						uri, fileURL, function(entry) {
 							console.log("download complete: " + entry.toURL());
 							//mostra o link ir para a próxima página somente depois que o download é concluído
-							document.getElementById("link_proxima").style.display = "block"; 	
-							//$("#resposta").html("<p>Preparando download...</p>");
+							//verificar se é a ultima foto, só mostra se é a última foto que baixou
+							if(i == qtd_fotos) {
+								document.getElementById("link_proxima").style.display = "block";
+							}
+							else {
+							}
 						},
 										
 						function(error) {
