@@ -38,9 +38,12 @@ var app = {
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
-		//Aqui vai minhas coisas
-		var camImagem = cordova.file.dataDirectory+"imagens/05.jpg";
-		document.getElementById("imagem").innerHTML = "<img src='"+camImagem+"' />";
+	//Aqui vai a minha programação
+	var camImagem1 = cordova.file.dataDirectory+"imagens/CAPA.jpg";
+	var camImagem2 = cordova.file.dataDirectory+"imagens/001.jpg";
+	var camImagem3 = cordova.file.dataDirectory+"imagens/002.jpg";
+	var camImagem4 = cordova.file.dataDirectory+"imagens/003.jpg";
+	document.getElementById("imagem").innerHTML = "<img src='"+camImagem1+"' /><br /><img src='"+camImagem2+"' /><br /><img src='"+camImagem3+"' /><br /><img src='"+camImagem4+"' />";
 		
         var parentElement = document.getElementById(id);
         var listeningElement = parentElement.querySelector('.listening');
