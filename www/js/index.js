@@ -66,7 +66,6 @@ function baixarfotos(empresa,contrato,album,senha) {
 				
 				var i; // Laço for para Baixar as imagens, uma por uma.
 				for (i = 1; i <= qtd_fotos; i++) {
-					var i_atual = i; //Gambiarra necessária para só aparecer link de proxima tela depois de baixar tudo
 					var caminhocompleto = "http://www.porcocapitalista.com.br"+response[i];
 					var nome_arquivo = pega_nome_arquivo(response[i]);
 					
@@ -81,7 +80,6 @@ function baixarfotos(empresa,contrato,album,senha) {
 							//mostra o link ir para a próxima página somente depois que o download é concluído
 							//verificar se é a ultima foto, só mostra se é a última foto que baixou
 							document.getElementById("link_proxima").style.display = "block";
-							alert(i_atual+" - "+qtd_fotos);
 							/*if(i == qtd_fotos) {
 								alert("chegou até aqui");
 							}
