@@ -67,6 +67,7 @@ function baixarFotos(response) {
 
 			fileTransfer.download(
 				uri, fileURL, function(entry) {
+					alert(i+" - "+qtd_fotos);
 					console.log("download complete: " + entry.toURL());
 					//mostra o link ir para a próxima página somente depois que o download é concluído
 					//verificar se é a ultima foto, só mostra se é a última foto que baixou
