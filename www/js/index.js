@@ -19,9 +19,9 @@
 
 var fotosBaixadas = 0;
 //FUNÇÃO DEPOIS QUE O DOWNLOAD DAS FOTOS É CONCLUÍDO
-function download_concluido() {
+function download_concluido(qtd_fotos) {
 	fotosBaixadas++;
-	alert(fotosBaixadas);
+	alert(fotosBaixadas+" fotos baixadas de um total de "+qtd_fotos);
 	//document.getElementById("link_proxima").style.display = "block";
 }
 
@@ -77,7 +77,7 @@ function baixarFotos(response) {
 				uri, fileURL, function(entry) {
 					console.log("download complete: " + entry.toURL());
 					//chamar função que executa somente depois que download é concluído					
-					download_concluido();
+					download_concluido(qtd_fotos);
 				},
 										
 				function(error) {
