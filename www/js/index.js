@@ -29,7 +29,7 @@ function download_concluido(qtd_fotos) {
 		//document.getElementById("link_proxima").style.display = "block"; //Antes era um link que aparecia que mandava para outra pagina de teste 
 	}
 	else {
-		$("#fotos_baixadas").html("<p>"+fotosBaixadas+" fotos baixadas de um total de "+qtd_fotos+"</p>");
+		$("#fotos_baixadas").html("<p style='font-family:tahoma; font-size:9pt; color:#5f5f5f;'>"+fotosBaixadas+" fotos baixadas de um total de "+qtd_fotos+"</p>");
 	}
 }
 
