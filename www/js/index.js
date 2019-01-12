@@ -17,10 +17,12 @@
  * under the License.
  */
 
+var fotosBaixadas = 0;
 //FUNÇÃO DEPOIS QUE O DOWNLOAD DAS FOTOS É CONCLUÍDO
 function download_concluido() {
-	alert("até aqui veio");
-	document.getElementById("link_proxima").style.display = "block";
+	fotosBaixadas++;
+	alert(fotosBaixadas);
+	//document.getElementById("link_proxima").style.display = "block";
 }
 
 //FUNÇÃO QUE EXTRAI O NOME DO ARQUIVO A PARTIR DO CAMINHO
