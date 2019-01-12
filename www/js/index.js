@@ -133,6 +133,7 @@ function enviar() {
 	else {
 		var respostaServidor = obterRespostaServidor(empresa,contrato,album,senha);
 		//Só muda de tela caso o retorno do servidor não seja uma mensagem de erro na validação
+		alert(respostaServidor);
 		if(respostaServidor == "Álbum não encontrado.") {
 			$("#resposta").html("<p>"+respostaServidor+"</p>");
 		}
