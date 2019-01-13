@@ -84,7 +84,6 @@ function baixarFotos(response) {
 		//Passa para a próxima tela
 		document.getElementById("pagina_login").style.display = "none";
 		document.getElementById("pagina_download").style.display = "block";
-		animar(); //Chama a função que anima o preloader da tela de download
 				
 		var qtd_fotos = response[0]; //Lê a resposta do servidor que dá a quantidade de fotos a serem baixadas
 				
