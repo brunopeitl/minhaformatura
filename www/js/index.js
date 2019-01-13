@@ -26,11 +26,7 @@ function animar() {
 	}
 	var prox = 0;
 	function poeImagem()
-	{
-		//document.getElementById('foto').src = elenco[ prox ];
-		//$("#foto").src(elenco[ prox ]);
-		//$("#foto").attr('src', elenco[ prox ]);
-		
+	{	
 		$(function() {
     			$('#foto').attr('src',  elenco[ prox ]);
 		});
