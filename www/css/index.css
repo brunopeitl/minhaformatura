@@ -44,6 +44,7 @@ img.logo { margin-top: 10px; }
 
 #pagina_login { display:none; }
 
+/* PAGINA DOWNLOAD */
 #pagina_download {
 	display:none;
 	position: absolute;
@@ -54,58 +55,7 @@ img.logo { margin-top: 10px; }
 
 #fazendo_download p { font-family:tahoma; font-size:9pt; color:#5f5f5f; }
 
-/* ELEMENTOS DA PÁGINA DOWNLOAD (LOADING) */
-#animacao { position:absolute; left:34%; top:30%; text-align:center; }
-#transp {
-  width: 95px;
-  height: 105px;
-  position: absolute;
-  background-image:url(transp.png);
-  top:0;
-  left:0;
-  z-index:1;
-}
-#container {
-  width: 95px;
-  height: 105px;
-  background: #fff;
-}
-#animate1 {
-  width: 15px;
-  height: 15px;
-  position: absolute;
-  background-color: #fbd323;
-}
-#animate2 {
-  width: 15px;
-  height: 15px;
-  position: absolute;
-  background-color: #fbd323;
-  left:20px;
-}
-#animate3 {
-  width: 15px;
-  height: 15px;
-  position: absolute;
-  background-color: #fbd323;
-  left:40px;
-}
-#animate4 {
-  width: 15px;
-  height: 15px;
-  position: absolute;
-  background-color: #fbd323;
-  left:60px;
-}
-#animate5 {
-  width: 15px;
-  height: 15px;
-  position: absolute;
-  background-color: #fbd323;
-  left:80px;
-}
-
-/* ------------- PAGINA CAPA ----------------*/
+/* PAGINA CAPA */
 #pagina_capa {
 	display:none;
 	position: absolute;
