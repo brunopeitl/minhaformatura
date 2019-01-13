@@ -31,8 +31,9 @@ function animar() {
 		//document.getElementById('foto').src = elenco[ prox ];
 		//$("#foto").src(elenco[ prox ]);
 		//$("#foto").attr('src', elenco[ prox ]);
-		$('#foto').each(function(){
-			$(this).attr('src', elenco[ prox ]);
+		
+		$(function() {
+    			$('#foto').attr('src',  elenco[ prox ]);
 		});
 		prox++;
 		if( prox == (elenco.length) ) prox = 0;
