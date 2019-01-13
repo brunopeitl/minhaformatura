@@ -22,7 +22,7 @@ function animar() {
 	var elenco = new Array();
 	for (i=0; i<57; i++) {
 		seq = i+1;
-		elenco [i] = "sequencia02/frame ("+seq+").png";
+		elenco [i] = "../img/sequencia02/frame ("+seq+").png";
 	}
 	var prox = 0;
 	function poeImagem()
