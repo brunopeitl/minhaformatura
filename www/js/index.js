@@ -19,13 +19,13 @@
 
 //FUNÇÃO PARA ANIMAR PRELOADER DA PÁGINA DE DOWNLOAD
 function animar() {
-	alert("chegou até aqui");
 	var elenco = new Array();
 	for (i=0; i<57; i++) {
 		seq = i+1;
 		elenco [i] = "../img/sequencia02/frame ("+seq+").png";
 	}
 	var prox = 0;
+	alert(elenco [10]);
 	function poeImagem()
 	{
 		//document.getElementById('foto').src = elenco[ prox ];
