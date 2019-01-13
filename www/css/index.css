@@ -53,7 +53,7 @@ img.logo { margin-top: 10px; }
 	background: #fff;
 }
 #loader_ext { width:100%; }
-#loader { width:90px; margin:30% auto; }
+#loader { width:90px; margin:30% auto; background-color:yellow; }
 
 #fazendo_download p { font-family:tahoma; font-size:9pt; color:#5f5f5f; }
 
