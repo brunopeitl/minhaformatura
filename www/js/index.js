@@ -22,7 +22,7 @@ function animar() {
 	var elenco = new Array();
 	for (i=0; i<57; i++) {
 		seq = i+1;
-		elenco [i] = "../img/sequencia02/anima_"+seq+".png";
+		elenco [i] = "img/sequencia02/anima_"+seq+".png";
 	}
 	var prox = 0;
 	alert(elenco [10]);
