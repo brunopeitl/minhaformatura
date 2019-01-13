@@ -142,6 +142,8 @@ function obterRespostaServidor(empresa,contrato,album,senha) {
 	}); //fim do ajax
 } //Fim da função baixarfotos
 
+//Colocar função para verificar conexão aqui
+
 //Função para validar o formulário
 function enviar() {
 	//PEGAR VARIÁVEIS
