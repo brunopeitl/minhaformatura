@@ -17,6 +17,23 @@
  * under the License.
  */
 
+//FUNÇÃO PARA ANIMAR PRELOADER DA PÁGINA DE DOWNLOAD
+function animar() {
+	var elenco = new Array();
+	for (i=0; i<57; i++) {
+		seq = i+1;
+		elenco [i] = "sequencia02/frame ("+seq+").png";
+	}
+	var prox = 0;
+	function poeImagem()
+	{
+		document.getElementById('foto').src = elenco[ prox ];
+		prox++;
+		if( prox == (elenco.length) ) prox = 0;
+	}
+	window.setInterval( poeImagem, 40 );
+}
+
 var fotosBaixadas = 0;
 //FUNÇÃO DEPOIS QUE O DOWNLOAD DAS FOTOS É CONCLUÍDO
 function download_concluido(qtd_fotos) {
@@ -67,6 +84,7 @@ function baixarFotos(response) {
 		//Passa para a próxima tela
 		document.getElementById("pagina_login").style.display = "none";
 		document.getElementById("pagina_download").style.display = "block";
+		animar(); //Chama a função que anima o preloader da tela de download
 				
 		var qtd_fotos = response[0]; //Lê a resposta do servidor que dá a quantidade de fotos a serem baixadas
 				
