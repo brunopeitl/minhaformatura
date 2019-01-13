@@ -19,6 +19,7 @@
 
 //FUNÇÃO PARA ANIMAR PRELOADER DA PÁGINA DE DOWNLOAD
 function animar() {
+	alert("chegou até aqui");
 	var elenco = new Array();
 	for (i=0; i<57; i++) {
 		seq = i+1;
@@ -27,7 +28,9 @@ function animar() {
 	var prox = 0;
 	function poeImagem()
 	{
-		document.getElementById('foto').src = elenco[ prox ];
+		//document.getElementById('foto').src = elenco[ prox ];
+		//$("#foto").src(elenco[ prox ]);
+		$("#foto").attr('src', elenco[ prox ]);
 		prox++;
 		if( prox == (elenco.length) ) prox = 0;
 	}
@@ -84,6 +87,7 @@ function baixarFotos(response) {
 		//Passa para a próxima tela
 		document.getElementById("pagina_login").style.display = "none";
 		document.getElementById("pagina_download").style.display = "block";
+		animar();
 				
 		var qtd_fotos = response[0]; //Lê a resposta do servidor que dá a quantidade de fotos a serem baixadas
 				
