@@ -143,6 +143,21 @@ function obterRespostaServidor(empresa,contrato,album,senha) {
 } //Fim da função baixarfotos
 
 //Colocar função para verificar conexão aqui
+function checkConnection() {
+    var networkState = navigator.connection.type;
+
+    var states = {};
+    states[Connection.UNKNOWN]  = 'Unknown connection';
+    states[Connection.ETHERNET] = 'Ethernet connection';
+    states[Connection.WIFI]     = 'WiFi connection';
+    states[Connection.CELL_2G]  = 'Cell 2G connection';
+    states[Connection.CELL_3G]  = 'Cell 3G connection';
+    states[Connection.CELL_4G]  = 'Cell 4G connection';
+    states[Connection.CELL]     = 'Cell generic connection';
+    states[Connection.NONE]     = 'No network connection';
+
+    return states[networkState];
+}
 
 //Função para validar o formulário
 function enviar() {
@@ -151,6 +166,7 @@ function enviar() {
 	var contrato = $("#contrato").val();
 	var album = $("#album").val();
 	var senha = $("#senha").val();
+	var conexao = checkConnection();
 	var response;
 	
 	if (empresa == 'COD. DA EMPRESA') {
@@ -168,6 +184,10 @@ function enviar() {
 	else if (senha == '') {
 		$("#resposta").html("");
 		$("#resposta").html("<p>Preencha o campo Senha</p>");
+	}
+	else if (conexao == 'No network connection') {
+		$("#resposta").html("");
+		$("#resposta").html("<p>Você não está conectado à internet.</p>");
 	}
 	else {
 		obterRespostaServidor(empresa,contrato,album,senha);
