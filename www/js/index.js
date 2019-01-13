@@ -25,7 +25,6 @@ function animar() {
 		elenco [i] = "img/sequencia02/anima_"+seq+".png";
 	}
 	var prox = 0;
-	alert(elenco [10]);
 	function poeImagem()
 	{
 		//document.getElementById('foto').src = elenco[ prox ];
