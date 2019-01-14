@@ -168,6 +168,8 @@ function enviar() {
 	var conexao = checkConnection();
 	var response;
 	
+	alert(conexao);
+	
 	if (empresa == 'COD. DA EMPRESA') {
 		$("#resposta").html("");
 		$("#resposta").html("<p>Preencha o campo Cod. da Empresa</p>");
