@@ -94,10 +94,10 @@ function baixarFotos(response) {
 		var qtd_fotos = response[0]; //Lê a resposta do servidor que dá a quantidade de fotos a serem baixadas
 				
 		var i; // Laço for para Baixar as imagens, uma por uma.
-		for (i = 4; i <= qtd_fotos+3; i++) {
+		for (i = 4; i <= qtd_fotos+3; i++) { //Da forma como está, ele está baixando só a cada 4 fotos.
 			var caminhocompleto = "http://www.porcocapitalista.com.br"+response[i];
 			var nome_arquivo = pega_nome_arquivo(response[i]);
-					
+			alert(caminhocompleto);
 			//Aqui vai o comando do download
 			var fileTransfer = new FileTransfer();
 			var uri = encodeURI(caminhocompleto);
