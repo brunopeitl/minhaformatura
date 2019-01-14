@@ -117,6 +117,8 @@ function baixarFotos(response) {
 					console.log("download error code" + error.code);
 					//$("#resposta").html("<p>"+response+"</p>");
 					$("#fotos_baixadas").html("ERRO NO DOWNLOAD.");
+					document.getElementById("loader_ext").style.display = "none";
+					document.getElementById("fazendo_download").style.display = "none";
 				},
 										
 				false, {
