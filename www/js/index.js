@@ -46,6 +46,9 @@ function download_concluido(qtd_fotos) {
 		document.getElementById("pagina_download").style.display = "none";
 		document.getElementById("pagina_capa").style.display = "block";
 	}
+	else if (fotosBaixadas == 1) {
+		$("#fotos_baixadas").html("<p style='font-family:tahoma; font-size:9pt; color:#5f5f5f;'>"+fotosBaixadas+" FOTO BAIXADA <span style='font-weight:800'>DE UM TOTAL DE "+qtd_fotos+"</span></p>");
+	}
 	else {
 		$("#fotos_baixadas").html("<p style='font-family:tahoma; font-size:9pt; color:#5f5f5f;'>"+fotosBaixadas+" FOTOS BAIXADAS <span style='font-weight:800'>DE UM TOTAL DE "+qtd_fotos+"</span></p>");
 	}
