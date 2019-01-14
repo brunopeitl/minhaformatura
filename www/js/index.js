@@ -123,7 +123,6 @@ function baixarFotos(response) {
 			);//Aqui termina o script do download
 		}//Aqui termina o laço for
 		
-		//COMANDO PARA MOSTRAR LINK NO FINAL DO DOWNLOAD ESTAVA AQUI ANTES ----------------------------		
 	}//fim do último else
 }//Fim da função baixarFotos
 
