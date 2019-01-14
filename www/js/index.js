@@ -18,22 +18,27 @@
  */
 
 //FUNÇÃO PARA ANIMAR PRELOADER DA PÁGINA DE DOWNLOAD
+var parar_animacao = 0;
 function animar() {
-	var elenco = new Array();
-	for (i=0; i<57; i++) {
-		seq = i+1;
-		elenco [i] = "img/sequencia02/anima_"+seq+".png";
+	if (parar_animacao == 0) {
+		var elenco = new Array();
+		for (i=0; i<57; i++) {
+			seq = i+1;
+			elenco [i] = "img/sequencia02/anima_"+seq+".png";
+		}
+		var prox = 0;
+		function poeImagem()
+		{	
+			$(function() {
+	    			$('#foto').attr('src',  elenco[ prox ]);
+			});
+			prox++;
+			if( prox == (elenco.length) ) prox = 0;
+		}
+		window.setInterval( poeImagem, 40 );
 	}
-	var prox = 0;
-	function poeImagem()
-	{	
-		$(function() {
-    			$('#foto').attr('src',  elenco[ prox ]);
-		});
-		prox++;
-		if( prox == (elenco.length) ) prox = 0;
+	else {
 	}
-	window.setInterval( poeImagem, 40 );
 }
 
 var fotosBaixadas = 0;
@@ -116,7 +121,7 @@ function baixarFotos(response) {
 					console.log("download error target " + error.target);
 					console.log("download error code" + error.code);
 					$("#fotos_baixadas").html("ERRO NO DOWNLOAD.");
-					document.getElementById("loader_ext").style.display = "none";
+					parar_animacao = 1;
 					document.getElementById("fazendo_download").style.display = "none";
 				},
 										
