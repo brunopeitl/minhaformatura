@@ -150,15 +150,15 @@ function checkConnection() {
     states[Connection.UNKNOWN]  = 'Unknown connection';
     states[Connection.ETHERNET] = 'Ethernet connection';
     states[Connection.WIFI]     = 'WiFi connection';
-    states[Connection.CELL_2G]  = 'Cell 2G connection';
-    states[Connection.CELL_3G]  = 'Cell 3G connection';
-    states[Connection.CELL_4G]  = 'Cell 4G connection';
-    states[Connection.CELL]     = 'Cell generic connection';
+    states[Connection.CELL_2G]  = 'Cell connection';
+    states[Connection.CELL_3G]  = 'Cell connection';
+    states[Connection.CELL_4G]  = 'Cell connection';
+    states[Connection.CELL]     = 'Cell connection';
     states[Connection.NONE]     = 'No network connection';
 
     return states[networkState];
 }
-
+avisado = 0;
 //Função para validar o formulário
 function enviar() {
 	//PEGAR VARIÁVEIS
@@ -188,6 +188,16 @@ function enviar() {
 	else if (conexao == 'No network connection') {
 		$("#resposta").html("");
 		$("#resposta").html("<p>Você não está conectado à internet.</p>");
+	}
+	else if (conexao == 'Cell connection') {
+		if (avisado == 0) {
+			$("#resposta").html("");
+			$("#resposta").html("<p>Você está conectado através de uma conexão móvel e isso pode consumir muitos dos seus dados móveis. Deseja baixar as fotos mesmo assim?</p>");
+			avisado = 1;
+		}
+		else {
+			obterRespostaServidor(empresa,contrato,album,senha);
+		}
 	}
 	else {
 		obterRespostaServidor(empresa,contrato,album,senha);
