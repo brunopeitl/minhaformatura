@@ -28,8 +28,28 @@ function mostrar_dados_capa() {
 	$("#cor").html(localStorage.getItem("cor"));
 }
 
+function deuCerto(response) {
+	alert(response);
+}
+
 //FUNÇÃO COM AJAX PARA ATUALIZAR CADASTRO DO ALBUM NO BANCO DE DADOS E COLOCAR QUE ALBUM JÁ FOI BAIXADO
 function alterar_album_banco() {
+	var acao = "atualizar";
+	variaveisGlobais["empresa"] = empresa;
+	variaveisGlobais["contrato"] = contrato;
+	variaveisGlobais["album"] = album;
+	variaveisGlobais["senha"] = senha;
+	$.ajax({
+		type: "GET",
+		url: 'http://www.porcocapitalista.com.br/minhaformatura/teste4.php',
+		data: {'empresa': empresa, 'contrato': contrato, 'album': album, 'senha': senha, 'acao':acao},
+		dataType: 'jsonp',
+		jsonp: 'jsoncallback',
+		timeout: 5000,
+		success: function(response, status){
+			deuCerto(response);
+		} //fim do success						
+	}); //fim do ajax
 }
 
 //FUNÇÃO PARA ANIMAR PRELOADER DA PÁGINA DE DOWNLOAD
