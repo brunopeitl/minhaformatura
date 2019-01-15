@@ -29,11 +29,12 @@ function mostrar_dados_capa() {
 }
 
 function deuCerto(response2) {
-	alert(response2);
+	alert("chegou na segunda etapa");
 }
 
 //FUNÇÃO COM AJAX PARA ATUALIZAR CADASTRO DO ALBUM NO BANCO DE DADOS E COLOCAR QUE ALBUM JÁ FOI BAIXADO
 function alterar_album_banco() {
+	alert("chegou até aqui");
 	var acao = "atualizar";
 	variaveisGlobais["empresa"] = empresa;
 	variaveisGlobais["contrato"] = contrato;
