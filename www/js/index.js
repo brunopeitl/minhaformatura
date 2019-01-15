@@ -27,25 +27,27 @@ function mostrar_dados_capa() {
 //FUNÇÃO PARA ANIMAR PRELOADER DA PÁGINA DE DOWNLOAD
 parar_animacao = 0;
 function animar() {
-	if (parar_animacao == 0) {
-		var elenco = new Array();
-		for (i=0; i<57; i++) {
+	var elenco = new Array();
+	for (i=0; i<57; i++) {
+		if (parar_animacao == 0) {
 			seq = i+1;
 			elenco [i] = "img/sequencia02/anima_"+seq+".png";
 		}
-		var prox = 0;
-		function poeImagem()
-		{	
-			$(function() {
-	    			$('#foto').attr('src',  elenco[ prox ]);
-			});
-			prox++;
-			if( prox == (elenco.length) ) prox = 0;
+		else {
+			seq = i;
+			elenco [i] = "img/sequencia02/anima_"+seq+".png";
 		}
+	}
+	var prox = 0;
+	function poeImagem()
+	{	
+		$(function() {
+	   		$('#foto').attr('src',  elenco[ prox ]);
+		});
+		prox++;
+		if( prox == (elenco.length) ) prox = 0;
+	}
 		window.setInterval( poeImagem, 40 );
-	}
-	else {
-	}
 }
 
 var fotosBaixadas = 0;
