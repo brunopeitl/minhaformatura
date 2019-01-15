@@ -19,8 +19,7 @@
 
 //Array para guardar informações variadas
 //Também salva informações: Cod Empresa, Nº Contrato, Album e Senha para usar depois
-var variaveisGlobais = [];
-variaveisGlobais[parar_animacao] = 0;
+var variaveisGlobais = {parar_animacao:0, empresa:"", contrato:"", album:"", senha:""};
 
 //Mostrar dados salvos no LocalStorage na página CAPA
 function mostrar_dados_capa() {
@@ -39,7 +38,7 @@ function alterar_album_banco() {
 function animar() {
 	var elenco = new Array();
 	for (i=0; i<57; i++) {
-		if (variaveisGlobais[parar_animacao] == 0) {
+		if (variaveisGlobais["parar_animacao"] == 0) {
 			seq = i+1;
 			elenco [i] = "img/sequencia02/anima_"+seq+".png";
 		}
@@ -164,10 +163,10 @@ function baixarFotos(response) {
 //Função que envia dados para o servidor e obtém a resposta dele
 function obterRespostaServidor(empresa,contrato,album,senha) {
 	var acao = "selecionar";
-	variaveisGlobais[empresa] = empresa;
-	variaveisGlobais[contrato] = contrato;
-	variaveisGlobais[album] = album;
-	variaveisGlobais[senha] = senha;
+	variaveisGlobais["empresa"] = empresa;
+	variaveisGlobais["contrato"] = contrato;
+	variaveisGlobais["album"] = album;
+	variaveisGlobais["senha"] = senha;
 	$.ajax({
 		type: "GET",
 		url: 'http://www.porcocapitalista.com.br/minhaformatura/teste4.php',
