@@ -17,6 +17,10 @@
  * under the License.
  */
 
+//Array para guardar informações variadas
+var variaveisGlobais = [];
+variaveisGlobais[parar_animacao] = 0;
+
 //Mostrar dados salvos no LocalStorage na página CAPA
 function mostrar_dados_capa() {
 	$("#curso").html(localStorage.getItem("curso"));
@@ -29,11 +33,10 @@ function alterar_album_banco() {
 }
 
 //FUNÇÃO PARA ANIMAR PRELOADER DA PÁGINA DE DOWNLOAD
-parar_animacao = 0;
 function animar() {
 	var elenco = new Array();
 	for (i=0; i<57; i++) {
-		if (parar_animacao == 0) {
+		if (variaveisGlobais[parar_animacao] == 0) {
 			seq = i+1;
 			elenco [i] = "img/sequencia02/anima_"+seq+".png";
 		}
@@ -140,7 +143,7 @@ function baixarFotos(response) {
 					console.log("download error target " + error.target);
 					console.log("download error code" + error.code);
 					$("#fotos_baixadas").html("ERRO NO DOWNLOAD.");
-					parar_animacao = 1;
+					variaveisGlobais[parar_animacao] = 1;
 					document.getElementById("fazendo_download").style.display = "none";
 				},
 										
