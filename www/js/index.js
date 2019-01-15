@@ -157,10 +157,11 @@ function baixarFotos(response) {
 
 //Função que envia dados para o servidor e obtém a resposta dele
 function obterRespostaServidor(empresa,contrato,album,senha) {
+	var acao = "selecionar";
 	$.ajax({
 		type: "GET",
 		url: 'http://www.porcocapitalista.com.br/minhaformatura/teste4.php',
-		data: {'empresa': empresa, 'contrato': contrato, 'album': album, 'senha': senha},
+		data: {'empresa': empresa, 'contrato': contrato, 'album': album, 'senha': senha, 'acao':acao},
 		dataType: 'jsonp',
 		jsonp: 'jsoncallback',
 		timeout: 5000,
