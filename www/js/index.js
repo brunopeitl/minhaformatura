@@ -18,6 +18,7 @@
  */
 
 //Array para guardar informações variadas
+//Também salva informações: Cod Empresa, Nº Contrato, Album e Senha para usar depois
 var variaveisGlobais = [];
 variaveisGlobais[parar_animacao] = 0;
 
@@ -161,6 +162,10 @@ function baixarFotos(response) {
 //Função que envia dados para o servidor e obtém a resposta dele
 function obterRespostaServidor(empresa,contrato,album,senha) {
 	var acao = "selecionar";
+	variaveisGlobais[empresa] = empresa;
+	variaveisGlobais[contrato] = contrato;
+	variaveisGlobais[album] = album;
+	variaveisGlobais[senha] = senha;
 	$.ajax({
 		type: "GET",
 		url: 'http://www.porcocapitalista.com.br/minhaformatura/teste4.php',
