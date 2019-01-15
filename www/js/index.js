@@ -24,7 +24,7 @@ function mostrar_dados_capa() {
 	$("#cor").html(localStorage.getItem("cor"));
 }
 
-//FUNÇÃO COM AJAZ PARA ATUALIZAR CADASTRO DO ALBUM NO BANCO DE DADOS E COLOCAR QUE ALBUM JÁ FOI BAIXADO
+//FUNÇÃO COM AJAX PARA ATUALIZAR CADASTRO DO ALBUM NO BANCO DE DADOS E COLOCAR QUE ALBUM JÁ FOI BAIXADO
 function alterar_album_banco() {
 }
 
