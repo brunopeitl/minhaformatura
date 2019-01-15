@@ -38,14 +38,8 @@ function alterar_album_banco() {
 function animar() {
 	var elenco = new Array();
 	for (i=0; i<57; i++) {
-		if (variaveisGlobais["parar_animacao"] == 0) {
-			seq = i+1;
-			elenco [i] = "img/sequencia02/anima_"+seq+".png";
-		}
-		else {
-			seq = i;
-			elenco [i] = "img/sequencia02/anima_"+seq+".png";
-		}
+		seq = i+1;
+		elenco [i] = "img/sequencia02/anima_"+seq+".png";
 	}
 	var prox = 0;
 	function poeImagem()
@@ -53,7 +47,10 @@ function animar() {
 		$(function() {
 	   		$('#foto').attr('src',  elenco[ prox ]);
 		});
-		prox++;
+		
+		if (variaveisGlobais["parar_animacao"] == 0) {
+			prox++;
+		}
 		if( prox == (elenco.length) ) prox = 0;
 	}
 		window.setInterval( poeImagem, 40 );
