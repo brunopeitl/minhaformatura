@@ -17,6 +17,13 @@
  * under the License.
  */
 
+//Mostrar dados salvos no LocalStorage na página CAPA
+function mostrar_dados_capa() {
+	$("#curso").html(localStorage.getItem("curso"));
+	$("#instituicao").html(localStorage.getItem("instituicao"));
+	$("#cor").html(localStorage.getItem("cor"));
+}
+
 //FUNÇÃO PARA ANIMAR PRELOADER DA PÁGINA DE DOWNLOAD
 var parar_animacao = 0;
 function animar() {
@@ -50,9 +57,7 @@ function download_concluido(qtd_fotos) {
 		localStorage.setItem("album", 1); //Grava no LocalStorage que album já foi baixado
 		document.getElementById("pagina_download").style.display = "none";
 		document.getElementById("pagina_capa").style.display = "block";
-		$("#curso").html(localStorage.getItem("curso"));
-		$("#instituicao").html(localStorage.getItem("instituicao"));
-		$("#cor").html(localStorage.getItem("cor"));
+		mostrar_dados_capa();
 	}
 	else if (fotosBaixadas == 1) {
 		$("#fotos_baixadas").html("<p style='font-family:tahoma; font-size:9pt; color:#5f5f5f;'>"+fotosBaixadas+" FOTO BAIXADA <span style='font-weight:800'>DE UM TOTAL DE "+qtd_fotos+"</span></p>");
@@ -256,6 +261,7 @@ var app = {
 					}
 					else {
 						document.getElementById("pagina_capa").style.display = "block";
+						mostrar_dados_capa();
 					}
 				});
 			})
