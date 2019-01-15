@@ -145,7 +145,7 @@ function baixarFotos(response) {
 					console.log("download error target " + error.target);
 					console.log("download error code" + error.code);
 					$("#fotos_baixadas").html("ERRO NO DOWNLOAD.");
-					variaveisGlobais[parar_animacao] = 1;
+					variaveisGlobais["parar_animacao"] = 1;
 					document.getElementById("fazendo_download").style.display = "none";
 				},
 										
