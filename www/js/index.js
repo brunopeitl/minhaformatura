@@ -27,7 +27,7 @@ function mostrar_dados_capa() {
 	$("#instituicao").html(localStorage.getItem("instituicao"));
 	$("#cor").html(localStorage.getItem("cor"));
 
-	$("#teste_variaveis_globais").html(variaveisGlobais[empresa]+" - "+variaveisGlobais[contrato]+" - "+variaveisGlobais[album]+" - "+variaveisGlobais[senha]);
+	$("#teste_variaveis_globais").html(variaveisGlobais["empresa"]+" - "+variaveisGlobais["contrato"]+" - "+variaveisGlobais["album"]+" - "+variaveisGlobais["senha"]);
 }
 
 //FUNÇÃO COM AJAX PARA ATUALIZAR CADASTRO DO ALBUM NO BANCO DE DADOS E COLOCAR QUE ALBUM JÁ FOI BAIXADO
