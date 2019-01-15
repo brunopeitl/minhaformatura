@@ -25,7 +25,7 @@ function mostrar_dados_capa() {
 }
 
 //FUNÇÃO PARA ANIMAR PRELOADER DA PÁGINA DE DOWNLOAD
-var parar_animacao = 0;
+parar_animacao = 0;
 function animar() {
 	if (parar_animacao == 0) {
 		var elenco = new Array();
