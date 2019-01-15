@@ -81,7 +81,7 @@ function download_concluido(qtd_fotos) {
 	if(fotosBaixadas == qtd_fotos) {
 		$("#fotos_baixadas").html("<p>Download Concluído.</p>");
 		localStorage.setItem("album", 1); //Grava no LocalStorage que album já foi baixado
-		//alterar_album_banco(); //Chama função com Ajax que atualiza cadastro do album no banco
+		alterar_album_banco(); //Chama função com Ajax que atualiza cadastro do album no banco
 		document.getElementById("pagina_download").style.display = "none"; //Muda de tela
 		document.getElementById("pagina_capa").style.display = "block";
 		mostrar_dados_capa(); //Monta a próxima tela
