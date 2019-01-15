@@ -28,8 +28,8 @@ function mostrar_dados_capa() {
 	$("#cor").html(localStorage.getItem("cor"));
 }
 
-function deuCerto(response) {
-	alert(response);
+function deuCerto(response2) {
+	alert(response2);
 }
 
 //FUNÇÃO COM AJAX PARA ATUALIZAR CADASTRO DO ALBUM NO BANCO DE DADOS E COLOCAR QUE ALBUM JÁ FOI BAIXADO
@@ -46,8 +46,8 @@ function alterar_album_banco() {
 		dataType: 'jsonp',
 		jsonp: 'jsoncallback',
 		timeout: 5000,
-		success: function(response, status){
-			deuCerto(response);
+		success: function(response2, status){
+			deuCerto(response2);
 		} //fim do success						
 	}); //fim do ajax
 }
