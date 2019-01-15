@@ -30,6 +30,9 @@ function mostrar_dados_capa() {
 
 function deuCerto(response2) {
 	alert(response2);
+	document.getElementById("pagina_download").style.display = "none"; //Muda de tela
+	document.getElementById("pagina_capa").style.display = "block";
+	mostrar_dados_capa(); //Monta a próxima tela
 }
 
 //FUNÇÃO COM AJAX PARA ATUALIZAR CADASTRO DO ALBUM NO BANCO DE DADOS E COLOCAR QUE ALBUM JÁ FOI BAIXADO
@@ -81,9 +84,7 @@ function download_concluido(qtd_fotos) {
 	if(fotosBaixadas == qtd_fotos) {
 		$("#fotos_baixadas").html("<p>Download Concluído.</p>");
 		localStorage.setItem("album", 1); //Grava no LocalStorage que album já foi baixado
-		document.getElementById("pagina_download").style.display = "none"; //Muda de tela
-		document.getElementById("pagina_capa").style.display = "block";
-		mostrar_dados_capa(); //Monta a próxima tela
+		//------------------A mudança para a tela CAPA estava aqui antes
 		alterar_album_banco(); //Chama função com Ajax que atualiza cadastro do album no banco
 	}
 	else if (fotosBaixadas == 1) {
