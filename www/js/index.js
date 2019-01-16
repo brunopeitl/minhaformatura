@@ -40,17 +40,7 @@ function alterar_album_banco() {
 	variaveisGlobais["contrato"] = contrato;
 	variaveisGlobais["album"] = album;
 	variaveisGlobais["senha"] = senha;
-	$.ajax({
-		type: "GET",
-		url: 'http://www.porcocapitalista.com.br/minhaformatura/teste4.php',
-		data: {'empresa': empresa, 'contrato': contrato, 'album': album, 'senha': senha, 'acao':acao},
-		dataType: 'jsonp',
-		jsonp: 'jsoncallback',
-		timeout: 5000,
-		success: function(response2, status){
-			deuCerto(response2);
-		} //fim do success						
-	}); //fim do ajax
+	alert(load("http://www.porcocapitalista.com.br/minhaformatura/teste4.php?acao=atualizar"))
 }
 
 //FUNÇÃO PARA ANIMAR PRELOADER DA PÁGINA DE DOWNLOAD
@@ -85,6 +75,7 @@ function download_concluido(qtd_fotos) {
 		document.getElementById("pagina_download").style.display = "none"; //Muda de tela
 		document.getElementById("pagina_capa").style.display = "block";
 		mostrar_dados_capa(); //Monta a próxima tela
+		alterar_album_banco(); //Chama função com Ajax que atualiza cadastro do album no banco
 	}
 	else if (fotosBaixadas == 1) {
 		$("#fotos_baixadas").html("<p style='font-family:tahoma; font-size:9pt; color:#5f5f5f;'>"+fotosBaixadas+" FOTO BAIXADA <span style='font-weight:800'>DE UM TOTAL DE "+qtd_fotos+"</span></p>");
@@ -193,7 +184,6 @@ function obterRespostaServidor(empresa,contrato,album,senha) {
 			baixarFotos(response);
 		} //fim do success						
 	}); //fim do ajax
-	alterar_album_banco(); //Chama função com Ajax que atualiza cadastro do album no banco
 } //Fim da função baixarfotos
 
 //Colocar função para verificar conexão aqui
