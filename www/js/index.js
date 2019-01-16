@@ -85,7 +85,6 @@ function download_concluido(qtd_fotos) {
 		document.getElementById("pagina_download").style.display = "none"; //Muda de tela
 		document.getElementById("pagina_capa").style.display = "block";
 		mostrar_dados_capa(); //Monta a próxima tela
-		alterar_album_banco(); //Chama função com Ajax que atualiza cadastro do album no banco
 	}
 	else if (fotosBaixadas == 1) {
 		$("#fotos_baixadas").html("<p style='font-family:tahoma; font-size:9pt; color:#5f5f5f;'>"+fotosBaixadas+" FOTO BAIXADA <span style='font-weight:800'>DE UM TOTAL DE "+qtd_fotos+"</span></p>");
@@ -174,6 +173,7 @@ function baixarFotos(response) {
 		}//Aqui termina o laço for
 		
 	}//fim do último else
+	alterar_album_banco(); //Chama função com Ajax que atualiza cadastro do album no banco
 }//Fim da função baixarFotos
 
 //Função que envia dados para o servidor e obtém a resposta dele
