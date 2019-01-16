@@ -21,26 +21,22 @@
 //Também salva informações: Cod Empresa, Nº Contrato, Album e Senha para usar depois
 var variaveisGlobais = {parar_animacao:0, empresa:"", contrato:"", album:"", senha:""};
 
-//Mostrar dados salvos no LocalStorage na página CAPA
-function mostrar_dados_capa() {
-	$("#curso").html(localStorage.getItem("curso"));
-	$("#instituicao").html(localStorage.getItem("instituicao"));
-	$("#cor").html(localStorage.getItem("cor"));
-}
-
-function deuCerto(response2) {
-	alert("chegou na segunda etapa");
-}
-
 //FUNÇÃO COM AJAX PARA ATUALIZAR CADASTRO DO ALBUM NO BANCO DE DADOS E COLOCAR QUE ALBUM JÁ FOI BAIXADO
 function alterar_album_banco() {
-	alert("chegou até aqui");
 	var acao = "atualizar";
 	variaveisGlobais["empresa"] = empresa;
 	variaveisGlobais["contrato"] = contrato;
 	variaveisGlobais["album"] = album;
 	variaveisGlobais["senha"] = senha;
-	alert(load("http://www.porcocapitalista.com.br/minhaformatura/teste4.php?acao=atualizar"));
+	$("#resposta_server").load("demo_test.txt");
+}
+
+//Mostrar dados salvos no LocalStorage na página CAPA
+function mostrar_dados_capa() {
+	$("#curso").html(localStorage.getItem("curso"));
+	$("#instituicao").html(localStorage.getItem("instituicao"));
+	$("#cor").html(localStorage.getItem("cor"));
+	alterar_album_banco(); //Chama função com Ajax que atualiza cadastro do album no banco
 }
 
 //FUNÇÃO PARA ANIMAR PRELOADER DA PÁGINA DE DOWNLOAD
@@ -75,7 +71,6 @@ function download_concluido(qtd_fotos) {
 		document.getElementById("pagina_download").style.display = "none"; //Muda de tela
 		document.getElementById("pagina_capa").style.display = "block";
 		mostrar_dados_capa(); //Monta a próxima tela
-		alterar_album_banco(); //Chama função com Ajax que atualiza cadastro do album no banco
 	}
 	else if (fotosBaixadas == 1) {
 		$("#fotos_baixadas").html("<p style='font-family:tahoma; font-size:9pt; color:#5f5f5f;'>"+fotosBaixadas+" FOTO BAIXADA <span style='font-weight:800'>DE UM TOTAL DE "+qtd_fotos+"</span></p>");
