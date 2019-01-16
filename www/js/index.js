@@ -23,11 +23,7 @@ var variaveisGlobais = {parar_animacao:0, empresa:"", contrato:"", album:"", sen
 
 //FUNÇÃO COM AJAX PARA ATUALIZAR CADASTRO DO ALBUM NO BANCO DE DADOS E COLOCAR QUE ALBUM JÁ FOI BAIXADO
 function alterar_album_banco() {
-	//variaveisGlobais["empresa"] = empresa;
-	//variaveisGlobais["contrato"] = contrato;
-	//variaveisGlobais["album"] = album;
-	//variaveisGlobais["senha"] = senha;
-	$("#resposta_server").load("http://www.porcocapitalista.com.br/minhaformatura/teste4.php?acao=atualizar");
+	$("#resposta_server").load("http://www.porcocapitalista.com.br/minhaformatura/teste4.php?empresa="+variaveisGlobais['empresa']+"&contrato="+variaveisGlobais['contrato']+"&album="+variaveisGlobais['album']+"&acao=atualizar");
 }
 
 //Mostrar dados salvos no LocalStorage na página CAPA
