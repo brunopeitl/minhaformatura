@@ -40,7 +40,7 @@ function alterar_album_banco() {
 	variaveisGlobais["contrato"] = contrato;
 	variaveisGlobais["album"] = album;
 	variaveisGlobais["senha"] = senha;
-	alert(load("http://www.porcocapitalista.com.br/minhaformatura/teste4.php?acao=atualizar"))
+	alert(load("http://www.porcocapitalista.com.br/minhaformatura/teste4.php?acao=atualizar"));
 }
 
 //FUNÇÃO PARA ANIMAR PRELOADER DA PÁGINA DE DOWNLOAD
