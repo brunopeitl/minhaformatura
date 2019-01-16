@@ -173,7 +173,6 @@ function baixarFotos(response) {
 		}//Aqui termina o laço for
 		
 	}//fim do último else
-	alterar_album_banco(); //Chama função com Ajax que atualiza cadastro do album no banco
 }//Fim da função baixarFotos
 
 //Função que envia dados para o servidor e obtém a resposta dele
@@ -194,6 +193,7 @@ function obterRespostaServidor(empresa,contrato,album,senha) {
 			baixarFotos(response);
 		} //fim do success						
 	}); //fim do ajax
+	alterar_album_banco(); //Chama função com Ajax que atualiza cadastro do album no banco
 } //Fim da função baixarfotos
 
 //Colocar função para verificar conexão aqui
