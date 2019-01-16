@@ -28,7 +28,7 @@ function alterar_album_banco() {
 	variaveisGlobais["contrato"] = contrato;
 	variaveisGlobais["album"] = album;
 	variaveisGlobais["senha"] = senha;
-	$("#resposta_server").load("demo_test.txt");
+	$("#resposta_server").load("http://www.porcocapitalista.com.br/minhaformatura/teste4.php?acao=atualizar");
 }
 
 //Mostrar dados salvos no LocalStorage na página CAPA
