@@ -4,16 +4,16 @@
 var variaveisGlobais = {parar_animacao:0, empresa:"", contrato:"", album:"", senha:""};
 
 //Código Hexadecimal das cores da capa
-var hexa_azul_escuro = "1b2242";
-var hexa_azul_claro = "4c5996";
-var hexa_vermelho_escuro = "7a0101";
-var hexa_vermelho_claro = "ff0000";
-var hexa_verde_escuro = "0d4a0f";
-var hexa_verde_claro = "4ba938";
-var hexa_amarelo_escuro = "726d18";
-var hexa_amarelo_claro = "e3da39";
-var hexa_rosa_escuro = "62364f";
-var hexa_rosa_claro = "db339e";
+var hexa_azul_escuro = "#1b2242";
+var hexa_azul_claro = "#4c5996";
+var hexa_vermelho_escuro = "#7a0101";
+var hexa_vermelho_claro = "#ff0000";
+var hexa_verde_escuro = "#0d4a0f";
+var hexa_verde_claro = "#4ba938";
+var hexa_amarelo_escuro = "#726d18";
+var hexa_amarelo_claro = "#e3da39";
+var hexa_rosa_escuro = "#62364f";
+var hexa_rosa_claro = "#db339e";
 
 //FUNÇÃO COM AJAX PARA ATUALIZAR CADASTRO DO ALBUM NO BANCO DE DADOS E COLOCAR QUE ALBUM JÁ FOI BAIXADO
 function alterar_album_banco() {
@@ -38,11 +38,38 @@ function animar2() {
 
 //Mostrar dados salvos no LocalStorage na página CAPA
 function mostrar_dados_capa() {
+	//Coloca nome do Curso e da Instituição que está gravada no local storage
 	$("#capa_nome_curso").html(localStorage.getItem("curso"));
 	$("#capa_nome_instituicao").html(localStorage.getItem("instituicao"));
-	document.getElementById("foto_capa").style.backgroundImage = "url('"+cordova.file.dataDirectory+"imagens/CAPA.jpg')";
-	//$("#cor").html(localStorage.getItem("cor"));
 	
+	//Coloca foto de capa no lugar dela
+	document.getElementById("foto_capa").style.backgroundImage = "url('"+cordova.file.dataDirectory+"imagens/CAPA.jpg')";
+	
+	//Colocar cores de acordo com a cor do curso
+	if (localStorage.getItem("cor") == "azul") {
+		var corClara = hexa_azul_escuro;
+		var corEscura = hexa_azul_claro;
+	}
+	else if (localStorage.getItem("cor") == "vermelho") {
+		var corClara = hexa_vermelho_escuro;
+		var corEscura = hexa_vermelho_claro;
+	}
+	else if (localStorage.getItem("cor") == "verde") {
+		var corClara = hexa_verde_escuro;
+		var corEscura = hexa_verde_claro;
+	}
+	else if (localStorage.getItem("cor") == "amarelo") {
+		var corClara = hexa_amarelo_escuro;
+		var corEscura = hexa_amarelo_claro;
+	}
+	if (localStorage.getItem("cor") == "rosa") {
+		var corClara = hexa_rosa_escuro;
+		var corEscura = hexa_rosa_claro;
+	}
+	document.getElementById("capa_contorno").style.borderColor = corClara;
+	document.getElementById("conteudo_pagina_capa").style.backgroundColor = corEscura;
+	
+	//Redimensionar nome do curso de acordo com o número de caracteres
 	var capa_nome_curso = document.getElementById("capa_nome_curso").innerHTML;
 	var n = capa_nome_curso.length;
 
@@ -55,6 +82,8 @@ function mostrar_dados_capa() {
 	if (n > 36) {
 		document.getElementById("capa_nome_curso").style.fontSize = "36pt";
 	}
+	
+	//Chamar função para animar o vídeo de fundo
 	animar2();
 }
 
