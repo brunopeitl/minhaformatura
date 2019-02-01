@@ -39,7 +39,7 @@ function animar2() {
 		document.getElementById('capa_imagem_fundo_img').src = elenco2[ prox2 ];
 		
 		prox2++;
-		if( prox2 == (elenco2.length) ) prox2 = 0;
+		if( prox2 == (elenco2.length) ) { prox2 = 0; }
 	}
 	window.setInterval( poeImagem2, 40 );
 	}
