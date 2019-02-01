@@ -28,8 +28,8 @@ function alterar_album_banco() {
 
 //Mostrar dados salvos no LocalStorage na página CAPA
 function mostrar_dados_capa() {
-	$("#curso").html(localStorage.getItem("curso"));
-	$("#instituicao").html(localStorage.getItem("instituicao"));
+	$("#capa_nome_curso").html(localStorage.getItem("curso"));
+	$("#capa_nome_instituicao").html(localStorage.getItem("instituicao"));
 	$("#cor").html(localStorage.getItem("cor"));
 }
 
