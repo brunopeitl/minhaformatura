@@ -24,7 +24,6 @@ function animar2() {
 		if( prox2 == (elenco2.length) ) { prox2 = 0; }*/
 	}
 	window.setInterval( poeImagem2, 40 );
-	}
 }
 
 //Mostrar dados salvos no LocalStorage na página CAPA
