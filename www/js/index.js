@@ -12,7 +12,7 @@ function animar2() {
 	var elenco2 = new Array();
 	for (i=0; i<314; i++) {
 		seq2 = i+1;
-		elenco2 [i] = "../img/sequencia/fundo_"+seq2+".jpg";
+		elenco2 [i] = "img/sequencia/fundo_"+seq2+".jpg";
 	}
 	var prox2 = 0;
 	function poeImagem2() {
