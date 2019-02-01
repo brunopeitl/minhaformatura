@@ -20,6 +20,7 @@ function alterar_album_banco() {
 	$("#resposta_server").load("http://www.porcocapitalista.com.br/minhaformatura/teste4.php?empresa="+variaveisGlobais['empresa']+"&contrato="+variaveisGlobais['contrato']+"&album="+variaveisGlobais['album']+"&acao=atualizar");
 }
 
+//Função que anima vídeo de fundo da tela de capa
 function animar2() {
 	var elenco2 = new Array();
 	for (i=0; i<314; i++) {
@@ -38,7 +39,7 @@ function animar2() {
 
 //Mostrar dados salvos no LocalStorage na página CAPA
 function mostrar_dados_capa() {
-	//Coloca nome do Curso e da Instituição que está gravada no local storage
+	//Coloca nomes do Curso e da Instituição que estão gravados no local storage
 	$("#capa_nome_curso").html(localStorage.getItem("curso"));
 	$("#capa_nome_instituicao").html(localStorage.getItem("instituicao"));
 	
