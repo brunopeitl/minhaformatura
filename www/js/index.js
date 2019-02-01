@@ -28,6 +28,7 @@ function animar2() {
 function mostrar_dados_capa() {
 	$("#capa_nome_curso").html(localStorage.getItem("curso"));
 	$("#capa_nome_instituicao").html(localStorage.getItem("instituicao"));
+	document.getElementById("foto_capa").style.backgroundImage = "url('"+cordova.file.dataDirectory+"imagens/CAPA.jpg')";
 	//$("#cor").html(localStorage.getItem("cor"));
 	
 	var capa_nome_curso = document.getElementById("capa_nome_curso").innerHTML;
