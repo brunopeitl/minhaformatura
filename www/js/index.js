@@ -27,7 +27,8 @@ function alterar_album_banco() {
 }
 
 function animar2() {
-	var elenco2 = new Array();
+	alert("tá chegando aqui");
+	/*var elenco2 = new Array();
 	for (i=0; i<314; i++) {
 		seq2 = i+1;
 		elenco2 [i] = "../img/sequencia/fundo_"+seq2+".jpg";
@@ -42,7 +43,7 @@ function animar2() {
 		if( prox2 == (elenco2.length) ) { prox2 = 0; }
 	}
 	window.setInterval( poeImagem2, 40 );
-	}
+	}*/
 }
 
 //Mostrar dados salvos no LocalStorage na página CAPA
