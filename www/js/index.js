@@ -13,18 +13,19 @@ function animar2() {
 	for (i=0; i<314; i++) {
 		seq2 = i+1;
 		elenco2 [i] = "../img/sequencia/fundo_"+seq2+".jpg";
-	}/*
+	}
 	var prox2 = 0;
 	function poeImagem2()
 	{
+		alert("funcao poe imagem funcionando.");
 		//document.getElementById('conteudo_pagina_capa').style.backgroundImage = "url('"+elenco[ prox ]+"')";
-		document.getElementById('capa_imagem_fundo_img').src = elenco2[ prox2 ];
+		/*document.getElementById('capa_imagem_fundo_img').src = elenco2[ prox2 ];
 		
 		prox2++;
-		if( prox2 == (elenco2.length) ) { prox2 = 0; }
+		if( prox2 == (elenco2.length) ) { prox2 = 0; }*/
 	}
 	window.setInterval( poeImagem2, 40 );
-	}*/
+	}
 }
 
 //Mostrar dados salvos no LocalStorage na página CAPA
