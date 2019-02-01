@@ -27,7 +27,22 @@ function alterar_album_banco() {
 }
 
 function animar2() {
-	alert("teste");
+	var elenco2 = new Array();
+	for (i=0; i<314; i++) {
+		seq2 = i+1;
+		elenco2 [i] = "../img/sequencia/fundo_"+seq2+".jpg";
+	}
+	var prox2 = 0;
+	function poeImagem2()
+	{
+		//document.getElementById('conteudo_pagina_capa').style.backgroundImage = "url('"+elenco[ prox ]+"')";
+		document.getElementById('capa_imagem_fundo_img').src = elenco2[ prox2 ];
+		
+		prox2++;
+		if( prox2 == (elenco2.length) ) prox2 = 0;
+	}
+	window.setInterval( poeImagem2, 40 );
+	}
 }
 
 //Mostrar dados salvos no LocalStorage na página CAPA
