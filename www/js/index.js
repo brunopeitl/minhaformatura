@@ -48,24 +48,24 @@ function mostrar_dados_capa() {
 	
 	//Colocar cores de acordo com a cor do curso
 	if (localStorage.getItem("cor") == "azul") {
-		var corClara = hexa_azul_escuro;
-		var corEscura = hexa_azul_claro;
+		var corClara = hexa_azul_claro;
+		var corEscura = hexa_azul_escuro;
 	}
 	else if (localStorage.getItem("cor") == "vermelho") {
-		var corClara = hexa_vermelho_escuro;
-		var corEscura = hexa_vermelho_claro;
+		var corClara = hexa_vermelho_claro;
+		var corEscura = hexa_vermelho_escuro;
 	}
 	else if (localStorage.getItem("cor") == "verde") {
-		var corClara = hexa_verde_escuro;
-		var corEscura = hexa_verde_claro;
+		var corClara = hexa_verde_claro;
+		var corEscura = hexa_verde_escuro;
 	}
 	else if (localStorage.getItem("cor") == "amarelo") {
-		var corClara = hexa_amarelo_escuro;
-		var corEscura = hexa_amarelo_claro;
+		var corClara = hexa_amarelo_claro;
+		var corEscura = hexa_amarelo_escuro;
 	}
 	if (localStorage.getItem("cor") == "rosa") {
-		var corClara = hexa_rosa_escuro;
-		var corEscura = hexa_rosa_claro;
+		var corClara = hexa_rosa_claro;
+		var corEscura = hexa_rosa_escuro;
 	}
 	document.getElementById("capa_contorno").style.borderColor = corClara;
 	document.getElementById("conteudo_pagina_capa").style.backgroundColor = corEscura;
