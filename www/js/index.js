@@ -15,8 +15,7 @@ function animar2() {
 		elenco2 [i] = "../img/sequencia/fundo_"+seq2+".jpg";
 	}
 	var prox2 = 0;
-	function poeImagem2()
-	{
+	function poeImagem2() {
 		alert("funcao poe imagem funcionando. - "+prox2);
 		//document.getElementById('conteudo_pagina_capa').style.backgroundImage = "url('"+elenco[ prox ]+"')";
 		/*document.getElementById('capa_imagem_fundo_img').src = elenco2[ prox2 ];
