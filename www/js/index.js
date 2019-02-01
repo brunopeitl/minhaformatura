@@ -26,11 +26,29 @@ function alterar_album_banco() {
 	$("#resposta_server").load("http://www.porcocapitalista.com.br/minhaformatura/teste4.php?empresa="+variaveisGlobais['empresa']+"&contrato="+variaveisGlobais['contrato']+"&album="+variaveisGlobais['album']+"&acao=atualizar");
 }
 
+function animar2() {
+	alert("teste");
+}
+
 //Mostrar dados salvos no LocalStorage na página CAPA
 function mostrar_dados_capa() {
 	$("#capa_nome_curso").html(localStorage.getItem("curso"));
 	$("#capa_nome_instituicao").html(localStorage.getItem("instituicao"));
 	//$("#cor").html(localStorage.getItem("cor"));
+	
+	var capa_nome_curso = document.getElementById("capa_nome_curso").innerHTML;
+	var n = capa_nome_curso.length;
+
+	if (n <= 16) {
+		document.getElementById("capa_nome_curso").style.fontSize = "57pt"; //48
+	}
+	if (n > 16 && n <= 36) {
+		document.getElementById("capa_nome_curso").style.fontSize = "57pt";
+	}
+	if (n > 36) {
+		document.getElementById("capa_nome_curso").style.fontSize = "36pt";
+	}
+	animar2();
 }
 
 //FUNÇÃO PARA ANIMAR PRELOADER DA PÁGINA DE DOWNLOAD
