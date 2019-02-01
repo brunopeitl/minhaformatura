@@ -17,7 +17,7 @@ function animar2() {
 	var prox2 = 0;
 	function poeImagem2()
 	{
-		alert("funcao poe imagem funcionando.");
+		alert("funcao poe imagem funcionando. - "+prox2);
 		//document.getElementById('conteudo_pagina_capa').style.backgroundImage = "url('"+elenco[ prox ]+"')";
 		/*document.getElementById('capa_imagem_fundo_img').src = elenco2[ prox2 ];
 		
