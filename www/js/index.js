@@ -27,12 +27,12 @@ function alterar_album_banco() {
 }
 
 function animar2() {
-	alert("tá chegando aqui");
-	/*var elenco2 = new Array();
+	var elenco2 = new Array();
 	for (i=0; i<314; i++) {
 		seq2 = i+1;
 		elenco2 [i] = "../img/sequencia/fundo_"+seq2+".jpg";
-	}
+		alert(elenco2 [i]);
+	}/*
 	var prox2 = 0;
 	function poeImagem2()
 	{
