@@ -84,7 +84,7 @@ top: 0;
 }
 #conteudo_pagina_capa { position:absolute; width:100%; height:100%; margin:0; background-color:#1b2242; background-position:0 0; background-size: 100%; background-repeat: no-repeat;  }
 #capa_imagem_fundo_div { position:absolute; z-index:0; }
-#foto_capa { position:relative; width:64%; height:64%; background-color:#000; margin:auto;  margin-top:14px; background-position:center; background-size:100% auto; background-repeat: no-repeat; }
+#foto_capa { position:relative; width:64%; height:64%; background-color:#000; margin:auto;  margin-top:14px; background-position:center; background-size:auto 100%; background-repeat: no-repeat; }
 p#capa_nome_curso { font-family: highDestiny; font-size: 48pt; text-align:center; margin:0 auto; color:white; width:77%; line-height: 70%; margin-top:10px; }
 p#capa_nome_instituicao { font-family: Tahoma; color:white; text-align:center; margin-top:0; }
 ul { display:block; width:75%; margin:auto; margin-top:-5px; }
