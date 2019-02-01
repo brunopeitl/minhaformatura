@@ -30,7 +30,7 @@ function alterar_album_banco() {
 function mostrar_dados_capa() {
 	$("#capa_nome_curso").html(localStorage.getItem("curso"));
 	$("#capa_nome_instituicao").html(localStorage.getItem("instituicao"));
-	$("#cor").html(localStorage.getItem("cor"));
+	//$("#cor").html(localStorage.getItem("cor"));
 }
 
 //FUNÇÃO PARA ANIMAR PRELOADER DA PÁGINA DE DOWNLOAD
