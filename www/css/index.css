@@ -87,6 +87,6 @@ top: 0;
 #foto_capa { position:relative; width:64%; height:70%; background-color:#CCC; margin:auto;  margin-top:14px; }
 p#capa_nome_curso { font-family: highDestiny; font-size: 48pt; text-align:center; margin:0 auto; color:white; width:77%; line-height: 70%; margin-top:5px; }
 p#capa_nome_instituicao { font-family: Tahoma; color:white; text-align:center; margin-top:0; }
-ul { display:block; width:68%; margin:auto; }
+ul { display:block; width:75%; margin:auto; margin-top:-10px; }
 li { display:block; list-style-type:none; float:left; margin:auto; }
 .cap_botoes { color:white; text-decoration:none; font-family:Tahoma; padding-top:7px; padding-bottom:7px; padding-left:20px; padding-right:20px; border:solid 1px white; font-size:10pt; display:block; margin-top:0; margin-left:10px; }
