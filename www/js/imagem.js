@@ -1,27 +1,8 @@
 
-function myTimer() {
-  setTimeout(function(){ 
-     if (continua <= larguraDiv) {
-     	document.getElementById("abertura_contorno_branco").style.width = w+"px";
-        w++;
-        myTimer();
-     }
-     else {
-		if(h < alturaDiv) {
-  			document.getElementById("abertura_contorno_branco").style.height = h+"px";
-  			h++;
-			myTimer();
-    		}
-	     	else {
-			document.getElementById("escrever").style.display = "block";
-			escrever_s_n = 1;
-		}
-     }
-  }, 100);
-}
-
 function programacao() {
-	//Código Hexadecimal das cores da capa
+
+	/*
+//Código Hexadecimal das cores da capa
 	var hexa_azul_escuro = "#1b2242";
 	var hexa_azul_claro = "#4c5996";
 	var hexa_vermelho_escuro = "#7a0101";
@@ -32,17 +13,20 @@ function programacao() {
 	var hexa_amarelo_claro = "#e3da39";
 	var hexa_rosa_escuro = "#62364f";
 	var hexa_rosa_claro = "#db339e";
-	
+	*/
 	//Colocar primeira imagem de fundo
 	var imagemFundo = cordova.file.dataDirectory+"imagens/001.jpg";
 	document.getElementById("abertura_fundo").style.backgroundImage = "url('"+imagemFundo+"')";
-	
-	//Estava aqui antes
-	myTimer();
-	var myVar2 = setInterval(myTimer2 ,20);
-	var alfa = 0;
 
-	//Define variáveis - Nome do Curso e Instituição e quantidades de caracteres
+
+
+
+	var w = 0;
+    var h = 0;
+    var escrever_s_n = 0;
+    var alfa = 0;
+    
+    //Define variáveis - Nome do Curso e Instituição e quantidades de caracteres
 	var palavra_nome_curso = localStorage.getItem("curso");
 	var palavra_instituicao = localStorage.getItem("instituicao");
 	var qtd_char_nome_curso = palavra_nome_curso.length;
@@ -60,81 +44,68 @@ function programacao() {
 	for (var i = 0; i < qtd_char_instituicao; i++) {
 		letras[i+posicao_continuar] = palavra_instituicao.charAt(i);
 	}
-
-	var area_bt_aparecer = 0;
-	var myVar3 = setInterval(myTimer3 ,100);
-	var myVar4 = setInterval(myTimer4 ,20);
+    
+    var area_bt_aparecer = 0;
 	var alfa2 = 0;
 	var l = 0;
-
-	function myTimer3() {
-		if(escrever_s_n == 1) {
-	  		if(l < tamanha_palavra) {
-	  			palavra = palavra+letras[l];
-	  			document.getElementById("escrever").innerHTML = palavra;
-	  			l++;
-	  		}
-			else {
-				//document.getElementById("areaBtComecar").style.display = "block";
-				area_bt_aparecer = 1;
-			}
-		}
-	}
-
-	function myTimer4() {
-		if(area_bt_aparecer == 1) {
-			if(alfa2 < 1) {
+    
+    function myTimer4() {
+	    setTimeout(function(){ 
+        	if(alfa2 < 1) {
 				document.getElementById("areaBtComecar").style.opacity = alfa2;
 				alfa2 = alfa2 + 0.1;
+                myTimer4();
 			}
-		}
+    	}, 20);
+    }
+    
+    function myTimer3() {
+	    setTimeout(function(){ 
+    		if(l < tamanha_palavra) {
+	  				palavra = palavra+letras[l];
+	  				document.getElementById("escrever").innerHTML = palavra;
+	  				l++;
+            	    myTimer3();
+	  		}
+            else {
+            	myTimer4();
+            }
+    	}, 100);
+    }
+    
+	function myTimer() {
+		setTimeout(function(){ 
+        	if(w <= 77) {  document.getElementById("abertura_contorno_branco").style.width = w+"%";
+                w++;
+                myTimer();
+            }
+            else {
+            	if(h <= 90) {
+                	document.getElementById("abertura_contorno_branco").style.height = h+"%";
+                	h++;
+                	myTimer();
+                }
+                else {
+                	document.getElementById("escrever").style.display = "block";
+					myTimer3();
+                }
+            }
+        }, 10);
 	}
-
-	function myTimer2() {
-		if(alfa < 0.9) {
-			document.getElementById("abertura_fundo").style.opacity = alfa;
-			alfa = alfa + 0.01;
-		}
+    
+    function myTimer2() {
+		setTimeout(function(){
+        	if(alfa < 0.9) {
+				document.getElementById("abertura_fundo").style.opacity = alfa;
+				alfa = alfa + 0.01;
+                myTimer2();
+			}
+        }, 20);
 	}
+    
+    myTimer();
+    myTimer2();
 
-//Variáveis para transformar % em nº de pixels
-var windowWidth = window.innerWidth;
-var windowHeight = window.innerHeight;
-var larguraDiv = (windowWidth*77)/100;
-var alturaDiv = (windowHeight*90)/100;
-
-	
-	
-	
-	
-	
-/*	
-function myTimer() {
-	if(w < larguraDiv) {
-  		document.getElementById("abertura_contorno_branco").style.width = w+"px";
-  		w = w+5;
-  	}
-  	else {
-  		if(h < alturaDiv) {
-  			document.getElementById("abertura_contorno_branco").style.height = h+"px";
-  			h = h+5;
-    		}
-	
-		else {
-    			document.getElementById("escrever").style.display = "block";
-			escrever_s_n = 1;
-    		}
-	}
-}
-*/	
-	
-	
-	
-	
-	
-	
-	
-	
 //------------------Fim da função principal	
 }
 
@@ -160,10 +131,6 @@ var app = {
     // Update DOM on a Received Event
     receivedEvent: function(id) {
 	//Aqui vai a minha programação
-	//var myVar = setInterval(myTimer ,3);
-	w = 0;
-	h = 0;
-	escrever_s_n = 0; //Só começa a animação para escrever depois que a animação das bordas se abrindo estiver concluída
 	programacao();
 	/*
 	var camImagem1 = cordova.file.dataDirectory+"imagens/CAPA.jpg";
