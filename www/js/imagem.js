@@ -1,3 +1,22 @@
+function myTimer() {
+  setTimeout(function(){ 
+     if (continua <= larguraDiv) {
+     	document.getElementById("abertura_contorno_branco").style.width = w+"px";
+        w++;
+        myTimer();
+     }
+     else {
+		if(h < alturaDiv) {
+  			document.getElementById("abertura_contorno_branco").style.height = h+"px";
+  			h++;
+    		}
+	     	else {
+			document.getElementById("escrever").style.display = "block";
+			escrever_s_n = 1;
+		}
+     }
+  }, 100);
+}
 
 function programacao() {
 	//Código Hexadecimal das cores da capa
@@ -108,25 +127,7 @@ function myTimer() {
 	}
 }
 */
-function myTimer() {
-  setTimeout(function(){ 
-     if (continua <= larguraDiv) {
-     	document.getElementById("abertura_contorno_branco").style.width = w+"px";
-        w++;
-        myTimer();
-     }
-     else {
-		if(h < alturaDiv) {
-  			document.getElementById("abertura_contorno_branco").style.height = h+"px";
-  			h++;
-    		}
-	     	else {
-			document.getElementById("escrever").style.display = "block";
-			escrever_s_n = 1;
-		}
-     }
-  }, 100);
-}
+
 myTimer();	
 	
 	
