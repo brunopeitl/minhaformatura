@@ -90,7 +90,7 @@ function programacao() {
 					myTimer3();
                 }
             }
-        }, 10);
+        }, 5);
 	}
     
     function myTimer2() {
@@ -100,7 +100,7 @@ function programacao() {
 				alfa = alfa + 0.01;
                 myTimer2();
 			}
-        }, 20);
+        }, 10);
 	}
     
     myTimer();
