@@ -4,7 +4,7 @@ function programacao() {
 	var imagemFundo = cordova.file.dataDirectory+"imagens/001.jpg";
 	document.getElementById("abertura_fundo").style.backgroundImage = "url('"+imagemFundo+"')";
 	
-	var myVar = setInterval(myTimer ,10);
+	var myVar = setInterval(myTimer ,100);
 	var w = 0;
 	var h = 0;
 	var myVar2 = setInterval(myTimer2 ,20);
@@ -36,7 +36,7 @@ function programacao() {
 	var alfa2 = 0;
 	var l = 0;
 
-	function myTimer3() {
+,	function myTimer3() {
 	  if(escrever_s_n == 1) {
 	  	if(l < tamanha_palavra) {
 	  		palavra = palavra+letras[l];
