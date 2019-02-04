@@ -1,32 +1,7 @@
 
 function programacao() {
 
-	/*
-//Código Hexadecimal das cores da capa
-	var hexa_azul_escuro = "#1b2242";
-	var hexa_azul_claro = "#4c5996";
-	var hexa_vermelho_escuro = "#7a0101";
-	var hexa_vermelho_claro = "#ff0000";
-	var hexa_verde_escuro = "#0d4a0f";
-	var hexa_verde_claro = "#4ba938";
-	var hexa_amarelo_escuro = "#726d18";
-	var hexa_amarelo_claro = "#e3da39";
-	var hexa_rosa_escuro = "#62364f";
-	var hexa_rosa_claro = "#db339e";
-	*/
-	//Colocar primeira imagem de fundo
-	var imagemFundo = cordova.file.dataDirectory+"imagens/001.jpg";
-	document.getElementById("abertura_fundo").style.backgroundImage = "url('"+imagemFundo+"')";
-
-
-
-
-	var w = 0;
-    var h = 0;
-    var escrever_s_n = 0;
-    var alfa = 0;
-    
-    //Define variáveis - Nome do Curso e Instituição e quantidades de caracteres
+	//Define variáveis - Nome do Curso e Instituição e quantidades de caracteres
 	var palavra_nome_curso = localStorage.getItem("curso");
 	var palavra_instituicao = localStorage.getItem("instituicao");
 	var qtd_char_nome_curso = palavra_nome_curso.length;
@@ -71,40 +46,9 @@ function programacao() {
             	myTimer4();
             }
     	}, 100);
+        
     }
-    
-	function myTimer() {
-		setTimeout(function(){ 
-        	if(w <= 77) {  document.getElementById("abertura_contorno_branco").style.width = w+"%";
-                w = w+2.5;
-                myTimer();
-            }
-            else {
-            	if(h <= 90) {
-                	document.getElementById("abertura_contorno_branco").style.height = h+"%";
-                	h = h+2.5;
-                	myTimer();
-                }
-                else {
-                	document.getElementById("escrever").style.display = "block";
-					myTimer3();
-                }
-            }
-        }, 5);
-	}
-    
-    function myTimer2() {
-		setTimeout(function(){
-        	if(alfa < 0.9) {
-				document.getElementById("abertura_fundo").style.opacity = alfa;
-				alfa = alfa + 0.01;
-                myTimer2();
-			}
-        }, 10);
-	}
-    
-    myTimer();
-    myTimer2();
+    myTimer3();
 
 //------------------Fim da função principal	
 }
@@ -131,7 +75,35 @@ var app = {
     // Update DOM on a Received Event
     receivedEvent: function(id) {
 	//Aqui vai a minha programação
-	programacao();
+	//Código Hexadecimal das cores da capa
+	var hexa_azul_escuro = "#1b2242";
+	var hexa_azul_claro = "#4c5996";
+	var hexa_vermelho_escuro = "#7a0101";
+	var hexa_vermelho_claro = "#ff0000";
+	var hexa_verde_escuro = "#0d4a0f";
+	var hexa_verde_claro = "#4ba938";
+	var hexa_amarelo_escuro = "#726d18";
+	var hexa_amarelo_claro = "#e3da39";
+	var hexa_rosa_escuro = "#62364f";
+	var hexa_rosa_claro = "#db339e";
+	
+	//Colocar primeira imagem de fundo
+	var imagemFundo = cordova.file.dataDirectory+"imagens/001.jpg";
+	document.getElementById("abertura_fundo").style.backgroundImage = "url('"+imagemFundo+"')";
+    
+	$(document).ready(function(){
+		//animação 01
+    		$("#abertura_contorno_branco").animate({width: '77%'}, function() {
+    			$("#abertura_contorno_branco").animate({height: '90%'}, function() {
+        			programacao();
+        		});
+    		});
+	
+    	//animação 02
+    		$("#abertura_fundo").fadeIn(1500);
+	});
+	    
+	    
 	/*
 	var camImagem1 = cordova.file.dataDirectory+"imagens/CAPA.jpg";
 	var camImagem2 = cordova.file.dataDirectory+"imagens/001.jpg";
