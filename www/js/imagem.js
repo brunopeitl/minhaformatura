@@ -1,5 +1,17 @@
 
 function programacao() {
+	//Código Hexadecimal das cores da capa
+	var hexa_azul_escuro = "#1b2242";
+	var hexa_azul_claro = "#4c5996";
+	var hexa_vermelho_escuro = "#7a0101";
+	var hexa_vermelho_claro = "#ff0000";
+	var hexa_verde_escuro = "#0d4a0f";
+	var hexa_verde_claro = "#4ba938";
+	var hexa_amarelo_escuro = "#726d18";
+	var hexa_amarelo_claro = "#e3da39";
+	var hexa_rosa_escuro = "#62364f";
+	var hexa_rosa_claro = "#db339e";
+	
 	//Colocar primeira imagem de fundo
 	var imagemFundo = cordova.file.dataDirectory+"imagens/001.jpg";
 	document.getElementById("abertura_fundo").style.backgroundImage = "url('"+imagemFundo+"')";
