@@ -16,7 +16,7 @@ function programacao() {
 	var imagemFundo = cordova.file.dataDirectory+"imagens/001.jpg";
 	document.getElementById("abertura_fundo").style.backgroundImage = "url('"+imagemFundo+"')";
 	
-	var myVar = setInterval(myTimer ,10);
+	var myVar = setInterval(myTimer ,0.001);
 	var w = [0];
 	var h = [0];
 	var myVar2 = setInterval(myTimer2 ,20);
@@ -92,7 +92,7 @@ function myTimer() {
   	else {
   		if(h[0] < alturaDiv) {
   			document.getElementById("abertura_contorno_branco").style.height = h[0]+"px";
-  			h[0] = h+1;
+  			h[0] = h[0]+1;
     		}
 	
 		else {
