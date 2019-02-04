@@ -1,5 +1,9 @@
 
 function programacao() {
+	//Colocar primeira imagem de fundo
+	var imagemFundo = cordova.file.dataDirectory+"imagens/001.jpg";
+	
+	
 	var myVar = setInterval(myTimer ,10);
 	var w = 0;
 	var h = 0;
