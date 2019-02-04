@@ -1,10 +1,11 @@
 
 function programacao() {
 	//Colocar primeira imagem de fundo
-	var imagemFundo = cordova.file.dataDirectory+"imagens/001.jpg";
+	/*var imagemFundo = cordova.file.dataDirectory+"imagens/001.jpg";
 	document.getElementById("abertura_fundo").style.backgroundImage = "url('"+imagemFundo+"')";
+	*/
 	
-	var myVar = setInterval(myTimer ,10);
+	var myVar = setInterval(myTimer ,100);
 	var w = 0;
 	var h = 0;
 	var myVar2 = setInterval(myTimer2 ,20);
