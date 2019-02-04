@@ -1,3 +1,4 @@
+
 function myTimer() {
   setTimeout(function(){ 
      if (continua <= larguraDiv) {
@@ -9,6 +10,7 @@ function myTimer() {
 		if(h < alturaDiv) {
   			document.getElementById("abertura_contorno_branco").style.height = h+"px";
   			h++;
+			myTimer();
     		}
 	     	else {
 			document.getElementById("escrever").style.display = "block";
@@ -35,10 +37,7 @@ function programacao() {
 	var imagemFundo = cordova.file.dataDirectory+"imagens/001.jpg";
 	document.getElementById("abertura_fundo").style.backgroundImage = "url('"+imagemFundo+"')";
 	
-	//var myVar = setInterval(myTimer ,3);
-	var w = 0;
-	var h = 0;
-	var escrever_s_n = 0; //Só começa a animação para escrever depois que a animação das bordas se abrindo estiver concluída
+	//Estava aqui antes
 	myTimer();
 	var myVar2 = setInterval(myTimer2 ,20);
 	var alfa = 0;
@@ -161,6 +160,10 @@ var app = {
     // Update DOM on a Received Event
     receivedEvent: function(id) {
 	//Aqui vai a minha programação
+	//var myVar = setInterval(myTimer ,3);
+	w = 0;
+	h = 0;
+	escrever_s_n = 0; //Só começa a animação para escrever depois que a animação das bordas se abrindo estiver concluída
 	programacao();
 	/*
 	var camImagem1 = cordova.file.dataDirectory+"imagens/CAPA.jpg";
