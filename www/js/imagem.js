@@ -70,12 +70,12 @@ function myTimer2() {
 function myTimer() {
   if(w < 77) {
   	document.getElementById("abertura_contorno_branco").style.width = w+"%";
-  	w = w+5;
+  	w = w+2.5;
   }
   else {
   	if(h < 90) {
   		document.getElementById("abertura_contorno_branco").style.height = h+"%";
-  		h = h+5;
+  		h = h+2.5;
     }
     else {
     	document.getElementById("escrever").style.display = "block";
