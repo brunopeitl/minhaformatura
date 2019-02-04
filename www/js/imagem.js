@@ -76,13 +76,13 @@ function programacao() {
 	function myTimer() {
 		setTimeout(function(){ 
         	if(w <= 77) {  document.getElementById("abertura_contorno_branco").style.width = w+"%";
-                w++;
+                w = w+2.5;
                 myTimer();
             }
             else {
             	if(h <= 90) {
                 	document.getElementById("abertura_contorno_branco").style.height = h+"%";
-                	h++;
+                	h = h+2.5;
                 	myTimer();
                 }
                 else {
