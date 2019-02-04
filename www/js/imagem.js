@@ -38,6 +38,8 @@ function programacao() {
 	//var myVar = setInterval(myTimer ,3);
 	var w = 0;
 	var h = 0;
+	var escrever_s_n = 0; //Só começa a animação para escrever depois que a animação das bordas se abrindo estiver concluída
+	myTimer();
 	var myVar2 = setInterval(myTimer2 ,20);
 	var alfa = 0;
 
@@ -60,7 +62,6 @@ function programacao() {
 		letras[i+posicao_continuar] = palavra_instituicao.charAt(i);
 	}
 
-	var escrever_s_n = 0; //Só começa a animação para escrever depois que a animação das bordas se abrindo estiver concluída
 	var area_bt_aparecer = 0;
 	var myVar3 = setInterval(myTimer3 ,100);
 	var myVar4 = setInterval(myTimer4 ,20);
@@ -126,9 +127,7 @@ function myTimer() {
     		}
 	}
 }
-*/
-
-myTimer();	
+*/	
 	
 	
 	
