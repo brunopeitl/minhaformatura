@@ -16,7 +16,7 @@ function programacao() {
 	var imagemFundo = cordova.file.dataDirectory+"imagens/001.jpg";
 	document.getElementById("abertura_fundo").style.backgroundImage = "url('"+imagemFundo+"')";
 	
-	var myVar = setInterval(myTimer ,3);
+	//var myVar = setInterval(myTimer ,3);
 	var w = 0;
 	var h = 0;
 	var myVar2 = setInterval(myTimer2 ,20);
@@ -84,6 +84,12 @@ var windowHeight = window.innerHeight;
 var larguraDiv = (windowWidth*77)/100;
 var alturaDiv = (windowHeight*90)/100;
 
+	
+	
+	
+	
+	
+/*	
 function myTimer() {
 	if(w < larguraDiv) {
   		document.getElementById("abertura_contorno_branco").style.width = w+"px";
@@ -101,6 +107,34 @@ function myTimer() {
     		}
 	}
 }
+*/
+function myTimer() {
+  setTimeout(function(){ 
+     if (continua <= larguraDiv) {
+     	document.getElementById("abertura_contorno_branco").style.width = w+"px";
+        w++;
+        myTimer();
+     }
+     else {
+		if(h < alturaDiv) {
+  			document.getElementById("abertura_contorno_branco").style.height = h+"px";
+  			h++;
+    		}
+	     	else {
+			document.getElementById("escrever").style.display = "block";
+			escrever_s_n = 1;
+		}
+     }
+  }, 100);
+}
+myTimer();	
+	
+	
+	
+	
+	
+	
+	
 	
 //------------------Fim da função principal	
 }
