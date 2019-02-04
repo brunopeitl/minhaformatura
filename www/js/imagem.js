@@ -5,67 +5,66 @@ function programacao() {
 	document.getElementById("abertura_fundo").style.backgroundImage = "url('"+imagemFundo+"')";
 	
 	var myVar = setInterval(myTimer ,5);
-var w = 0;
-var h = 0;
-var myVar2 = setInterval(myTimer2 ,20);
-var alfa = 0;
+	var w = 0;
+	var h = 0;
+	var myVar2 = setInterval(myTimer2 ,20);
+	var alfa = 0;
 
-//Define variáveis - Nome do Curso e Instituição e quantidades de caracteres
-var palavra_nome_curso = "Medicina";
-var palavra_instituicao = "UEM";
-var qtd_char_nome_curso = palavra_nome_curso.length;
-var qtd_char_instituicao = palavra_instituicao.length;
-var tamanha_palavra = 15 + qtd_char_nome_curso + qtd_char_instituicao;
-var palavra = "";
+	//Define variáveis - Nome do Curso e Instituição e quantidades de caracteres
+	var palavra_nome_curso = "Medicina";
+	var palavra_instituicao = "UEM";
+	var qtd_char_nome_curso = palavra_nome_curso.length;
+	var qtd_char_instituicao = palavra_instituicao.length;
+	var tamanha_palavra = 15 + qtd_char_nome_curso + qtd_char_instituicao;
+	var palavra = "";
 
-//Cria Array com caracteres que serão animados
-var letras = ["F","o","r","m","a","t","u","r","a","<br/>","d","e","<br />"];
-for (var i = 0; i < qtd_char_nome_curso+1; i++) {
-    letras[i+13] = palavra_nome_curso.charAt(i);
-}
-letras[qtd_char_nome_curso+14] = "<br /><span>";
-var posicao_continuar = qtd_char_nome_curso+15;
-for (var i = 0; i < qtd_char_instituicao; i++) {
-    letras[i+posicao_continuar] = palavra_instituicao.charAt(i);
-}
-
-var escrever_s_n = 0; //Só começa a animação para escrever depois que a animação das bordas se abrindo estiver concluída
-var area_bt_aparecer = 0;
-var myVar3 = setInterval(myTimer3 ,100);
-var myVar4 = setInterval(myTimer4 ,20);
-var alfa2 = 0;
-var l = 0;
-
-function myTimer3() {
-  if(escrever_s_n == 1) {
-  	if(l < tamanha_palavra) {
-  		palavra = palavra+letras[l];
-  		document.getElementById("escrever").innerHTML = palavra;
-  		l++;
-  	}
-	else {
-		//document.getElementById("areaBtComecar").style.display = "block";
-		area_bt_aparecer = 1;
+	//Cria Array com caracteres que serão animados
+	var letras = ["F","o","r","m","a","t","u","r","a","<br/>","d","e","<br />"];
+	for (var i = 0; i < qtd_char_nome_curso+1; i++) {
+		letras[i+13] = palavra_nome_curso.charAt(i);
 	}
-  }
-}
+	letras[qtd_char_nome_curso+14] = "<br /><span>";
+	var posicao_continuar = qtd_char_nome_curso+15;
+	for (var i = 0; i < qtd_char_instituicao; i++) {
+		letras[i+posicao_continuar] = palavra_instituicao.charAt(i);
+	}
 
-function myTimer4() {
-	if(area_bt_aparecer == 1) {
-		if(alfa2 < 1) {
-			document.getElementById("areaBtComecar").style.opacity = alfa2;
-			alfa2 = alfa2 + 0.1;
+	var escrever_s_n = 0; //Só começa a animação para escrever depois que a animação das bordas se abrindo estiver concluída
+	var area_bt_aparecer = 0;
+	var myVar3 = setInterval(myTimer3 ,100);
+	var myVar4 = setInterval(myTimer4 ,20);
+	var alfa2 = 0;
+	var l = 0;
+
+	function myTimer3() {
+		if(escrever_s_n == 1) {
+	  		if(l < tamanha_palavra) {
+	  			palavra = palavra+letras[l];
+	  			document.getElementById("escrever").innerHTML = palavra;
+	  			l++;
+	  		}
+			else {
+				//document.getElementById("areaBtComecar").style.display = "block";
+				area_bt_aparecer = 1;
+			}
 		}
 	}
-}
 
-
-function myTimer2() {
-	if(alfa < 0.9) {
-		document.getElementById("abertura_fundo").style.opacity = alfa;
-		alfa = alfa + 0.01;
+	function myTimer4() {
+		if(area_bt_aparecer == 1) {
+			if(alfa2 < 1) {
+				document.getElementById("areaBtComecar").style.opacity = alfa2;
+				alfa2 = alfa2 + 0.1;
+			}
+		}
 	}
-}
+
+	function myTimer2() {
+		if(alfa < 0.9) {
+			document.getElementById("abertura_fundo").style.opacity = alfa;
+			alfa = alfa + 0.01;
+		}
+	}
 
 function myTimer() {
   if(w < 77) {
