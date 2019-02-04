@@ -87,12 +87,12 @@ var alturaDiv = (windowHeight*90)/100;
 function myTimer() {
 	if(w < larguraDiv) {
   		document.getElementById("abertura_contorno_branco").style.width = w+"px";
-  		w = w++;
+  		w++;
   	}
   	else {
   		if(h < alturaDiv) {
   			document.getElementById("abertura_contorno_branco").style.height = h+"px";
-  			h = h++;
+  			h++;
     		}
 	
 		else {
