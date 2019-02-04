@@ -11,8 +11,8 @@ function programacao() {
 	var alfa = 0;
 
 	//Define variáveis - Nome do Curso e Instituição e quantidades de caracteres
-	var palavra_nome_curso = "Medicina";
-	var palavra_instituicao = "UEM";
+	var palavra_nome_curso = localStorage.getItem("curso");
+	var palavra_instituicao = localStorage.getItem("instituicao");
 	var qtd_char_nome_curso = palavra_nome_curso.length;
 	var qtd_char_instituicao = palavra_instituicao.length;
 	var tamanha_palavra = 15 + qtd_char_nome_curso + qtd_char_instituicao;
