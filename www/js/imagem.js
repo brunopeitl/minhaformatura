@@ -74,7 +74,8 @@ var app = {
     // Update DOM on a Received Event
     receivedEvent: function(id) {
 	//Aqui vai a minha programação
-	//Código Hexadecimal das cores da capa
+	    
+	//Lista Código Hexadecimal das cores da capa
 	var hexa_azul_escuro = "#1b2242";
 	var hexa_azul_claro = "#4c5996";
 	var hexa_vermelho_escuro = "#7a0101";
@@ -86,6 +87,12 @@ var app = {
 	var hexa_rosa_escuro = "#62364f";
 	var hexa_rosa_claro = "#db339e";
 	
+	//Insere código hexadecimal de acordo com informação salva no LocalStorage
+	document.getElementById("photo_blur").style.backgroundColor = hexa_azul_escuro;
+	document.getElementById("areaBtComecar").style.backgroundColor = hexa_azul_escuro;
+	document.getElementById("abertura_contorno_branco").style.borderColor = hexa_azul_claro;
+
+	    
 	//Colocar primeira imagem de fundo
 	var imagemFundo = cordova.file.dataDirectory+"imagens/001.jpg";
 	document.getElementById("abertura_fundo").style.backgroundImage = "url('"+imagemFundo+"')";
