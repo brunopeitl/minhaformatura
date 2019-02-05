@@ -22,6 +22,17 @@
 				baixado = "nao";
 			}
 		}
+		
+		function dialogAlert() {
+		   var message = "Não há Clipe disponível para esse contrato";
+		   var title = "Clipe Indisponível";
+		   var buttonName = "OK";
+		   navigator.notification.alert(message, alertCallback, title, buttonName);
+
+		   function alertCallback() {
+		      console.log("Alert is Dismissed!");
+		   }
+		}
 	</script>
 	
 </head>
