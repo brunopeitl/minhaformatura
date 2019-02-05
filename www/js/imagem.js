@@ -20,35 +20,34 @@ function programacao() {
 		letras[i+posicao_continuar] = palavra_instituicao.charAt(i);
 	}
     
-    var area_bt_aparecer = 0;
+    	var area_bt_aparecer = 0;
 	var alfa2 = 0;
 	var l = 0;
-    
-    function myTimer4() {
-	    setTimeout(function(){ 
-        	if(alfa2 < 1) {
+    	
+	function myTimer4() {
+		setTimeout(function(){ 
+        		if(alfa2 < 1) {
 				document.getElementById("areaBtComecar").style.opacity = alfa2;
 				alfa2 = alfa2 + 0.1;
-                myTimer4();
+                		myTimer4();
 			}
-    	}, 20);
-    }
+    		}, 20);
+    	}
     
-    function myTimer3() {
-	    setTimeout(function(){ 
-    		if(l < tamanha_palavra) {
-	  				palavra = palavra+letras[l];
-	  				document.getElementById("escrever").innerHTML = palavra;
-	  				l++;
-            	    myTimer3();
+	function myTimer3() {
+		setTimeout(function(){ 
+    			if(l < tamanha_palavra) {
+	  			palavra = palavra+letras[l];
+	  			document.getElementById("escrever").innerHTML = palavra;
+	  			l++;
+            	    		myTimer3();
 	  		}
-            else {
-            	myTimer4();
-            }
-    	}, 100);
-        
-    }
-    myTimer3();
+            		else {
+            			myTimer4();
+            		}
+    		}, 100);
+    	}
+    	myTimer3();
 
 //------------------Fim da função principal	
 }
