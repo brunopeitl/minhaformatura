@@ -88,10 +88,32 @@ var app = {
 	var hexa_rosa_claro = "#db339e";
 	
 	//Insere código hexadecimal de acordo com informação salva no LocalStorage
-	document.getElementById("photo_blur").style.backgroundColor = hexa_azul_escuro;
-	document.getElementById("areaBtComecar").style.backgroundColor = hexa_azul_escuro;
-	document.getElementById("abertura_contorno_branco").style.borderColor = hexa_azul_claro;
-
+	var cor = localStorage.getItem("cor");
+	if (cor == "azul") {
+		document.getElementById("photo_blur").style.backgroundColor = hexa_azul_escuro;
+		document.getElementById("areaBtComecar").style.backgroundColor = hexa_azul_escuro;
+		document.getElementById("abertura_contorno_branco").style.borderColor = hexa_azul_claro;
+	}
+	else if (cor == "vermelho") {
+		document.getElementById("photo_blur").style.backgroundColor = hexa_vermelho_escuro;
+		document.getElementById("areaBtComecar").style.backgroundColor = hexa_vermelho_escuro;
+		document.getElementById("abertura_contorno_branco").style.borderColor = hexa_vermelho_claro;
+	}
+	else if (cor == "verde") {
+		document.getElementById("photo_blur").style.backgroundColor = hexa_verde_escuro;
+		document.getElementById("areaBtComecar").style.backgroundColor = hexa_verde_escuro;
+		document.getElementById("abertura_contorno_branco").style.borderColor = hexa_verde_claro;
+	}
+	else if (cor == "amarelo") {
+		document.getElementById("photo_blur").style.backgroundColor = hexa_amarelo_escuro;
+		document.getElementById("areaBtComecar").style.backgroundColor = hexa_amarelo_escuro;
+		document.getElementById("abertura_contorno_branco").style.borderColor = hexa_amarelo_claro;
+	}
+	else {
+		document.getElementById("photo_blur").style.backgroundColor = hexa_rosa_escuro;
+		document.getElementById("areaBtComecar").style.backgroundColor = hexa_rosa_escuro;
+		document.getElementById("abertura_contorno_branco").style.borderColor = hexa_rosa_claro;
+	}
 	    
 	//Colocar primeira imagem de fundo
 	var imagemFundo = cordova.file.dataDirectory+"imagens/001.jpg";
