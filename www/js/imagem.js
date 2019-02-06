@@ -1,3 +1,29 @@
+//Cria Array onde vão ficar as fotos
+listaFotos = new Array("");
+
+//Ler pasta onde estão as fotos baixadas e listar os arquivos contidos nela, inserindo na Array
+	function listDir(path){
+		window.resolveLocalFileSystemURL(path,
+			function (fileSystem) {
+      				var reader = fileSystem.createReader();
+      				reader.readEntries(
+        				function (entries) {
+						var i;
+						for (i=0; i<entries.length; i++) {
+							listaFotos.push(entries[i].name);
+							alert(listaFotos[i]);
+							//listaFotos[i] = entries[i].name;
+    						}
+        				},
+        				function (err) {
+          					console.log(err);
+        				}
+      				);
+    				}, function (err) {
+      					console.log(err);
+    				}
+  		);
+	}
 
 function programacao() {
 
@@ -76,39 +102,12 @@ var app = {
 	    
 	//Aqui vai a minha programação
 	
-	//Cria Array onde vão ficar as fotos
-	listaFotos = new Array("");
-	
-	//Ler pasta onde estão as fotos baixadas e listar os arquivos contidos nela, inserindo na Array
-	function listDir(path){
-		window.resolveLocalFileSystemURL(path,
-			function (fileSystem) {
-      				var reader = fileSystem.createReader();
-      				reader.readEntries(
-        				function (entries) {
-						var i;
-						for (i=0; i<entries.length; i++) {
-							listaFotos.push(entries[i].name);
-							alert(listaFotos[i]);
-							//listaFotos[i] = entries[i].name;
-    						}
-        				},
-        				function (err) {
-          					console.log(err);
-        				}
-      				);
-    				}, function (err) {
-      					console.log(err);
-    				}
-  		);
-	}
-	//Caminho da pasta na memória interna do aparelho a ser lida
+	//Chama a função passando o caminho da pasta na memória interna do aparelho a ser lida
 	listDir(cordova.file.dataDirectory + "imagens/");
 	    
 	//Teste para ordenar elementos do Array
 	//listaFotos.sort();
-	alert(listaFotos);
-	//alert (listaFotos[0] + " - " + listaFotos[1] + " - " + listaFotos[2]);
+	alert (listaFotos[0] + " - " + listaFotos[1] + " - " + listaFotos[2]);
 	    
 	//Colocar primeira imagem de fundo
 	var imagemFundo = cordova.file.dataDirectory+"imagens/001.jpg";
