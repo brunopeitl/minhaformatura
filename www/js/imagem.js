@@ -132,7 +132,7 @@ var app = {
       				var reader = fileSystem.createReader();
       				reader.readEntries(
         				function (entries) {
-          					alert(entries.name);//console.log(entries);
+          					alert(entries[0].name);//console.log(entries);
         				},
         				function (err) {
           					console.log(err);
