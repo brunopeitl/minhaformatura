@@ -89,6 +89,7 @@ var app = {
 						var i;
 						for (i=0; i<entries.length; i++) {
 							listaFotos.push(entries[i].name);
+							alert(listaFotos[i]);
 							//listaFotos[i] = entries[i].name;
     						}
         				},
@@ -106,7 +107,7 @@ var app = {
 	    
 	//Teste para ordenar elementos do Array
 	//listaFotos.sort();
-	alert(listaFotos[2]);
+	alert(listaFotos);
 	//alert (listaFotos[0] + " - " + listaFotos[1] + " - " + listaFotos[2]);
 	    
 	//Colocar primeira imagem de fundo
