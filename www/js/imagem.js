@@ -104,6 +104,10 @@ var app = {
 	//Caminho da pasta na memória interna do aparelho a ser lida
 	listDir(cordova.file.dataDirectory + "imagens/");
 	    
+	//Teste para ordenar elementos do Array
+	var fotosOrdem = listaFotos.sort();
+	alert (fotosOrdem[0] + " - " + fotosOrdem[1] + " - " + fotosOrdem[2]);
+	    
 	//Colocar primeira imagem de fundo
 	var imagemFundo = cordova.file.dataDirectory+"imagens/001.jpg";
 	document.getElementById("abertura_fundo").style.backgroundImage = "url('"+imagemFundo+"')";	    
