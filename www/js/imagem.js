@@ -89,7 +89,7 @@ var app = {
 						var i;
 						for (i=0; i<entries.length; i++) {
 							listaFotos[i] = entries[i].name;
-        						//alert(entries[i].name);
+        						alert(listaFotos[i]);
     						}
         				},
         				function (err) {
@@ -106,7 +106,7 @@ var app = {
 	    
 	//Teste para ordenar elementos do Array
 	//listaFotos.sort();
-	alert (listaFotos[0] + " - " + listaFotos[1] + " - " + listaFotos[2]);
+	//alert (listaFotos[0] + " - " + listaFotos[1] + " - " + listaFotos[2]);
 	    
 	//Colocar primeira imagem de fundo
 	var imagemFundo = cordova.file.dataDirectory+"imagens/001.jpg";
