@@ -89,7 +89,6 @@ var app = {
 						var i;
 						for (i=0; i<entries.length; i++) {
 							listaFotos[i] = entries[i].name;
-        						alert(listaFotos[i]);
     						}
         				},
         				function (err) {
