@@ -118,6 +118,40 @@ var app = {
 	//Colocar primeira imagem de fundo
 	var imagemFundo = cordova.file.dataDirectory+"imagens/001.jpg";
 	document.getElementById("abertura_fundo").style.backgroundImage = "url('"+imagemFundo+"')";
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	//Código a ser testado aqui
+	function listDir(path){
+		window.resolveLocalFileSystemURL(path,
+			function (fileSystem) {
+      				var reader = fileSystem.createReader();
+      				reader.readEntries(
+        				function (entries) {
+          					alert(entries);//console.log(entries);
+        				},
+        				function (err) {
+          					console.log(err);
+        				}
+      				);
+    				}, function (err) {
+      					console.log(err);
+    				}
+  		);
+	}
+	//example: list of imagens/ folder in cordova/ionic app.
+	listDir(cordova.file.dataDirectory + "imagens/");
+	    
+	    
+	    
+	    
+	    
+	    
+	    
     
 	$(document).ready(function(){
 		//animação 01
@@ -127,7 +161,7 @@ var app = {
         		});
     		});
 	
-    	//animação 02
+    		//animação 02
     		$("#abertura_fundo").fadeIn(1500);
 	});
 	    
