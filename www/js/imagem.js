@@ -75,8 +75,11 @@ var app = {
     receivedEvent: function(id) {
 	    
 	//Aqui vai a minha programação
-	    
-	//Ler pasta onde estão as fotos baixadas e listar os arquivos contidos nela
+	
+	//Cria Array onde vão ficar as fotos
+	var listaFotos = [];
+	
+	//Ler pasta onde estão as fotos baixadas e listar os arquivos contidos nela, inserindo na Array
 	function listDir(path){
 		window.resolveLocalFileSystemURL(path,
 			function (fileSystem) {
@@ -85,9 +88,9 @@ var app = {
         				function (entries) {
 						var i;
 						for (i=0; i<entries.length; i++) {
-        						alert(entries[i].name);
+							listaFotos[i] = entries[i].name;
+        						//alert(entries[i].name);
     						}
-          					//alert(entries[0].name);//console.log(entries);
         				},
         				function (err) {
           					console.log(err);
@@ -98,11 +101,12 @@ var app = {
     				}
   		);
 	}
-	//example: list of imagens/ folder in cordova/ionic app.
+	//Caminho da pasta na memória interna do aparelho a ser lida
 	listDir(cordova.file.dataDirectory + "imagens/");
 	    
-	    
-	    
+	//Colocar primeira imagem de fundo
+	var imagemFundo = cordova.file.dataDirectory+"imagens/001.jpg";
+	document.getElementById("abertura_fundo").style.backgroundImage = "url('"+imagemFundo+"')";	    
 	    
 	    
 	//Lista Código Hexadecimal das cores da capa
@@ -144,11 +148,8 @@ var app = {
 		document.getElementById("areaBtComecar").style.backgroundColor = hexa_rosa_escuro;
 		document.getElementById("abertura_contorno_branco").style.borderColor = hexa_rosa_claro;
 	}
-	    
-	//Colocar primeira imagem de fundo
-	var imagemFundo = cordova.file.dataDirectory+"imagens/001.jpg";
-	document.getElementById("abertura_fundo").style.backgroundImage = "url('"+imagemFundo+"')";
-	    
+	
+	//Primeiras Animações: Aparece o fundo com a foto e aparece contorno    
 	$(document).ready(function(){
 		//animação 01
     		$("#abertura_contorno_branco").animate({width: '77%'}, function() {
@@ -160,7 +161,8 @@ var app = {
     		//animação 02
     		$("#abertura_fundo").fadeIn(1500);
 	});
-	    
+
+//FIM DA MINHA PROGRAMAÇÃO
 //----------------------------------------------------
 	    
 	    
