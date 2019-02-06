@@ -106,6 +106,7 @@ var app = {
 	    
 	//Teste para ordenar elementos do Array
 	//listaFotos.sort();
+	alert(listaFotos[2]);
 	//alert (listaFotos[0] + " - " + listaFotos[1] + " - " + listaFotos[2]);
 	    
 	//Colocar primeira imagem de fundo
