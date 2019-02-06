@@ -73,7 +73,37 @@ var app = {
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
+	    
 	//Aqui vai a minha programação
+	    
+	//Ler pasta onde estão as fotos baixadas e listar os arquivos contidos nela
+	function listDir(path){
+		window.resolveLocalFileSystemURL(path,
+			function (fileSystem) {
+      				var reader = fileSystem.createReader();
+      				reader.readEntries(
+        				function (entries) {
+						var i;
+						for (i=0; i<entries.length; i++) {
+        						alert(entries[i].name);
+    						}
+          					//alert(entries[0].name);//console.log(entries);
+        				},
+        				function (err) {
+          					console.log(err);
+        				}
+      				);
+    				}, function (err) {
+      					console.log(err);
+    				}
+  		);
+	}
+	//example: list of imagens/ folder in cordova/ionic app.
+	listDir(cordova.file.dataDirectory + "imagens/");
+	    
+	    
+	    
+	    
 	    
 	//Lista Código Hexadecimal das cores da capa
 	var hexa_azul_escuro = "#1b2242";
@@ -119,40 +149,6 @@ var app = {
 	var imagemFundo = cordova.file.dataDirectory+"imagens/001.jpg";
 	document.getElementById("abertura_fundo").style.backgroundImage = "url('"+imagemFundo+"')";
 	    
-	    
-	    
-	    
-	    
-	    
-	    
-	//Código a ser testado aqui
-	function listDir(path){
-		window.resolveLocalFileSystemURL(path,
-			function (fileSystem) {
-      				var reader = fileSystem.createReader();
-      				reader.readEntries(
-        				function (entries) {
-          					alert(entries[0].name);//console.log(entries);
-        				},
-        				function (err) {
-          					console.log(err);
-        				}
-      				);
-    				}, function (err) {
-      					console.log(err);
-    				}
-  		);
-	}
-	//example: list of imagens/ folder in cordova/ionic app.
-	listDir(cordova.file.dataDirectory + "imagens/");
-	    
-	    
-	    
-	    
-	    
-	    
-	    
-    
 	$(document).ready(function(){
 		//animação 01
     		$("#abertura_contorno_branco").animate({width: '77%'}, function() {
