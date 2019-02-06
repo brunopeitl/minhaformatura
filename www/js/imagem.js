@@ -1,5 +1,5 @@
 //Cria Array onde vão ficar as fotos
-listaFotos = new Array("");
+listaFotos = new Array();
 
 //Ler pasta onde estão as fotos baixadas e listar os arquivos contidos nela, inserindo na Array
 	function listDir(path){
