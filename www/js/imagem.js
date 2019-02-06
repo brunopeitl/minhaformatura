@@ -105,8 +105,8 @@ var app = {
 	listDir(cordova.file.dataDirectory + "imagens/");
 	    
 	//Teste para ordenar elementos do Array
-	var fotosOrdem = listaFotos.sort();
-	alert (fotosOrdem[0] + " - " + fotosOrdem[1] + " - " + fotosOrdem[2]);
+	listaFotos.sort();
+	alert (listaFotos[0] + " - " + listaFotos[1] + " - " + listaFotos[2]);
 	    
 	//Colocar primeira imagem de fundo
 	var imagemFundo = cordova.file.dataDirectory+"imagens/001.jpg";
