@@ -78,6 +78,19 @@ function programacao() {
 //------------------Fim da função principal	
 }
 
+function animacoes() {
+	//Primeiras Animações: Aparece o fundo com a foto e aparece contorno    
+	//animação 01
+    	$("#abertura_contorno_branco").animate({width: '77%'}, function() {
+    		$("#abertura_contorno_branco").animate({height: '90%'}, function() {
+        		programacao();
+        	});
+    	});
+	
+    	//animação 02
+    	$("#abertura_fundo").fadeIn(1500);
+}
+
 function geral() {
 	//Chama a função passando o caminho da pasta na memória interna do aparelho a ser lida
 	listDir(cordova.file.dataDirectory + "imagens/");
@@ -131,16 +144,7 @@ function geral() {
 		document.getElementById("abertura_contorno_branco").style.borderColor = hexa_rosa_claro;
 	}
 	
-	//Primeiras Animações: Aparece o fundo com a foto e aparece contorno    
-	//animação 01
-    	$("#abertura_contorno_branco").animate({width: '77%'}, function() {
-    		$("#abertura_contorno_branco").animate({height: '90%'}, function() {
-        		programacao();
-        	});
-    	});
-	
-    	//animação 02
-    	$("#abertura_fundo").fadeIn(1500);
+	animacoes();
 	
 //----------------- FIM DA FUNÇÃO GERAL
 }
