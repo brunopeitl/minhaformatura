@@ -1,3 +1,4 @@
+/*
 function programacao() {
 
 	//Define variáveis - Nome do Curso e Instituição e quantidades de caracteres
@@ -63,7 +64,7 @@ function animacoes() {
     	//animação 02
     	$("#abertura_fundo").fadeIn(1500);
 }
-
+*/
 //Cria Array onde vão ficar as fotos
 listaFotos = new Array();
 
