@@ -138,6 +138,9 @@ function insereFotosArray() {
 						for (i=0; i<entries.length; i++) {
 							listaFotos.push(entries[i].name);
 							alert(listaFotos[i]);
+							if(i == entries.length - 1) {
+								alert(listaFotos[0] + " - " + listaFotos[1] + " - " + listaFotos[2]);
+							}
     						}
         				},
         				function (err) {
