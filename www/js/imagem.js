@@ -78,30 +78,7 @@ function programacao() {
 //------------------Fim da função principal	
 }
 
-var app = {
-    // Application Constructor
-    initialize: function() {
-        this.bindEvents();
-    },
-    // Bind Event Listeners
-    //
-    // Bind any events that are required on startup. Common events are:
-    // 'load', 'deviceready', 'offline', and 'online'.
-    bindEvents: function() {
-        document.addEventListener('deviceready', this.onDeviceReady, false);
-    },
-    // deviceready Event Handler
-    //
-    // The scope of 'this' is the event. In order to call the 'receivedEvent'
-    // function, we must explicitly call 'app.receivedEvent(...);'
-    onDeviceReady: function() {
-        app.receivedEvent('deviceready');
-    },
-    // Update DOM on a Received Event
-    receivedEvent: function(id) {
-	    
-	//Aqui vai a minha programação
-	
+function geral() {
 	//Chama a função passando o caminho da pasta na memória interna do aparelho a ser lida
 	listDir(cordova.file.dataDirectory + "imagens/");
 	    
@@ -155,17 +132,45 @@ var app = {
 	}
 	
 	//Primeiras Animações: Aparece o fundo com a foto e aparece contorno    
-	//$(document).ready(function(){
-		//animação 01
-    		$("#abertura_contorno_branco").animate({width: '77%'}, function() {
-    			$("#abertura_contorno_branco").animate({height: '90%'}, function() {
-        			programacao();
-        		});
-    		});
+	//animação 01
+    	$("#abertura_contorno_branco").animate({width: '77%'}, function() {
+    		$("#abertura_contorno_branco").animate({height: '90%'}, function() {
+        		programacao();
+        	});
+    	});
 	
-    		//animação 02
-    		$("#abertura_fundo").fadeIn(1500);
-	//});
+    	//animação 02
+    	$("#abertura_fundo").fadeIn(1500);
+	
+//----------------- FIM DA FUNÇÃO GERAL
+}
+
+var app = {
+    // Application Constructor
+    initialize: function() {
+        this.bindEvents();
+    },
+    // Bind Event Listeners
+    //
+    // Bind any events that are required on startup. Common events are:
+    // 'load', 'deviceready', 'offline', and 'online'.
+    bindEvents: function() {
+        document.addEventListener('deviceready', this.onDeviceReady, false);
+    },
+    // deviceready Event Handler
+    //
+    // The scope of 'this' is the event. In order to call the 'receivedEvent'
+    // function, we must explicitly call 'app.receivedEvent(...);'
+    onDeviceReady: function() {
+        app.receivedEvent('deviceready');
+    },
+    // Update DOM on a Received Event
+    receivedEvent: function(id) {
+	    
+	//Aqui vai a minha programação
+	geral();
+	
+
 
 //FIM DA MINHA PROGRAMAÇÃO
 //----------------------------------------------------
