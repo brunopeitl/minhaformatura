@@ -70,11 +70,11 @@ function animacoes() {
 //Primeiros comandos
 function geral() {
 	
-	//Teste para ordenar elementos do Array
+	//Colocar os elementos do Array na ordem correta
 	listaFotos.sort();
 	    
 	//Colocar primeira imagem de fundo
-	var imagemFundo = cordova.file.dataDirectory+"imagens/001.jpg";
+	var imagemFundo = cordova.file.dataDirectory+"imagens/"+listaFotos[0];
 	document.getElementById("abertura_fundo").style.backgroundImage = "url('"+imagemFundo+"')";	    
 	    
 	    
