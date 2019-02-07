@@ -155,7 +155,7 @@ var app = {
 	}
 	
 	//Primeiras Animações: Aparece o fundo com a foto e aparece contorno    
-	$(document).ready(function(){
+	//$(document).ready(function(){
 		//animação 01
     		$("#abertura_contorno_branco").animate({width: '77%'}, function() {
     			$("#abertura_contorno_branco").animate({height: '90%'}, function() {
@@ -165,7 +165,7 @@ var app = {
 	
     		//animação 02
     		$("#abertura_fundo").fadeIn(1500);
-	});
+	//});
 
 //FIM DA MINHA PROGRAMAÇÃO
 //----------------------------------------------------
