@@ -1,6 +1,10 @@
 //Cria Array onde vão ficar as fotos
 listaFotos = new Array();
 
+function btComecar() {
+	alert("Testando botão");
+}
+
 function programacao() {
 
 	//Define variáveis - Nome do Curso e Instituição e quantidades de caracteres
