@@ -1,30 +1,3 @@
-//Cria Array onde vão ficar as fotos
-listaFotos = new Array();
-
-//Ler pasta onde estão as fotos baixadas e listar os arquivos contidos nela, inserindo na Array
-	function listDir(path){
-		window.resolveLocalFileSystemURL(path,
-			function (fileSystem) {
-      				var reader = fileSystem.createReader();
-      				reader.readEntries(
-        				function (entries) {
-						var i;
-						for (i=0; i<entries.length; i++) {
-							listaFotos.push(entries[i].name);
-							alert(listaFotos[i]);
-							//listaFotos[i] = entries[i].name;
-    						}
-        				},
-        				function (err) {
-          					console.log(err);
-        				}
-      				);
-    				}, function (err) {
-      					console.log(err);
-    				}
-  		);
-	}
-
 function programacao() {
 
 	//Define variáveis - Nome do Curso e Instituição e quantidades de caracteres
@@ -91,6 +64,34 @@ function animacoes() {
     	$("#abertura_fundo").fadeIn(1500);
 }
 
+//Cria Array onde vão ficar as fotos
+listaFotos = new Array();
+
+//Ler pasta onde estão as fotos baixadas e listar os arquivos contidos nela, inserindo na Array
+	function listDir(path){
+		window.resolveLocalFileSystemURL(path,
+			function (fileSystem) {
+      				var reader = fileSystem.createReader();
+      				reader.readEntries(
+        				function (entries) {
+						var i;
+						for (i=0; i<entries.length; i++) {
+							listaFotos.push(entries[i].name);
+							alert(listaFotos[i]);
+							//listaFotos[i] = entries[i].name;
+    						}
+        				},
+        				function (err) {
+          					console.log(err);
+        				}
+      				);
+    				}, function (err) {
+      					console.log(err);
+    				}
+  		);
+	}
+
+//Primeiros comandos
 function geral() {
 	//Chama a função passando o caminho da pasta na memória interna do aparelho a ser lida
 	listDir(cordova.file.dataDirectory + "imagens/");
