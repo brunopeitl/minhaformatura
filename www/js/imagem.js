@@ -48,7 +48,7 @@ function programacao() {
     	}
     	myTimer3();
 
-//------------------Fim da função principal	
+//------------------Fim da função programacao	
 }
 
 function animacoes() {
