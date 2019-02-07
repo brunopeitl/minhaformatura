@@ -73,7 +73,7 @@ function animacoes() {
 function geral() {
 	
 	//Teste para ordenar elementos do Array
-	//listaFotos.sort();
+	listaFotos.sort();
 	alert (listaFotos[0] + " - " + listaFotos[1] + " - " + listaFotos[2]);
 	    
 	//Colocar primeira imagem de fundo
@@ -149,10 +149,10 @@ function insereFotosArray() {
       					console.log(err);
     				}
   		);
+		geral();
 	}
 	//Chama a função passando o caminho da pasta na memória interna do aparelho a ser lida
 	listDir(cordova.file.dataDirectory + "imagens/");
-	geral();
 }
 
 var app = {
