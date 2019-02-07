@@ -1,7 +1,6 @@
 //Cria Array onde vão ficar as fotos
 listaFotos = new Array();
 
-/*
 function programacao() {
 
 	//Define variáveis - Nome do Curso e Instituição e quantidades de caracteres
@@ -66,7 +65,7 @@ function animacoes() {
 	
     	//animação 02
     	$("#abertura_fundo").fadeIn(1500);
-}*/
+}
 
 //Primeiros comandos
 function geral() {
@@ -136,7 +135,6 @@ function insereFotosArray() {
 						var i;
 						for (i=0; i<entries.length; i++) {
 							listaFotos.push(entries[i].name);
-							alert(listaFotos[i]);
 							if(i == entries.length - 1) {
 								geral();
 							}
