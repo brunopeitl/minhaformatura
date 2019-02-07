@@ -66,7 +66,7 @@ function animacoes() {
 	
     	//animação 02
     	$("#abertura_fundo").fadeIn(1500);
-}
+}*/
 
 //Primeiros comandos
 function geral() {
@@ -124,7 +124,6 @@ function geral() {
 	
 //----------------- FIM DA FUNÇÃO GERAL
 }
-*/
 
 //Ler pasta onde estão as fotos baixadas e listar os arquivos contidos nela, inserindo na Array
 function insereFotosArray() {
@@ -139,7 +138,7 @@ function insereFotosArray() {
 							listaFotos.push(entries[i].name);
 							alert(listaFotos[i]);
 							if(i == entries.length - 1) {
-								alert(listaFotos[0] + " - " + listaFotos[1] + " - " + listaFotos[2]);
+								geral();
 							}
     						}
         				},
@@ -154,7 +153,6 @@ function insereFotosArray() {
 	}
 	//Chama a função passando o caminho da pasta na memória interna do aparelho a ser lida
 	listDir(cordova.file.dataDirectory + "imagens/");
-	//geral();
 }
 
 var app = {
