@@ -6,13 +6,12 @@ function btComecar() {
 	$("#abertura_contorno_branco").fadeOut(1500, function(){ 
 		//alert("Chegou até aqui.");
 		//Animação para desembaçar o fundo
-		var myVar5 = setInterval(myTimer5 ,100);
+		var myVar5 = setInterval(myTimer5 ,50);
 		var d5 = 20;
 		function myTimer5() {
   			if(d5 >= 0) {
   				document.getElementById("abertura_fundo").style.filter = "blur("+d5+"px)";
-  				//document.getElementById("demo").innerHTML = d;
-  				d5--;
+  				d5 = d5 - 0.5;
   			}
 		}
 
