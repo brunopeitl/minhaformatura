@@ -6,7 +6,7 @@ function btComecar() {
 	$("#abertura_contorno_branco").fadeOut(1500, function(){ 
 		//alert("Chegou até aqui.");
 		//Animação para desembaçar o fundo
-		var myVar5 = setInterval(myTimer5 ,50);
+		var myVar5 = setInterval(myTimer5 ,3);
 		var d5 = 20;
 		function myTimer5() {
   			if(d5 >= 0) {
