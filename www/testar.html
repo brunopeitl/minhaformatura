@@ -25,9 +25,15 @@ ul { list-style-type:none; margin:0; padding:0; }
 li { height:300px; background-color:#CCC; float:left; padding:0; margin:0; }
 </style>
 </head>
-<body onmousemove="pegar_coordenada()">
+<!-- 
+EVENTOS SUBSTITUIDOS
+mousedown -> touchstart
+mousemove -> touchmove
+mouseup   -> touchend
+-->
+<body ontouchmove="pegar_coordenada()">
 
-<div id="foto" onmousedown="comeca_puxar()" onmouseup="parar_puxar()">
+<div id="foto" ontouchstart="comeca_puxar()" ontouchend="parar_puxar()">
 	<ul id="listaUL">
 	</ul>
 </div>
