@@ -144,6 +144,7 @@ function comeca_puxar() {
 function passarProxima() {
 	if (lado_mover[0] == 0) { //MOVE PARA O LADO ESQUERDO
 		//Está chegando até aqui
+		alert("Número atual: "+numero[0]+" - Qtd. Fotos: "+qtd_fotos);
 		if(numero[0] < qtd_fotos) {
 			var touch = event.touches[0]; //PARA PEGAR A COORDENADA DO PONTO ONDE FOI CLICADO
 			//--------------------------------- Aqui vai uma animação
