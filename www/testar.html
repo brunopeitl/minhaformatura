@@ -138,10 +138,10 @@ function comeca_puxar() {
 
 //Função que define as  coordenadas para movimentar as fotos
 function passarProxima() {
-	alert(posicao_final[0]);
 	if (lado_mover[0] == 0) { //MOVE PARA O LADO ESQUERDO
-		alert("mover esquerda agora");
+		//Está chegando até aqui
 		if(numero[0] < qtd_fotos) {
+			//Está faltando coisa aqui
 			var touch = event.touches[0]; //PARA PEGAR A COORDENADA DO PONTO ONDE FOI CLICADO
 			//--------------------------------- Aqui vai uma animação
 			inicia_animacao = posicao_que_ficou[0] - (posicao_inicial[0] - touch.pageX);
@@ -156,11 +156,11 @@ function passarProxima() {
 		}
 	}
 	else { //MOVE PARA O LADO DIREITO
-		alert("mover direita agora");
 		if (numero[0] == 1) {
 		}
 		else {
 			if (numero[0] == 2) {
+				//Tá faltando coisa aqui
 				var touch = event.touches[0]; //PARA PEGAR A COORDENADA DO PONTO ONDE FOI CLICADO
 				//--------------------------------- Aqui vai uma animação
 				inicia_animacao = posicao_que_ficou[0] + (touch.pageX - posicao_inicial[0]);
@@ -193,6 +193,7 @@ function passarProxima() {
 //Função que executa quando solta
 function parar_puxar() {
 	//var touch2 = event.touches[0];
+	alert("Posição Atual: "+posicao_atual);
 	posicao_final[0] = 42;//touch2.pageX;
 	if(posicao_final[0] < posicao_inicial[0]) {
 		lado_mover[0] = 0;
