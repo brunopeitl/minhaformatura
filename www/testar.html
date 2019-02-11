@@ -8,7 +8,14 @@
 <title>Minha Formatura</title>
 	
 <style>
-body { margin:0; padding:0; overflow: hidden; /* ESCONDE BARRA DE ROLAGEM */}
+body { 
+	margin:0; padding:0; overflow: hidden; /* ESCONDE BARRA DE ROLAGEM */
+	 backface-visibility:hidden;
+	-webkit-backface-visibility:hidden;
+	 overflow: hidden;
+	-ms-content-zooming: none;
+	-ms-touch-action:none;
+}
 #foto { position:relative; }
 ul { list-style-type:none; margin:0; padding:0; }
 li { height:300px; background-color:#CCC; float:left; padding:0; margin:0; }
