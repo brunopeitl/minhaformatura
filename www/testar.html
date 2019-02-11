@@ -145,10 +145,9 @@ function passarProxima(ultimaPosicaoX) {
 	if (lado_mover[0] == 0) { //MOVE PARA O LADO ESQUERDO
 		//Está chegando até aqui
 		if(numero[0] < qtd_fotos) {
-			var touch = event.touches[0]; //PARA PEGAR A COORDENADA DO PONTO ONDE FOI CLICADO
-			alert("Ultima posição X: "+ultimaPosicaoX);
+			//var touch = event.touches[0]; //PARA PEGAR A COORDENADA DO PONTO ONDE FOI CLICADO -- tlvz desnecessário aqui
 			//--------------------------------- Aqui vai uma animação
-			inicia_animacao = posicao_que_ficou[0] - (posicao_inicial[0] - touch.pageX);
+			inicia_animacao = posicao_que_ficou[0] - (posicao_inicial[0] - ultimaPosicaoX/*touch.pageX*/);
 			finaliza_animacao = -(areaFoto * numero[0]);
 			moveFotoEsq(inicia_animacao , finaliza_animacao);
 			//--------------------------------- Aqui vai uma animação
@@ -164,9 +163,9 @@ function passarProxima(ultimaPosicaoX) {
 		}
 		else {
 			if (numero[0] == 2) {
-				var touch = event.touches[0]; //PARA PEGAR A COORDENADA DO PONTO ONDE FOI CLICADO
+				//var touch = event.touches[0]; //PARA PEGAR A COORDENADA DO PONTO ONDE FOI CLICADO
 				//--------------------------------- Aqui vai uma animação
-				inicia_animacao = posicao_que_ficou[0] + (touch.pageX - posicao_inicial[0]);
+				inicia_animacao = posicao_que_ficou[0] + (ultimaPosicaoX - posicao_inicial[0]);
 				finaliza_animacao = (posicao_que_ficou[0] + (areaFoto * (numero[0] - 1)));
 				moveFotoDir(inicia_animacao , finaliza_animacao);
 				//--------------------------------- Aqui vai uma animação
@@ -174,9 +173,9 @@ function passarProxima(ultimaPosicaoX) {
 				posicao_que_ficou[0] = (posicao_que_ficou[0] + (areaFoto * (numero[0] - 1)));
 			}
 			else {
-				var touch = event.touches[0]; //PARA PEGAR A COORDENADA DO PONTO ONDE FOI CLICADO
+				//var touch = event.touches[0]; //PARA PEGAR A COORDENADA DO PONTO ONDE FOI CLICADO
 				//--------------------------------- Aqui vai uma animação
-				inicia_animacao = posicao_que_ficou[0] + (touch.pageX - posicao_inicial[0]);
+				inicia_animacao = posicao_que_ficou[0] + (ultimaPosicaoX - posicao_inicial[0]);
 				finaliza_animacao = (posicao_que_ficou[0] + (areaFoto * (numero[0] - (numero[0] - 1))));
 				moveFotoDir(inicia_animacao , finaliza_animacao);
 				//--------------------------------- Aqui vai uma animação
