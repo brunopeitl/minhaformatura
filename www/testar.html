@@ -147,6 +147,7 @@ function passarProxima() {
 		if(numero[0] < qtd_fotos) {
 			var touch = event.touches[0]; //PARA PEGAR A COORDENADA DO PONTO ONDE FOI CLICADO
 			//--------------------------------- Aqui vai uma animação
+			alert("Chegou até aqui: "+touch.pageX);
 			inicia_animacao = posicao_que_ficou[0] - (posicao_inicial[0] - touch.pageX);
 			finaliza_animacao = -(areaFoto * numero[0]);
 			moveFotoEsq(inicia_animacao , finaliza_animacao);
