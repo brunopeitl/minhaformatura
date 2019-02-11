@@ -138,6 +138,7 @@ function comeca_puxar() {
 
 //Função que define as  coordenadas para movimentar as fotos
 function passarProxima() {
+	alert("chegou até aqui");
 	if (lado_mover[0] == 0) { //MOVE PARA O LADO ESQUERDO
 		if(numero[0] < qtd_fotos) {
 			var touch = event.touches[0]; //PARA PEGAR A COORDENADA DO PONTO ONDE FOI CLICADO
@@ -191,8 +192,8 @@ function passarProxima() {
 function parar_puxar() {
 	//var touch2 = event.touches[0];
 	posicao_final[0] = 42;//touch2.pageX;
-	alert(posicao_final[0]);
 	if(posicao_final[0] < posicao_inicial[0]) {
+		alert("mover esquerda");
 		lado_mover[0] = 0;
 	}
 	else {
@@ -200,6 +201,7 @@ function parar_puxar() {
 	}
 	passarProxima();
     mover_s_n[0] = 0;
+	alert(posicao_final[0]);
     document.getElementById("coordenada_x_final").innerHTML = posicao_final[0];
 }
 </script>
