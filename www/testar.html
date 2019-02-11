@@ -195,8 +195,7 @@ function passarProxima() {
 //Função que executa quando solta
 function parar_puxar() {
 	//var touch2 = event.touches[0];
-	alert("Posição Atual: "+posicao_atual[0]);
-	posicao_final[0] = 42;//touch2.pageX;
+	posicao_final[0] = posicao_atual[0];//touch2.pageX;
 	if(posicao_final[0] < posicao_inicial[0]) {
 		lado_mover[0] = 0;
 	}
