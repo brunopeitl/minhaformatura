@@ -59,10 +59,6 @@ for (i = 1; i <= qtd_fotos; i++) {
 	lista += "<li style='width:"+larguraFoto+"px; height:"+alturaFoto+"px; margin-left:"+espacamentoFotos+"px;'>Foto "+ i +"</li>"; 
 }
 document.getElementById("listaUL").innerHTML = lista;
-
-//---------------------------------------------------------------------------------------------------------------------------
-//---------------------------------------- O PROBLEMA ESTÁ DAQUI PRA BAIXO --------------------------------------------------
-//---------------------------------------------------------------------------------------------------------------------------
 	
 //Variáveis e comandos para fazer a galeria funcionar
 var mover_s_n = [0];
@@ -140,6 +136,10 @@ function comeca_puxar() {
 	document.getElementById("coordenada_x_inicial").innerHTML = posicao_inicial[0];
 }
 
+//---------------------------------------------------------------------------------------------------------------------------
+//---------------------------------------- O PROBLEMA ESTÁ DAQUI PRA BAIXO --------------------------------------------------
+//---------------------------------------------------------------------------------------------------------------------------
+	
 //Função que define as  coordenadas para movimentar as fotos
 function passarProxima() {
 	if (lado_mover[0] == 0) { //MOVE PARA O LADO ESQUERDO
