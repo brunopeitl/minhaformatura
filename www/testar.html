@@ -128,8 +128,10 @@ function pegar_coordenada() {
 
 //Função que executa quando clica na tela e começa a puxar as fotos
 function comeca_puxar() {
-	posicao_inicial[0] = event.clientX;
-    mover_s_n[0] = 1;
+	//Testando
+	//posicao_inicial[0] = event.clientX;
+	posicao_inicial[0] = touch.pageX;
+    	mover_s_n[0] = 1;
 	document.getElementById("coordenada_x_inicial").innerHTML = posicao_inicial[0];
 }
 
