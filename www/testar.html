@@ -61,7 +61,6 @@ for (i = 1; i <= qtd_fotos; i++) {
 document.getElementById("listaUL").innerHTML = lista;
 
 //Variáveis e comandos para fazer a galeria funcionar
-var touch = event.touches[0]; //PARA PEGAR A COORDENADA DO PONTO ONDE FOI CLICADO
 var mover_s_n = [0];
 var posicao_atual;
 posicao_inicial = [0];
@@ -97,6 +96,7 @@ function moveFotoDir(inicia_animacao , finaliza_animacao) {
 //Pega as coordenadas do cursor na tela para definir para que lado as fotos vão se movimentar
 //event.clientX MUDOU PARA touch.pageX E ACRESCENTOU A VARIÁVEL var touch = event.touches[0];
 function pegar_coordenada() {
+	var touch = event.touches[0]; //PARA PEGAR A COORDENADA DO PONTO ONDE FOI CLICADO
 	var posicao_atual = touch.pageX;
 	document.getElementById("coordenada_x").innerHTML = posicao_atual;
     if (mover_s_n[0] == 1) {
@@ -130,6 +130,7 @@ function pegar_coordenada() {
 
 //Função que executa quando clica na tela e começa a puxar as fotos
 function comeca_puxar() {
+	var touch = event.touches[0]; //PARA PEGAR A COORDENADA DO PONTO ONDE FOI CLICADO
 	posicao_inicial[0] = touch.pageX;
     	mover_s_n[0] = 1;
 	document.getElementById("coordenada_x_inicial").innerHTML = posicao_inicial[0];
@@ -139,6 +140,7 @@ function comeca_puxar() {
 function passarProxima() {
 	if (lado_mover[0] == 0) { //MOVE PARA O LADO ESQUERDO
 		if(numero[0] < qtd_fotos) {
+			var touch = event.touches[0]; //PARA PEGAR A COORDENADA DO PONTO ONDE FOI CLICADO
 			//--------------------------------- Aqui vai uma animação
 			inicia_animacao = posicao_que_ficou[0] - (posicao_inicial[0] - touch.pageX);
 			finaliza_animacao = -(areaFoto * numero[0]);
@@ -156,6 +158,7 @@ function passarProxima() {
 		}
 		else {
 			if (numero[0] == 2) {
+				var touch = event.touches[0]; //PARA PEGAR A COORDENADA DO PONTO ONDE FOI CLICADO
 				//--------------------------------- Aqui vai uma animação
 				inicia_animacao = posicao_que_ficou[0] + (touch.pageX - posicao_inicial[0]);
 				finaliza_animacao = (posicao_que_ficou[0] + (areaFoto * (numero[0] - 1)));
@@ -165,6 +168,7 @@ function passarProxima() {
 				posicao_que_ficou[0] = (posicao_que_ficou[0] + (areaFoto * (numero[0] - 1)));
 			}
 			else {
+				var touch = event.touches[0]; //PARA PEGAR A COORDENADA DO PONTO ONDE FOI CLICADO
 				//--------------------------------- Aqui vai uma animação
 				inicia_animacao = posicao_que_ficou[0] + (touch.pageX - posicao_inicial[0]);
 				finaliza_animacao = (posicao_que_ficou[0] + (areaFoto * (numero[0] - (numero[0] - 1))));
@@ -185,6 +189,7 @@ function passarProxima() {
 
 //Função que executa quando solta
 function parar_puxar() {
+	var touch = event.touches[0]; //PARA PEGAR A COORDENADA DO PONTO ONDE FOI CLICADO
 	posicao_final[0] = touch.pageX;
 	if(posicao_final[0] < posicao_inicial[0]) {
 		lado_mover[0] = 0;
