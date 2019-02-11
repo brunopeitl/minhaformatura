@@ -189,6 +189,7 @@ function passarProxima() {
 
 //Função que executa quando solta
 function parar_puxar() {
+	alert("soltou");
 	var touch = event.touches[0]; //PARA PEGAR A COORDENADA DO PONTO ONDE FOI CLICADO
 	posicao_final[0] = touch.pageX;
 	if(posicao_final[0] < posicao_inicial[0]) {
