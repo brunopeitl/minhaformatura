@@ -38,7 +38,6 @@ mouseup   -> touchend
 	</ul>
 </div>
 <p style="clear:left"></p>
-<p>Posição Inicial: <span id="coordenada_x_inicial"></span> - Posição Final: <span id="coordenada_x_final"></span> - Posição ATUAL: <span id="coordenada_x"></span></p>
 
 <script>
 //Variáveis e comandos para montar galeria
@@ -120,11 +119,8 @@ function pegar_coordenada() {
 				}
 			}
 		}
-		
-    	document.getElementById("coordenada_x").style.color = "red";
     }
     else {
-    	document.getElementById("coordenada_x").style.color = "black";
     }
 }
 
@@ -133,12 +129,7 @@ function comeca_puxar() {
 	var touch = event.touches[0]; //PARA PEGAR A COORDENADA DO PONTO ONDE FOI CLICADO
 	posicao_inicial[0] = touch.pageX;
     	mover_s_n[0] = 1;
-	document.getElementById("coordenada_x_inicial").innerHTML = posicao_inicial[0];
 }
-
-//---------------------------------------------------------------------------------------------------------------------------
-//---------------------------------------- O PROBLEMA ESTÁ DAQUI PRA BAIXO --------------------------------------------------
-//---------------------------------------------------------------------------------------------------------------------------
 	
 //Função que define as  coordenadas para movimentar as fotos
 function passarProxima(ultimaPosicaoX) {
@@ -203,7 +194,6 @@ function parar_puxar() {
 		lado_mover[0] = 1;
 	}
 	mover_s_n[0] = 0;
-    	document.getElementById("coordenada_x_final").innerHTML = posicao_final[0];
 	passarProxima(posicao_final[0]);
 }
 </script>
