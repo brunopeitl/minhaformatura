@@ -139,7 +139,7 @@ function pega_nome_arquivo(resposta) {
 		var char_teste = valor_caminho.substring(a, a+1);
 		if (char_teste == "/") {
 	        	barra++;
-	        	if (barra == 6) {
+	        	if (barra == 7) { //Alterado de 6 para 7 - Única coisa alterada aqui para arrumar o erro crítico.
 	        		posicao_ultima_barra = a;
 	            		break;
 	        	}
