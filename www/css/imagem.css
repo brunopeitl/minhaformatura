@@ -4,7 +4,7 @@ body { margin:0; padding:0; }
 -webkit-filter: blur(20px);
 filter: blur(20px);
 display:none;}
-#photo_blur { position:absolute; width:77%; /* 100% */ height:90%; /* 100% */ margin:0; padding:0; }
+#photo_blur { position:absolute; width:77%; /* 100% */ height:90%; /* 100% */ margin:auto; padding:0; }
 #abertura_contorno_branco { position:absolute; width:0; height:0; top:0; left:0; bottom:0; right:0; margin:auto; word-wrap:break-word; border:13px solid white; padding:0; }
 p#escrever { position:relative; top:0.01%; height:60%; text-align:center; color:white; font-family: highDestiny; font-size:60pt; line-height: 60%; }
 p#escrever span { font-family: Tahoma; font-size:15pt; }
