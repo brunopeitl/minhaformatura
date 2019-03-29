@@ -19,6 +19,8 @@ function btComecar() {
 }
 
 function programacao() {
+	//Mostrar botão para Pular Abertura
+	document.getElementById("pularAbertura").style.display = "block";
 
 	//Define variáveis - Nome do Curso e Instituição e quantidades de caracteres
 	var palavra_nome_curso = localStorage.getItem("curso");
