@@ -16,4 +16,5 @@ p#escrever span { font-family: Tahoma; font-size:15pt; }
 a.btComecar { display:block; color:white; text-decoration:none; font-family:Tahoma; text-align:center; padding-top:7px; padding-bottom:7px; padding-left:20px; padding-right:20px; border:solid 1px white; font-size:10pt; }
 
 
-#photo_unica { display:none; position:absolute; top:0; left:0; }
+#photo_unica { display:none; position:absolute; top:0; left:0; z-index: -1;}
+#a_foto { width:30%; height:30%; background-color:red; }
