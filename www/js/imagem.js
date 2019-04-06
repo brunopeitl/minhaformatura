@@ -3,8 +3,10 @@ listaFotos = new Array();
 
 //Função depois que aperta botão começar
 function btComecar() {
-	$("#abertura_contorno_branco").fadeOut(1500, function(){
+	$("#photo_blur").fadeOut(1500, function(){
+		
 		//Animação para desembaçar o fundo
+		/*
 		var myVar5 = setInterval(myTimer5 ,3);
 		var d5 = 20;
 		function myTimer5() {
@@ -13,7 +15,7 @@ function btComecar() {
   				d5 = d5 - 0.5;
   			}
 		}
-
+		*/
 	});
 }
 
