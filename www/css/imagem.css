@@ -14,3 +14,6 @@ p#escrever span { font-family: Tahoma; font-size:15pt; }
 #areaBtComecar { position:absolute; width:100%; height:14%; background-color:black; bottom:0; opacity: 0; filter: alpha(opacity=0); } 
 #lugarBt { position:relative; margin:auto; width:40%; height:45%; top:30%; }
 a.btComecar { display:block; color:white; text-decoration:none; font-family:Tahoma; text-align:center; padding-top:7px; padding-bottom:7px; padding-left:20px; padding-right:20px; border:solid 1px white; font-size:10pt; }
+
+
+#photo_unica { display:none; position:absolute; top:0; left:0; }
