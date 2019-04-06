@@ -3,8 +3,7 @@ listaFotos = new Array();
 
 //Função depois que aperta botão começar
 function btComecar() {
-	$("#abertura_contorno_branco").fadeOut(1500, function(){ 
-		//alert("Chegou até aqui.");
+	$("#abertura_contorno_branco").fadeOut(1500, function(){
 		//Animação para desembaçar o fundo
 		var myVar5 = setInterval(myTimer5 ,3);
 		var d5 = 20;
@@ -65,6 +64,8 @@ function programacao() {
 	  		}
             		else {
             			myTimer4();
+				//Ocultar botão para Pular Abertura
+				document.getElementById("pularAbertura").style.display = "none";
             		}
     		}, 100);
     	}
