@@ -4,7 +4,9 @@ listaFotos = new Array();
 //Função depois que aperta botão começar
 function btComecar() {
 	$("#photo_blur").fadeOut(1500, function(){
-		
+		document.getElementById("photo_blur").style.display = "none";
+		$("#photo_unica").fadeIn(1500, function() {
+		});
 		//Animação para desembaçar o fundo
 		/*
 		var myVar5 = setInterval(myTimer5 ,3);
