@@ -6,6 +6,7 @@ function btComecar() {
 	$("#photo_blur").fadeOut(1500, function(){
 		document.getElementById("photo_blur").style.display = "none";
 		$("#photo_unica").fadeIn(1500, function() {
+			alert("chegou aqui.");
 		});
 		//Animação para desembaçar o fundo
 		/*
