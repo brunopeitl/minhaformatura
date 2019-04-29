@@ -17,4 +17,4 @@ a.btComecar { display:block; color:white; text-decoration:none; font-family:Taho
 
 
 #photo_unica { display:none; position:absolute; top:0; left:0; z-index: -1;}
-#a_foto { width:30px; height:30px; background-color:red; }
+#foto { width:30px; height:30px; background-color:red; }
