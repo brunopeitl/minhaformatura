@@ -29,6 +29,6 @@ overflow: hidden;
 -ms-content-zooming: none;
 -ms-touch-action:none;
 }
-#foto { position:relative; background-color:green; }
+#foto { position:relative; }
 ul { list-style-type:none; margin:0; padding:0; }
 li { height:300px; background-color:#CCC; float:left; padding:0; margin:0; }
