@@ -20,6 +20,7 @@ a.btComecar { display:block; color:white; text-decoration:none; font-family:Taho
 display:none; position:absolute; top:0; left:0; z-index: -1;
 //ESSA PARTE TEM QUE MUDAR EM ALGUM MOMENTO
 //position: relative;
+background-color:yellow;
 height: 100%;
 width: 100%;
 margin:0; padding:0; overflow: hidden; /* ESCONDE BARRA DE ROLAGEM */
