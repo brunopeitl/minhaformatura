@@ -1,3 +1,8 @@
+//TESTANDO ESSA FUNÇÃO
+function pegar_coordenada() {
+	alert("Função funcionando.");
+}
+
 //Cria Array onde vão ficar as fotos
 listaFotos = new Array();
 
