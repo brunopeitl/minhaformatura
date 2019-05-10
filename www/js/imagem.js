@@ -1,3 +1,6 @@
+//Cria Array onde vão ficar as fotos
+listaFotos = new Array();
+
 //---------------------------- FUNÇÕES E VARIAVEIS RELACIONADAS À TELA DE FOTO INTEIRA ----------------------------//
 //------------------------------------------------------ INICIO ---------------------------------------------------//
 
@@ -7,9 +10,6 @@ function pegar_coordenada() {
 
 //---------------------------- FUNÇÕES E VARIAVEIS RELACIONADAS À TELA DE FOTO INTEIRA ----------------------------//
 //------------------------------------------------------- FIM -----------------------------------------------------//
-
-//Cria Array onde vão ficar as fotos
-listaFotos = new Array();
 
 //Função depois que aperta botão começar
 function btComecar() {
