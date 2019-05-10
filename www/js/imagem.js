@@ -4,6 +4,37 @@ listaFotos = new Array();
 //---------------------------- FUNÇÕES E VARIAVEIS RELACIONADAS À TELA DE FOTO INTEIRA ----------------------------//
 //------------------------------------------------------ INICIO ---------------------------------------------------//
 
+//--- DECLARAÇÃO DE VARIÁVEIS
+//Variáveis e comandos para montar galeria
+var qtd_fotos = 6; //Quantidade de fotos
+var larguraJanela = window.innerWidth; //Pega largura da janela
+var larguraFoto = (larguraJanela * 90) / 100; //Área onde aparece a foto é 90% da largura da janela
+var espacamentoFotos = (larguraJanela * 10) / 100; //Distancia entre uma foto e outra é 10% da largura da janela
+var areaFoto = larguraFoto + espacamentoFotos; //Soma a largura da foto + espaçamento entre elas - Usado para calcular a distancia que as fotos vão andar na animação
+var larguraTotal = qtd_fotos * areaFoto; //Largura total de todas as fotos + espaçamentos
+document.getElementById("listaUL").style.width = larguraTotal + "px"; //Coloca essa largura total na UL que contém as fotos 
+var puxarUL = espacamentoFotos / 2;
+document.getElementById("listaUL").style.marginLeft = -puxarUL + "px"; //Puxa a UL em 5% para a esquerda para centralizar as fotos
+var alturaFoto = (larguraFoto * 160) / 100; //Define altura da área onde aparecem as fotos
+//Laço for para criar os elementos LI onde ficarão as fotos, já com a largura e o espaçamento que foi calculado
+var lista = "";
+for (i = 1; i <= qtd_fotos; i++) {
+	lista += "<li style='width:"+larguraFoto+"px; height:"+alturaFoto+"px; margin-left:"+espacamentoFotos+"px;'>Foto "+ i +"</li>"; 
+}
+document.getElementById("listaUL").innerHTML = lista;
+	
+//Variáveis e comandos para fazer a galeria funcionar
+var mover_s_n = [0];
+var posicao_atual = [0];
+var posicao_inicial = [0];
+var posicao_final = [0];
+var lado_mover = [0];
+var numero = [1];
+var posicao_que_ficou = [0];
+var inicia_animacao;
+var finaliza_animacao;
+//--- FIM DA DECLARAÇÃO DE VARIÁVEIS
+
 function pegar_coordenada() {
 	alert("Função funcionando.");
 }
