@@ -1,7 +1,12 @@
-//TESTANDO ESSA FUNÇÃO
+//---------------------------- FUNÇÕES E VARIAVEIS RELACIONADAS À TELA DE FOTO INTEIRA ----------------------------//
+//------------------------------------------------------ INICIO ---------------------------------------------------//
+
 function pegar_coordenada() {
 	alert("Função funcionando.");
 }
+
+//---------------------------- FUNÇÕES E VARIAVEIS RELACIONADAS À TELA DE FOTO INTEIRA ----------------------------//
+//------------------------------------------------------- FIM -----------------------------------------------------//
 
 //Cria Array onde vão ficar as fotos
 listaFotos = new Array();
