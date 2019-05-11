@@ -35,8 +35,123 @@ var inicia_animacao;
 var finaliza_animacao;
 //--- FIM DA DECLARAÇÃO DE VARIÁVEIS
 
+//Funções que animam as fotos se movendo
+function moveFotoEsq(inicia_animacao , finaliza_animacao) {
+	setTimeout(function(){
+        if(inicia_animacao > finaliza_animacao) {
+			document.getElementById("foto").style.left = inicia_animacao + "px";
+			inicia_animacao = inicia_animacao - 5;
+			moveFotoEsq(inicia_animacao , finaliza_animacao);
+		}
+    }, 5);
+}
+function moveFotoDir(inicia_animacao , finaliza_animacao) {
+	setTimeout(function(){
+        if(inicia_animacao < finaliza_animacao) {
+			document.getElementById("foto").style.left = inicia_animacao + "px";
+			inicia_animacao = inicia_animacao + 5;
+			moveFotoDir(inicia_animacao , finaliza_animacao);
+		}
+    }, 5);
+}
+//Pega as coordenadas do cursor na tela para definir para que lado as fotos vão se movimentar
+//event.clientX MUDOU PARA touch.pageX E ACRESCENTOU A VARIÁVEL var touch = event.touches[0];
 function pegar_coordenada() {
-	alert("Função funcionando.");
+	var touch = event.touches[0]; //PARA PEGAR A COORDENADA DO PONTO ONDE FOI CLICADO
+	posicao_atual[0] = touch.pageX;
+    if (mover_s_n[0] == 1) {
+    	var qtd_mover = posicao_atual[0] - posicao_inicial[0];
+		
+		if(numero[0] == 1) {
+			if (touch.pageX <= posicao_inicial[0]) {
+				document.getElementById("foto").style.left = qtd_mover + "px";
+			}
+        }
+		else {
+			if(numero[0] < qtd_fotos) {
+				document.getElementById("foto").style.left = (qtd_mover - (areaFoto * (numero[0] - 1))) + "px";
+			}
+			else {
+				if (touch.pageX > posicao_inicial[0]) {
+					document.getElementById("foto").style.left = (qtd_mover - (areaFoto * (numero[0] - 1))) + "px";
+				}
+				else {
+					document.getElementById("foto").style.left = posicao_que_ficou[0] + "px";
+				}
+			}
+		}
+    }
+    else {
+    }
+}
+//Função que executa quando clica na tela e começa a puxar as fotos
+function comeca_puxar() {
+	var touch = event.touches[0]; //PARA PEGAR A COORDENADA DO PONTO ONDE FOI CLICADO
+	posicao_inicial[0] = touch.pageX;
+    	mover_s_n[0] = 1;
+}
+	
+//Função que define as  coordenadas para movimentar as fotos
+function passarProxima(ultimaPosicaoX) {
+	if (lado_mover[0] == 0) { //MOVE PARA O LADO ESQUERDO
+		//Está chegando até aqui
+		if(numero[0] < qtd_fotos) {
+			//var touch = event.touches[0]; //PARA PEGAR A COORDENADA DO PONTO ONDE FOI CLICADO -- tlvz desnecessário aqui
+			//--------------------------------- Aqui vai uma animação
+			inicia_animacao = posicao_que_ficou[0] - (posicao_inicial[0] - ultimaPosicaoX/*touch.pageX*/);
+			finaliza_animacao = -(areaFoto * numero[0]);
+			moveFotoEsq(inicia_animacao , finaliza_animacao);
+			//--------------------------------- Aqui vai uma animação
+			
+			posicao_que_ficou[0] = -(areaFoto * numero[0]);
+			posicao_final[0] = 0;
+			posicao_inicial[0] = 0;
+			numero[0] = numero[0] + 1;
+		}
+	}
+	else { //MOVE PARA O LADO DIREITO
+		if (numero[0] == 1) {
+		}
+		else {
+			if (numero[0] == 2) {
+				//var touch = event.touches[0]; //PARA PEGAR A COORDENADA DO PONTO ONDE FOI CLICADO
+				//--------------------------------- Aqui vai uma animação
+				inicia_animacao = posicao_que_ficou[0] + (ultimaPosicaoX - posicao_inicial[0]);
+				finaliza_animacao = (posicao_que_ficou[0] + (areaFoto * (numero[0] - 1)));
+				moveFotoDir(inicia_animacao , finaliza_animacao);
+				//--------------------------------- Aqui vai uma animação
+				
+				posicao_que_ficou[0] = (posicao_que_ficou[0] + (areaFoto * (numero[0] - 1)));
+			}
+			else {
+				//var touch = event.touches[0]; //PARA PEGAR A COORDENADA DO PONTO ONDE FOI CLICADO
+				//--------------------------------- Aqui vai uma animação
+				inicia_animacao = posicao_que_ficou[0] + (ultimaPosicaoX - posicao_inicial[0]);
+				finaliza_animacao = (posicao_que_ficou[0] + (areaFoto * (numero[0] - (numero[0] - 1))));
+				moveFotoDir(inicia_animacao , finaliza_animacao);
+				//--------------------------------- Aqui vai uma animação
+				
+				posicao_que_ficou[0] = (posicao_que_ficou[0] + (areaFoto * (numero[0] - (numero[0] - 1))));
+			}
+			
+			posicao_final[0] = 0;
+			posicao_inicial[0] = 0;
+			numero[0] = numero[0] - 1;
+		}
+	}
+}
+//Função que executa quando solta
+function parar_puxar() {
+	//var touch2 = event.touches[0];
+	posicao_final[0] = posicao_atual[0];//touch2.pageX;
+	if(posicao_final[0] < posicao_inicial[0]) {
+		lado_mover[0] = 0;
+	}
+	else {
+		lado_mover[0] = 1;
+	}
+	mover_s_n[0] = 0;
+	passarProxima(posicao_final[0]);
 }
 
 //---------------------------- FUNÇÕES E VARIAVEIS RELACIONADAS À TELA DE FOTO INTEIRA ----------------------------//
