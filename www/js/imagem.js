@@ -8,7 +8,7 @@ listaFotos = new Array();
 //Variáveis e comandos para montar galeria
 var qtd_fotos = listaFotos.length; //Quantidade de fotos
 
-//---------- VARIÁVEIS PARA MONTAR O LAYOUT RESPONSÁVEL DA TELA
+//---------- VARIÁVEIS PARA MONTAR O LAYOUT RESPONSÍVEL DA TELA
 var larguraJanela = window.innerWidth; //Pega largura da janela
 var larguraFoto = (larguraJanela * 90) / 100; //Área onde aparece a foto é 90% da largura da janela
 var espacamentoFotos = (larguraJanela * 10) / 100; //Distancia entre uma foto e outra é 10% da largura da janela
