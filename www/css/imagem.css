@@ -31,4 +31,4 @@ overflow: hidden;
 }
 #foto { position:relative; }
 ul#listaUL { list-style-type:none; margin:0; padding:0; margin-top:5%; /* Ver como vai ficar esse margin-top*/ }
-li { height:300px; background-color:#000; float:left; padding:0; margin:0; }
+li { height:300px; background-color:#000; float:left; padding:0; margin:0; color:#FFF; }
