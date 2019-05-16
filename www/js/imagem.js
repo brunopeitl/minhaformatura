@@ -12,6 +12,8 @@ var qtd_fotos = listaFotos.length; //Quantidade de fotos
 var larguraJanela = window.innerWidth; //Pega largura da janela
 var larguraFoto = (larguraJanela * 90) / 100; //Área onde aparece a foto é 90% da largura da janela
 var espacamentoFotos = (larguraJanela * 10) / 100; //Distancia entre uma foto e outra é 10% da largura da janela
+var larguraMenu = larguraFoto;
+var alturaMenu = (larguraMenu * 25) / 100;
 
 var areaFoto = larguraFoto + espacamentoFotos; //Soma a largura da foto + espaçamento entre elas - Usado para calcular a distancia que as fotos vão andar na animação
 var larguraTotal = qtd_fotos * areaFoto; //Largura total de todas as fotos + espaçamentos
