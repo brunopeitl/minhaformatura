@@ -6,7 +6,7 @@ listaFotos = new Array();
 
 //--- DECLARAÇÃO DE VARIÁVEIS
 //Variáveis e comandos para montar galeria
-//var qtd_fotos = listaFotos.length; //Quantidade de fotos
+var qtd_fotos = 10;//listaFotos.length; //Quantidade de fotos
 
 //---------- VARIÁVEIS PARA MONTAR O LAYOUT RESPONSÍVEL DA TELA
 var larguraJanela = window.innerWidth; //Pega largura da janela
@@ -167,7 +167,6 @@ function btComecar() {
 	document.getElementById("photo_unica").style.display = "block";
 	$("#photo_blur").fadeOut(1500, function(){
 		document.getElementById("photo_blur").style.display = "none";
-		var qtd_fotos = listaFotos.length; 
 		//Animação para desembaçar o fundo
 		/*
 		var myVar5 = setInterval(myTimer5 ,3);
