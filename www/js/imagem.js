@@ -7,9 +7,12 @@ listaFotos = new Array();
 //--- DECLARAÇÃO DE VARIÁVEIS
 //Variáveis e comandos para montar galeria
 var qtd_fotos = listaFotos.length; //Quantidade de fotos
+
+//---------- VARIÁVEIS PARA MONTAR O LAYOUT RESPONSÁVEL DA TELA
 var larguraJanela = window.innerWidth; //Pega largura da janela
 var larguraFoto = (larguraJanela * 90) / 100; //Área onde aparece a foto é 90% da largura da janela
 var espacamentoFotos = (larguraJanela * 10) / 100; //Distancia entre uma foto e outra é 10% da largura da janela
+
 var areaFoto = larguraFoto + espacamentoFotos; //Soma a largura da foto + espaçamento entre elas - Usado para calcular a distancia que as fotos vão andar na animação
 var larguraTotal = qtd_fotos * areaFoto; //Largura total de todas as fotos + espaçamentos
 document.getElementById("listaUL").style.width = larguraTotal + "px"; //Coloca essa largura total na UL que contém as fotos 
