@@ -6,7 +6,7 @@ listaFotos = new Array();
 
 //--- DECLARAÇÃO DE VARIÁVEIS
 //Variáveis e comandos para montar galeria
-qtd_fotos = new Array();//listaFotos.length; //Quantidade de fotos
+qtd_fotos = 10;//listaFotos.length; //Quantidade de fotos
 
 //---------- VARIÁVEIS PARA MONTAR O LAYOUT RESPONSÍVEL DA TELA
 var larguraJanela = window.innerWidth; //Pega largura da janela
@@ -16,14 +16,14 @@ var larguraMenu = larguraFoto;
 var alturaMenu = (larguraMenu * 25) / 100;
 
 var areaFoto = larguraFoto + espacamentoFotos; //Soma a largura da foto + espaçamento entre elas - Usado para calcular a distancia que as fotos vão andar na animação
-var larguraTotal = qtd_fotos[0] * areaFoto; //Largura total de todas as fotos + espaçamentos
+var larguraTotal = qtd_fotos * areaFoto; //Largura total de todas as fotos + espaçamentos
 document.getElementById("listaUL").style.width = larguraTotal + "px"; //Coloca essa largura total na UL que contém as fotos 
 var puxarUL = espacamentoFotos / 2;
 document.getElementById("listaUL").style.marginLeft = -puxarUL + "px"; //Puxa a UL em 5% para a esquerda para centralizar as fotos
 var alturaFoto = (larguraFoto * 160) / 100; //Define altura da área onde aparecem as fotos
 //Laço for para criar os elementos LI onde ficarão as fotos, já com a largura e o espaçamento que foi calculado
 var lista = "";
-for (i = 1; i <= qtd_fotos[0]; i++) {
+for (i = 1; i <= qtd_fotos; i++) {
 	lista += "<li style='width:"+larguraFoto+"px; height:"+alturaFoto+"px; margin-left:"+espacamentoFotos+"px;'>Foto "+ i +"</li>"; 
 }
 document.getElementById("listaUL").innerHTML = lista;
