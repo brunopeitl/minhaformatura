@@ -4,6 +4,10 @@ listaFotos = new Array();
 //---------------------------- FUNÇÕES E VARIAVEIS RELACIONADAS À TELA DE FOTO INTEIRA ----------------------------//
 //------------------------------------------------------ INICIO ---------------------------------------------------//
 
+function montarTelaFtUn() {
+	alert("testando função");
+}
+
 //--- DECLARAÇÃO DE VARIÁVEIS
 //Variáveis e comandos para montar galeria
 qtd_fotos = 10;//listaFotos.length; //Quantidade de fotos
@@ -164,6 +168,7 @@ function parar_puxar() {
 
 //Função depois que aperta botão começar
 function btComecar() {
+	montarTelaFtUn();
 	document.getElementById("photo_unica").style.display = "block";
 	$("#photo_blur").fadeOut(1500, function(){
 		document.getElementById("photo_blur").style.display = "none";
