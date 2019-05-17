@@ -5,10 +5,8 @@ listaFotos = new Array();
 //------------------------------------------------------ INICIO ---------------------------------------------------//
 
 function montarTelaFtUn() {
-	alert("testando função");
-}
-
-//--- DECLARAÇÃO DE VARIÁVEIS
+	
+	//--- DECLARAÇÃO DE VARIÁVEIS
 //Variáveis e comandos para montar galeria
 qtd_fotos = 10;//listaFotos.length; //Quantidade de fotos
 
@@ -43,6 +41,7 @@ var posicao_que_ficou = [0];
 var inicia_animacao;
 var finaliza_animacao;
 //--- FIM DA DECLARAÇÃO DE VARIÁVEIS
+}
 
 //Funções que animam as fotos se movendo
 function moveFotoEsq(inicia_animacao , finaliza_animacao) {
