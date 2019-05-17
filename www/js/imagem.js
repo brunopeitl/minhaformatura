@@ -73,7 +73,7 @@ function pegar_coordenada() {
 			}
         }
 		else {
-			if(numero[0] < qtd_fotos) {
+			if(numero[0] < qtd_fotos[0]) {
 				document.getElementById("foto").style.left = (qtd_mover - (areaFoto * (numero[0] - 1))) + "px";
 			}
 			else {
