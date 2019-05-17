@@ -6,7 +6,6 @@ listaFotos = new Array();
 
 //--- DECLARAÇÃO DE VARIÁVEIS
 //Variáveis e comandos para montar galeria
-var qtd_fotosArray = [];
 var qtd_fotos = 10;//listaFotos.length; //Quantidade de fotos
 
 //---------- VARIÁVEIS PARA MONTAR O LAYOUT RESPONSÍVEL DA TELA
