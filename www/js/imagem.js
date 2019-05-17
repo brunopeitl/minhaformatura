@@ -100,7 +100,7 @@ function comeca_puxar() {
 function passarProxima(ultimaPosicaoX) {
 	if (lado_mover[0] == 0) { //MOVE PARA O LADO ESQUERDO
 		//Está chegando até aqui
-		if(numero[0] < qtd_fotos) {
+		if(numero[0] < qtd_fotos[0]) {
 			//var touch = event.touches[0]; //PARA PEGAR A COORDENADA DO PONTO ONDE FOI CLICADO -- tlvz desnecessário aqui
 			//--------------------------------- Aqui vai uma animação
 			inicia_animacao = posicao_que_ficou[0] - (posicao_inicial[0] - ultimaPosicaoX/*touch.pageX*/);
