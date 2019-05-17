@@ -15,7 +15,7 @@ p#escrever span { font-family: Tahoma; font-size:15pt; }
 #lugarBt { position:relative; margin:auto; width:95%; height:45%; top:30%; text-align:center; } 
 /* Largura estava 40% */
 /* Testar colocar largura 90% e ver se centraliza certo */
-a.btComecar { display:block; color:white; text-decoration:none; font-family:Tahoma; text-align:center; padding-top:7px; padding-bottom:7px; padding-left:20px; padding-right:20px; border:solid 1px white; font-size:10pt; }
+a.btComecar { display:inline; color:white; text-decoration:none; font-family:Tahoma; text-align:center; padding-top:7px; padding-bottom:7px; padding-left:20px; padding-right:20px; border:solid 1px white; font-size:10pt; }
 
 
 #photo_unica { 
