@@ -4,11 +4,11 @@ listaFotos = new Array();
 //---------------------------- FUNÇÕES E VARIAVEIS RELACIONADAS À TELA DE FOTO INTEIRA ----------------------------//
 //------------------------------------------------------ INICIO ---------------------------------------------------//
 
-function montarTelaFtUn() {
-	
+function montarTelaFtUn(qtd_fotos) {
+	alert("tá dando certo.");
 	//--- DECLARAÇÃO DE VARIÁVEIS
 //Variáveis e comandos para montar galeria
-qtd_fotos = 10;//listaFotos.length; //Quantidade de fotos
+//qtd_fotos = 10;//listaFotos.length; //Quantidade de fotos
 
 //---------- VARIÁVEIS PARA MONTAR O LAYOUT RESPONSÍVEL DA TELA
 var larguraJanela = window.innerWidth; //Pega largura da janela
@@ -167,7 +167,7 @@ function parar_puxar() {
 
 //Função depois que aperta botão começar
 function btComecar() {
-	montarTelaFtUn();
+	montarTelaFtUn(listaFotos.length);
 	document.getElementById("photo_unica").style.display = "block";
 	$("#photo_blur").fadeOut(1500, function(){
 		document.getElementById("photo_blur").style.display = "none";
