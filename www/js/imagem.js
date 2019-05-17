@@ -100,7 +100,7 @@ function comeca_puxar() {
 function passarProxima(ultimaPosicaoX) {
 	if (lado_mover[0] == 0) { //MOVE PARA O LADO ESQUERDO
 		//Está chegando até aqui
-		if(numero[0] < qtd_fotos[0]) {
+		if(numero[0] < qtd_fotos) {
 			//var touch = event.touches[0]; //PARA PEGAR A COORDENADA DO PONTO ONDE FOI CLICADO -- tlvz desnecessário aqui
 			//--------------------------------- Aqui vai uma animação
 			inicia_animacao = posicao_que_ficou[0] - (posicao_inicial[0] - ultimaPosicaoX/*touch.pageX*/);
@@ -164,8 +164,6 @@ function parar_puxar() {
 
 //Função depois que aperta botão começar
 function btComecar() {
-	qtd_fotos[0] = listaFotos.length;
-	alert(qtd_fotos[0]);
 	document.getElementById("photo_unica").style.display = "block";
 	$("#photo_blur").fadeOut(1500, function(){
 		document.getElementById("photo_blur").style.display = "none";
