@@ -1,6 +1,17 @@
 //Cria Array onde vão ficar as fotos
 listaFotos = new Array();
 
+//Variáveis e comandos para fazer a galeria funcionar
+var mover_s_n = [0];
+var posicao_atual = [0];
+var posicao_inicial = [0];
+var posicao_final = [0];
+var lado_mover = [0];
+var numero = [1];
+var posicao_que_ficou = [0];
+var inicia_animacao;
+var finaliza_animacao;
+
 //---------------------------- FUNÇÕES E VARIAVEIS RELACIONADAS À TELA DE FOTO INTEIRA ----------------------------//
 //------------------------------------------------------ INICIO ---------------------------------------------------//
 
@@ -30,16 +41,8 @@ for (i = 1; i <= qtd_fotos; i++) {
 }
 document.getElementById("listaUL").innerHTML = lista;
 	
-//Variáveis e comandos para fazer a galeria funcionar
-var mover_s_n = [0];
-var posicao_atual = [0];
-var posicao_inicial = [0];
-var posicao_final = [0];
-var lado_mover = [0];
-var numero = [1];
-var posicao_que_ficou = [0];
-var inicia_animacao;
-var finaliza_animacao;
+//Variáveis e comandos para fazer a galeria funcionar --- ESTAVA AQUI
+
 //--- FIM DA DECLARAÇÃO DE VARIÁVEIS
 }
 
