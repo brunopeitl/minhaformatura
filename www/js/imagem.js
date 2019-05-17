@@ -164,6 +164,7 @@ function parar_puxar() {
 
 //Função depois que aperta botão começar
 function btComecar() {
+	qtd_fotos[0] = listaFotos.length;
 	document.getElementById("photo_unica").style.display = "block";
 	$("#photo_blur").fadeOut(1500, function(){
 		document.getElementById("photo_blur").style.display = "none";
