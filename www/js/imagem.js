@@ -6,7 +6,7 @@ listaFotos = new Array();
 
 //--- DECLARAÇÃO DE VARIÁVEIS
 //Variáveis e comandos para montar galeria
-var qtd_fotos = [];//listaFotos.length; //Quantidade de fotos
+qtd_fotos = new Array();//listaFotos.length; //Quantidade de fotos
 
 //---------- VARIÁVEIS PARA MONTAR O LAYOUT RESPONSÍVEL DA TELA
 var larguraJanela = window.innerWidth; //Pega largura da janela
@@ -165,6 +165,7 @@ function parar_puxar() {
 //Função depois que aperta botão começar
 function btComecar() {
 	qtd_fotos[0] = listaFotos.length;
+	alert(qtd_fotos[0]);
 	document.getElementById("photo_unica").style.display = "block";
 	$("#photo_blur").fadeOut(1500, function(){
 		document.getElementById("photo_blur").style.display = "none";
