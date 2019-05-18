@@ -15,15 +15,11 @@ var puxarUL;
 var alturaFoto;
 var lista;
 
-//-------------------------------TESTES
 var larguraMenu;
 var alturaMenu;
-//------------------
 var alturaTotal;
 var areaEspacos;
-var alturaFoto; //--- VAI USAR ESSA MESMO????
-
-//-------------------------------TESTES
+var alturaFoto;
 
 //Variáveis e comandos para fazer a galeria funcionar
 var mover_s_n = [0];
