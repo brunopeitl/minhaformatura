@@ -52,16 +52,14 @@ function montarTelaFtUn(qtd_fotos2) {
 	//alturaFoto = (larguraFoto * 160) / 100; //Define altura da área onde aparecem as fotos
 	//***COMENTADA TEMPORARIAMENTE -- TESTAR COM ESSA LINHA COMENTADA POR ENQUANTO
 	
-	//-------------------------------TESTES
+	//-------- MONTANDO ELEMENTOS DA TELA
 	larguraMenu = larguraFoto;
 	alturaMenu = (larguraMenu * 25) / 100;
 	document.getElementById("menu_photo_unica").style.width = larguraMenu + "px";
 	document.getElementById("menu_photo_unica").style.height = alturaMenu + "px";
-	//------------------
 	alturaTotal = window.innerHeight;
 	areaEspacos = (alturaTotal * 15) / 100;
 	alturaFoto = alturaTotal - (areaEspacos + alturaMenu); //--- VAI USAR ISSO MESMO?
-	//-------------------------------TESTES
 	
 	//Laço for para criar os elementos LI onde ficarão as fotos, já com a largura e o espaçamento que foi calculado
 	lista = "";
