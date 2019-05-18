@@ -2,6 +2,7 @@
 listaFotos = new Array();
 
 //TESTAR ISSO DAQUI
+var qtd_fotos;
 var larguraJanela;
 var larguraFoto;
 var espacamentoFotos;
@@ -27,8 +28,9 @@ var finaliza_animacao;
 //---------------------------- FUNÇÕES E VARIAVEIS RELACIONADAS À TELA DE FOTO INTEIRA ----------------------------//
 //------------------------------------------------------ INICIO ---------------------------------------------------//
 
-function montarTelaFtUn(qtd_fotos) {
+function montarTelaFtUn(qtd_fotos2) {
 	alert("tá dando certo.");
+	qtd_fotos = qtd_fotos2;
 	//--- DECLARAÇÃO DE VARIÁVEIS
 //Variáveis e comandos para montar galeria
 //qtd_fotos = 10;//listaFotos.length; //Quantidade de fotos
