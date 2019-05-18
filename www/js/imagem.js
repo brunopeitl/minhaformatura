@@ -1,6 +1,9 @@
 //Cria Array onde vão ficar as fotos
 listaFotos = new Array();
 
+//---------------------------- FUNÇÕES E VARIAVEIS RELACIONADAS À TELA DE FOTO INTEIRA ----------------------------//
+//------------------------------------------------------ INICIO ---------------------------------------------------//
+
 //Declarando variáveis e comandos para montar galeria fora da função para que elas funcionem depois que a função foi executada
 var qtd_fotos;
 var larguraJanela;
@@ -24,9 +27,6 @@ var numero = [1];
 var posicao_que_ficou = [0];
 var inicia_animacao;
 var finaliza_animacao;
-
-//---------------------------- FUNÇÕES E VARIAVEIS RELACIONADAS À TELA DE FOTO INTEIRA ----------------------------//
-//------------------------------------------------------ INICIO ---------------------------------------------------//
 
 function montarTelaFtUn(qtd_fotos2) {
 	//--- DECLARAÇÃO DE VARIÁVEIS
