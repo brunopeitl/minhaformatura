@@ -17,6 +17,23 @@ var puxarUL;
 var alturaFoto;
 var lista;
 
+//-------------------------------TESTES
+var larguraMenu;
+var alturaMenu;
+larguraMenu = larguraFoto;
+alturaMenu = (larguraMenu * 25) / 100;
+document.getElementById("menu_photo_unica").style.width = larguraMenu + "px";
+document.getElementById("menu_photo_unica").style.height = alturaMenu + "px";
+//- larguraTotal = pegar largura da tela (essa variável já tem) - larguraJanela
+//- larguraMenu = 90% da larguraTotal (tem uma variável com o mesmo valor)
+//- alturaMenu = 25% da larguraMenu
+
+//- alturaTotal = pegar altura da tela
+//- areaEspacos = 15% da alturaTotal
+//- alturaFoto = alturaTotal - (areaEspacos + alturaMenu) (essa variável está declarada mas precisa ser calculada de outra forma)
+
+//-------------------------------TESTES
+
 //Variáveis e comandos para fazer a galeria funcionar
 var mover_s_n = [0];
 var posicao_atual = [0];
