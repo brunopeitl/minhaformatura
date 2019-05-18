@@ -9,8 +9,6 @@ var qtd_fotos;
 var larguraJanela;
 var larguraFoto;
 var espacamentoFotos;
-var larguraMenu;
-var alturaMenu;
 var areaFoto;
 var larguraTotal;
 var puxarUL;
@@ -24,13 +22,13 @@ larguraMenu = larguraFoto;
 alturaMenu = (larguraMenu * 25) / 100;
 document.getElementById("menu_photo_unica").style.width = larguraMenu + "px";
 document.getElementById("menu_photo_unica").style.height = alturaMenu + "px";
-//- larguraTotal = pegar largura da tela (essa variável já tem) - larguraJanela
-//- larguraMenu = 90% da larguraTotal (tem uma variável com o mesmo valor)
-//- alturaMenu = 25% da larguraMenu
 
-//- alturaTotal = pegar altura da tela
-//- areaEspacos = 15% da alturaTotal
-//- alturaFoto = alturaTotal - (areaEspacos + alturaMenu) (essa variável está declarada mas precisa ser calculada de outra forma)
+var alturaTotal;
+var areaEspacos;
+var alturaFoto; //--- VAI USAR ESSA MESMO????
+alturaTotal = window.innerHeight;
+areaEspacos = (alturaTotal * 15) / 100;
+alturaFoto = alturaTotal - (areaEspacos + alturaMenu); //--- VAI USAR ISSO MESMO?
 
 //-------------------------------TESTES
 
