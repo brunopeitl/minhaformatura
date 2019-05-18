@@ -56,13 +56,7 @@ function montarTelaFtUn(qtd_fotos2) {
 	document.getElementById("listaUL").style.marginLeft = -puxarUL + "px"; //Puxa a UL em 5% para a esquerda para centralizar as fotos
 	//alturaFoto = (larguraFoto * 160) / 100; //Define altura da área onde aparecem as fotos
 	//***COMENTADA TEMPORARIAMENTE -- TESTAR COM ESSA LINHA COMENTADA POR ENQUANTO
-	//Laço for para criar os elementos LI onde ficarão as fotos, já com a largura e o espaçamento que foi calculado
-	lista = "";
-	for (i = 1; i <= qtd_fotos; i++) {
-		lista += "<li style='width:"+larguraFoto+"px; height:"+alturaFoto+"px; margin-left:"+espacamentoFotos+"px;'>Foto "+ i +"</li>"; 
-	}
-	document.getElementById("listaUL").innerHTML = lista;
-
+	
 	//-------------------------------TESTES
 	larguraMenu = larguraFoto;
 	alturaMenu = (larguraMenu * 25) / 100;
@@ -73,6 +67,15 @@ function montarTelaFtUn(qtd_fotos2) {
 	areaEspacos = (alturaTotal * 15) / 100;
 	alturaFoto = alturaTotal - (areaEspacos + alturaMenu); //--- VAI USAR ISSO MESMO?
 	//-------------------------------TESTES
+	
+	//Laço for para criar os elementos LI onde ficarão as fotos, já com a largura e o espaçamento que foi calculado
+	lista = "";
+	for (i = 1; i <= qtd_fotos; i++) {
+		lista += "<li style='width:"+larguraFoto+"px; height:"+alturaFoto+"px; margin-left:"+espacamentoFotos+"px;'>Foto "+ i +"</li>"; 
+	}
+	document.getElementById("listaUL").innerHTML = lista;
+
+
 	
 	//--- FIM DA DECLARAÇÃO DE VARIÁVEIS
 }
