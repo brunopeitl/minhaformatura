@@ -39,7 +39,6 @@ var finaliza_animacao;
 function montarTelaFtUn(qtd_fotos2) {
 	//--- DECLARAÇÃO DE VARIÁVEIS
 	//Variáveis e comandos para montar galeria
-	alert("tá dando certo.");
 	qtd_fotos = qtd_fotos2;
 
 	//---------- VARIÁVEIS PARA MONTAR O LAYOUT RESPONSÍVEL DA TELA
