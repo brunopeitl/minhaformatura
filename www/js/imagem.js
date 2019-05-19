@@ -68,7 +68,7 @@ function montarTelaFtUn(qtd_fotos2) {
 	listaFotos.sort();
 	for (i = 1; i <= qtd_fotos; i++) {
 		fotoColocar = cordova.file.dataDirectory+"imagens/"+listaFotos[i-1];
-		lista += "<li style=\"width:"+larguraFoto+"px; height:"+alturaFoto+"px; margin-left:"+espacamentoFotos+"px; background-image: url('"+fotoColocar+"'); \">Foto "+ i +"</li>";
+		lista += "<li style=\"width:"+larguraFoto+"px; height:"+alturaFoto+"px; margin-left:"+espacamentoFotos+"px; background-image: url('"+fotoColocar+"'); \"></li>";
 	}
 	document.getElementById("listaUL").innerHTML = lista;
 
