@@ -33,6 +33,6 @@ overflow: hidden;
 }
 #foto { position:relative; }
 ul#listaUL { list-style-type:none; margin:0; padding:0; margin-top:5%; /* Ver como vai ficar esse margin-top*/ }
-li { background-color:#000; float:left; padding:0; margin:0; color:#FFF; }
+li { background-color:#000; float:left; padding:0; margin:0; color:#FFF; background-repeat:no-repeat; background-size: contain; background-position: center; }
 #contentMenu { width:100%; }
 #menu_photo_unica { margin:5% auto; background-color:#CCC; }
