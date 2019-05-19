@@ -11,7 +11,8 @@ var larguraFoto;
 var espacamentoFotos;
 var areaFoto;
 var larguraTotal;
-var puxarUL;
+var puxarUL;var fotoColocar;
+
 var alturaFoto;
 var lista;
 
@@ -20,6 +21,7 @@ var alturaMenu;
 var alturaTotal;
 var areaEspacos;
 var alturaFoto;
+var fotoColocar;
 
 //Variáveis e comandos para fazer a galeria funcionar
 var mover_s_n = [0];
@@ -65,8 +67,8 @@ function montarTelaFtUn(qtd_fotos2) {
 	lista = "";
 	listaFotos.sort();
 	for (i = 1; i <= qtd_fotos; i++) {
-		var FotoColocar = cordova.file.dataDirectory+"imagens/"+listaFotos[i-1];
-		lista += "<li style='width:"+larguraFoto+"px; height:"+alturaFoto+"px; margin-left:"+espacamentoFotos+"px; background-image:url(\'"+FotoColocar+"\');'>Foto "+ i +"</li>"; 
+		fotoColocar = cordova.file.dataDirectory+"imagens/"+listaFotos[i-1];
+		lista += "<li style='width:"+larguraFoto+"px; height:"+alturaFoto+"px; margin-left:"+espacamentoFotos+"px;' id='foto"+i+"'>Foto "+ i +"</li>";
 	}
 	document.getElementById("listaUL").innerHTML = lista;
 
