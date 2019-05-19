@@ -60,7 +60,7 @@ function montarTelaFtUn(qtd_fotos2) {
 	alturaTotal = window.innerHeight;
 	areaEspacos = (alturaTotal * 15) / 100;
 	alturaFoto = alturaTotal - (areaEspacos + alturaMenu); //--- VAI USAR ISSO MESMO?
-	alert("altura total: "+alturaTotal+" - Área Espaços: "+areaEspacos+" - Altura Menu: "+alturaMenu+" - Largura Menu: "+larguraMenu);
+	alert("altura total: "+alturaTotal+" - Área Espaços: "+areaEspacos+" - Altura Menu: "+alturaMenu+" - Largura Menu: "+larguraMenu+" - Altura Foto: "+alturaFoto);
 	
 	//Laço for para criar os elementos LI onde ficarão as fotos, já com a largura e o espaçamento que foi calculado
 	lista = "";
