@@ -63,8 +63,10 @@ function montarTelaFtUn(qtd_fotos2) {
 	
 	//Laço for para criar os elementos LI onde ficarão as fotos, já com a largura e o espaçamento que foi calculado
 	lista = "";
+	listaFotos.sort();
 	for (i = 1; i <= qtd_fotos; i++) {
-		lista += "<li style='width:"+larguraFoto+"px; height:"+alturaFoto+"px; margin-left:"+espacamentoFotos+"px;'>Foto "+ i +"</li>"; 
+		var FotoColocar = cordova.file.dataDirectory+"imagens/"+listaFotos[i-1];
+		lista += "<li style='width:"+larguraFoto+"px; height:"+alturaFoto+"px; margin-left:"+espacamentoFotos+"px; background-image:url(\'"+FotoColocar+"\');'>Foto "+ i +"</li>"; 
 	}
 	document.getElementById("listaUL").innerHTML = lista;
 
