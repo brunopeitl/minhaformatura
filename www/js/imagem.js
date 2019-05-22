@@ -1,7 +1,15 @@
-
 //Funções dos botões do Menu -- Tela de Foto Única
-function teste_botao_menu() {
-	alert("testando função");
+function ir_galeria() {
+	alert("Ir para a Galeria");
+}
+function favoritar_individual() {
+	alert("Favoritar Foto");
+}
+function compartilhar_individual() {
+	alert("Compartilhar Foto");
+}
+function salvar_individual() {
+	alert("Salvar Foto na Memória do Celular ou Cartão de Memória");
 }
 
 //Cria Array onde vão ficar as fotos
