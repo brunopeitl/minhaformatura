@@ -1,3 +1,9 @@
+
+//Funções dos botões do Menu -- Tela de Foto Única
+function teste_botao_menu() {
+	alert("testando função");
+}
+
 //Cria Array onde vão ficar as fotos
 listaFotos = new Array();
 
