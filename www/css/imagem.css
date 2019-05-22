@@ -20,8 +20,6 @@ a.btComecar { display:inline; color:white; text-decoration:none; font-family:Tah
 
 #photo_unica { 
 display:none; position:absolute; top:0; left:0; z-index: -1;
-//ESSA PARTE TEM QUE MUDAR EM ALGUM MOMENTO
-//position: relative;
 height: 100%;
 width: 100%;
 margin:0; padding:0; overflow: hidden; /* ESCONDE BARRA DE ROLAGEM */
@@ -36,3 +34,5 @@ ul#listaUL { list-style-type:none; margin:0; padding:0; margin-top:5%; /* Ver co
 li { background-color:#000; float:left; padding:0; margin:0; color:#FFF; background-repeat:no-repeat; background-size: contain; background-position: center; }
 #contentMenu { width:100%; }
 #menu_photo_unica { margin:5% auto; background-color:#CCC; }
+ul.menu_botoes { list-style-type:none; margin:0; padding:0; }
+ul.menu_botoes li { float:left; }
