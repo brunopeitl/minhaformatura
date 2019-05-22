@@ -1,16 +1,3 @@
-//Funções dos botões do Menu -- Tela de Foto Única
-function ir_galeria() {
-	alert("Ir para a Galeria");
-}
-function favoritar_individual() {
-	alert("Favoritar Foto");
-}
-function compartilhar_individual() {
-	alert("Compartilhar Foto");
-}
-function salvar_individual() {
-	alert("Salvar Foto na Memória do Celular ou Cartão de Memória");
-}
 
 //Cria Array onde vão ficar as fotos
 listaFotos = new Array();
@@ -48,6 +35,23 @@ var posicao_que_ficou = [0];
 var inicia_animacao;
 var finaliza_animacao;
 
+
+//---------------- Funções dos botões do Menu -- Tela de Foto Única
+function ir_galeria() {
+	alert("Ir para a Galeria");
+}
+function favoritar_individual() {
+	alert("Favoritar Foto nº "+numero[0]);
+}
+function compartilhar_individual() {
+	alert("Compartilhar Foto nº "+numero[0]);
+}
+function salvar_individual() {
+	alert("Salvar Foto nº "+numero[0]+" na Memória do Celular ou Cartão de Memória");
+}
+//---------------- Funções dos botões do Menu -- Tela de Foto Única --------------- FIM
+
+
 function montarTelaFtUn(qtd_fotos2) {
 	//--- DECLARAÇÃO DE VARIÁVEIS
 	//Variáveis e comandos para montar galeria
@@ -65,8 +69,6 @@ function montarTelaFtUn(qtd_fotos2) {
 	document.getElementById("listaUL").style.width = larguraTotal + "px"; //Coloca essa largura total na UL que contém as fotos 
 	puxarUL = espacamentoFotos / 2;
 	document.getElementById("listaUL").style.marginLeft = -puxarUL + "px"; //Puxa a UL em 5% para a esquerda para centralizar as fotos
-	//alturaFoto = (larguraFoto * 160) / 100; //Define altura da área onde aparecem as fotos
-	//***COMENTADA TEMPORARIAMENTE -- TESTAR COM ESSA LINHA COMENTADA POR ENQUANTO
 	
 	//-------- MONTANDO ELEMENTOS DA TELA
 	larguraMenu = larguraFoto;
