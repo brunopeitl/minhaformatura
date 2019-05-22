@@ -412,6 +412,11 @@ var app = {
 	    
 	//Aqui vai a minha programação
 	insereFotosArray();
+	    
+	//testando rotação da tela
+	window.addEventListener('orientationchange', function(){
+   		alert(screen.orientation.type);
+	});
 	
 
 
