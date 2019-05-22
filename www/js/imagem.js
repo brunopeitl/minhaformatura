@@ -415,7 +415,8 @@ var app = {
 	    
 	//testando rotação da tela
 	window.addEventListener('orientationchange', function(){
-   		alert(screen.orientation.type);
+		alert("virou");
+   		//alert(screen.orientation.type);
 	});
 	
 
