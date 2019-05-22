@@ -35,4 +35,4 @@ li { background-color:#000; float:left; padding:0; margin:0; color:#FFF; backgro
 #contentMenu { width:100%; }
 #menu_photo_unica { margin:5% auto; background-color:#CCC; }
 ul.menu_botoes { list-style-type:none; margin:0; padding:0; }
-ul.menu_botoes li { float:left; }
+ul.menu_botoes li { float:left; margin:0; padding:0; }
