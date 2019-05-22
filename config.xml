@@ -5,7 +5,7 @@
     <author email="support@phonegap.com" href="http://phonegap.com">PhoneGap Team</author>
     <content src="index.html" />
     <preference name="DisallowOverscroll" value="true" />
-    <preference name="orientation" value="portrait" />
+    <!-- <preference name="orientation" value="portrait" /> -->
     
     <plugin name="cordova-plugin-whitelist" source="npm" />
     <plugin name="cordova-plugin-device" source="npm" spec="~1.1.6" />
