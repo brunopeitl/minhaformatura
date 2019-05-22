@@ -414,9 +414,13 @@ var app = {
 	insereFotosArray();
 	    
 	//testando rotação da tela
-	window.addEventListener('orientationchange', function(){
+	/*window.addEventListener('orientationchange', function(){
 		alert("virou");
    		//alert(screen.orientation.type);
+	});*/
+	screen.orientation.addEventListener('change', function(){
+		alert("virou");
+    		//console.log(screen.orientation.type);
 	});
 	
 
