@@ -9,7 +9,7 @@
     <title>Minha Formatura</title>
 </head>
 
-<body>
+<body onload="insereFotosArray()">
 	<div class="app">
   
     	<p>teste</p>
@@ -39,7 +39,34 @@
     	</script>
 
 	<script>
-		
+		//Ler pasta onde estão as fotos baixadas e listar os arquivos contidos nela, inserindo na tag UL
+		function insereFotosArray() {
+			function listDir(path){
+				window.resolveLocalFileSystemURL(path,
+					function (fileSystem) {
+						var reader = fileSystem.createReader();
+						reader.readEntries(
+							function (entries) {
+								var i;
+								for (i=0; i<entries.length; i++) {
+									listaFotos.push(entries[i].name);
+									if(i == entries.length - 1) {
+										geral();
+									}
+								}
+							},
+							function (err) {
+								console.log(err);
+							}
+						);
+						}, function (err) {
+							console.log(err);
+						}
+				);
+			}
+			//Chama a função passando o caminho da pasta na memória interna do aparelho a ser lida
+			listDir(cordova.file.dataDirectory + "imagens/");
+		}
 	</script>
 
 </body>
