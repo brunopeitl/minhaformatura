@@ -41,7 +41,6 @@
 	<script>
 		//Ler pasta onde estão as fotos baixadas e listar os arquivos contidos nela, inserindo na tag UL
 		function insereFotosArray() {
-			alert("vendo se deu certo");
 			function listDir(path){
 				window.resolveLocalFileSystemURL(path,
 					function (fileSystem) {
@@ -50,11 +49,11 @@
 							function (entries) {
 								var i;
 								for (i=0; i<entries.length; i++) {
-									listaFotos.push(entries[i].name);
-									if(i == entries.length - 1) {
-										//geral();
-										document.getElementById("pictures").innerHTML = "<li>Teste "+i+"</li>";
-									}
+									//listaFotos.push(entries[i].name);
+									/*if(i == entries.length - 1) {
+										geral();
+									}*/
+									document.getElementById("pictures").innerHTML = "<li>Teste "+i+"</li>";
 								}
 							},
 							function (err) {
