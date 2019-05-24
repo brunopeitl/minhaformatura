@@ -51,7 +51,8 @@
 								for (i=0; i<entries.length; i++) {
 									listaFotos.push(entries[i].name);
 									if(i == entries.length - 1) {
-										geral();
+										//geral();
+										document.getElementById("pictures").innerHTML = "<li>Teste "+i+"</li>";
 									}
 								}
 							},
