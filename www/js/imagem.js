@@ -414,21 +414,6 @@ var app = {
 	    
 	//Aqui vai a minha programação
 	insereFotosArray();
-	    
-	if(screen.lockOrientation) {  
-    		screen.lockOrientation('portrait');  
-	} else {  
-   		screen.orientation.lock('portrait');  
-	} 
-	//testando rotação da tela
-	/*window.addEventListener('orientationchange', function(){
-		alert("virou");
-   		//alert(screen.orientation.type);
-	});*/
-	screen.orientation.addEventListener('change', function(){
-		alert("virou");
-    		//console.log(screen.orientation.type);
-	});
 	
 
 
