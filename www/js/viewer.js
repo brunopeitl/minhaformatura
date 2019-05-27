@@ -1,8 +1,12 @@
 //Ler pasta onde estão as fotos baixadas e listar os arquivos contidos nela, inserindo na tag UL
 		function insereFotosArray() {
+			
+			alert("chegou até aqui");
+			
 			function listDir(path){
+				alert("chegou na etapa 01: "+path);
 				window.resolveLocalFileSystemURL(path,
-					alert(path);
+					alert("chegou na etapa 21: "+path);
 					function (fileSystem) {
 						var reader = fileSystem.createReader();
 						reader.readEntries(
@@ -15,7 +19,7 @@
 										geral();
 									}*/
 									//document.getElementById("pictures").innerHTML += "<li>Teste "+i+"</li>";
-									alert(entries[i].name);
+									alert(i/*entries[i].name*/);
 									//document.getElementById("pictures").innerHTML += "<li><img data-original='"+path+entries[i].name"' src='"+path+entries[i].name+"' alt='Foto'"+i+"></li>";
 								}
 							},
