@@ -15,7 +15,7 @@
 									}*/
 									//document.getElementById("pictures").innerHTML += "<li>Teste "+i+"</li>";
 									alert(path+entries[i].name);
-									document.getElementById("pictures").innerHTML += "<li><img data-original='"+path+entries[i].name"' src='"+path+entries[i].name+"' alt='Foto'"+i+"></li>"
+									document.getElementById("pictures").innerHTML += "<li><img data-original='"+path+entries[i].name"' src='"+path+entries[i].name+"' alt='Foto'"+i+"></li>";
 								}
 							},
 							function (err) {
