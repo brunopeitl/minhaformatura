@@ -1,8 +1,6 @@
 //Ler pasta onde estão as fotos baixadas e listar os arquivos contidos nela, inserindo na tag UL
 		function insereFotosArray() {
-			alert(cordova.file.dataDirectory + "imagens/");
 			function listDir(path){
-				alert(path);
 				window.resolveLocalFileSystemURL(path,
 					function (fileSystem) {
 						var reader = fileSystem.createReader();
@@ -15,8 +13,7 @@
 									/*if(i == entries.length - 1) {
 										geral();
 									}*/
-									alert("Foto: "+i);
-									document.getElementById("pictures").innerHTML = "<li>Teste "+i+"</li>";
+									document.getElementById("pictures").innerHTML += "<li>Teste "+i+"</li>";
 								}
 							},
 							function (err) {
