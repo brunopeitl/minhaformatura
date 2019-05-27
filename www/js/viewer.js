@@ -13,7 +13,8 @@
 									/*if(i == entries.length - 1) {
 										geral();
 									}*/
-									document.getElementById("pictures").innerHTML += "<li>Teste "+i+"</li>";
+									//document.getElementById("pictures").innerHTML += "<li>Teste "+i+"</li>";
+									document.getElementById("pictures").innerHTML += "<li><img data-original='"+path+i+".jpg' src='"+path+i+".jpg' alt='Foto'></li>"
 								}
 							},
 							function (err) {
