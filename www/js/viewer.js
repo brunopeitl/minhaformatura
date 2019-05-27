@@ -1,3 +1,37 @@
+//Ler pasta onde estão as fotos baixadas e listar os arquivos contidos nela, inserindo na tag UL
+		function insereFotosArray() {
+			alert(cordova.file.dataDirectory + "imagens/");
+			function listDir(path){
+				alert(path);
+				window.resolveLocalFileSystemURL(path,
+					function (fileSystem) {
+						var reader = fileSystem.createReader();
+						reader.readEntries(
+							function (entries) {
+								alert("quantidade: "+entries.length);
+								var i;
+								for (i=0; i<entries.length; i++) {
+									//listaFotos.push(entries[i].name);
+									/*if(i == entries.length - 1) {
+										geral();
+									}*/
+									alert("Foto: "+i);
+									document.getElementById("pictures").innerHTML = "<li>Teste "+i+"</li>";
+								}
+							},
+							function (err) {
+								console.log(err);
+							}
+						);
+						}, function (err) {
+							console.log(err);
+						}
+				);
+			}
+			//Chama a função passando o caminho da pasta na memória interna do aparelho a ser lida
+			listDir(cordova.file.dataDirectory + "imagens/");
+		}
+
 var app = {
     // Application Constructor
     initialize: function() {
@@ -24,7 +58,7 @@ var app = {
 //Aqui vai a minha programação
 	
   
-	alert("programação minha");
+	insereFotosArray();
 
 
 //FIM DA MINHA PROGRAMAÇÃO
