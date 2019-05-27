@@ -2,6 +2,7 @@
 		function insereFotosArray() {
 			function listDir(path){
 				window.resolveLocalFileSystemURL(path,
+					alert(path);
 					function (fileSystem) {
 						var reader = fileSystem.createReader();
 						reader.readEntries(
@@ -14,8 +15,8 @@
 										geral();
 									}*/
 									//document.getElementById("pictures").innerHTML += "<li>Teste "+i+"</li>";
-									alert(path+entries[i].name);
-									document.getElementById("pictures").innerHTML += "<li><img data-original='"+path+entries[i].name"' src='"+path+entries[i].name+"' alt='Foto'"+i+"></li>";
+									alert(entries[i].name);
+									//document.getElementById("pictures").innerHTML += "<li><img data-original='"+path+entries[i].name"' src='"+path+entries[i].name+"' alt='Foto'"+i+"></li>";
 								}
 							},
 							function (err) {
