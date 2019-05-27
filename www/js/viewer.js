@@ -61,7 +61,7 @@ var app = {
 //----------------------------------------------------
 //Aqui vai a minha programação
 	
-  
+  	alert("tá lendo o javascript pelo menos.");
 	insereFotosArray();
 
 
