@@ -48,11 +48,11 @@ function compartilhar_individual() {
 	alert("Compartilhar Foto nº "+numero[0]);
 }
 
-function step2(destination)
+/*function step2(destination)
 {
 	alert(destination);
         file.moveTo(destination,guardar[0],move_success, move_fail);
-}
+}*/
 
 function salvar_individual() {
 	var pegaFotoAtual = numero[0];
@@ -64,7 +64,7 @@ function salvar_individual() {
 	File sdcard = Environment.getExternalStorageDirectory();
 	String path = "file://"+sdcard.getAbsolutePath();
 	
-	window.resolveLocalFileSystemURI(path, step2,fail); //resolve destinaio
+	//window.resolveLocalFileSystemURI(path, step2,fail);
 	
 }
 //---------------- Funções dos botões do Menu -- Tela de Foto Única --------------- FIM
