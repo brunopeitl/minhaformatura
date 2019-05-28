@@ -8,7 +8,6 @@ function insereFotosArray() {
         				function (entries) {
 						var i;
 						for (i=0; i<entries.length; i++) {
-							//alert(entries[i].name);
 							document.getElementById("pictures").innerHTML += "<li>"+entries[i].name+"</li>";
     						}
         				},
