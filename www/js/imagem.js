@@ -61,10 +61,10 @@ function salvar_individual() {
 	alert("Caminho da foto para baixar: "+fotoaBaixar);
 	guardar[0] = fotoaBaixar;
 	//--- BAIXAR FOTO
-	File sdcard = Environment.getExternalStorageDirectory();
+	/*File sdcard = Environment.getExternalStorageDirectory();
 	String path = "file://"+sdcard.getAbsolutePath();
 	
-	//window.resolveLocalFileSystemURI(path, step2,fail);
+	window.resolveLocalFileSystemURI(path, step2,fail);*/
 	
 }
 //---------------- Funções dos botões do Menu -- Tela de Foto Única --------------- FIM
