@@ -47,7 +47,10 @@ function compartilhar_individual() {
 	alert("Compartilhar Foto nº "+numero[0]);
 }
 function salvar_individual() {
-	alert("Salvar Foto nº "+numero[0]+" na Memória do Celular ou Cartão de Memória");
+	var pegaFotoAtual = numero[0];
+	var fotoaBaixar = cordova.file.dataDirectory+"imagens/"+listaFotos[pegaFotoAtual];
+	
+	alert("Caminho da foto para baixar: "+fotoaBaixar);
 }
 //---------------- Funções dos botões do Menu -- Tela de Foto Única --------------- FIM
 
