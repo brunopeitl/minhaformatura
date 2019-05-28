@@ -1,4 +1,5 @@
 function insereFotosArray() {
+	alert("chamando função externa");
 }
 
 var app = {
@@ -26,7 +27,6 @@ var app = {
 	//Aqui vai a minha programação
 	//----------------------------------------------------
 
-	alert("JavaScript funcionando!");
 	insereFotosArray();
 
 	//FIM DA MINHA PROGRAMAÇÃO
