@@ -48,7 +48,7 @@ function compartilhar_individual() {
 }
 function salvar_individual() {
 	var pegaFotoAtual = numero[0];
-	var fotoaBaixar = cordova.file.dataDirectory+"imagens/"+listaFotos[pegaFotoAtual];
+	var fotoaBaixar = cordova.file.dataDirectory+"imagens/"+listaFotos[pegaFotoAtual-1];
 	
 	alert("Caminho da foto para baixar: "+fotoaBaixar);
 }
