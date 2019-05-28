@@ -1,5 +1,4 @@
 function insereFotosArray() {
-	alert("chamando função externa");
 	function listDir(path){
 			window.resolveLocalFileSystemURL(path,
 			function (fileSystem) {
