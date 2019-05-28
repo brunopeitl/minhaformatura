@@ -50,6 +50,7 @@ function compartilhar_individual() {
 
 function step2(destination)
 {
+	alert(destination);
         file.moveTo(destination,guardar[0],move_success, move_fail);
 }
 
