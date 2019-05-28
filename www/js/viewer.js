@@ -1,5 +1,10 @@
 function insereFotosArray() {
 	alert("chamando função externa");
+	function listDir(path){
+		alert(path);
+	}
+	//Chama a função passando o caminho da pasta na memória interna do aparelho a ser lida
+	listDir(cordova.file.dataDirectory + "imagens/");
 }
 
 var app = {
