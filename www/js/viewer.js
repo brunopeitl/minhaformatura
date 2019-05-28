@@ -8,7 +8,8 @@ function insereFotosArray() {
         				function (entries) {
 						var i;
 						for (i=0; i<entries.length; i++) {
-							document.getElementById("pictures").innerHTML += "<li>"+entries[i].name+"</li>";
+							//document.getElementById("pictures").innerHTML += "<li>"+entries[i].name+"</li>";
+							document.getElementById("pictures").innerHTML += "<li><img data-original='"+path+entries[i].name+"' src='"+path+entries[i].name+"' alt='Foto"+i+"'></li>";
     						}
         				},
         				function (err) {
