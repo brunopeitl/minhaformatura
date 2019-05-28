@@ -67,6 +67,24 @@
     	<script type="text/javascript">
         	app.initialize();
     	</script>
+	<script src="jquery-3.3.1.slim.min.js"></script>
+  <script src="bootstrap.bundle.min.js"></script>
+  <script src="viewer2.js"></script>
+  <script>
+    window.addEventListener('DOMContentLoaded', function () {
+      var galley = document.getElementById('galley');
+      var viewer = new Viewer(galley, {
+        url: 'data-original',
+        toolbar: false,
+	navbar: false,
+	title: false,
+	tooltip: false,
+	keyboard: false,
+	loop: false,
+	
+      });
+    });
+  </script>
 
 </body>
 </html>
