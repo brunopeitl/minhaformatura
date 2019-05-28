@@ -1,3 +1,6 @@
+function insereFotosArray() {
+}
+
 var app = {
     // Application Constructor
     initialize: function() {
@@ -20,13 +23,14 @@ var app = {
     // Update DOM on a Received Event
     receivedEvent: function(id) {
 	    
-//Aqui vai a minha programação
-//----------------------------------------------------
+	//Aqui vai a minha programação
+	//----------------------------------------------------
 
 	alert("JavaScript funcionando!");
+	insereFotosArray();
 
-//FIM DA MINHA PROGRAMAÇÃO
-//----------------------------------------------------
+	//FIM DA MINHA PROGRAMAÇÃO
+	//----------------------------------------------------
 	    
 	    
 	
