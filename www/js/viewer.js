@@ -1,12 +1,6 @@
 function insereFotosArray() {
 	alert("chamando função externa");
 	function listDir(path){
-
-		
-		
-		
-		
-		
 			window.resolveLocalFileSystemURL(path,
 			function (fileSystem) {
       				var reader = fileSystem.createReader();
@@ -15,10 +9,6 @@ function insereFotosArray() {
 						var i;
 						for (i=0; i<entries.length; i++) {
 							alert(entries[i].name);
-							//listaFotos.push(entries[i].name);
-							/*if(i == entries.length - 1) {
-								geral();
-							}*/
     						}
         				},
         				function (err) {
@@ -29,13 +19,6 @@ function insereFotosArray() {
       					console.log(err);
     				}
   		);
-		
-		
-		
-		
-		
-		
-		
 	}
 	//Chama a função passando o caminho da pasta na memória interna do aparelho a ser lida
 	listDir(cordova.file.dataDirectory + "imagens/");
