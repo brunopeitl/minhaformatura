@@ -1,6 +1,7 @@
 
 //Cria Array onde vão ficar as fotos
 listaFotos = new Array();
+guardar = new Array();
 
 //---------------------------- FUNÇÕES E VARIAVEIS RELACIONADAS À TELA DE FOTO INTEIRA ----------------------------//
 //------------------------------------------------------ INICIO ---------------------------------------------------//
@@ -46,11 +47,24 @@ function favoritar_individual() {
 function compartilhar_individual() {
 	alert("Compartilhar Foto nº "+numero[0]);
 }
+
+function step2(destination)
+{
+        file.moveTo(destination,guardar[0],move_success, move_fail);
+}
+
 function salvar_individual() {
 	var pegaFotoAtual = numero[0];
 	var fotoaBaixar = cordova.file.dataDirectory+"imagens/"+listaFotos[pegaFotoAtual-1];
 	
 	alert("Caminho da foto para baixar: "+fotoaBaixar);
+	guardar[0] = fotoaBaixar;
+	//--- BAIXAR FOTO
+	File sdcard = Environment.getExternalStorageDirectory();
+	String path = "file://"+sdcard.getAbsolutePath();
+	
+	window.resolveLocalFileSystemURI(path, step2,fail); //resolve destinaio
+	
 }
 //---------------- Funções dos botões do Menu -- Tela de Foto Única --------------- FIM
 
