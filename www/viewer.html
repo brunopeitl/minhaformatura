@@ -74,7 +74,7 @@
     window.addEventListener('DOMContentLoaded', function () {
       var galley = document.getElementById('galley');
       var viewer = new Viewer(galley, {
-        url: 'data-original',
+        url: cordova.file.dataDirectory + "imagens/CAPA.jpg"/*'data-original'*/,
         toolbar: false,
 	navbar: false,
 	title: false,
