@@ -71,10 +71,12 @@
   <script src="js/bootstrap.bundle.min.js"></script>
   <script src="js/viewer2.js"></script>
   <script>
+   var caminhoImagemAbrir = cordova.file.dataDirectory + "imagens/CAPA.jpg";
+	  
     window.addEventListener('DOMContentLoaded', function () {
       var galley = document.getElementById('galley');
       var viewer = new Viewer(galley, {
-        url: cordova.file.dataDirectory + "imagens/CAPA.jpg"/*'data-original'*/,
+        url: caminhoImagemAbrir/*'data-original'*/,
         toolbar: false,
 	navbar: false,
 	title: false,
