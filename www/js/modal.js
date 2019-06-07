@@ -1,9 +1,39 @@
 var conjuntoFotos = document.getElementById("conjuntoFotos");
-var fotos = ["img/img_5terre.jpg","img/img_forest.jpg","img/img_lights.jpg","img/img_mountains.jpg"];
+//var fotos = ["img/img_5terre.jpg","img/img_forest.jpg","img/img_lights.jpg","img/img_mountains.jpg"];
+listaFotos = new Array();
+
+//Ler pasta onde estão as fotos baixadas e listar os arquivos contidos nela, inserindo na Array
+function insereFotosArray() {
+	function listDir(path){
+		window.resolveLocalFileSystemURL(path,
+			function (fileSystem) {
+      				var reader = fileSystem.createReader();
+      				reader.readEntries(
+        				function (entries) {
+						var i;
+						for (i=0; i<entries.length; i++) {
+							listaFotos.push(entries[i].name);
+							if(i == entries.length - 1) {
+								geral();
+							}
+    						}
+        				},
+        				function (err) {
+          					console.log(err);
+        				}
+      				);
+    				}, function (err) {
+      					console.log(err);
+    				}
+  		);
+	}
+	//Chama a função passando o caminho da pasta na memória interna do aparelho a ser lida
+	listDir(cordova.file.dataDirectory + "imagens/");
+}
 
 function teste() {
   for (i = 0; i < fotos.length; i++) { 
-  	conjuntoFotos.innerHTML += "<div class=\"fotoUnitPaisagem\" style=\"background-image: url('" + fotos[i] + "')\" onclick=\"modalizar('" + fotos[i] + "')\"></div>";
+  	conjuntoFotos.innerHTML += "<div class=\"fotoUnitPaisagem\" style=\"background-image: url('" + cordova.file.dataDirectory+"imagens/"+listaFotos[i] + "')\" onclick=\"modalizar('" + cordova.file.dataDirectory+"imagens/"+listaFotos[i] + "')\"></div>";
   }
 }
 
@@ -51,6 +81,7 @@ var app = {
     receivedEvent: function(id) {
 	    
 	//Aqui vai a minha programação
+	insereFotosArray();
 	teste();
 	
 
