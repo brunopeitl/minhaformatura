@@ -21,7 +21,7 @@ function insereFotosArray() {
 						for (i=0; i<entries.length; i++) {
 							listaFotos.push(entries[i].name);
 							if(i == entries.length - 1) {
-								geral();
+								teste();
 							}
     						}
         				},
@@ -36,7 +36,6 @@ function insereFotosArray() {
 	}
 	//Chama a função passando o caminho da pasta na memória interna do aparelho a ser lida
 	listDir(cordova.file.dataDirectory + "imagens/");
-	teste();
 }
 
 function modalizar(numero) {
