@@ -2,6 +2,13 @@ var conjuntoFotos = document.getElementById("conjuntoFotos");
 //var fotos = ["img/img_5terre.jpg","img/img_forest.jpg","img/img_lights.jpg","img/img_mountains.jpg"];
 listaFotos = new Array();
 
+function teste() {
+  alert(listaFotos[0]);
+  for (i = 0; i < fotos.length; i++) { 
+  	conjuntoFotos.innerHTML += "<div class=\"fotoUnitPaisagem\" style=\"background-image: url('" + cordova.file.dataDirectory+"imagens/"+listaFotos[i] + "')\" onclick=\"modalizar('" + cordova.file.dataDirectory+"imagens/"+listaFotos[i] + "')\"></div>";
+  }
+}
+
 //Ler pasta onde estão as fotos baixadas e listar os arquivos contidos nela, inserindo na Array
 function insereFotosArray() {
 	function listDir(path){
@@ -29,21 +36,13 @@ function insereFotosArray() {
 	}
 	//Chama a função passando o caminho da pasta na memória interna do aparelho a ser lida
 	listDir(cordova.file.dataDirectory + "imagens/");
+	teste();
 }
-
-function teste() {
-  alert(listaFotos[0]);
-  for (i = 0; i < fotos.length; i++) { 
-  	conjuntoFotos.innerHTML += "<div class=\"fotoUnitPaisagem\" style=\"background-image: url('" + cordova.file.dataDirectory+"imagens/"+listaFotos[i] + "')\" onclick=\"modalizar('" + cordova.file.dataDirectory+"imagens/"+listaFotos[i] + "')\"></div>";
-  }
-}
-
 
 function modalizar(numero) {
 	modal.style.display = "block";
 	modalImg.src = numero;
 }
-
 
 // Get the modal
 var modal = document.getElementById("myModal");
@@ -83,7 +82,6 @@ var app = {
 	    
 	//Aqui vai a minha programação
 	insereFotosArray();
-	teste();
 	
 
 
