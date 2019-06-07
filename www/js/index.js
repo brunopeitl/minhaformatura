@@ -285,6 +285,7 @@ function enviar() {
 			avisado = 1;
 		}
 		else {
+			alert(conexao + " - Chegou até aqui.");
 			obterRespostaServidor(empresa,contrato,album,senha);
 		}
 	}
