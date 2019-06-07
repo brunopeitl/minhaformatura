@@ -4,7 +4,7 @@ listaFotos = new Array();
 
 function teste() {
   alert(listaFotos[0]);
-  for (i = 0; i < fotos.length; i++) { 
+  for (i = 0; i < listaFotos.length; i++) { 
   	conjuntoFotos.innerHTML += "<div class=\"fotoUnitPaisagem\" style=\"background-image: url('" + cordova.file.dataDirectory+"imagens/"+listaFotos[i] + "')\" onclick=\"modalizar('" + cordova.file.dataDirectory+"imagens/"+listaFotos[i] + "')\"></div>";
   }
 }
