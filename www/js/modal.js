@@ -1,3 +1,6 @@
+var conjuntoFotos = document.getElementById("conjuntoFotos");
+var fotos = ["../img/img_5terre.jpg","../img/img_forest.jpg","../img/img_lights.jpg","../img/img_mountains.jpg"];
+
 function teste() {
   for (i = 0; i < fotos.length; i++) { 
   	conjuntoFotos.innerHTML += "<div class=\"fotoUnitPaisagem\" style=\"background-image: url('" + fotos[i] + "')\" onclick=\"modalizar('" + fotos[i] + "')\"></div>";
@@ -48,8 +51,6 @@ var app = {
     receivedEvent: function(id) {
 	    
 	//Aqui vai a minha programação
-	var conjuntoFotos = document.getElementById("conjuntoFotos");
-	var fotos = ["../img/img_5terre.jpg","../img/img_forest.jpg","../img/img_lights.jpg","../img/img_mountains.jpg"];
 	teste();
 	
 
