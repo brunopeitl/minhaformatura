@@ -2,6 +2,17 @@ var conjuntoFotos = document.getElementById("conjuntoFotos");
 //var fotos = ["img/img_5terre.jpg","img/img_forest.jpg","img/img_lights.jpg","img/img_mountains.jpg"];
 listaFotos = new Array();
 
+function zoomin() {
+	alert("Deu Zoom In");
+	document.getElementsByClassName("modal")[0].style.width = "150%";
+	document.getElementsByClassName("modal")[0].style.height = "150%";
+}
+function zoomout() {
+	alert("Deu Zoom Out");
+	document.getElementsByClassName("modal")[0].style.width = "100%";
+	document.getElementsByClassName("modal")[0].style.height = "100%";
+}
+
 function teste() {
   alert(listaFotos[0]);
   for (i = 0; i < listaFotos.length; i++) { 
