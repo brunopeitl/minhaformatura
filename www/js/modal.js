@@ -8,14 +8,32 @@ transform: rotate(20deg);*/
 var conjuntoFotos = document.getElementById("conjuntoFotos");
 listaFotos = new Array();
 var estadoZoom = [0];
-var estadoRotacao = [0];
+var estadoRotacao = [1];
 
 function rotacionarmais() {
-	document.getElementsByClassName("modal-content")[0].style.transform = "rotate(90deg)";
+	if(estadoRotacao[0] == 0) {
+		document.getElementsByClassName("modal-content")[0].style.transform = "rotate(0deg)";
+		estadoRotacao[0] = 1;
+	}
+	else if(estadoRotacao[0] == 1) {
+		document.getElementsByClassName("modal-content")[0].style.transform = "rotate(90deg)";
+		estadoRotacao[0] = 2;
+	}
+	else {
+	}
 }
 
 function rotacionarmenos() {
-	document.getElementsByClassName("modal-content")[0].style.transform = "rotate(-90deg)";
+	if(estadoRotacao[0] == 2) {
+		document.getElementsByClassName("modal-content")[0].style.transform = "rotate(0deg)";
+		estadoRotacao[0] = 1;
+	}
+	else if(estadoRotacao[0] == 1) {
+		document.getElementsByClassName("modal-content")[0].style.transform = "rotate(-90deg)";
+		estadoRotacao[0] = 0;
+	}
+	else {
+	}
 }
 
 function zoomin() {
