@@ -3,18 +3,15 @@ var conjuntoFotos = document.getElementById("conjuntoFotos");
 listaFotos = new Array();
 
 function zoomin() {
-	alert("Deu Zoom In");
 	document.getElementsByClassName("modal-content")[0].style.width = "150%";
 	document.getElementsByClassName("modal-content")[0].style.height = "150%";
 }
 function zoomout() {
-	alert("Deu Zoom Out");
 	document.getElementsByClassName("modal-content")[0].style.width = "100%";
 	document.getElementsByClassName("modal-content")[0].style.height = "100%";
 }
 
 function teste() {
-  alert(listaFotos[0]);
   for (i = 0; i < listaFotos.length; i++) { 
   	conjuntoFotos.innerHTML += "<div class=\"fotoUnitPaisagem\" style=\"background-image: url('" + cordova.file.dataDirectory+"imagens/"+listaFotos[i] + "')\" onclick=\"modalizar('" + cordova.file.dataDirectory+"imagens/"+listaFotos[i] + "')\"></div>";
   }
