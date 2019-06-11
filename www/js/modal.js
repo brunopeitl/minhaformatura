@@ -4,11 +4,11 @@ listaFotos = new Array();
 
 function zoomin() {
 	document.getElementsByClassName("modal-content")[0].style.width = "150%";
-	document.getElementsByClassName("modal-content")[0].style.height = "150%";
+	document.getElementsByClassName("modal-content")[0].style.height = "auto";
 }
 function zoomout() {
 	document.getElementsByClassName("modal-content")[0].style.width = "80%";
-	document.getElementsByClassName("modal-content")[0].style.height = "80%";
+	document.getElementsByClassName("modal-content")[0].style.height = "auto";
 }
 
 function teste() {
