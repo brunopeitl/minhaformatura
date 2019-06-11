@@ -56,12 +56,14 @@ function insereFotosArray() {
 
 function modalizar(numero) {
 	modal.style.display = "block";
+	menuVisual.style.display = "block";
 	modalImg.src = numero;
 }
 
 // Get the modal
 var modal = document.getElementById("myModal");
 var modalImg = document.getElementById("img01");
+var menuVisual = document.getElementById("menuVisual");
 var captionText = document.getElementById("caption");
 
 
