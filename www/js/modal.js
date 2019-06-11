@@ -3,11 +3,11 @@ var conjuntoFotos = document.getElementById("conjuntoFotos");
 listaFotos = new Array();
 
 function rotacionarmais() {
-	alert("rotacionar mais");
+	document.getElementsByClassName("modal-content")[0].style.transform = "rotate(90deg)";
 }
 
 function rotacionarmenos() {
-	alert("rotacionar menos");
+	document.getElementsByClassName("modal-content")[0].style.transform = "rotate(-90deg)";
 }
 
 function zoomin() {
