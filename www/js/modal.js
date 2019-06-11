@@ -19,12 +19,42 @@ function rotacionarmenos() {
 }
 
 function zoomin() {
-	document.getElementsByClassName("modal-content")[0].style.width = "150%";
-	document.getElementsByClassName("modal-content")[0].style.height = "auto";
+	if (estadoZoom[0] == 0) {
+		document.getElementsByClassName("modal-content")[0].style.width = "150%";
+		document.getElementsByClassName("modal-content")[0].style.height = "auto";
+		estadoZoom[0] = 1;
+	}
+	else if (estadoZoom[0] == 1) {
+		document.getElementsByClassName("modal-content")[0].style.width = "200%";
+		document.getElementsByClassName("modal-content")[0].style.height = "auto";
+		estadoZoom[0] = 2;
+	}
+	else if (estadoZoom[0] == 2) {
+		document.getElementsByClassName("modal-content")[0].style.width = "250%";
+		document.getElementsByClassName("modal-content")[0].style.height = "auto";
+		estadoZoom[0] = 3;
+	}
+	else {
+	}
 }
 function zoomout() {
-	document.getElementsByClassName("modal-content")[0].style.width = "100%";
-	document.getElementsByClassName("modal-content")[0].style.height = "auto";
+		if (estadoZoom[0] == 3) {
+		document.getElementsByClassName("modal-content")[0].style.width = "200%";
+		document.getElementsByClassName("modal-content")[0].style.height = "auto";
+		estadoZoom[0] = 2;
+	}
+	else if (estadoZoom[0] == 2) {
+		document.getElementsByClassName("modal-content")[0].style.width = "150%";
+		document.getElementsByClassName("modal-content")[0].style.height = "auto";
+		estadoZoom[0] = 1;
+	}
+	else if (estadoZoom[0] == 1) {
+		document.getElementsByClassName("modal-content")[0].style.width = "100%";
+		document.getElementsByClassName("modal-content")[0].style.height = "auto";
+		estadoZoom[0] = 0;
+	}
+	else {
+	}
 }
 
 function teste() {
