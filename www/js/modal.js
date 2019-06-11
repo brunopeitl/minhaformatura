@@ -4,13 +4,13 @@ listaFotos = new Array();
 
 function zoomin() {
 	alert("Deu Zoom In");
-	document.getElementsByClassName("modal")[0].style.width = "150%";
-	document.getElementsByClassName("modal")[0].style.height = "150%";
+	document.getElementsByClassName("modal-content")[0].style.width = "150%";
+	document.getElementsByClassName("modal-content")[0].style.height = "150%";
 }
 function zoomout() {
 	alert("Deu Zoom Out");
-	document.getElementsByClassName("modal")[0].style.width = "100%";
-	document.getElementsByClassName("modal")[0].style.height = "100%";
+	document.getElementsByClassName("modal-content")[0].style.width = "100%";
+	document.getElementsByClassName("modal-content")[0].style.height = "100%";
 }
 
 function teste() {
