@@ -2,6 +2,14 @@ var conjuntoFotos = document.getElementById("conjuntoFotos");
 //var fotos = ["img/img_5terre.jpg","img/img_forest.jpg","img/img_lights.jpg","img/img_mountains.jpg"];
 listaFotos = new Array();
 
+function rotacionarmais() {
+	alert("rotacionar mais");
+}
+
+function rotacionarmenos() {
+	alert("rotacionar menos");
+}
+
 function zoomin() {
 	document.getElementsByClassName("modal-content")[0].style.width = "150%";
 	document.getElementsByClassName("modal-content")[0].style.height = "auto";
