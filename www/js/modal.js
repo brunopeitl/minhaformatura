@@ -64,6 +64,7 @@ function insereFotosArray() {
 function modalizar(numero) {
 	modal.style.display = "block";
 	menuVisual.style.display = "block";
+	menuPrincipal.style.display = "block";
 	modalImg.src = numero;
 }
 
@@ -71,6 +72,7 @@ function modalizar(numero) {
 var modal = document.getElementById("myModal");
 var modalImg = document.getElementById("img01");
 var menuVisual = document.getElementById("menuVisual");
+var menuPrincipal = document.getElementById("menuPrincipal");
 var captionText = document.getElementById("caption");
 
 
@@ -85,6 +87,7 @@ var span = document.getElementsByClassName("close")[0];
 function fecharModal() {
 	modal.style.display = "none";
 	menuVisual.style.display = "none";
+	menuPrincipal.style.display = "none";
 }
 
 var app = {
