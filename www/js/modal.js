@@ -1,3 +1,10 @@
+//------------
+//TALVEZ O TRANSFORM (PARA ROTACIONAR AS IMAGENS, PRECISE DISSO PARA FUNCIONAR EM ALGUNS DISPOSITIVOS
+/*-ms-transform: rotate(20deg); 
+-webkit-transform: rotate(20deg);
+transform: rotate(20deg);*/
+//------------
+
 var conjuntoFotos = document.getElementById("conjuntoFotos");
 //var fotos = ["img/img_5terre.jpg","img/img_forest.jpg","img/img_lights.jpg","img/img_mountains.jpg"];
 listaFotos = new Array();
