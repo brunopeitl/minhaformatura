@@ -48,7 +48,7 @@ function zoomin() {
 		estadoZoom[0] = 2;
 	}
 	else if (estadoZoom[0] == 2) {
-		document.getElementsByClassName("modal-content")[0].style.width = "250%";
+		document.getElementsByClassName("modal-content")[0].style.width = "300%";
 		document.getElementsByClassName("modal-content")[0].style.height = "auto";
 		estadoZoom[0] = 3;
 	}
