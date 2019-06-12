@@ -18,6 +18,8 @@ body {font-family: Arial, Helvetica, sans-serif; margin:0; padding:0; }
   z-index: 2;
   top:20px;
   left:50%;
+  margin:auto;
+  text-align: center;
 }
 #menuVisualInterno {
   position:relative;
@@ -32,6 +34,8 @@ body {font-family: Arial, Helvetica, sans-serif; margin:0; padding:0; }
   z-index: 2;
   top:80%;
   left:50%;
+  margin:auto;
+  text-align: center;
 }
 #menuPrincipalInterno {
   position:relative;
