@@ -63,21 +63,11 @@ function zoomin() {
 		document.getElementsByClassName("modal-content")[0].style.height = "auto";
 		estadoZoom[0] = 2;
 	}
-	else if (estadoZoom[0] == 2) {
-		document.getElementsByClassName("modal-content")[0].style.width = "300%";
-		document.getElementsByClassName("modal-content")[0].style.height = "auto";
-		estadoZoom[0] = 3;
-	}
 	else {
 	}
 }
 function zoomout() {
-	if (estadoZoom[0] == 3) {
-		document.getElementsByClassName("modal-content")[0].style.width = "200%";
-		document.getElementsByClassName("modal-content")[0].style.height = "auto";
-		estadoZoom[0] = 2;
-	}
-	else if (estadoZoom[0] == 2) {
+	if (estadoZoom[0] == 2) {
 		document.getElementsByClassName("modal-content")[0].style.width = "150%";
 		document.getElementsByClassName("modal-content")[0].style.height = "auto";
 		estadoZoom[0] = 1;
