@@ -14,8 +14,8 @@ function rotacionarmais() {
 	if(estadoRotacao[0] == 0) {
 		document.getElementsByClassName("modal-content")[0].style.transform = "rotate(0deg)";
 		if(estadoZoom[0] == 0) {
-			document.getElementsByClassName("modal-content")[0].style.width = "auto";
-			document.getElementsByClassName("modal-content")[0].style.height = "100%";
+			document.getElementsByClassName("modal-content")[0].style.width = "100%";
+			document.getElementsByClassName("modal-content")[0].style.height = "auto";
 		}
 		estadoRotacao[0] = 1;
 	}
@@ -35,8 +35,8 @@ function rotacionarmenos() {
 	if(estadoRotacao[0] == 2) {
 		document.getElementsByClassName("modal-content")[0].style.transform = "rotate(0deg)";
 		if(estadoZoom[0] == 0) {
-			document.getElementsByClassName("modal-content")[0].style.width = "auto";
-			document.getElementsByClassName("modal-content")[0].style.height = "100%";
+			document.getElementsByClassName("modal-content")[0].style.width = "100%";
+			document.getElementsByClassName("modal-content")[0].style.height = "auto";
 		}
 		estadoRotacao[0] = 1;
 	}
