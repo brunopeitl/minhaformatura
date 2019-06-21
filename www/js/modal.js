@@ -11,12 +11,28 @@ fotoAberta = new Array();
 var estadoZoom = [0];
 var estadoRotacao = [1];
 
+
+
+//------------------- CRIA PASTA
+function createFolder(win, error) {
+    window.resolveLocalFileSystemURL(cordova.file.externalRootDirectory, function (entry) {
+
+        entry.getDirectory("MinhaFormatura", {create: true, exclusive: false}, win, error);
+
+    });
+}
+
+
+
+
+
 function baixarFoto() {
+	createFolder();
 	alert("Baixar: "+fotoAberta[0]);
 	if (device.platform == "Android") {
 		alert("O dispositivo é um Android");
 	}
-	alert("A pasta externa é: "+cordova.file.externalDataDirectory);
+	//alert("A pasta externa é: "+cordova.file.externalDataDirectory);
 	
 	
 	
@@ -27,7 +43,7 @@ function baixarFoto() {
 	   var wwwDirEntry;
 
 	   //resolve url for directory entry for putting in copied file
-	   window.resolveLocalFileSystemURL(cordova.file.externalRootDirectory+"DCIM/", function success(dirEntry) {
+	   window.resolveLocalFileSystemURL(cordova.file.externalRootDirectory+"MinhaFormatura/", function success(dirEntry) {
 	       wwwDirEntry = dirEntry;
 	   });
 	
