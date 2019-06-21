@@ -27,7 +27,7 @@ function baixarFoto() {
 	   var wwwDirEntry;
 
 	   //resolve url for directory entry for putting in copied file
-	   window.resolveLocalFileSystemURL(cordova.file.dataDirectory + "imagens/", function success(dirEntry) {
+	   window.resolveLocalFileSystemURL(cordova.file.externalDataDirectory + "imagens/", function success(dirEntry) {
 	       wwwDirEntry = dirEntry;
 	   });
 
