@@ -27,13 +27,14 @@ function baixarFoto() {
 	   var wwwDirEntry;
 
 	   //resolve url for directory entry for putting in copied file
-	   window.resolveLocalFileSystemURL(cordova.file.externalDataDirectory + "imagens/", function success(dirEntry) {
+	   window.resolveLocalFileSystemURL(cordova.file.externalDataDirectory, function success(dirEntry) {
 	       wwwDirEntry = dirEntry;
 	   });
-
+	   alert("Chegou até aqui: "+wwwDirEntry);
 	   window.resolveLocalFileSystemURL(fotoAberta[0],
 	      function onSuccess(fileEntry)
 	      {
+		   alert("Até aqui chegou também");
 		  //alert(JSON.stringify(fileEntry));
 		  fileEntry.copyTo(wwwDirEntry, 'fotocopiada.jpg',
 		  function()
