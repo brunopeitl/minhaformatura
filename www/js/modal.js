@@ -7,6 +7,7 @@ transform: rotate(20deg);*/
 
 var conjuntoFotos = document.getElementById("conjuntoFotos");
 listaFotos = new Array();
+fotoAberta = new Array();
 var estadoZoom = [0];
 var estadoRotacao = [1];
 
@@ -127,10 +128,12 @@ function insereFotosArray() {
 }
 
 function modalizar(numero) {
+	fotoAberta[0] = numero;
 	modal.style.display = "block";
 	menuVisual.style.display = "block";
 	menuPrincipal.style.display = "block";
 	modalImg.src = numero;
+	alert(fotoAberta[0]);
 }
 
 // Get the modal
