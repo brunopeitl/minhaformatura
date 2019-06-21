@@ -16,6 +16,7 @@ function baixarFoto() {
 	if (device.platform == "Android") {
 		alert("O dispositivo é um Android");
 	}
+	alert("A pasta externa é: "+cordova.file.externalDataDirectory);
 }
 
 function rotacionarmais() {
