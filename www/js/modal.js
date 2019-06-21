@@ -11,6 +11,10 @@ fotoAberta = new Array();
 var estadoZoom = [0];
 var estadoRotacao = [1];
 
+function baixarFoto() {
+	alert("Baixar: "+fotoAberta[0]);
+}
+
 function rotacionarmais() {
 	if(estadoRotacao[0] == 0) {
 		document.getElementsByClassName("modal-content")[0].style.transform = "rotate(0deg)";
@@ -133,7 +137,6 @@ function modalizar(numero) {
 	menuVisual.style.display = "block";
 	menuPrincipal.style.display = "block";
 	modalImg.src = numero;
-	alert(fotoAberta[0]);
 }
 
 // Get the modal
