@@ -27,10 +27,10 @@ function baixarFoto() {
 	   var wwwDirEntry;
 
 	   //resolve url for directory entry for putting in copied file
-	   window.resolveLocalFileSystemURL(cordova.file.externalDataDirectory, function success(dirEntry) {
+	   window.resolveLocalFileSystemURL(cordova.file.externalRootDirectory, function success(dirEntry) {
 	       wwwDirEntry = dirEntry;
 	   });
-	   alert("Chegou até aqui: "+wwwDirEntry);
+	
 	   window.resolveLocalFileSystemURL(fotoAberta[0],
 	      function onSuccess(fileEntry)
 	      {
