@@ -12,7 +12,7 @@ var estadoZoom = [0];
 var estadoRotacao = [1];
 
 function baixarFoto() {
-	alert("Baixar: "+fotoAberta[0]);
+	alert("Baixar: "+fotoAberta[0]+"<br />Plataforma: "+device.platform);
 }
 
 function rotacionarmais() {
