@@ -17,6 +17,40 @@ function baixarFoto() {
 		alert("O dispositivo é um Android");
 	}
 	alert("A pasta externa é: "+cordova.file.externalDataDirectory);
+	
+	
+	
+	
+	
+	//----------------------------------------------
+	//COPY FILE
+	   var wwwDirEntry;
+
+	   //resolve url for directory entry for putting in copied file
+	   window.resolveLocalFileSystemURL(cordova.file.dataDirectory + "imagens/", function success(dirEntry) {
+	       wwwDirEntry = dirEntry;
+	   });
+
+	   window.resolveLocalFileSystemURL(fotoAberta[0],
+	      function onSuccess(fileEntry)
+	      {
+		  //alert(JSON.stringify(fileEntry));
+		  fileEntry.copyTo(wwwDirEntry, 'fotocopiada.jpg',
+		  function()
+		  {
+		      alert('copying was successful');
+		  },
+		  function()
+		  {
+		      alert('copying FAILED');
+		  });
+	     }, function (e) { alert(JSON.stringify(e)); });
+
+	
+	
+	
+	
+	//--------------------------------------------------
 }
 
 function rotacionarmais() {
