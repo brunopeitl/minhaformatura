@@ -12,6 +12,10 @@ var estadoZoom = [0];
 var estadoRotacao = [1];
 
 
+function compartilharFoto() {
+	alert("Compartilhar: "+fotoAberta[0]);
+}
+
 
 //------------------- CRIA PASTA
 function createFolder(win, error) {
