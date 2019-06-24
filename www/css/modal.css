@@ -84,7 +84,8 @@ body {font-family: Arial, Helvetica, sans-serif; margin:0; padding:0; }
   height: 150px;
 }
 
-/* Add Animation */
+/* ----------------------------------- ANIMAÇÃO ----------------------------------- */
+
 .modal-content, #caption, #menuVisual, #menuPrincipal {  
   -webkit-animation-name: zoom;
   -webkit-animation-duration: 0.6s;
@@ -101,6 +102,8 @@ body {font-family: Arial, Helvetica, sans-serif; margin:0; padding:0; }
   from {transform:scale(0)} 
   to {transform:scale(1)}
 }
+
+/* ----------------------------------- ANIMAÇÃO ----------------------------------- */
 
 /* The Close Button */
 .close {
