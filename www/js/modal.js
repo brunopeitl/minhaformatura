@@ -19,7 +19,7 @@ function compartilharFoto() {
 
 //------------------- CRIA PASTA
 function createFolder(win, error) {
-    window.resolveLocalFileSystemURL(cordova.file.externalRootDirectory, function (entry) {
+    window.resolveLocalFileSystemURL(cordova.file.externalRootDirectory+"DCIM/", function (entry) {
 
         entry.getDirectory("MinhaFormatura", {create: true, exclusive: false}, win, error);
 
@@ -47,7 +47,7 @@ function baixarFoto() {
 	   var wwwDirEntry;
 
 	   //resolve url for directory entry for putting in copied file
-	   window.resolveLocalFileSystemURL(cordova.file.externalRootDirectory+"MinhaFormatura/", function success(dirEntry) {
+	   window.resolveLocalFileSystemURL(cordova.file.externalRootDirectory+"DCIM/MinhaFormatura/", function success(dirEntry) {
 	       wwwDirEntry = dirEntry;
 	   });
 	
