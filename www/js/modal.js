@@ -73,6 +73,15 @@ function baixarFoto() {
 	//--------------------------------------------------
 }
 
+//------ Essa função é uma gambiarra para centralizar a foto na tela quando dá zoom
+function centraliza(tamZoom) {
+	var largTela = window.innerWidth;
+	var novoTamanho = (largTela * tamZoom)/100;
+	var medidaVoltar = (novoTamanho - largTela)/2;
+	document.getElementsByClassName("modal-content")[0].style.left = -medidaVoltar;
+}
+//----------------------------------------------------------------------------------
+
 function rotacionarmais() {
 	if(estadoRotacao[0] == 0) {
 		document.getElementsByClassName("modal-content")[0].style.transform = "rotate(0deg)";
@@ -119,19 +128,19 @@ function zoomin() {
 	if (estadoZoom[0] == 0) {
 		document.getElementsByClassName("modal-content")[0].style.width = "150%";
 		document.getElementsByClassName("modal-content")[0].style.height = "auto";
-		document.getElementsByClassName("modal-content")[0].style.margin = "auto";
+		centraliza(150);
 		estadoZoom[0] = 1;
 	}
 	else if (estadoZoom[0] == 1) {
 		document.getElementsByClassName("modal-content")[0].style.width = "200%";
 		document.getElementsByClassName("modal-content")[0].style.height = "auto";
-		document.getElementsByClassName("modal-content")[0].style.margin = "auto";
+		centraliza(200);
 		estadoZoom[0] = 2;
 	}
 	else if (estadoZoom[0] == 2) {
 		document.getElementsByClassName("modal-content")[0].style.width = "250%";
 		document.getElementsByClassName("modal-content")[0].style.height = "auto";
-		document.getElementsByClassName("modal-content")[0].style.margin = "auto";
+		centraliza(250);
 		estadoZoom[0] = 3;
 	}
 	else {
@@ -141,19 +150,19 @@ function zoomout() {
 	if (estadoZoom[0] == 3) {
 		document.getElementsByClassName("modal-content")[0].style.width = "200%";
 		document.getElementsByClassName("modal-content")[0].style.height = "auto";
-		document.getElementsByClassName("modal-content")[0].style.margin = "auto";
+		centraliza(200);
 		estadoZoom[0] = 2;
 	}
 	else if (estadoZoom[0] == 2) {
 		document.getElementsByClassName("modal-content")[0].style.width = "150%";
 		document.getElementsByClassName("modal-content")[0].style.height = "auto";
-		document.getElementsByClassName("modal-content")[0].style.margin = "auto";
+		centraliza(150);
 		estadoZoom[0] = 1;
 	}
 	else if (estadoZoom[0] == 1) {
 		document.getElementsByClassName("modal-content")[0].style.width = "100%";
 		document.getElementsByClassName("modal-content")[0].style.height = "auto";
-		document.getElementsByClassName("modal-content")[0].style.margin = "auto";
+		centraliza(100);
 		estadoZoom[0] = 0;
 	}
 	else {
