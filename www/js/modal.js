@@ -78,7 +78,8 @@ function centraliza(tamZoom) {
 	var largTela = window.innerWidth;
 	var novoTamanho = (largTela * tamZoom)/100;
 	var medidaVoltar = (novoTamanho - largTela)/2;
-	document.getElementsByClassName("modal-content")[0].style.marginLeft = 0 - medidaVoltar;
+	document.getElementsByClassName("modal-content")[0].style.left = -medidaVoltar;
+	alert("file://"+sdcard.getAbsolutePath(););
 }
 //----------------------------------------------------------------------------------
 
