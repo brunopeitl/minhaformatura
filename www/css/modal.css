@@ -66,6 +66,7 @@ body {font-family: Arial, Helvetica, sans-serif; margin:0; padding:0; }
 
 /* Modal Content (image) */
 .modal-content {
+  position:relative;
   margin: auto;
   display: block;
   width: 100%;
