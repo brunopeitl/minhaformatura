@@ -79,7 +79,7 @@ function centraliza(tamZoom) {
 	var novoTamanho = (largTela * tamZoom)/100;
 	var medidaVoltar = (novoTamanho - largTela)/2;
 	var numeroNegativo = 0 - medidaVoltar;
-	document.getElementsByClassName("modal-content")[0].style.left = numeroNegativo+"px";
+	document.getElementsByClassName("modal-content")[0].style.marginLeft = numeroNegativo+"px";
 }
 //----------------------------------------------------------------------------------
 
