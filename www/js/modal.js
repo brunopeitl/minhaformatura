@@ -78,7 +78,9 @@ function centraliza(tamZoom) {
 	var largTela = window.innerWidth;
 	var novoTamanho = (largTela * tamZoom)/100;
 	var medidaVoltar = (novoTamanho - largTela)/2;
-	document.getElementsByClassName("modal-content")[0].style.left = -medidaVoltar;
+	var numeroNegativo = 0 - medidaVoltar;
+	document.getElementsByClassName("modal-content")[0].style.left = numeroNegativo+"px";
+	alert("tá atualizando");
 	alert("file://"+sdcard.getAbsolutePath());
 }
 //----------------------------------------------------------------------------------
