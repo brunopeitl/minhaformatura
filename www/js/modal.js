@@ -80,8 +80,6 @@ function centraliza(tamZoom) {
 	var medidaVoltar = (novoTamanho - largTela)/2;
 	var numeroNegativo = 0 - medidaVoltar;
 	document.getElementsByClassName("modal-content")[0].style.left = numeroNegativo+"px";
-	alert("tá atualizando");
-	alert("file://"+sdcard.getAbsolutePath());
 }
 //----------------------------------------------------------------------------------
 
