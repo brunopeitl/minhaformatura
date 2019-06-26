@@ -78,9 +78,8 @@ function centraliza(tamZoom) {
 	var largTela = window.innerWidth;
 	var novoTamanho = (largTela * tamZoom)/100;
 	var medidaVoltar = (novoTamanho - largTela)/2;
-	alert("Rolar para: "+medidaVoltar);
 	window.scrollTo(0, 0);
-	window.scrollTo(medidaVoltar, 0);
+	window.scrollTo(90, 0);
 }
 //----------------------------------------------------------------------------------
 
