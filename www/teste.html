@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+<style>
+#longo {
+	width:500px;
+    height:80px;
+    background-color:red;
+}
+</style>
+</head>
+<body>
+
+<a href="javascript:testar()">Testar</a>
+<div id="longo"></div>
+
+<script>
+function testar() {
+	document.getElementById("longo").style.width = "2500px";
+	window.scrollTo(0, 0);
+	window.scrollTo(500, 0);
+}
+</script>
+</body>
+</html>
