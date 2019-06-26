@@ -130,7 +130,9 @@ function rotacionarmenos() {
 
 function zoomin() {
 	if (estadoZoom[0] == 0) {
-		document.getElementsByClassName("modal-content")[0].style.width = "150%";
+		var largTela1 = window.innerWidth;
+		var novoTamanho1 = (largTela1 * 150)/100;
+		document.getElementsByClassName("modal-content")[0].style.width = novoTamanho1+"px";
 		document.getElementsByClassName("modal-content")[0].style.height = "auto";
 		centraliza(150);
 		estadoZoom[0] = 1;
