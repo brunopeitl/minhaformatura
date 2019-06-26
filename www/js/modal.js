@@ -75,6 +75,9 @@ function baixarFoto() {
 
 //------ Essa função é uma gambiarra para centralizar a foto na tela quando dá zoom
 function centraliza(tamZoom) {
+	document.body.style.overflow = "scroll";
+	document.getElementsByClassName("modal")[0].style.overflow = "scroll";
+	document.getElementsByClassName("modal-content")[0].style.overflow = "scroll";
 	var largTela = window.innerWidth;
 	var novoTamanho = (largTela * tamZoom)/100;
 	var medidaVoltar = (novoTamanho - largTela)/2;
