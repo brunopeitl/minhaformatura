@@ -80,8 +80,6 @@ function centraliza(tamZoom) {
 	var medidaVoltar = (novoTamanho - largTela)/2;
 	document.getElementsByClassName("modal")[0].scrollTo(0, 0);
 	document.getElementsByClassName("modal")[0].scrollTo(medidaVoltar, 0);
-	//window.scrollTo(0, 0);
-	//window.scrollTo(90, 0);
 }
 //----------------------------------------------------------------------------------
 
