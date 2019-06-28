@@ -83,6 +83,16 @@ function centraliza(tamZoom) {
 }
 //----------------------------------------------------------------------------------
 
+var orientacaoFoto;
+
+function verOrientacao() {
+	var largura = document.getElementById('img01').offsetWidth;
+	var altura = document.getElementById('img01').offsetHeight;
+
+	if (largura > altura) { return "horizontal"; }
+	else if (largura < altura) { return "vertical"; }
+}
+
 function rotacionarmais() {
 	if(estadoRotacao[0] == 0) {
 		document.getElementsByClassName("modal-content")[0].style.transform = "rotate(0deg)";
@@ -91,6 +101,8 @@ function rotacionarmais() {
 			document.getElementsByClassName("modal-content")[0].style.height = "auto";
 		}
 		estadoRotacao[0] = 1;
+		orientacaoFoto = verOrientacao();
+		alert(orientacaoFoto);
 	}
 	else if(estadoRotacao[0] == 1) {
 		document.getElementsByClassName("modal-content")[0].style.transform = "rotate(90deg)";
@@ -112,6 +124,8 @@ function rotacionarmenos() {
 			document.getElementsByClassName("modal-content")[0].style.height = "auto";
 		}
 		estadoRotacao[0] = 1;
+		orientacaoFoto = verOrientacao();
+		alert(orientacaoFoto);
 	}
 	else if(estadoRotacao[0] == 1) {
 		document.getElementsByClassName("modal-content")[0].style.transform = "rotate(-90deg)";
