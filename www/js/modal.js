@@ -86,7 +86,7 @@ function centraliza(tamZoom) {
 function adequarLargura(orientacao) {
 	alert("Orientação: "+orientacao);
 	if (estadoRotacao[0] != 1) {
-		if (orientacao == "retrato") {
+		if (orientacao == "paisagem") {
 			var largTela = window.innerWidth;
 			document.getElementsByClassName("modal-content")[0].style.width = "auto";
 			document.getElementsByClassName("modal-content")[0].style.height = largTela+"px";
