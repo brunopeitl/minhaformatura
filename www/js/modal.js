@@ -85,6 +85,9 @@ function centraliza(tamZoom) {
 
 function adequarLargura() {
 	alert("Orientação: Paisagem");
+	var largTela = window.innerWidth;
+	document.getElementsByClassName("modal-content")[0].style.width = "auto";
+	document.getElementsByClassName("modal-content")[0].style.height = largTela+"px";
 }
 
 function verOrientacao() {
