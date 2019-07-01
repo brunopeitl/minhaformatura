@@ -85,9 +85,17 @@ function centraliza(tamZoom) {
 
 function adequarLargura(orientacao) {
 	alert("Orientação: "+orientacao);
-	//var largTela = window.innerWidth;
-	//document.getElementsByClassName("modal-content")[0].style.width = "auto";
-	//document.getElementsByClassName("modal-content")[0].style.height = largTela+"px";
+	if (estadoRotacao[0] != 1) {
+		if (orientacao == "retrato") {
+			var largTela = window.innerWidth;
+			document.getElementsByClassName("modal-content")[0].style.width = "auto";
+			document.getElementsByClassName("modal-content")[0].style.height = largTela+"px";
+		}
+		else {
+		}
+	}
+	else {
+	}
 }
 
 function verOrientacao() {
