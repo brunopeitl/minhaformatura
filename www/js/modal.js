@@ -83,14 +83,16 @@ function centraliza(tamZoom) {
 }
 //----------------------------------------------------------------------------------
 
-var orientacaoFoto;
+function adequarLargura() {
+	alert("Orientação: Paisagem");
+}
 
 function verOrientacao() {
 	var largura = document.getElementById('img01').offsetWidth;
 	var altura = document.getElementById('img01').offsetHeight;
 
-	if (largura > altura) { return "paisagem"; }
-	else if (largura < altura) { return "retrato"; }
+	if (largura > altura) { adequarLargura(); }
+	else { }
 }
 
 function rotacionarmais() {
@@ -101,8 +103,7 @@ function rotacionarmais() {
 			document.getElementsByClassName("modal-content")[0].style.height = "auto";
 		}
 		estadoRotacao[0] = 1;
-		orientacaoFoto = verOrientacao();
-		alert(orientacaoFoto);
+		verOrientacao();
 	}
 	else if(estadoRotacao[0] == 1) {
 		document.getElementsByClassName("modal-content")[0].style.transform = "rotate(90deg)";
@@ -124,8 +125,7 @@ function rotacionarmenos() {
 			document.getElementsByClassName("modal-content")[0].style.height = "auto";
 		}
 		estadoRotacao[0] = 1;
-		orientacaoFoto = verOrientacao();
-		alert(orientacaoFoto);
+		verOrientacao();
 	}
 	else if(estadoRotacao[0] == 1) {
 		document.getElementsByClassName("modal-content")[0].style.transform = "rotate(-90deg)";
