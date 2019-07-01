@@ -89,8 +89,8 @@ function verOrientacao() {
 	var largura = document.getElementById('img01').offsetWidth;
 	var altura = document.getElementById('img01').offsetHeight;
 
-	if (largura > altura) { return "horizontal"; }
-	else if (largura < altura) { return "vertical"; }
+	if (largura > altura) { return "paisagem"; }
+	else if (largura < altura) { return "retrato"; }
 }
 
 function rotacionarmais() {
