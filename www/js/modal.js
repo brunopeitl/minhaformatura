@@ -235,8 +235,13 @@ function insereFotosArray() {
 function modalizar(numero) {
 	fotoAberta[0] = numero;
 	modal.style.display = "block";
+	
 	menuVisual.style.display = "block";
 	menuPrincipal.style.display = "block";
+	//Testando isso daqui ver se arruma
+	menuVisual.style.zIndex = "200";
+	menuPrincipal.style.zIndex = "200";
+	
 	modalImg.src = numero;
 }
 
