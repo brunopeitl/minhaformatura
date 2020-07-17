@@ -195,6 +195,16 @@ function baixarFotos(response) {
 					console.log("download error source " + error.source);
 					console.log("download error target " + error.target);
 					console.log("download error code" + error.code);
+					
+//---------------------------------------------------------------------------------------------------------------------------------------------------------------//
+					//AQUI VAI O CÓDIGO PARA TRATAR MELHOR O ERRO NO DOWNLOAD
+					//Colocar um timer, quando dá erro, começa o timer, conta 5 minutos
+					//Se baixar outra foto, zera o timer
+					//Se não baixar nenhuma foto em 5 minutos, dá um erro definitivo que para o download
+					//Acho que se colocar i=100 ele para o laço for e para de baixar
+					//Colocar um link ou botão "Tentar de novo" que manda para a primeira tela
+//---------------------------------------------------------------------------------------------------------------------------------------------------------------//
+					
 					$("#fotos_baixadas").html("ERRO NO DOWNLOAD.");
 					variaveisGlobais["parar_animacao"] = 1;
 					document.getElementById("fazendo_download").style.display = "none";
