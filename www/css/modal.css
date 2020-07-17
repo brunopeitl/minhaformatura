@@ -15,7 +15,7 @@ body {font-family: Arial, Helvetica, sans-serif; margin:0; padding:0; }
 #menuVisual {
   display:none;
   /* Menu Visual - position:absolute; */
-  position:relative;
+  position:fixed;
   z-index: 2;
   top:20px;
   left:50%;
@@ -34,7 +34,7 @@ body {font-family: Arial, Helvetica, sans-serif; margin:0; padding:0; }
 #menuPrincipal {
   display:none;
   /* Menu Principal - position:absolute; */
-  position:relative;
+  position:fixed;
   z-index: 2;
   top:80%;
   left:50%;
