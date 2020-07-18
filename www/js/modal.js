@@ -11,8 +11,8 @@ fotoAberta = new Array();
 var estadoZoom = [0];
 var estadoRotacao = [1];
 
-function pegarnumerofoto(caminhoInteiro) {
-	return 'fotocopiadabcdefgh.jpg';
+function pegarnumerofoto() {
+	caminhoInteiro = fotoAberta[0];
 	alert("O caminho inteiro é "+caminhoInteiro);
 	//Aqui vai um algoritmo para pegar só o nome do arquivo do caminho todo
 	for (a = caminhoInteiro.length; a > 0; a--) {
@@ -25,6 +25,7 @@ function pegarnumerofoto(caminhoInteiro) {
 		else {
 		}
 	}
+	return 'fotocopiadabcdefgh.jpg';
 }
 
 function compartilharFoto() {
@@ -74,7 +75,7 @@ function baixarFoto() {
 //--------------------------------------------------------------------------------------------------------------------------------------------------------------------------//
 //--------------------------------------------------------------------------------------------------------------------------------------------------------------------------//
 		  //É AQUI QUE ESTAMOS MEXENDO
-		  fotocopiada = pegarnumerofoto(fotoAberta[0]);
+		  fotocopiada = pegarnumerofoto();
 		  fileEntry.copyTo(wwwDirEntry, fotocopiada,
 		  function()
 		  {
