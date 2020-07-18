@@ -16,8 +16,8 @@ var cor = localStorage.getItem("cor");
 var curso = localStorage.getItem("curso");
 var instituicao = localStorage.getItem("instituicao");
 
-document.getElementById("tituloCurso").innerHTML = curso+" - <span>"+instituicao+"</span>";
-//document.getElementById("tituloCurso").innerHTML = curso+" - <span style=\" font-family: Tahoma; font-size:16pt; \">"+instituicao+"</span>";
+//document.getElementById("tituloCurso").innerHTML = curso+" - <span>"+instituicao+"</span>";
+document.getElementById("tituloCurso").innerHTML = curso+" - <span style=\" font-family: Tahoma; font-size:16pt; \">"+instituicao+"</span>";
 
 alert("chegou até aqui. Que que tá pegando?");
 
@@ -30,7 +30,7 @@ function pegarnumerofoto() {
 		if (char_teste == "/") {
 			posicaoBarraNome = a;
 			break;
-		}<s
+		}
 		else {
 		}
 	}//--- Fim do algoritmo para pegar o nome do arquivo
