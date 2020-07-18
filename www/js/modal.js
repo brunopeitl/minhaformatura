@@ -11,8 +11,20 @@ fotoAberta = new Array();
 var estadoZoom = [0];
 var estadoRotacao = [1];
 
-function pegarnumerofoto() {
+function pegarnumerofoto(caminhoInteiro) {
 	return 'fotocopiadabcdefgh.jpg';
+	alert("O caminho inteiro é "+caminhoInteiro);
+	//Aqui vai um algoritmo para pegar só o nome do arquivo do caminho todo
+	for (a = caminhoInteiro.length; a > 0; a--) {
+		var char_teste = caminhoInteiro.substring(a, a-1);
+		if (char_teste == "/") {
+			posicaoBarraNome = a;
+			break;
+			alert(posicaoBarraNome);
+		}
+		else {
+		}
+	}
 }
 
 function compartilharFoto() {
