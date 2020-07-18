@@ -1,3 +1,4 @@
+@font-face { font-family: highDestiny; src: url(../fonts/highDestiny.otf); }
 body {font-family: Arial, Helvetica, sans-serif; margin:0; padding:0; }
 
 h2 { font-family: highDestiny; font-size:18pt; margin-left:5px; }
