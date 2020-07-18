@@ -11,6 +11,13 @@ fotoAberta = new Array();
 var estadoZoom = [0];
 var estadoRotacao = [1];
 
+//Texto no topo da Tela de Galeria
+var cor = localStorage.getItem("cor");
+var curso = localStorage.getItem("curso");
+var instituicao = localStorage.getItem("instituicao");
+
+document.getElementById("tituloCurso").innerHTML = curso+" - "+instituicao;
+
 
 function pegarnumerofoto() {
 	var posicaoBarraNome;
