@@ -11,6 +11,9 @@ fotoAberta = new Array();
 var estadoZoom = [0];
 var estadoRotacao = [1];
 
+function pegarnumerofoto() {
+	return 'fotocopiadabcdefgh.jpg';
+}
 
 function compartilharFoto() {
 	alert("Compartilhar: "+fotoAberta[0]);
@@ -59,9 +62,8 @@ function baixarFoto() {
 //--------------------------------------------------------------------------------------------------------------------------------------------------------------------------//
 //--------------------------------------------------------------------------------------------------------------------------------------------------------------------------//
 		  //É AQUI QUE ESTAMOS MEXENDO
-		  acopiar = fotoAberta[0]+".jpg";
-		  alert("Variável acopiar = "+acopiar);
-		  fileEntry.copyTo(wwwDirEntry, 'fotocopiadaaaa.jpg',
+		  fotocopiada = pegarnumerofoto(fotoAberta[0]);
+		  fileEntry.copyTo(wwwDirEntry, fotocopiada,
 		  function()
 		  {
 		      alert('copying was successful');
