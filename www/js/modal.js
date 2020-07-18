@@ -16,7 +16,7 @@ var cor = localStorage.getItem("cor");
 var curso = localStorage.getItem("curso");
 var instituicao = localStorage.getItem("instituicao");
 
-document.getElementById("tituloCurso").innerHTML = curso+" - "+instituicao;
+document.getElementById("tituloCurso").innerHTML = curso+" - <span style=\" font-family: Tahoma; font-size:16pt; \">"+instituicao+"</span>";
 
 
 function pegarnumerofoto() {
@@ -28,7 +28,7 @@ function pegarnumerofoto() {
 		if (char_teste == "/") {
 			posicaoBarraNome = a;
 			break;
-		}
+		}<s
 		else {
 		}
 	}//--- Fim do algoritmo para pegar o nome do arquivo
