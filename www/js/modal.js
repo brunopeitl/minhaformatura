@@ -55,7 +55,7 @@ function baixarFoto() {
 	      function onSuccess(fileEntry)
 	      {
 		  //alert(JSON.stringify(fileEntry));
-		  fileEntry.copyTo(wwwDirEntry, 'Foto_'+fotoAberta[0]+'.jpg',
+		  fileEntry.copyTo(wwwDirEntry, 'foto_teste.jpg',
 		  function()
 		  {
 		      alert('copying was successful');
