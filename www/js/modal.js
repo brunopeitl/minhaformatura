@@ -49,9 +49,9 @@ function createFolder(win, error) {
 
 function baixarFoto() {
 	createFolder();
-	alert("Baixar: "+fotoAberta[0]);
+	//alert("Baixar: "+fotoAberta[0]);
 	if (device.platform == "Android") {
-		alert("O dispositivo é um Android");
+		//alert("O dispositivo é um Android");
 	}
 	//alert("A pasta externa é: "+cordova.file.externalDataDirectory);
 	
@@ -72,19 +72,15 @@ function baixarFoto() {
 	      function onSuccess(fileEntry)
 	      {
 		  //alert(JSON.stringify(fileEntry));
-//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------//
-//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------//
-//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------//
-		  //É AQUI QUE ESTAMOS MEXENDO
 		  fotocopiada = pegarnumerofoto();
 		  fileEntry.copyTo(wwwDirEntry, fotocopiada,
 		  function()
 		  {
-		      alert('copying was successful');
+		      alert('Foto copiada com sucesso para a memória do aparelho.');
 		  },
 		  function()
 		  {
-		      alert('copying FAILED');
+		      alert('Erro ao Salvar foto na memória do aparelho.');
 		  });
 	     }, function (e) { alert(JSON.stringify(e)); });
 
