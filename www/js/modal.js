@@ -56,7 +56,8 @@ function baixarFoto() {
 	      {
 		  //alert(JSON.stringify(fileEntry));
 		  acopiar = fotoAberta[0]+".jpg";
-		  fileEntry.copyTo(wwwDirEntry, acopiar/*'fotocopiada.jpg'*/,
+		  alert("Variável acopiar = "+acopiar);
+		  fileEntry.copyTo(wwwDirEntry, 'fotocopiadaaaa.jpg',
 		  function()
 		  {
 		      alert('copying was successful');
