@@ -15,21 +15,18 @@ var estadoRotacao = [1];
 function pegarnumerofoto() {
 	var posicaoBarraNome;
 	caminhoInteiro = fotoAberta[0];
-	alert("O caminho inteiro é "+caminhoInteiro);
 	//Aqui vai um algoritmo para pegar só o nome do arquivo do caminho todo
 	for (a = caminhoInteiro.length; a > 0; a--) {
 		var char_teste = caminhoInteiro.substring(a, a-1);
 		if (char_teste == "/") {
 			posicaoBarraNome = a;
-			alert(posicaoBarraNome);
 			break;
 		}
 		else {
 		}
-	}
-	var NomeDoArquivoRetornar = caminhoInteiro.substring(posicaoBarraNome,caminhoInteiro.length);
-	alert("Nome do arquivo é = "+NomeDoArquivoRetornar);
-	return 'fotocopiadabcdefgh.jpg';
+	}//--- Fim do algoritmo para pegar o nome do arquivo
+	
+	return caminhoInteiro.substring(posicaoBarraNome,caminhoInteiro.length);
 }
 
 function compartilharFoto() {
