@@ -166,6 +166,7 @@ function pega_nome_arquivo(resposta) {
 
 function downloadPropriamenteDito(caminhocompleto,nome_arquivo) {
 			//Aqui vai o comando do download
+			alert(caminhocompleto+" -- "+nome_arquivo);
 			var fileTransfer = new FileTransfer();
 			var uri = encodeURI(caminhocompleto);
 			var fileURL =  cordova.file.dataDirectory+"imagens/"+nome_arquivo;
