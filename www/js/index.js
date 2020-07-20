@@ -154,14 +154,7 @@ function pega_nome_arquivo(resposta) {
 
 //Função para baixar as fotos
 function baixarFotos(response) {
-	//Só muda de tela caso o retorno do servidor não seja uma mensagem de erro na validação
-	if(response == "Álbum não encontrado.") {
-		$("#resposta").html("<p>"+response+"</p>");
-	}
-	else if (response == "Senha incorreta.") {
-		$("#resposta").html("<p>"+response+"</p>");
-	}
-	else {
+
 		//Passa para a próxima tela
 		document.getElementById("pagina_login").style.display = "none";
 		document.getElementById("pagina_download").style.display = "block";
@@ -218,7 +211,7 @@ function baixarFotos(response) {
 			);//Aqui termina o script do download
 		}//Aqui termina o laço for
 		
-	}//fim do último else
+	
 }//Fim da função baixarFotos
 
 //Função que envia dados para o servidor e obtém a resposta dele
@@ -236,7 +229,18 @@ function obterRespostaServidor(empresa,contrato,album,senha) {
 		jsonp: 'jsoncallback',
 		timeout: 5000,
 		success: function(response, status){
-			baixarFotos(response);
+			
+			//Só muda de tela caso o retorno do servidor não seja uma mensagem de erro na validação
+			if(response == "Álbum não encontrado.") {
+				$("#resposta").html("<p>"+response+"</p>");
+			}
+			else if (response == "Senha incorreta.") {
+				$("#resposta").html("<p>"+response+"</p>");
+			}
+			else {
+				baixarFotos(response);
+			}
+
 		} //fim do success						
 	}); //fim do ajax
 } //Fim da função baixarfotos
