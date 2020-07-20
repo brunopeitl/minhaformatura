@@ -155,17 +155,8 @@ function pega_nome_arquivo(resposta) {
 //Função para baixar as fotos
 function baixarFotos(response) {
 
-		//Passa para a próxima tela
-		document.getElementById("pagina_login").style.display = "none";
-		document.getElementById("pagina_download").style.display = "block";
-		animar();
-				
 		var qtd_fotos = response[0]; //Lê a resposta do servidor que dá a quantidade de fotos a serem baixadas
-		//Pega resposta do servidor e grava informações no LocalStorage
-		localStorage.setItem("curso", response[1]);
-		localStorage.setItem("instituicao", response[2]);
-		localStorage.setItem("cor", response[3]);
-				
+	
 		var i; // Laço for para Baixar as imagens, uma por uma.
 		for (i = 4; i <= qtd_fotos+3; i++) { //Da forma como está, ele está baixando só a cada 4 fotos.
 			var caminhocompleto = "http://www.porcocapitalista.com.br"+response[i];
@@ -238,6 +229,17 @@ function obterRespostaServidor(empresa,contrato,album,senha) {
 				$("#resposta").html("<p>"+response+"</p>");
 			}
 			else {
+	
+				//Passa para a próxima tela
+				document.getElementById("pagina_login").style.display = "none";
+				document.getElementById("pagina_download").style.display = "block";
+				animar();
+		
+				//Pega resposta do servidor e grava informações no LocalStorage
+				localStorage.setItem("curso", response[1]);
+				localStorage.setItem("instituicao", response[2]);
+				localStorage.setItem("cor", response[3]);
+				
 				baixarFotos(response);
 			}
 
