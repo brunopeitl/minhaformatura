@@ -294,6 +294,7 @@ function contaFotosBaixadas() {
 
 function myFunction3(fotosBaixadasTotal) {
   setTimeout(function(){
+	  var fotosBaixadasTotal = contaFotosBaixadas();
 	  if(fotosBaixadasTotal > 0) {
 		  alert("Baixou uma");
 	  }
@@ -346,8 +347,7 @@ function obterRespostaServidor(empresa,contrato,album,senha) {
 				
 				
 				//Coloca aqui a função de teste que conta quantas fotos têm baixadas na pasta
-				var fotosBaixadasTotal = contaFotosBaixadas();
-				myFunction3(fotosBaixadasTotal);
+				myFunction3();
 				
 				
 //-----------------------------É AQUI QUE ESTAVA O TESTE				
