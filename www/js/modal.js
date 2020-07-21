@@ -19,7 +19,6 @@ var instituicao = localStorage.getItem("instituicao");
 //document.getElementById("tituloCurso").innerHTML = curso+" - <span>"+instituicao+"</span>";
 document.getElementById("tituloGaleria").innerHTML = curso+" - <span style=\" font-family: Tahoma; font-size:16pt; \">"+instituicao+"</span>";
 
-alert("chegou até aqui. Que que tá pegando?");
 
 function pegarnumerofoto() {
 	var posicaoBarraNome;
