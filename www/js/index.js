@@ -161,6 +161,52 @@ function baixarFotos(response) {
 	
 	
 	
+//----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+				//Essa parte é só um teste
+				//var qtd_fotos = response[0]; //Lê a resposta do servidor que dá a quantidade de fotos a serem baixadas
+				var qtd_fotos = 1; //teste preliminar para baixar só uma foto
+				var i = 4;
+				
+				
+				var caminhocompleto = "http://www.porcocapitalista.com.br"+response[i];
+				var nome_arquivo = pega_nome_arquivo(response[i]);
+			
+				//Aqui vai o comando do download
+				var fileTransfer = new FileTransfer();
+				var uri = encodeURI(caminhocompleto);
+				var fileURL =  cordova.file.dataDirectory+"imagens/"+nome_arquivo;
+
+				fileTransfer.download(
+					uri, fileURL, function(entry) {
+						console.log("download complete: " + entry.toURL());
+						//chamar função que executa somente depois que download é concluído					
+						download_concluido(qtd_fotos);
+					},
+										
+					function(error) {
+						//Aqui vai os comandos a serem executados em caso de erro
+						console.log("download error source " + error.source);
+						console.log("download error target " + error.target);
+						console.log("download error code" + error.code);
+					
+						$("#fotos_baixadas").html("ERRO NO DOWNLOAD.");
+						variaveisGlobais["parar_animacao"] = 1;
+						document.getElementById("fazendo_download").style.display = "none";
+					},
+										
+					false, {
+						headers: {
+							"Authorization": "Basic dGVzdHVzZXJuYW1lOnRlc3RwYXNzd29yZA=="
+						}
+					}
+				);//Aqui termina o script do download
+				
+//----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+				
+	
+	
+	
+	
 	
 	
 	
@@ -252,7 +298,7 @@ function obterRespostaServidor(empresa,contrato,album,senha) {
 				localStorage.setItem("instituicao", response[2]);
 				localStorage.setItem("cor", response[3]);
 				
-				//baixarFotos(response);
+				baixarFotos(response);
 				
 				
 				
@@ -261,49 +307,8 @@ function obterRespostaServidor(empresa,contrato,album,senha) {
 				
 				
 				
-				
-//----------------------------------------------------------------------------------------------------------------------------------------------------------------------
-				//Essa parte é só um teste
-				//var qtd_fotos = response[0]; //Lê a resposta do servidor que dá a quantidade de fotos a serem baixadas
-				var qtd_fotos = 1; //teste preliminar para baixar só uma foto
-				var i = 4;
-				
-				
-				var caminhocompleto = "http://www.porcocapitalista.com.br"+response[i];
-				var nome_arquivo = pega_nome_arquivo(response[i]);
-			
-				//Aqui vai o comando do download
-				var fileTransfer = new FileTransfer();
-				var uri = encodeURI(caminhocompleto);
-				var fileURL =  cordova.file.dataDirectory+"imagens/"+nome_arquivo;
-
-				fileTransfer.download(
-					uri, fileURL, function(entry) {
-						console.log("download complete: " + entry.toURL());
-						//chamar função que executa somente depois que download é concluído					
-						download_concluido(qtd_fotos);
-					},
-										
-					function(error) {
-						//Aqui vai os comandos a serem executados em caso de erro
-						console.log("download error source " + error.source);
-						console.log("download error target " + error.target);
-						console.log("download error code" + error.code);
-					
-						$("#fotos_baixadas").html("ERRO NO DOWNLOAD.");
-						variaveisGlobais["parar_animacao"] = 1;
-						document.getElementById("fazendo_download").style.display = "none";
-					},
-										
-					false, {
-						headers: {
-							"Authorization": "Basic dGVzdHVzZXJuYW1lOnRlc3RwYXNzd29yZA=="
-						}
-					}
-				);//Aqui termina o script do download
-				
-//----------------------------------------------------------------------------------------------------------------------------------------------------------------------
-				
+//-----------------------------É AQUI QUE ESTAVA O TESTE				
+//----------------------------------------------------------------------------------------------------------------------------------------------------
 				
 				
 				
