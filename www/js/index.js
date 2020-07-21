@@ -264,8 +264,6 @@ function baixarFotos(response,i,qtd_fotos) {
 var fotosBaixadasAteAgora = 0;
 //Conta quantas fotos baixadas tem na pasta da memória do aparelho
 function contaFotosBaixadas() {
-	//alert("chegou até aqui também"); //Até aqui está chegando
-	alert(fotosBaixadasAteAgora);
 	function listDir(path){
 		window.resolveLocalFileSystemURL(path,
 			function (fileSystem) {
@@ -342,10 +340,7 @@ function obterRespostaServidor(empresa,contrato,album,senha) {
 				
 				//Coloca aqui a função de teste que conta quantas fotos têm baixadas na pasta
 				var fotosBaixadasTotal = contaFotosBaixadas();
-				
-				//Não está chegando aqui, só até o comando de cima.
-		  		//alert(fotosBaixadasTotal);
-				//alert("passou por aqui");
+				alert("Transcendeu!!! - A Quantidade de Fotos Baixadas é = "+fotosBaixadasTotal);
 				
 				
 //-----------------------------É AQUI QUE ESTAVA O TESTE				
