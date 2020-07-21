@@ -274,7 +274,8 @@ function contaFotosBaixadas() {
         				function (entries) {
 						var c;
 						for (c=0; c<entries.length; c++) {
-							listaFotos.push(entries[c].name);
+							//listaFotos.push(entries[c].name); //Isso aqui é desnecessário
+							//Resta saber se é aqui que coloca a ação principal ou abaixo
 							if(c == entries.length - 1) {
 								fotosBaixadasAteAgora += 1;
 							}
