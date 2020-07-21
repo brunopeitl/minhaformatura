@@ -345,7 +345,7 @@ function obterRespostaServidor(empresa,contrato,album,senha) {
 				
 				//Coloca aqui a função de teste que conta quantas fotos têm baixadas na pasta
 				var fotosBaixadasTotal = contaFotosBaixadas();
-				alert("Transcendeu!!! - A Quantidade de Fotos Baixadas é = "+fotosBaixadasTotal);
+				//Não adianta testar aqui agora porque só executa aqui 1 vez, antes de contar, então só vai dar 0
 				
 				
 //-----------------------------É AQUI QUE ESTAVA O TESTE				
