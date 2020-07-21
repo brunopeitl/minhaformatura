@@ -292,7 +292,7 @@ function contaFotosBaixadas() {
 	return fotosBaixadasAteAgora();
 }
 
-function myFunction3(fotosBaixadasTotal) {
+function myFunction3() {
   setTimeout(function(){
 	  var fotosBaixadasTotal = contaFotosBaixadas();
 	  if(fotosBaixadasTotal > 0) {
