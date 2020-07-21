@@ -115,7 +115,7 @@ var fotosBaixadas = 0;
 function download_concluido(qtd_fotos) {
 	//DELETAR ISSO DAQUI DEPOIS
 	var fotosBaixadasTotal2 = contaFotosBaixadas();
-	alert("Transcendeu DEMAIS DENOVO!!! - A Quantidade de Fotos Baixadas é = "+fotosBaixadasTotal2);
+	alert("Para transcender mesmo, o numero aqui na frente deve ser 1 = "+fotosBaixadasTotal2);
 	
 	
 	fotosBaixadas++;
@@ -281,7 +281,6 @@ function contaFotosBaixadas() {
 							//Resta saber se é aqui que coloca a ação principal ou abaixo
 							//if(c == entries.length - 1) {
 								fotosBaixadasAteAgora += 1;
-								alert("É aqui que dá problema. Ver se é 1 = "+fotosBaixadasAteAgora);
 							//}
     						}
         				},
