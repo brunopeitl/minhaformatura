@@ -301,7 +301,7 @@ function obterRespostaServidor(empresa,contrato,album,senha) {
 				
 				
 				
-				
+				//Coloca aqui a função de teste que conta quantas fotos têm baixadas na pasta
 				
 				
 				
