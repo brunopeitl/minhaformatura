@@ -295,7 +295,6 @@ function contaFotosBaixadas() {
 	}
 	//Chama a função passando o caminho da pasta na memória interna do aparelho a ser lida
 	listDir(cordova.file.dataDirectory + "imagens/");
-	alert("Até aqui veio o total é = "+fotosBaixadasAteAgora);
 	return fotosBaixadasAteAgora;
 }
 
