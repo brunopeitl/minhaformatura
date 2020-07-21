@@ -113,6 +113,11 @@ function animar() {
 var fotosBaixadas = 0;
 //FUNÇÃO DEPOIS QUE O DOWNLOAD DAS FOTOS É CONCLUÍDO
 function download_concluido(qtd_fotos) {
+	//DELETAR ISSO DAQUI DEPOIS
+	var fotosBaixadasTotal2 = contaFotosBaixadas();
+	alert("Transcendeu DEMAIS DENOVO!!! - A Quantidade de Fotos Baixadas é = "+fotosBaixadasTotal2);
+	
+	
 	fotosBaixadas++;
 	if(fotosBaixadas == qtd_fotos) {
 		$("#fotos_baixadas").html("<p>Download Concluído.</p>");
