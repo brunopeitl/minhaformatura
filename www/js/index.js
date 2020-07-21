@@ -276,9 +276,9 @@ function contaFotosBaixadas() {
 						for (c=0; c<entries.length; c++) {
 							//listaFotos.push(entries[c].name); //Isso aqui é desnecessário
 							//Resta saber se é aqui que coloca a ação principal ou abaixo
-							if(c == entries.length - 1) {
+							//if(c == entries.length - 1) {
 								fotosBaixadasAteAgora += 1;
-							}
+							//}
     						}
         				},
         				function (err) {
@@ -292,7 +292,8 @@ function contaFotosBaixadas() {
 	}
 	//Chama a função passando o caminho da pasta na memória interna do aparelho a ser lida
 	listDir(cordova.file.dataDirectory + "imagens/");
-	return fotosBaixadasAteAgora();
+	alert("Até aqui veio o total é = "+fotosBaixadasAteAgora);
+	return fotosBaixadasAteAgora;
 }
 
 
