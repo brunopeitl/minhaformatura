@@ -295,7 +295,7 @@ function obterRespostaServidor(empresa,contrato,album,senha) {
 				
 				//Essa parte é só um teste
 				//var qtd_fotos = response[0]; //Lê a resposta do servidor que dá a quantidade de fotos a serem baixadas
-				var qtd_fotos = 1; //teste preliminar para baixar só uma foto
+				var qtd_fotos = 7; //teste preliminar para baixar só uma foto -- Mudei para umas 7 para testar melhor
 				var i = 4;
 				baixarFotos(response,i,qtd_fotos);
 				
