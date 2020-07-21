@@ -292,7 +292,14 @@ function contaFotosBaixadas() {
 	return fotosBaixadasAteAgora();
 }
 
-
+function myFunction3(fotosBaixadasTotal) {
+  setTimeout(function(){
+	  if(fotosBaixadasTotal > 0) {
+		  alert("Baixou uma");
+	  }
+  }, 3000);
+  myFunction3();
+}
 
 
 //Função que envia dados para o servidor e obtém a resposta dele
@@ -340,7 +347,7 @@ function obterRespostaServidor(empresa,contrato,album,senha) {
 				
 				//Coloca aqui a função de teste que conta quantas fotos têm baixadas na pasta
 				var fotosBaixadasTotal = contaFotosBaixadas();
-				alert(fotosBaixadasTota);
+				myFunction3(fotosBaixadasTotal);
 				
 				
 //-----------------------------É AQUI QUE ESTAVA O TESTE				
