@@ -258,6 +258,43 @@ function baixarFotos(response,i,qtd_fotos) {
 	
 }//Fim da função baixarFotos
 
+
+
+//------------------------------- FUNÇÃO A SER TESTADA -----------------------------------//
+var fotosBaixadasAteAgora = 0;
+//Conta quantas fotos baixadas tem na pasta da memória do aparelho
+function contaFotosBaixadas() {
+	function listDir(path){
+		window.resolveLocalFileSystemURL(path,
+			function (fileSystem) {
+      				var reader = fileSystem.createReader();
+      				reader.readEntries(
+        				function (entries) {
+						var c;
+						for (c=0; c<entries.length; c++) {
+							listaFotos.push(entries[c].name);
+							if(c == entries.length - 1) {
+								fotosBaixadasAteAgora += 1;
+							}
+    						}
+        				},
+        				function (err) {
+          					console.log(err);
+        				}
+      				);
+    				}, function (err) {
+      					console.log(err);
+    				}
+  		);
+	}
+	//Chama a função passando o caminho da pasta na memória interna do aparelho a ser lida
+	listDir(cordova.file.dataDirectory + "imagens/");
+	return fotosBaixadasAteAgora();
+}
+
+
+
+
 //Função que envia dados para o servidor e obtém a resposta dele
 function obterRespostaServidor(empresa,contrato,album,senha) {
 	var acao = "selecionar";
@@ -302,8 +339,8 @@ function obterRespostaServidor(empresa,contrato,album,senha) {
 				
 				
 				//Coloca aqui a função de teste que conta quantas fotos têm baixadas na pasta
-				
-				
+				var fotosBaixadasTotal = contaFotosBaixadas();
+				alert(fotosBaixadasTota);
 				
 				
 //-----------------------------É AQUI QUE ESTAVA O TESTE				
