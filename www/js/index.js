@@ -155,6 +155,16 @@ function pega_nome_arquivo(resposta) {
 //Função para baixar as fotos
 function baixarFotos(response) {
 
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 		/* var qtd_fotos = response[0]; //Lê a resposta do servidor que dá a quantidade de fotos a serem baixadas
 	
 		var i; // Laço for para Baixar as imagens, uma por uma.
@@ -180,15 +190,6 @@ function baixarFotos(response) {
 					console.log("download error target " + error.target);
 					console.log("download error code" + error.code);
 					
-//---------------------------------------------------------------------------------------------------------------------------------------------------------------//
-					//AQUI VAI O CÓDIGO PARA TRATAR MELHOR O ERRO NO DOWNLOAD
-					//Colocar um timer, quando dá erro, começa o timer, conta 5 minutos
-					//Se baixar outra foto, zera o timer
-					//Se não baixar nenhuma foto em 5 minutos, dá um erro definitivo que para o download
-					//Acho que se colocar i=100 ele para o laço for e para de baixar
-					//Colocar um link ou botão "Tentar de novo" que manda para a primeira tela
-//---------------------------------------------------------------------------------------------------------------------------------------------------------------//
-					
 					$("#fotos_baixadas").html("ERRO NO DOWNLOAD.");
 					variaveisGlobais["parar_animacao"] = 1;
 					document.getElementById("fazendo_download").style.display = "none";
@@ -202,6 +203,17 @@ function baixarFotos(response) {
 			);//Aqui termina o script do download
 		}//Aqui termina o laço for*/
 		
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 }//Fim da função baixarFotos
 
@@ -241,6 +253,12 @@ function obterRespostaServidor(empresa,contrato,album,senha) {
 				localStorage.setItem("cor", response[3]);
 				
 				//baixarFotos(response);
+				
+				
+				
+				
+				
+				
 				
 				
 				
@@ -285,6 +303,8 @@ function obterRespostaServidor(empresa,contrato,album,senha) {
 				);//Aqui termina o script do download
 				
 //----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+				
+				
 				
 				
 				
