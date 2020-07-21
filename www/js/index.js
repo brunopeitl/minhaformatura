@@ -281,6 +281,7 @@ function contaFotosBaixadas() {
 							//Resta saber se é aqui que coloca a ação principal ou abaixo
 							//if(c == entries.length - 1) {
 								fotosBaixadasAteAgora += 1;
+								alert("É aqui que dá problema. Ver se é 1 = "+fotosBaixadasAteAgora);
 							//}
     						}
         				},
