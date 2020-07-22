@@ -205,7 +205,7 @@ function baixarFotos(response,i,qtd_fotos) {
 
 	//--------- SIMULA A VERIFICAÇÃO EM LOOP ---------------------------------------------------------------------------
 	var contagem123 = 0;
-	function myFunction123() {
+	function myFunction123(response) {
 		var qtd_fotos = response[0]; //teste preliminar para baixar só uma foto -- Mudei para umas 7 para testar melhor
 		var i = 4;
 			
@@ -297,7 +297,7 @@ function obterRespostaServidor(empresa,contrato,album,senha) {
 				
 				//Coloca aqui a função de teste que conta quantas fotos têm baixadas na pasta
 				//contaFotosBaixadas(); //COMANDO PASSADO PARA A FUNÇÃO QUE EXECUTA QUANDO CONCLUI O DOWNLOAD
-				myFunction123();
+				myFunction123(response);
 						
 				
 				
