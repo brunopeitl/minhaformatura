@@ -201,9 +201,8 @@ function baixarFotos(response,i,qtd_fotos) {
 //----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
-//------------------------------- FUNÇÃO TESTADA - ESTÁ FUNCIONANDO -----------------------------------//
 
-	//--------- SIMULA A VERIFICAÇÃO EM LOOP ---------------------------------------------------------------------------
+	//--------- VERIFICAÇÃO EM LOOP ---------------------------------------------------------------------------
 	var contagem123 = 0;
 	function myFunction123(response) {
 		var qtd_fotos = response[0]; //teste preliminar para baixar só uma foto -- Mudei para umas 7 para testar melhor
@@ -221,7 +220,11 @@ function baixarFotos(response,i,qtd_fotos) {
 	    		}
 		}, 3000);
 	}
-	//--------- SIMULA A VERIFICAÇÃO EM LOOP ---------------------------------------------------------------------------
+	//--------- VERIFICAÇÃO EM LOOP ---------------------------------------------------------------------------
+
+
+
+//------------------------------- FUNÇÃO TESTADA - ESTÁ FUNCIONANDO -----------------------------------//
 
 function somaContagem(somarContagem) {
 	fotosBaixadasAteAgora[0] = somarContagem;
