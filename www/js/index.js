@@ -116,9 +116,23 @@ function animar() {
 var fotosBaixadas = 0;
 //FUNÇÃO DEPOIS QUE O DOWNLOAD DAS FOTOS É CONCLUÍDO
 function download_concluido(qtd_fotos) {
-	//DELETAR ISSO DAQUI DEPOIS - DUAS PRÓXIMAS LINHAS
+	//DELETAR ISSO DAQUI DEPOIS - ATÉ A SIMULAÇÃO DA VERIFICAÇÃO EM LOOP
 	contaFotosBaixadas();
-	alert("Etapa 02 = "+fotosBaixadasAteAgora[0]);
+	
+	//--------- SIMULA A VERIFICAÇÃO EM LOOP ---------------------------------------------------------------------------
+	var contagem123 = 0;
+	function myFunction123() {
+	  setInterval(function(){ 
+		if(contagem123 < 6) {
+			alert("A hora da VERDADE= "+fotosBaixadasAteAgora[0]);
+			//alert("teste");
+			contagem123++;
+	    	}
+	  }, 3000);
+	}
+	//--------- SIMULA A VERIFICAÇÃO EM LOOP ---------------------------------------------------------------------------
+	
+	
 	
 	
 	fotosBaixadas++;
