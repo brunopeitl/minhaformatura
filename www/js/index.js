@@ -210,14 +210,15 @@ function baixarFotos(response,i,qtd_fotos) {
 			
 		setInterval(function(){
 			if (contagem123 < 1) {
-				baixarFotos(response,i,qtd_fotos);	
+				baixarFotos(response,i,qtd_fotos);
+				alert("TESTE DEFINITIVO. ESTÁ CHEGANDO PERTO! = "+fotosBaixadasAteAgora[0]);
+				contagem123++;
 			}
 		  
-			else if(contagem123 < 6) {
+			/*else if(contagem123 < 6) {
 				alert("TESTE DEFINITIVO. ESTÁ CHEGANDO PERTO! = "+fotosBaixadasAteAgora[0]);
-				//alert("teste");
 				contagem123++;
-	    		}
+	    		}*/
 		}, 3000);
 	}
 	//--------- VERIFICAÇÃO EM LOOP ---------------------------------------------------------------------------
