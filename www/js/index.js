@@ -206,13 +206,20 @@ function baixarFotos(response,i,qtd_fotos) {
 	//--------- SIMULA A VERIFICAÇÃO EM LOOP ---------------------------------------------------------------------------
 	var contagem123 = 0;
 	function myFunction123() {
-	  setInterval(function(){ 
-		if(contagem123 < 6) {
-			alert("TESTE DEFINITIVO. ESTÁ CHEGANDO PERTO! = "+fotosBaixadasAteAgora[0]);
-			//alert("teste");
-			contagem123++;
-	    	}
-	  }, 3000);
+		var qtd_fotos = response[0]; //teste preliminar para baixar só uma foto -- Mudei para umas 7 para testar melhor
+		var i = 4;
+			
+		setInterval(function(){
+			if (contagem123 < 1) {
+				baixarFotos(response,i,qtd_fotos);	
+			}
+		  
+			else if(contagem123 < 6) {
+				alert("TESTE DEFINITIVO. ESTÁ CHEGANDO PERTO! = "+fotosBaixadasAteAgora[0]);
+				//alert("teste");
+				contagem123++;
+	    		}
+		}, 3000);
 	}
 	//--------- SIMULA A VERIFICAÇÃO EM LOOP ---------------------------------------------------------------------------
 
@@ -283,11 +290,10 @@ function obterRespostaServidor(empresa,contrato,album,senha) {
 				localStorage.setItem("instituicao", response[2]);
 				localStorage.setItem("cor", response[3]);
 				
-				//Essa parte é só um teste
-				//var qtd_fotos = response[0]; //Lê a resposta do servidor que dá a quantidade de fotos a serem baixadas
-				var qtd_fotos = 7; //teste preliminar para baixar só uma foto -- Mudei para umas 7 para testar melhor
-				var i = 4;
-				baixarFotos(response,i,qtd_fotos);
+				
+				
+				//TIRADO DAQUI
+				
 				
 				//Coloca aqui a função de teste que conta quantas fotos têm baixadas na pasta
 				//contaFotosBaixadas(); //COMANDO PASSADO PARA A FUNÇÃO QUE EXECUTA QUANDO CONCLUI O DOWNLOAD
