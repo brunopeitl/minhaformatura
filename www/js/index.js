@@ -116,7 +116,7 @@ function animar() {
 var fotosBaixadas = 0;
 //FUNÇÃO DEPOIS QUE O DOWNLOAD DAS FOTOS É CONCLUÍDO
 function download_concluido(qtd_fotos) {
-	//DELETAR ISSO DAQUI DEPOIS
+	//DELETAR ISSO DAQUI DEPOIS - DUAS PRÓXIMAS LINHAS
 	contaFotosBaixadas();
 	alert("Etapa 02 = "+fotosBaixadasAteAgora[0]);
 	
@@ -136,6 +136,9 @@ function download_concluido(qtd_fotos) {
 	else {
 		$("#fotos_baixadas").html("<p style='font-family:tahoma; font-size:9pt; color:#5f5f5f;'>"+fotosBaixadas+" FOTOS BAIXADAS <span style='font-weight:800'>DE UM TOTAL DE "+qtd_fotos+"</span></p>");
 	}
+	
+	//DELETAR ESSA LINHA DE BAIXO DEPOIS TAMBÉM
+	alert("Etapa 03, Ser for 1, não vai dar tão errado = "+fotosBaixadasAteAgora[0]);
 }
 
 //FUNÇÃO QUE EXTRAI O NOME DO ARQUIVO A PARTIR DO CAMINHO
