@@ -115,7 +115,7 @@ var fotosBaixadas = 0;
 function download_concluido(qtd_fotos) {
 	//DELETAR ISSO DAQUI DEPOIS
 	var fotosBaixadasTotal2 = contaFotosBaixadas();
-	alert("Para transcender mesmo, o numero aqui na frente deve ser 1 = "+fotosBaixadasTotal2);
+	alert("Transcende porra = "+fotosBaixadasAteAgora[0]);
 	
 	
 	fotosBaixadas++;
@@ -269,9 +269,7 @@ function baixarFotos(response,i,qtd_fotos) {
 var fotosBaixadasAteAgora = [0];
 
 function somaContagem(somarContagem) {
-	alert("somarContagem = "+somarContagem);
 	fotosBaixadasAteAgora[0] = somarContagem;
-	alert("fotosBaixadasAteAgora[0] = "+fotosBaixadasAteAgora[0]);
 }
 
 //Conta quantas fotos baixadas tem na pasta da memória do aparelho
