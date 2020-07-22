@@ -205,7 +205,7 @@ function baixarFotos(response,i,qtd_fotos) {
 	function myFunction123() {
 	  setInterval(function(){ 
 		if(contagem123 < 6) {
-			alert("A hora da VERDADE= "+fotosBaixadasAteAgora[0]);
+			alert("TESTE DEFINITIVO. ESTÁ CHEGANDO PERTO! = "+fotosBaixadasAteAgora[0]);
 			//alert("teste");
 			contagem123++;
 	    	}
