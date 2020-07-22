@@ -284,8 +284,8 @@ function contaFotosBaixadas() {
 								fotosBaixadasAteAgora[0] = gambiarra + 1;
 							//}
     						}
-        				},;
-        	 = gambiarra + 1nction (err) {
+        				},
+        				function (err) {
           					console.log(err);
         				}
       				);
