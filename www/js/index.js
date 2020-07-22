@@ -113,12 +113,6 @@ function animar() {
 		window.setInterval( poeImagem, 40 );
 }
 
-var fotosBaixadas = 0;
-//FUNÇÃO DEPOIS QUE O DOWNLOAD DAS FOTOS É CONCLUÍDO
-function download_concluido(qtd_fotos) {
-	//DELETAR ISSO DAQUI DEPOIS - ATÉ A SIMULAÇÃO DA VERIFICAÇÃO EM LOOP
-	contaFotosBaixadas();
-	
 	//--------- SIMULA A VERIFICAÇÃO EM LOOP ---------------------------------------------------------------------------
 	var contagem123 = 0;
 	function myFunction123() {
@@ -131,7 +125,13 @@ function download_concluido(qtd_fotos) {
 	  }, 3000);
 	}
 	//--------- SIMULA A VERIFICAÇÃO EM LOOP ---------------------------------------------------------------------------
-	
+
+var fotosBaixadas = 0;
+//FUNÇÃO DEPOIS QUE O DOWNLOAD DAS FOTOS É CONCLUÍDO
+function download_concluido(qtd_fotos) {
+	//DELETAR ISSO DAQUI DEPOIS - DUAS LINHAS ABAIXO E ESSA FUNÇÃO DE CIMA
+	contaFotosBaixadas();
+	myFunction123();
 	
 	
 	
