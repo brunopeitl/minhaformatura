@@ -3,6 +3,9 @@
 //Também salva informações: Cod Empresa, Nº Contrato, Album e Senha para usar depois
 var variaveisGlobais = {parar_animacao:0, empresa:"", contrato:"", album:"", senha:""};
 
+//Parte da função que está sendo testada para contar quantas fotos tem baixadas na pasta
+var fotosBaixadasAteAgora = [0];
+
 //Código Hexadecimal das cores da capa
 var hexa_azul_escuro = "#1b2242";
 var hexa_azul_claro = "#4c5996";
@@ -114,8 +117,8 @@ var fotosBaixadas = 0;
 //FUNÇÃO DEPOIS QUE O DOWNLOAD DAS FOTOS É CONCLUÍDO
 function download_concluido(qtd_fotos) {
 	//DELETAR ISSO DAQUI DEPOIS
-	var fotosBaixadasTotal2 = contaFotosBaixadas();
-	alert("Transcende porra = "+fotosBaixadasAteAgora[0]);
+	contaFotosBaixadas();
+	alert("Etapa 02 = "+fotosBaixadasAteAgora[0]);
 	
 	
 	fotosBaixadas++;
@@ -266,10 +269,10 @@ function baixarFotos(response,i,qtd_fotos) {
 
 
 //------------------------------- FUNÇÃO A SER TESTADA -----------------------------------//
-var fotosBaixadasAteAgora = [0];
 
 function somaContagem(somarContagem) {
 	fotosBaixadasAteAgora[0] = somarContagem;
+	alert("Etapa 1 = "+fotosBaixadasAteAgora[0]);
 }
 
 //Conta quantas fotos baixadas tem na pasta da memória do aparelho
