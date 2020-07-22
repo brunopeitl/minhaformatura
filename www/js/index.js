@@ -276,10 +276,11 @@ function contaFotosBaixadas() {
       				reader.readEntries(
         				function (entries) {
 						var c;
-						for (c=0; c<entries.length; c++) {
+						for (c=1; c<entries.length; c++) {
 							//listaFotos.push(entries[c].name); //Isso aqui é desnecessário
 							//Resta saber se é aqui que coloca a ação principal ou abaixo
 							//if(c == entries.length - 1) {
+								alert(entries[c].name);
 								var gambiarra = fotosBaixadasAteAgora[0];
 								fotosBaixadasAteAgora[0] = gambiarra + 1;
 							//}
