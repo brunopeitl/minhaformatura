@@ -117,6 +117,9 @@ function animar() {
 var fotosBaixadas = 0;
 //FUNÇÃO DEPOIS QUE O DOWNLOAD DAS FOTOS É CONCLUÍDO
 function download_concluido(qtd_fotos) {
+	//ESSE COMANDO PRECISA FICAR AQUI
+	contaFotosBaixadas();
+	
 	fotosBaixadas++;
 	if(fotosBaixadas == qtd_fotos) {
 		$("#fotos_baixadas").html("<p>Download Concluído.</p>");
@@ -287,7 +290,7 @@ function obterRespostaServidor(empresa,contrato,album,senha) {
 				baixarFotos(response,i,qtd_fotos);
 				
 				//Coloca aqui a função de teste que conta quantas fotos têm baixadas na pasta
-				contaFotosBaixadas();
+				//contaFotosBaixadas(); //COMANDO PASSADO PARA A FUNÇÃO QUE EXECUTA QUANDO CONCLUI O DOWNLOAD
 				myFunction123();
 						
 				
