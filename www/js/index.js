@@ -269,7 +269,9 @@ function baixarFotos(response,i,qtd_fotos) {
 var fotosBaixadasAteAgora = [0];
 
 function somaContagem(somarContagem) {
+	alert("somarContagem = "+somarContagem);
 	fotosBaixadasAteAgora[0] = somarContagem;
+	alert("fotosBaixadasAteAgora[0] = "+fotosBaixadasAteAgora[0]);
 }
 
 //Conta quantas fotos baixadas tem na pasta da memória do aparelho
