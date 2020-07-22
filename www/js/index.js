@@ -266,7 +266,7 @@ function baixarFotos(response,i,qtd_fotos) {
 
 
 //------------------------------- FUNÇÃO A SER TESTADA -----------------------------------//
-var fotosBaixadasAteAgora = 0;
+var fotosBaixadasAteAgora = [0];
 //Conta quantas fotos baixadas tem na pasta da memória do aparelho
 function contaFotosBaixadas() {
 	function listDir(path){
@@ -280,11 +280,12 @@ function contaFotosBaixadas() {
 							//listaFotos.push(entries[c].name); //Isso aqui é desnecessário
 							//Resta saber se é aqui que coloca a ação principal ou abaixo
 							//if(c == entries.length - 1) {
-								fotosBaixadasAteAgora += 1;
+								var gambiarra = fotosBaixadasAteAgora[0];
+								fotosBaixadasAteAgora[0] = gambiarra + 1;
 							//}
     						}
-        				},
-        				function (err) {
+        				},;
+        	 = gambiarra + 1nction (err) {
           					console.log(err);
         				}
       				);
