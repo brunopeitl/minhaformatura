@@ -113,28 +113,10 @@ function animar() {
 		window.setInterval( poeImagem, 40 );
 }
 
-	//--------- SIMULA A VERIFICAÇÃO EM LOOP ---------------------------------------------------------------------------
-	var contagem123 = 0;
-	function myFunction123() {
-	  setInterval(function(){ 
-		if(contagem123 < 6) {
-			alert("A hora da VERDADE= "+fotosBaixadasAteAgora[0]);
-			//alert("teste");
-			contagem123++;
-	    	}
-	  }, 3000);
-	}
-	//--------- SIMULA A VERIFICAÇÃO EM LOOP ---------------------------------------------------------------------------
 
 var fotosBaixadas = 0;
 //FUNÇÃO DEPOIS QUE O DOWNLOAD DAS FOTOS É CONCLUÍDO
 function download_concluido(qtd_fotos) {
-	//DELETAR ISSO DAQUI DEPOIS - DUAS LINHAS ABAIXO E ESSA FUNÇÃO DE CIMA
-	contaFotosBaixadas();
-	myFunction123();
-	
-	
-	
 	fotosBaixadas++;
 	if(fotosBaixadas == qtd_fotos) {
 		$("#fotos_baixadas").html("<p>Download Concluído.</p>");
@@ -218,6 +200,19 @@ function baixarFotos(response,i,qtd_fotos) {
 
 //------------------------------- FUNÇÃO TESTADA - ESTÁ FUNCIONANDO -----------------------------------//
 
+	//--------- SIMULA A VERIFICAÇÃO EM LOOP ---------------------------------------------------------------------------
+	var contagem123 = 0;
+	function myFunction123() {
+	  setInterval(function(){ 
+		if(contagem123 < 6) {
+			alert("A hora da VERDADE= "+fotosBaixadasAteAgora[0]);
+			//alert("teste");
+			contagem123++;
+	    	}
+	  }, 3000);
+	}
+	//--------- SIMULA A VERIFICAÇÃO EM LOOP ---------------------------------------------------------------------------
+
 function somaContagem(somarContagem) {
 	fotosBaixadasAteAgora[0] = somarContagem;
 }
@@ -292,14 +287,9 @@ function obterRespostaServidor(empresa,contrato,album,senha) {
 				baixarFotos(response,i,qtd_fotos);
 				
 				//Coloca aqui a função de teste que conta quantas fotos têm baixadas na pasta
-				//var fotosBaixadasTotal = contaFotosBaixadas();
-				//Não adianta testar aqui agora porque só executa aqui 1 vez, antes de contar, então só vai dar 0
-				
-				
-//-----------------------------É AQUI QUE ESTAVA O TESTE				
-//----------------------------------------------------------------------------------------------------------------------------------------------------
-				
-				
+				contaFotosBaixadas();
+				myFunction123();
+						
 				
 				
 				
