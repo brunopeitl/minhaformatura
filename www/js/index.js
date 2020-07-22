@@ -174,17 +174,11 @@ function pega_nome_arquivo(resposta) {
 	return valor_caminho.substring(posicao_ultima_barra+1, valor_caminho.length);	
 }
 
+
+//----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 //Função para baixar as fotos
 function baixarFotos(response,i,qtd_fotos) {
 
-	
-	
-	
-	
-	
-	
-//----------------------------------------------------------------------------------------------------------------------------------------------------------------------
-				
 				var caminhocompleto = "http://www.porcocapitalista.com.br"+response[i];
 				var nome_arquivo = pega_nome_arquivo(response[i]);
 			
@@ -216,77 +210,16 @@ function baixarFotos(response,i,qtd_fotos) {
 							"Authorization": "Basic dGVzdHVzZXJuYW1lOnRlc3RwYXNzd29yZA=="
 						}
 					}
-				);//Aqui termina o script do download
-				
-//----------------------------------------------------------------------------------------------------------------------------------------------------------------------
-				
-	
-	
-	
-	
-	
-	
-	
-	
-		/* var qtd_fotos = response[0]; //Lê a resposta do servidor que dá a quantidade de fotos a serem baixadas
-	
-		var i; // Laço for para Baixar as imagens, uma por uma.
-		for (i = 4; i <= qtd_fotos+3; i++) { //Da forma como está, ele está baixando só a cada 4 fotos.
-			var caminhocompleto = "http://www.porcocapitalista.com.br"+response[i];
-			var nome_arquivo = pega_nome_arquivo(response[i]);
-			
-			//Aqui vai o comando do download
-			var fileTransfer = new FileTransfer();
-			var uri = encodeURI(caminhocompleto);
-			var fileURL =  cordova.file.dataDirectory+"imagens/"+nome_arquivo;
-
-			fileTransfer.download(
-				uri, fileURL, function(entry) {
-					console.log("download complete: " + entry.toURL());
-					//chamar função que executa somente depois que download é concluído					
-					download_concluido(qtd_fotos);
-				},
-										
-				function(error) {
-					//Aqui vai os comandos a serem executados em caso de erro
-					console.log("download error source " + error.source);
-					console.log("download error target " + error.target);
-					console.log("download error code" + error.code);
-					
-					$("#fotos_baixadas").html("ERRO NO DOWNLOAD.");
-					variaveisGlobais["parar_animacao"] = 1;
-					document.getElementById("fazendo_download").style.display = "none";
-				},
-										
-				false, {
-					headers: {
-						"Authorization": "Basic dGVzdHVzZXJuYW1lOnRlc3RwYXNzd29yZA=="
-					}
-				}
-			);//Aqui termina o script do download
-		}//Aqui termina o laço for*/
-		
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+				);//Aqui termina o script do download				
 }//Fim da função baixarFotos
 
+//----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
-//------------------------------- FUNÇÃO A SER TESTADA -----------------------------------//
+//------------------------------- FUNÇÃO TESTADA - ESTÁ FUNCIONANDO -----------------------------------//
 
 function somaContagem(somarContagem) {
 	fotosBaixadasAteAgora[0] = somarContagem;
-	alert("Etapa 1 = "+fotosBaixadasAteAgora[0]);
 }
 
 //Conta quantas fotos baixadas tem na pasta da memória do aparelho
@@ -299,11 +232,7 @@ function contaFotosBaixadas() {
         				function (entries) {
 						var c;
 						for (c=0; c<entries.length; c++) {
-							//listaFotos.push(entries[c].name); //Isso aqui é desnecessário
-							//Resta saber se é aqui que coloca a ação principal ou abaixo
-							//if(c == entries.length - 1) {
-								somaContagem(c + 1);
-							//}
+							somaContagem(c + 1);
     						}
         				},
         				function (err) {
@@ -317,7 +246,7 @@ function contaFotosBaixadas() {
 	}
 	//Chama a função passando o caminho da pasta na memória interna do aparelho a ser lida
 	listDir(cordova.file.dataDirectory + "imagens/");
-	return fotosBaixadasAteAgora[0];
+	//return fotosBaixadasAteAgora[0];
 }
 
 
@@ -361,8 +290,6 @@ function obterRespostaServidor(empresa,contrato,album,senha) {
 				var qtd_fotos = 7; //teste preliminar para baixar só uma foto -- Mudei para umas 7 para testar melhor
 				var i = 4;
 				baixarFotos(response,i,qtd_fotos);
-				
-				
 				
 				//Coloca aqui a função de teste que conta quantas fotos têm baixadas na pasta
 				//var fotosBaixadasTotal = contaFotosBaixadas();
