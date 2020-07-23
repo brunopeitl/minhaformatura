@@ -222,8 +222,7 @@ function baixarFotos(response,i,qtd_fotos) {
 		
 		baixarFotos(response,i,qtd_fotos);
 		
-		setInterval(function(){
-
+		/*setInterval(function(){
 				valorTeste = i - 3;
 				alert("valorTeste = "+valorTeste+" | qtdFotosPasta[0] = "+qtdFotosPasta[0]);
 				if(qtdFotosPasta[0] == valorTeste) {
@@ -237,22 +236,19 @@ function baixarFotos(response,i,qtd_fotos) {
 					alert("não baixou a 1a");
 					//Condição não satisfeita
 				}
-			
-			
-			
-			
+				
 				//valorTeste = i - 3;
 				//baixarFotos(response,i,qtd_fotos);
 				//qtdFotosPasta[0]
 				//i++;
         	        	//primeiraFoto[0] = 1;
-			
-		}, 3000);
+
+		}, 3000);*/
 		
 		
 		
 		
-		/*setInterval(function(){
+		setInterval(function(){
 			if (contagem123 < 1) {
 				baixarFotos(response,i,qtd_fotos);
 				alert("TESTE DEFINITIVO. ESTÁ CHEGANDO PERTO! = "+fotosBaixadasAteAgora[0]);
@@ -262,10 +258,16 @@ function baixarFotos(response,i,qtd_fotos) {
 				if (contagem123 < 6) {
 					alert("TESTE DEFINITIVO. ESTÁ CHEGANDO PERTO! = "+fotosBaixadasAteAgora[0]);
 					contagem123++;
+					valorTeste = i - 3;
+					if (fotosBaixadasAteAgora[0] == valorTeste) {
+						//baixarFotos(response,i+1,qtd_fotos);
+						i++
+						baixarFotos(response,i,qtd_fotos);
+					}
 				}
 			}
 			
-		}, 3000);*/
+		}, 3000);
 	}
 	//--------- VERIFICAÇÃO EM LOOP ---------------------------------------------------------------------------
 
