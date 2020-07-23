@@ -278,10 +278,11 @@ var captionText = document.getElementById("caption");
 var span = document.getElementsByClassName("close")[0];
 
 // When the user clicks on <span> (x), close the modal
-/*span.onclick = function() { 
+span.onclick = function() { 
 	modal.style.display = "none";
 	menuVisual.style.display = "none";
-}*/
+}
+
 function fecharModal() {
 	modal.style.display = "none";
 	menuVisual.style.display = "none";
