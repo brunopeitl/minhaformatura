@@ -368,6 +368,15 @@ function obterRespostaServidor(empresa,contrato,album,senha) {
 	}); //fim do ajax
 } //Fim da função baixarfotos
 
+//Função que verifica quanto espaço em disco tem o aparelho
+function verEspacoDisco() {
+	cordova.exec(function(result) {
+	    alert("Free Disk Space: " + result);
+	}, function(error) {
+	    alert("Error: " + error);
+	}, "File", "getFreeDiskSpace", []);
+}
+
 //Colocar função para verificar conexão aqui
 function checkConnection() {
     var networkState = navigator.connection.type;
@@ -427,6 +436,7 @@ function enviar() {
 		}
 	}
 	else {
+		verEspacoDisco();
 		obterRespostaServidor(empresa,contrato,album,senha);
 	}
 }
