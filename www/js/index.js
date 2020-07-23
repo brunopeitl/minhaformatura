@@ -231,11 +231,7 @@ function baixarFotos(response,i,qtd_fotos) {
 					contagem123++;
 				}
 			}
-		  
-			/*else if(contagem123 < 6) {
-				alert("TESTE DEFINITIVO. ESTÁ CHEGANDO PERTO! = "+fotosBaixadasAteAgora[0]);
-				contagem123++;
-	    		}*/
+			
 		}, 3000);
 	}
 	//--------- VERIFICAÇÃO EM LOOP ---------------------------------------------------------------------------
