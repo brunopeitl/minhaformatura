@@ -255,7 +255,8 @@ function baixarFotos(response,i,qtd_fotos) {
 				contagem123++;
 			}
 			else {
-				if (contagem123 < 120) { //Durante quantos segundos vai ficar tentando baixar?
+				var tempoEspera = 17 * qtd_fotos; //17 segundos por foto
+				if (contagem123 < tempoEspera) { //Durante quantos segundos vai ficar tentando baixar?
 					//alert("TESTE DEFINITIVO. ESTÁ CHEGANDO PERTO! = "+fotosBaixadasAteAgora[0]);
 					contagem123++;
 					var valorTeste = i - 3;
