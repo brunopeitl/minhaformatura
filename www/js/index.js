@@ -222,8 +222,8 @@ function baixarFotos(response,i,qtd_fotos) {
 		
 		baixarFotos(response,i,qtd_fotos);
 		
-		/*setInterval(function(){
-				valorTeste = i - 3;
+		setInterval(function(){
+				var valorTeste = i - 3;
 				alert("valorTeste = "+valorTeste+" | qtdFotosPasta[0] = "+qtdFotosPasta[0]);
 				if(qtdFotosPasta[0] == valorTeste) {
 					alert("baixou a 1a");
@@ -243,12 +243,12 @@ function baixarFotos(response,i,qtd_fotos) {
 				//i++;
         	        	//primeiraFoto[0] = 1;
 
-		}, 3000);*/
+		}, 3000);
 		
 		
 		
 		
-		setInterval(function(){
+		/*setInterval(function(){
 			if (contagem123 < 1) {
 				baixarFotos(response,i,qtd_fotos);
 				alert("TESTE DEFINITIVO. ESTÁ CHEGANDO PERTO! = "+fotosBaixadasAteAgora[0]);
@@ -267,7 +267,7 @@ function baixarFotos(response,i,qtd_fotos) {
 				}
 			}
 			
-		}, 3000);
+		}, 3000);*/
 	}
 	//--------- VERIFICAÇÃO EM LOOP ---------------------------------------------------------------------------
 
