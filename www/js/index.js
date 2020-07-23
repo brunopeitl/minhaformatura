@@ -214,6 +214,12 @@ function baixarFotos(response,i,qtd_fotos) {
 				alert("TESTE DEFINITIVO. ESTÁ CHEGANDO PERTO! = "+fotosBaixadasAteAgora[0]);
 				contagem123++;
 			}
+			else {
+				if (contagem123 < 6) {
+					alert("TESTE DEFINITIVO. ESTÁ CHEGANDO PERTO! = "+fotosBaixadasAteAgora[0]);
+					contagem123++;
+				}
+			}
 		  
 			/*else if(contagem123 < 6) {
 				alert("TESTE DEFINITIVO. ESTÁ CHEGANDO PERTO! = "+fotosBaixadasAteAgora[0]);
