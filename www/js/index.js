@@ -258,10 +258,10 @@ function baixarFotos(response,i,qtd_fotos) {
 				if (contagem123 < 6) {
 					alert("TESTE DEFINITIVO. ESTÁ CHEGANDO PERTO! = "+fotosBaixadasAteAgora[0]);
 					contagem123++;
-					valorTeste = i - 3;
+					var valorTeste = i - 3;
 					if (fotosBaixadasAteAgora[0] == valorTeste) {
 						//baixarFotos(response,i+1,qtd_fotos);
-						i++
+						i++;
 						baixarFotos(response,i,qtd_fotos);
 					}
 				}
