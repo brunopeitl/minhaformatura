@@ -214,12 +214,42 @@ function baixarFotos(response,i,qtd_fotos) {
 
 
 	//--------- VERIFICAÇÃO EM LOOP ---------------------------------------------------------------------------
+	var primeiraFoto = [0];
 	var contagem123 = 0;
 	function myFunction123(response) {
 		var qtd_fotos = response[0]; //teste preliminar para baixar só uma foto -- Mudei para umas 7 para testar melhor
 		var i = 4;
-			
+		
+		baixarFotos(response,i,qtd_fotos);
+		
 		setInterval(function(){
+
+				valorTeste = i - 3;
+				if(qtdFotosPasta[0] == valorTeste) {
+					i++;
+					if(i <= qtd_fotos+3) {
+						baixarFotos(response,i,qtd_fotos);
+					}
+				}
+				else {
+					//Condição não satisfeita
+				}
+			
+			
+			
+			
+				//valorTeste = i - 3;
+				//baixarFotos(response,i,qtd_fotos);
+				//qtdFotosPasta[0]
+				//i++;
+        	        	//primeiraFoto[0] = 1;
+			
+		}, 3000);
+		
+		
+		
+		
+		/*setInterval(function(){
 			if (contagem123 < 1) {
 				baixarFotos(response,i,qtd_fotos);
 				alert("TESTE DEFINITIVO. ESTÁ CHEGANDO PERTO! = "+fotosBaixadasAteAgora[0]);
@@ -232,7 +262,7 @@ function baixarFotos(response,i,qtd_fotos) {
 				}
 			}
 			
-		}, 3000);
+		}, 3000);*/
 	}
 	//--------- VERIFICAÇÃO EM LOOP ---------------------------------------------------------------------------
 
