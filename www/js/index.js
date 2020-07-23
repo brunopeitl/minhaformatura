@@ -202,6 +202,17 @@ function baixarFotos(response,i,qtd_fotos) {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
 	//--------- VERIFICAÇÃO EM LOOP ---------------------------------------------------------------------------
 	var contagem123 = 0;
 	function myFunction123(response) {
@@ -228,6 +239,15 @@ function baixarFotos(response,i,qtd_fotos) {
 		}, 3000);
 	}
 	//--------- VERIFICAÇÃO EM LOOP ---------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
 
 
 
@@ -309,11 +329,6 @@ function obterRespostaServidor(empresa,contrato,album,senha) {
 				//contaFotosBaixadas(); //COMANDO PASSADO PARA A FUNÇÃO QUE EXECUTA QUANDO CONCLUI O DOWNLOAD
 				myFunction123(response);
 						
-				
-				
-				
-				
-				
 				
 			}
 
