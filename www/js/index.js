@@ -226,12 +226,14 @@ function baixarFotos(response,i,qtd_fotos) {
 
 				valorTeste = i - 3;
 				if(qtdFotosPasta[0] == valorTeste) {
+					alert("baixou a 1a");
 					i++;
 					if(i <= qtd_fotos+3) {
 						baixarFotos(response,i,qtd_fotos);
 					}
 				}
 				else {
+					alert("não baixou a 1a");
 					//Condição não satisfeita
 				}
 			
