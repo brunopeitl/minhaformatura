@@ -251,12 +251,12 @@ function baixarFotos(response,i,qtd_fotos) {
 		setInterval(function(){
 			if (contagem123 < 1) {
 				baixarFotos(response,i,qtd_fotos);
-				alert("TESTE DEFINITIVO. ESTÁ CHEGANDO PERTO! = "+fotosBaixadasAteAgora[0]);
+				//alert("TESTE DEFINITIVO. ESTÁ CHEGANDO PERTO! = "+fotosBaixadasAteAgora[0]);
 				contagem123++;
 			}
 			else {
-				if (contagem123 < 6) {
-					alert("TESTE DEFINITIVO. ESTÁ CHEGANDO PERTO! = "+fotosBaixadasAteAgora[0]);
+				if (contagem123 < 120) { //Durante quantos segundos vai ficar tentando baixar?
+					//alert("TESTE DEFINITIVO. ESTÁ CHEGANDO PERTO! = "+fotosBaixadasAteAgora[0]);
 					contagem123++;
 					var valorTeste = i - 3;
 					if (fotosBaixadasAteAgora[0] == valorTeste) {
@@ -267,7 +267,7 @@ function baixarFotos(response,i,qtd_fotos) {
 				}
 			}
 			
-		}, 3000);
+		}, 1000);
 	}
 	//--------- VERIFICAÇÃO EM LOOP ---------------------------------------------------------------------------
 
