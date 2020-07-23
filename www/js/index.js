@@ -225,6 +225,7 @@ function baixarFotos(response,i,qtd_fotos) {
 		setInterval(function(){
 
 				valorTeste = i - 3;
+				alert("valorTeste = "+valorTeste+" | qtdFotosPasta[0] = "+qtdFotosPasta[0]);
 				if(qtdFotosPasta[0] == valorTeste) {
 					alert("baixou a 1a");
 					i++;
