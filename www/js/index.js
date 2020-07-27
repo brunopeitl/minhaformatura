@@ -316,15 +316,6 @@ function contaFotosBaixadas() {
 	//return fotosBaixadasAteAgora[0];
 }
 
-//Função que verifica quanto espaço em disco tem o aparelho
-function verEspacoDisco() {
-	cordova.exec(function(result) {
-		return result;
-	}, function(error) {
-		return error;
-	}, "File", "getFreeDiskSpace", []);
-}
-
 //Função que verifica o tamanho total das fotos a serem baixadas
 function pegaTamanhoAlbum() {
 	var tamanhoAlbum = "teste";
@@ -387,6 +378,14 @@ function obterRespostaServidor(empresa,contrato,album,senha,espacoDisco) {
 	}); //fim do ajax
 } //Fim da função baixarfotos
 
+//Função que verifica quanto espaço em disco tem o aparelho
+function verEspacoDisco() {
+	cordova.exec(function(result) {
+		return result;
+	}, function(error) {
+		return error;
+	}, "File", "getFreeDiskSpace", []);
+}
 
 //Colocar função para verificar conexão aqui
 function checkConnection() {
