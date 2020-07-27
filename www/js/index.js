@@ -316,6 +316,14 @@ function contaFotosBaixadas() {
 	//return fotosBaixadasAteAgora[0];
 }
 
+//Função que verifica quanto espaço em disco tem o aparelho
+function verEspacoDisco() {
+	cordova.exec(function(result) {
+		return result;
+	}, function(error) {
+		return error;
+	}, "File", "getFreeDiskSpace", []);
+}
 
 //Função que envia dados para o servidor e obtém a resposta dele
 function obterRespostaServidor(empresa,contrato,album,senha) {
@@ -324,6 +332,11 @@ function obterRespostaServidor(empresa,contrato,album,senha) {
 	variaveisGlobais["contrato"] = contrato;
 	variaveisGlobais["album"] = album;
 	variaveisGlobais["senha"] = senha;
+	
+	//Verificar se Espaço em disco é suficiente
+	var espacoDisco = verEspacoDisco();
+	alert("Espaço em Disco é: "+espacoDisco);
+	
 	$.ajax({
 		type: "GET",
 		url: 'http://www.porcocapitalista.com.br/minhaformatura/teste4.php',
@@ -368,14 +381,6 @@ function obterRespostaServidor(empresa,contrato,album,senha) {
 	}); //fim do ajax
 } //Fim da função baixarfotos
 
-//Função que verifica quanto espaço em disco tem o aparelho
-function verEspacoDisco() {
-	cordova.exec(function(result) {
-		return result;
-	}, function(error) {
-		return error;
-	}, "File", "getFreeDiskSpace", []);
-}
 
 //Colocar função para verificar conexão aqui
 function checkConnection() {
@@ -436,8 +441,6 @@ function enviar() {
 		}
 	}
 	else {
-		var espacoDisco = verEspacoDisco();
-		alert("Espaço em Disco é: "+espacoDisco);
 		obterRespostaServidor(empresa,contrato,album,senha);
 	}
 }
