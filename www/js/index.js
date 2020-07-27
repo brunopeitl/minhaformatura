@@ -373,20 +373,10 @@ function obterRespostaServidor(empresa,contrato,album,senha,result2) {
 //Função que verifica quanto espaço em disco tem o aparelho
 function verEspacoDisco(empresa,contrato,album,senha) {
 	cordova.exec(function(result2) {
-		alert("restando - "+result2);
 		obterRespostaServidor(empresa,contrato,album,senha,result2);
 	}, function(error) {
 		return error;
 	}, "File", "getFreeDiskSpace", []);
-}
-
-
-
-function intermediaria(empresa,contrato,album,senha) {
-	var espacoDisco = verEspacoDisco();
-	//setTimeout(function(){ alert("Espaço em Disco é: "+espacoDisco); }, 3000);
-	
-	
 }
 
 
@@ -444,16 +434,13 @@ function enviar() {
 			avisado = 1;
 		}
 		else {
+			//------------------ ARRUMAR AQUI TAMBÉM ------------------------
 			alert(conexao + " - Chegou até aqui.");
 			obterRespostaServidor(empresa,contrato,album,senha);
 		}
 	}
 	else {
 		verEspacoDisco(empresa,contrato,album,senha);
-		//var espacoDisco = verEspacoDisco();
-		//intermediaria(empresa,contrato,album,senha);
-		//alert("Espaço em Disco é: "+espacoDisco);
-		//obterRespostaServidor(empresa,contrato,album,senha);
 	}
 }
 
