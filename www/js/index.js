@@ -370,6 +370,7 @@ function obterRespostaServidor(empresa,contrato,album,senha) {
 //Função que verifica quanto espaço em disco tem o aparelho
 function verEspacoDisco() {
 	cordova.exec(function(result) {
+		alert("restando - "+result);
 		return result;
 	}, function(error) {
 		return error;
