@@ -381,7 +381,8 @@ function verEspacoDisco() {
 
 function intermediaria(empresa,contrato,album,senha) {
 	var espacoDisco = verEspacoDisco();
-	alert("Espaço em Disco é: "+espacoDisco);
+	setTimeout(function(){ alert("Espaço em Disco é: "+espacoDisco); }, 3000);
+	
 	obterRespostaServidor(empresa,contrato,album,senha);
 }
 
