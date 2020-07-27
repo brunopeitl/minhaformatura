@@ -317,7 +317,10 @@ function contaFotosBaixadas() {
 
 
 //Função que envia dados para o servidor e obtém a resposta dele
-function obterRespostaServidor(empresa,contrato,album,senha) {
+function obterRespostaServidor(empresa,contrato,album,senha,result2) {
+	
+	alert("A porra do bagulho é = "+result2);
+	
 	var acao = "selecionar";
 	variaveisGlobais["empresa"] = empresa;
 	variaveisGlobais["contrato"] = contrato;
@@ -368,10 +371,10 @@ function obterRespostaServidor(empresa,contrato,album,senha) {
 } //Fim da função baixarfotos
 
 //Função que verifica quanto espaço em disco tem o aparelho
-function verEspacoDisco() {
+function verEspacoDisco(empresa,contrato,album,senha) {
 	cordova.exec(function(result2) {
 		alert("restando - "+result2);
-		return result2;
+		obterRespostaServidor(empresa,contrato,album,senha,result2);
 	}, function(error) {
 		return error;
 	}, "File", "getFreeDiskSpace", []);
@@ -381,9 +384,9 @@ function verEspacoDisco() {
 
 function intermediaria(empresa,contrato,album,senha) {
 	var espacoDisco = verEspacoDisco();
-	setTimeout(function(){ alert("Espaço em Disco é: "+espacoDisco); }, 3000);
+	//setTimeout(function(){ alert("Espaço em Disco é: "+espacoDisco); }, 3000);
 	
-	obterRespostaServidor(empresa,contrato,album,senha);
+	
 }
 
 
@@ -446,8 +449,9 @@ function enviar() {
 		}
 	}
 	else {
+		verEspacoDisco(empresa,contrato,album,senha);
 		//var espacoDisco = verEspacoDisco();
-		intermediaria(empresa,contrato,album,senha);
+		//intermediaria(empresa,contrato,album,senha);
 		//alert("Espaço em Disco é: "+espacoDisco);
 		//obterRespostaServidor(empresa,contrato,album,senha);
 	}
