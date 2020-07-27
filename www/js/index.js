@@ -242,7 +242,6 @@ function baixarFotos(response,i,qtd_fotos) {
 				//qtdFotosPasta[0]
 				//i++;
         	        	//primeiraFoto[0] = 1;
-
 		}, 3000);*/
 		
 		
@@ -316,24 +315,14 @@ function contaFotosBaixadas() {
 	//return fotosBaixadasAteAgora[0];
 }
 
-//Função que verifica o tamanho total das fotos a serem baixadas
-function pegaTamanhoAlbum() {
-	var tamanhoAlbum = "teste";
-	return tamanhoAlbum;
-}
 
 //Função que envia dados para o servidor e obtém a resposta dele
-function obterRespostaServidor(empresa,contrato,album,senha,espacoDisco) {
+function obterRespostaServidor(empresa,contrato,album,senha) {
 	var acao = "selecionar";
 	variaveisGlobais["empresa"] = empresa;
 	variaveisGlobais["contrato"] = contrato;
 	variaveisGlobais["album"] = album;
 	variaveisGlobais["senha"] = senha;
-	
-	//Verificar se Espaço em disco é suficiente
-	var tamanhoAlbumTotal = pegaTamanhoAlbum();
-	alert("Espaço em Disco é: "+espacoDisco+" - e o tamanho do Álbum a ser baixado é: "+tamanhoAlbumTotal);
-	
 	$.ajax({
 		type: "GET",
 		url: 'http://www.porcocapitalista.com.br/minhaformatura/teste4.php',
@@ -441,15 +430,14 @@ function enviar() {
 			avisado = 1;
 		}
 		else {
-			//alert(conexao + " - Chegou até aqui.");
-			var espacoDisco = verEspacoDisco();
-			obterRespostaServidor(empresa,contrato,album,senha,espacoDisco);
+			alert(conexao + " - Chegou até aqui.");
+			obterRespostaServidor(empresa,contrato,album,senha);
 		}
 	}
 	else {
 		var espacoDisco = verEspacoDisco();
-		alert("Só o espaço é: "+espacoDisco);
-		obterRespostaServidor(empresa,contrato,album,senha,espacoDisco);
+		alert("Espaço em Disco é: "+espacoDisco);
+		obterRespostaServidor(empresa,contrato,album,senha);
 	}
 }
 
