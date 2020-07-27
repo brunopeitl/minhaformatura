@@ -6,8 +6,6 @@ var variaveisGlobais = {parar_animacao:0, empresa:"", contrato:"", album:"", sen
 //Parte da função que está sendo testada para contar quantas fotos tem baixadas na pasta
 var fotosBaixadasAteAgora = [0];
 
-var espacoDisco2 = [0];
-
 //Código Hexadecimal das cores da capa
 var hexa_azul_escuro = "#1b2242";
 var hexa_azul_claro = "#4c5996";
@@ -373,11 +371,20 @@ function obterRespostaServidor(empresa,contrato,album,senha) {
 function verEspacoDisco() {
 	cordova.exec(function(result) {
 		alert("restando - "+result);
-		espacoDisco2[0] = result;
+		return result;
 	}, function(error) {
 		return error;
 	}, "File", "getFreeDiskSpace", []);
 }
+
+
+
+function intermediaria(empresa,contrato,album,senha) {
+	var espacoDisco = verEspacoDisco();
+	alert("Espaço em Disco é: "+espacoDisco);
+	obterRespostaServidor(empresa,contrato,album,senha);
+}
+
 
 //Colocar função para verificar conexão aqui
 function checkConnection() {
@@ -438,9 +445,10 @@ function enviar() {
 		}
 	}
 	else {
-		verEspacoDisco();
-		alert("Espaço em Disco é: "+espacoDisco2[0]);
-		obterRespostaServidor(empresa,contrato,album,senha);
+		//var espacoDisco = verEspacoDisco();
+		intermediaria(empresa,contrato,album,senha);
+		//alert("Espaço em Disco é: "+espacoDisco);
+		//obterRespostaServidor(empresa,contrato,album,senha);
 	}
 }
 
