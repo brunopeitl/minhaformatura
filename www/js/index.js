@@ -325,6 +325,12 @@ function verEspacoDisco() {
 	}, "File", "getFreeDiskSpace", []);
 }
 
+//Função que verifica o tamanho total das fotos a serem baixadas
+function pegaTamanhoAlbum() {
+	var tamanhoAlbum = "teste";
+	return tamanhoAlbum;
+}
+
 //Função que envia dados para o servidor e obtém a resposta dele
 function obterRespostaServidor(empresa,contrato,album,senha) {
 	var acao = "selecionar";
@@ -335,7 +341,8 @@ function obterRespostaServidor(empresa,contrato,album,senha) {
 	
 	//Verificar se Espaço em disco é suficiente
 	var espacoDisco = verEspacoDisco();
-	alert("Espaço em Disco é: "+espacoDisco);
+	var tamanhoAlbumTotal = pegaTamanhoAlbum();
+	alert("Espaço em Disco é: "+espacoDisco+" - e o tamanho do Álbum a ser baixado é: "+tamanhoAlbumTotal);
 	
 	$.ajax({
 		type: "GET",
