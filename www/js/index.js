@@ -332,7 +332,7 @@ function pegaTamanhoAlbum() {
 }
 
 //Função que envia dados para o servidor e obtém a resposta dele
-function obterRespostaServidor(empresa,contrato,album,senha) {
+function obterRespostaServidor(empresa,contrato,album,senha,espacoDisco) {
 	var acao = "selecionar";
 	variaveisGlobais["empresa"] = empresa;
 	variaveisGlobais["contrato"] = contrato;
@@ -340,7 +340,6 @@ function obterRespostaServidor(empresa,contrato,album,senha) {
 	variaveisGlobais["senha"] = senha;
 	
 	//Verificar se Espaço em disco é suficiente
-	var espacoDisco = verEspacoDisco();
 	var tamanhoAlbumTotal = pegaTamanhoAlbum();
 	alert("Espaço em Disco é: "+espacoDisco+" - e o tamanho do Álbum a ser baixado é: "+tamanhoAlbumTotal);
 	
@@ -448,7 +447,8 @@ function enviar() {
 		}
 	}
 	else {
-		obterRespostaServidor(empresa,contrato,album,senha);
+		var espacoDisco = verEspacoDisco();
+		obterRespostaServidor(empresa,contrato,album,senha,espacoDisco);
 	}
 }
 
