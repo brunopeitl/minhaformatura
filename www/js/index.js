@@ -442,8 +442,9 @@ function enviar() {
 			avisado = 1;
 		}
 		else {
-			alert(conexao + " - Chegou até aqui.");
-			obterRespostaServidor(empresa,contrato,album,senha);
+			//alert(conexao + " - Chegou até aqui.");
+			var espacoDisco = verEspacoDisco();
+			obterRespostaServidor(empresa,contrato,album,senha,espacoDisco);
 		}
 	}
 	else {
