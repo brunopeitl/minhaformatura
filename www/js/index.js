@@ -449,6 +449,7 @@ function enviar() {
 	}
 	else {
 		var espacoDisco = verEspacoDisco();
+		alert("Só o espaço é: "+espacoDisco);
 		obterRespostaServidor(empresa,contrato,album,senha,espacoDisco);
 	}
 }
