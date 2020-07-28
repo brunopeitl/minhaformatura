@@ -218,33 +218,7 @@ function baixarFotos(response,i,qtd_fotos) {
 	var contagem123 = 0;
 	function myFunction123(response) {
 		var qtd_fotos = response[0]; //teste preliminar para baixar só uma foto -- Mudei para umas 7 para testar melhor
-		var i = 4;
-		
-		//baixarFotos(response,i,qtd_fotos);
-		
-		/*setInterval(function(){
-				var valorTeste = i - 3;
-				alert("valorTeste = "+valorTeste+" | qtdFotosPasta[0] = "+qtdFotosPasta[0]);
-				if(qtdFotosPasta[0] == valorTeste) {
-					alert("baixou a 1a");
-					i++;
-					if(i <= qtd_fotos+3) {
-						baixarFotos(response,i,qtd_fotos);
-					}
-				}
-				else {
-					alert("não baixou a 1a");
-					//Condição não satisfeita
-				}
-				
-				//valorTeste = i - 3;
-				//baixarFotos(response,i,qtd_fotos);
-				//qtdFotosPasta[0]
-				//i++;
-        	        	//primeiraFoto[0] = 1;
-		}, 3000);*/
-		
-		
+		var i = 5;
 		
 		
 		setInterval(function(){
@@ -258,9 +232,8 @@ function baixarFotos(response,i,qtd_fotos) {
 				if (contagem123 < tempoEspera) { //Durante quantos segundos vai ficar tentando baixar?
 					//alert("TESTE DEFINITIVO. ESTÁ CHEGANDO PERTO! = "+fotosBaixadasAteAgora[0]);
 					contagem123++;
-					var valorTeste = i - 3;
+					var valorTeste = i - 4;
 					if (fotosBaixadasAteAgora[0] == valorTeste) {
-						//baixarFotos(response,i+1,qtd_fotos);
 						i++;
 						baixarFotos(response,i,qtd_fotos);
 					}
@@ -319,7 +292,7 @@ function contaFotosBaixadas() {
 //Função que envia dados para o servidor e obtém a resposta dele
 function obterRespostaServidor(empresa,contrato,album,senha,result2) {
 	
-	alert("A porra do bagulho é = "+result2);
+	alert("O espaço disponível em disco é = "+result2);
 	
 	var acao = "selecionar";
 	variaveisGlobais["empresa"] = empresa;
@@ -354,7 +327,7 @@ function obterRespostaServidor(empresa,contrato,album,senha,result2) {
 				localStorage.setItem("instituicao", response[2]);
 				localStorage.setItem("cor", response[3]);
 				
-				
+				alert("O tamanho do Álbum é = "+response[4]);
 				
 				//TIRADO DAQUI
 				
