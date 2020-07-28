@@ -285,7 +285,6 @@ function contaFotosBaixadas() {
 	}
 	//Chama a função passando o caminho da pasta na memória interna do aparelho a ser lida
 	listDir(cordova.file.dataDirectory + "imagens/");
-	//return fotosBaixadasAteAgora[0];
 }
 
 
@@ -333,14 +332,7 @@ function obterRespostaServidor(empresa,contrato,album,senha,result2) {
 				
 				alert("O tamanho do Álbum é = "+response[4]);
 				
-				//TIRADO DAQUI
-				
-				
-				//Coloca aqui a função de teste que conta quantas fotos têm baixadas na pasta
-				//contaFotosBaixadas(); //COMANDO PASSADO PARA A FUNÇÃO QUE EXECUTA QUANDO CONCLUI O DOWNLOAD
 				myFunction123(response);
-						
-				
 			}
 
 		} //fim do success						
