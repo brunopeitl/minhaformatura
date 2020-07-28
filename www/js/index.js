@@ -434,9 +434,7 @@ function enviar() {
 			avisado = 1;
 		}
 		else {
-			//------------------ ARRUMAR AQUI TAMBÉM ------------------------
-			alert(conexao + " - Chegou até aqui.");
-			obterRespostaServidor(empresa,contrato,album,senha);
+			verEspacoDisco(empresa,contrato,album,senha);
 		}
 	}
 	else {
