@@ -291,11 +291,7 @@ function contaFotosBaixadas() {
 //Função que envia dados para o servidor e obtém a resposta dele
 function obterRespostaServidor(empresa,contrato,album,senha,result2) {
 	
-	alert("O espaço disponível em disco é = "+result2+" Kb");
-	
 	var espacoDiscoBytes = result2 * 1000;
-	
-	alert("...ou, "+espacoDiscoBytes+" Bytes");
 	
 	var acao = "selecionar";
 	variaveisGlobais["empresa"] = empresa;
@@ -320,7 +316,7 @@ function obterRespostaServidor(empresa,contrato,album,senha,result2) {
 			}
 			else {
 				//Compara espaço disponível com tamanho do álbum
-				alert("O tamanho do Álbum é = "+response[4]);
+				//response[4] é a string que pega do servidor trazendo o tamanho do álbum em bytes
 				if(espacoDiscoBytes > response[4] * 2) { //Vezes dois porque o espaço disponível tem que ser maior que pelo menos o dobro do tamanho das fotos. Apenas por segurança.
 					alert("O espaço é suficiente");
 					document.getElementById("pagina_login").style.display = "none";
@@ -338,20 +334,6 @@ function obterRespostaServidor(empresa,contrato,album,senha,result2) {
 					$("#resposta").html("<p>Memória Insuficiente. Tente abrir espaço na memória do celular para conseguir baixar as fotos.</p>");
 				}
 				
-				//------------------------------TIROU DAQUI E COLOCOU DENTRO DO IF ACIMA
-				/*
-				//Passa para a próxima tela
-				document.getElementById("pagina_login").style.display = "none";
-				document.getElementById("pagina_download").style.display = "block";
-				animar();
-		
-				//Pega resposta do servidor e grava informações no LocalStorage
-				localStorage.setItem("curso", response[1]);
-				localStorage.setItem("instituicao", response[2]);
-				localStorage.setItem("cor", response[3]);
-				
-				myFunction123(response);
-				*/
 			}
 
 		} //fim do success						
