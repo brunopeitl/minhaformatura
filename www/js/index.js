@@ -291,7 +291,7 @@ function contaFotosBaixadas() {
 //Função que envia dados para o servidor e obtém a resposta dele
 function obterRespostaServidor(empresa,contrato,album,senha,result2) {
 	
-	var espacoDiscoBytes = result2 * 1000;
+	var espacoDiscoBytes = result2 * 1000; //Resultado do Espaço disponível em disco vem em Kb, aqui converte para bytes
 	
 	var acao = "selecionar";
 	variaveisGlobais["empresa"] = empresa;
