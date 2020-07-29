@@ -160,7 +160,6 @@ function pega_nome_arquivo(resposta) {
 }
 
 
-//----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 //Função para baixar as fotos
 function baixarFotos(response,i,qtd_fotos) {
 
@@ -180,11 +179,19 @@ function baixarFotos(response,i,qtd_fotos) {
 					},
 										
 					function(error) {
-						//Aqui vai os comandos a serem executados em caso de erro
+						
+						
+						
+						
+						
+//--------------------------------------------- Aqui vai os comandos a serem executados em caso de erro ---------------------------------------------
+//---------------------------------------------------------------------------------------------------------------------------------------------------
+						
 						console.log("download error source " + error.source);
 						console.log("download error target " + error.target);
 						console.log("download error code" + error.code);
-					
+						
+						//TRATAR ESSE ERRO AQUI
 						$("#fotos_baixadas").html("ERRO NO DOWNLOAD.");
 						variaveisGlobais["parar_animacao"] = 1;
 						document.getElementById("fazendo_download").style.display = "none";
@@ -198,22 +205,9 @@ function baixarFotos(response,i,qtd_fotos) {
 				);//Aqui termina o script do download				
 }//Fim da função baixarFotos
 
-//----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-	//--------- VERIFICAÇÃO EM LOOP ---------------------------------------------------------------------------
+	// VERIFICAÇÃO EM LOOP 
 	var primeiraFoto = [0];
 	var contagem123 = 0;
 	function myFunction123(response) {
@@ -242,20 +236,9 @@ function baixarFotos(response,i,qtd_fotos) {
 			
 		}, 1000);
 	}
-	//--------- VERIFICAÇÃO EM LOOP ---------------------------------------------------------------------------
 
 
 
-
-
-
-
-
-
-
-
-
-//------------------------------- FUNÇÃO TESTADA - ESTÁ FUNCIONANDO -----------------------------------//
 
 function somaContagem(somarContagem) {
 	fotosBaixadasAteAgora[0] = somarContagem;
