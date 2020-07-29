@@ -192,9 +192,11 @@ function baixarFotos(response,i,qtd_fotos) {
 						console.log("download error code" + error.code);
 						
 						//TRATAR ESSE ERRO AQUI
-						$("#fotos_baixadas").html("ERRO NO DOWNLOAD.");
+						//$("#fotos_baixadas").html("ERRO NO DOWNLOAD.");
+						$("#fazendo_download").html("ERRO NO DOWNLOAD.");
+						$("#fotos_baixadas").html("<a href='index.html'>Voltar</a>");
 						variaveisGlobais["parar_animacao"] = 1;
-						document.getElementById("fazendo_download").style.display = "none";
+						//document.getElementById("fazendo_download").style.display = "none";
 					},
 										
 					false, {
