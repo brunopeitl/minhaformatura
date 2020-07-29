@@ -318,7 +318,6 @@ function obterRespostaServidor(empresa,contrato,album,senha,result2) {
 				//Compara espaço disponível com tamanho do álbum
 				//response[4] é a string que pega do servidor trazendo o tamanho do álbum em bytes
 				if(espacoDiscoBytes > response[4] * 2) { //Vezes dois porque o espaço disponível tem que ser maior que pelo menos o dobro do tamanho das fotos. Apenas por segurança.
-					alert("O espaço é suficiente");
 					document.getElementById("pagina_login").style.display = "none";
 					document.getElementById("pagina_download").style.display = "block";
 					animar();
@@ -331,7 +330,7 @@ function obterRespostaServidor(empresa,contrato,album,senha,result2) {
 					myFunction123(response);
 				}
 				else {
-					$("#resposta").html("<p>Memória Insuficiente. Tente abrir espaço na memória do celular para conseguir baixar as fotos.</p>");
+					$("#resposta").html("<p>Memória Insuficiente. Tente abrir espaço na memória do aparelho para conseguir baixar as fotos.</p>");
 				}
 				
 			}
