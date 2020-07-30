@@ -29,7 +29,7 @@ function limparPasta() {
 
 	
 	
-    window.resolveLocalFileSystemURL(cordova.file.externalDataDirectory, function (dir) {
+    window.resolveLocalFileSystemURL(cordova.file.dataDirectory+"imagens/", function (dir) {
 
         dir.getFile("CAPA.jpg", {create: false}, function (fileEntry) {
             fileEntry.remove(function (file) {
