@@ -1,4 +1,3 @@
-
 //Array para guardar informações variadas
 //Também salva informações: Cod Empresa, Nº Contrato, Album e Senha para usar depois
 var variaveisGlobais = {parar_animacao:0, empresa:"", contrato:"", album:"", senha:""};
@@ -17,6 +16,27 @@ var hexa_amarelo_escuro = "#726d18";
 var hexa_amarelo_claro = "#e3da39";
 var hexa_rosa_escuro = "#62364f";
 var hexa_rosa_claro = "#db339e";
+
+
+
+
+
+
+
+
+//Função para limpar pasta interna oculta do aplicativo onde estão as fotos - Se der erro no download das fotos, ao tentar baixar de novo, a pasta precisa estar limpa para não dar erro no algoritmo do download
+function limparPasta() {
+}
+
+
+
+
+
+
+
+
+
+
 
 //FUNÇÃO COM AJAX PARA ATUALIZAR CADASTRO DO ALBUM NO BANCO DE DADOS E COLOCAR QUE ALBUM JÁ FOI BAIXADO
 function alterar_album_banco() {
