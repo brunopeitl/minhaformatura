@@ -26,6 +26,7 @@ var hexa_rosa_claro = "#db339e";
 
 //Função para limpar pasta interna oculta do aplicativo onde estão as fotos - Se der erro no download das fotos, ao tentar baixar de novo, a pasta precisa estar limpa para não dar erro no algoritmo do download
 function limparPasta() {
+	alert("segue esse caminho.");
 }
 
 
