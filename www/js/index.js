@@ -193,9 +193,21 @@ function baixarFotos(response,i,qtd_fotos) {
 						
 						//TRATAR ESSE ERRO AQUI
 						//$("#fotos_baixadas").html("ERRO NO DOWNLOAD.");
-						document.getElementById("fazendo_download").innerHTML = "ERRO NO DOWNLOAD.";
+						document.getElementById("fazendo_download").innerHTML = "ERRO NO DOWNLOAD";
+						
+						
+						
+						
 						document.getElementById("fotos_baixadas").innerHTML = "<p class=\"retomarDownload\">Voltar</p>";
-						document.getElementById("fotos_baixadas").onclick = function() {alert('teste')};
+        					//document.getElementById("fotos_baixadas").onclick = function() {alert('teste')};
+						$("#fotos_baixadas").click(function(){
+						  alert("testando");
+						});
+						
+						
+						
+						
+						
 						
 						//------- VOLTA PARA ESSE DAQUI SE DER ERRADO -------//$("#fazendo_download").html("ERRO NO DOWNLOAD.");
 						//------- VOLTA PARA ESSE DAQUI SE DER ERRADO -------//$("#fotos_baixadas").html("<a href=\"javascript:alert(\"testando\");\" class=\"retomarDownload\">Voltar</a>");
