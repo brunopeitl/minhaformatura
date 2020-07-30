@@ -26,6 +26,24 @@ var hexa_rosa_claro = "#db339e";
 
 //Função para limpar pasta interna oculta do aplicativo onde estão as fotos - Se der erro no download das fotos, ao tentar baixar de novo, a pasta precisa estar limpa para não dar erro no algoritmo do download
 function limparPasta() {
+
+	
+	
+    window.resolveLocalFileSystemURL(cordova.file.externalDataDirectory, function (dir) {
+
+        dir.getFile("CAPA.jpg", {create: false}, function (fileEntry) {
+            fileEntry.remove(function (file) {
+                alert("DELETOU FOI POUCO!");
+            }, function (error) {
+                alert("error occurred: " + error.code);
+            }, function () {
+                alert("file does not exist");
+            });
+        });
+    });	
+	
+	
+	
 	alert("segue esse caminho.");
 }
 
