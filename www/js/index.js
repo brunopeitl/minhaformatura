@@ -159,6 +159,13 @@ function pega_nome_arquivo(resposta) {
 	return valor_caminho.substring(posicao_ultima_barra+1, valor_caminho.length);	
 }
 
+function botaoVoltar() {
+	document.getElementById("fotos_baixadas").innerHTML = "<p class=\"retomarDownload\">Voltar</p>";
+        //document.getElementById("fotos_baixadas").onclick = function() {alert('teste')};
+	$("#fotos_baixadas").click(function(){
+		alert("testando");
+	});
+}
 
 //Função para baixar as fotos
 function baixarFotos(response,i,qtd_fotos) {
@@ -197,12 +204,7 @@ function baixarFotos(response,i,qtd_fotos) {
 						
 						
 						
-						
-						document.getElementById("fotos_baixadas").innerHTML = "<p class=\"retomarDownload\">Voltar</p>";
-        					//document.getElementById("fotos_baixadas").onclick = function() {alert('teste')};
-						$("#fotos_baixadas").click(function(){
-						  alert("testando");
-						});
+						botaoVoltar();
 						
 						
 						
