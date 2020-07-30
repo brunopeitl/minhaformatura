@@ -4,6 +4,7 @@ var variaveisGlobais = {parar_animacao:0, empresa:"", contrato:"", album:"", sen
 
 //Parte da função que está sendo testada para contar quantas fotos tem baixadas na pasta
 var fotosBaixadasAteAgora = [0];
+var fotosBaixadas2 = [0];
 
 //Código Hexadecimal das cores da capa
 var hexa_azul_escuro = "#1b2242";
@@ -24,9 +25,44 @@ var hexa_rosa_claro = "#db339e";
 
 
 
+
+
+//------ OUTRA FUNÇÃO QUE CONTA QUANTAS FOTOS TEM NA PASTA PARA NÃO PRECISAR MEXER NA OUTRA
+function somaContagem2(somarContagem2) {
+	fotosBaixadas2[0] = somarContagem2;
+}
+
+//Conta quantas fotos baixadas tem na pasta da memória do aparelho
+function contaFotosBaixadas2() {
+	function listDir2(path){
+		window.resolveLocalFileSystemURL(path,
+			function (fileSystem) {
+      				var reader = fileSystem.createReader();
+      				reader.readEntries(
+        				function (entries) {
+						var d;
+						for (d=0; d<entries.length; d++) {
+							somaContagem2(d + 1);
+    						}
+        				},
+        				function (err) {
+          					console.log(err);
+        				}
+      				);
+    				}, function (err) {
+      					console.log(err);
+    				}
+  		);
+	}
+	//Chama a função passando o caminho da pasta na memória interna do aparelho a ser lida
+	listDir2(cordova.file.dataDirectory + "imagens/");
+}
+
 //Função para limpar pasta interna oculta do aplicativo onde estão as fotos - Se der erro no download das fotos, ao tentar baixar de novo, a pasta precisa estar limpa para não dar erro no algoritmo do download
 function limparPasta() {
 
+contaFotosBaixadas2();
+alert("A quantidade de fotos na pasta interna é = "+fotosBaixadas2[0]);
 //------ ESSA FUNÇÃO FUNCIONA!!!
     window.resolveLocalFileSystemURL(cordova.file.dataDirectory+"imagens/", function (dir) {
         dir.getFile("CAPA.jpg", {create: false}, function (fileEntry) {
@@ -39,8 +75,6 @@ function limparPasta() {
             });
         });
     });
-	
-	alert("segue esse caminho.");
 }
 
 
