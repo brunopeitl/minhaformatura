@@ -180,29 +180,15 @@ function baixarFotos(response,i,qtd_fotos) {
 										
 					function(error) {
 						
-						
-						
-						
-						
-//--------------------------------------------- Aqui vai os comandos a serem executados em caso de erro ---------------------------------------------
-//---------------------------------------------------------------------------------------------------------------------------------------------------
-						
 						console.log("download error source " + error.source);
 						console.log("download error target " + error.target);
 						console.log("download error code" + error.code);
 						
 						//TRATAR ESSE ERRO AQUI
-						//$("#fotos_baixadas").html("ERRO NO DOWNLOAD.");
 						document.getElementById("fazendo_download").innerHTML = "ERRO NO DOWNLOAD";
-						
 						document.getElementById("retomarDownload").style.display = "block";
 						$("#fotos_baixadas").html(" ");
-						//------- RETIRADO POR ENQUANTO -------//document.getElementById("fotos_baixadas").innerHTML = "<p class=\"retomarDownload\">Voltar</p>";
-        					//------- RETIRADO POR ENQUANTO -------//document.getElementById("fotos_baixadas").onclick = function() {alert('teste')};
-						//------- VOLTA PARA ESSE DAQUI SE DER ERRADO -------//$("#fazendo_download").html("ERRO NO DOWNLOAD.");
-						//------- VOLTA PARA ESSE DAQUI SE DER ERRADO -------//$("#fotos_baixadas").html("<a href=\"javascript:alert(\"testando\");\" class=\"retomarDownload\">Voltar</a>");
 						variaveisGlobais["parar_animacao"] = 1;
-						//document.getElementById("fazendo_download").style.display = "none";
 					},
 										
 					false, {
