@@ -195,7 +195,7 @@ function baixarFotos(response,i,qtd_fotos) {
 						//$("#fotos_baixadas").html("ERRO NO DOWNLOAD.");
 						document.getElementById("fazendo_download").innerHTML = "ERRO NO DOWNLOAD";
 						
-						
+						document.getElementById("retomarDownload").style.display = "block";
 						$("#fotos_baixadas").html(" ");
 						//------- RETIRADO POR ENQUANTO -------//document.getElementById("fotos_baixadas").innerHTML = "<p class=\"retomarDownload\">Voltar</p>";
         					//------- RETIRADO POR ENQUANTO -------//document.getElementById("fotos_baixadas").onclick = function() {alert('teste')};
