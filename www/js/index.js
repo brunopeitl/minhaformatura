@@ -5,6 +5,7 @@ var variaveisGlobais = {parar_animacao:0, empresa:"", contrato:"", album:"", sen
 //Parte da função que está sendo testada para contar quantas fotos tem baixadas na pasta
 var fotosBaixadasAteAgora = [0];
 var fotosBaixadas2 = [0];
+var downloadInterrompido = [0]; //VER SE VAI USAR ISSO MESMO
 
 //Código Hexadecimal das cores da capa
 var hexa_azul_escuro = "#1b2242";
@@ -20,16 +21,7 @@ var hexa_rosa_claro = "#db339e";
 
 
 
-//-----//-----//-----//-----//-----//-----//
-//-----//-----//-----//-----//-----//-----//
-//-----//-----//-----//-----//-----//-----//
-//-----//----- AQUI VAI A --//-----//-----//
-//-----//----- FUNÇÃO QUE --//-----//-----//
-//-----//----- APAGA TUDO --//-----//-----//
-//-----//-----//-----//-----//-----//-----//
-//-----//-----//-----//-----//-----//-----//
-//-----//-----//-----//-----//-----//-----//
-
+//-----//-----//-----//-----//-----// INICIO DO ALGORITMO QUE LIMPA A PASTA DE FOTOS INTERNA DO APP QUANDO ABRE A TELA DO FORMULÁRIO //-----//-----//-----//-----//-----//
 
 //------ OUTRA FUNÇÃO QUE CONTA QUANTAS FOTOS TEM NA PASTA PARA NÃO PRECISAR MEXER NA OUTRA
 function deletaFoto(fotoDeletar) {
@@ -75,21 +67,12 @@ function contaFotosBaixadas2() {
 
 //Função para limpar pasta interna oculta do aplicativo onde estão as fotos - Se der erro no download das fotos, ao tentar baixar de novo, a pasta precisa estar limpa para não dar erro no algoritmo do download
 function limparPasta() {
-
+	//É DESNECESSÁRIO CAIR NUMA FUNÇÃO QUE APENAS CHAMA OUTRA. VER DEPOIS PARA ELIMINAR UMA
 	contaFotosBaixadas2();
 
 }
 
-
-//-----//-----//-----//-----//-----//-----//
-//-----//-----//-----//-----//-----//-----//
-//-----//-----//-----//-----//-----//-----//
-//-----//----- AQUI VAI A --//-----//-----//
-//-----//----- FUNÇÃO QUE --//-----//-----//
-//-----//----- APAGA TUDO --//-----//-----//
-//-----//-----//-----//-----//-----//-----//
-//-----//-----//-----//-----//-----//-----//
-//-----//-----//-----//-----//-----//-----//
+//-----//-----//-----//-----//-----// FIM DO ALGORITMO QUE LIMPA A PASTA DE FOTOS INTERNA DO APP QUANDO ABRE A TELA DO FORMULÁRIO //-----//-----//-----//-----//-----//
 
 
 
