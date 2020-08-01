@@ -31,6 +31,54 @@ var hexa_rosa_claro = "#db339e";
 //-----//-----//-----//-----//-----//-----//
 
 
+//------ OUTRA FUNÇÃO QUE CONTA QUANTAS FOTOS TEM NA PASTA PARA NÃO PRECISAR MEXER NA OUTRA
+function deletaFoto(fotoDeletar) {
+		//------ ESSA FUNÇÃO FUNCIONA!!!
+    window.resolveLocalFileSystemURL(cordova.file.dataDirectory+"imagens/", function (dir) {
+        dir.getFile("CAPA.jpg", {create: false}, function (fileEntry) {
+            fileEntry.remove(function (file) {
+                alert("DELETOU FOI POUCO!");
+            }, function (error) {
+                alert("error occurred: " + error.code);
+            }, function () {
+                alert("file does not exist");
+            });
+        });
+    });
+}
+
+//Conta quantas fotos baixadas tem na pasta da memória do aparelho
+function contaFotosBaixadas2() {
+	function listDir2(path){
+		window.resolveLocalFileSystemURL(path,
+			function (fileSystem) {
+      				var reader = fileSystem.createReader();
+      				reader.readEntries(
+        				function (entries) {
+						var d;
+						for (d=0; d<entries.length; d++) {
+							deletaFoto(d + 1);
+    						}
+        				},
+        				function (err) {
+          					console.log(err);
+        				}
+      				);
+    				}, function (err) {
+      					console.log(err);
+    				}
+  		);
+	}
+	//Chama a função passando o caminho da pasta na memória interna do aparelho a ser lida
+	listDir2(cordova.file.dataDirectory + "imagens/");
+}
+
+//Função para limpar pasta interna oculta do aplicativo onde estão as fotos - Se der erro no download das fotos, ao tentar baixar de novo, a pasta precisa estar limpa para não dar erro no algoritmo do download
+function limparPasta() {
+
+	contaFotosBaixadas2();
+
+}
 
 
 //-----//-----//-----//-----//-----//-----//
@@ -52,7 +100,7 @@ var hexa_rosa_claro = "#db339e";
 
 
 //------ OUTRA FUNÇÃO QUE CONTA QUANTAS FOTOS TEM NA PASTA PARA NÃO PRECISAR MEXER NA OUTRA
-function somaContagem2(somarContagem2) {
+/*function somaContagem2(somarContagem2) {
 	fotosBaixadas2[0] = somarContagem2;
 }
 
@@ -106,7 +154,7 @@ setTimeout(function(){
             });
         });
     });
-}
+}*/
 
 
 
