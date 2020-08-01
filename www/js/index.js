@@ -56,7 +56,7 @@ function contaFotosBaixadas2() {
       				reader.readEntries(
         				function (entries) {
 						var d;
-						for (d=1; d<entries.length; d++) {
+						for (d=0; d<entries.length; d++) {
 							deletaFoto(entries[d].name);
     						}
         				},
