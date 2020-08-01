@@ -37,7 +37,7 @@ function deletaFoto(fotoDeletar) {
     window.resolveLocalFileSystemURL(cordova.file.dataDirectory+"imagens/", function (dir) {
         dir.getFile(fotoDeletar/*"CAPA.jpg"*/, {create: false}, function (fileEntry) {
             fileEntry.remove(function (file) {
-                alert("DELETOU FOI POUCO!");
+                //alert("DELETOU FOI POUCO!");
             }, function (error) {
                 alert("error occurred: " + error.code);
             }, function () {
