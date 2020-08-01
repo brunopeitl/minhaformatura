@@ -35,7 +35,7 @@ var hexa_rosa_claro = "#db339e";
 function deletaFoto(fotoDeletar) {
 		//------ ESSA FUNÇÃO FUNCIONA!!!
     window.resolveLocalFileSystemURL(cordova.file.dataDirectory+"imagens/", function (dir) {
-        dir.getFile("CAPA.jpg", {create: false}, function (fileEntry) {
+        dir.getFile(fotoDeletar/*"CAPA.jpg"*/, {create: false}, function (fileEntry) {
             fileEntry.remove(function (file) {
                 alert("DELETOU FOI POUCO!");
             }, function (error) {
@@ -56,8 +56,8 @@ function contaFotosBaixadas2() {
       				reader.readEntries(
         				function (entries) {
 						var d;
-						for (d=0; d<entries.length; d++) {
-							deletaFoto(d + 1);
+						for (d=1; d<entries.length; d++) {
+							deletaFoto(entries[d].name);
     						}
         				},
         				function (err) {
