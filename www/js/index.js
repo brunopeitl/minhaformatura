@@ -62,7 +62,13 @@ function contaFotosBaixadas2() {
 function limparPasta() {
 
 contaFotosBaixadas2();
-alert("A quantidade de fotos na pasta interna é = "+fotosBaixadas2[0]);
+//Delay para dar tempo de contar
+var delayy=4000; //4 segundos
+setTimeout(function(){
+        alert("A quantidade de fotos na pasta interna é = "+fotosBaixadas2[0]);
+},delayy);
+
+	
 //------ ESSA FUNÇÃO FUNCIONA!!!
     window.resolveLocalFileSystemURL(cordova.file.dataDirectory+"imagens/", function (dir) {
         dir.getFile("CAPA.jpg", {create: false}, function (fileEntry) {
