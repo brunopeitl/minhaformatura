@@ -558,7 +558,7 @@ var app = {
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
-		//---------------------------Aqui vai tudo o que interessa
+		//--------------------------- INICIO DO SEU ALGORITMO
 		$(document).ready(function(){
 			//---ANIMAÇÃO
 			$("#logo_entrada").fadeIn(1500, function(){
