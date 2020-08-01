@@ -495,6 +495,7 @@ var app = {
 					document.getElementById("fundo_entrada").style.display = "none";
 					if(baixado == "nao") {
 						document.getElementById("pagina_login").style.display = "block";
+						limparPasta(); // Chama função que limpa a pasta interna do app caso já tenha havido uma tentativa fracassada de baixar as fotos
 					}
 					else {
 						document.getElementById("pagina_capa").style.display = "block";
