@@ -63,6 +63,7 @@ function limparPasta() {
 
 contaFotosBaixadas2();
 //Delay para dar tempo de contar
+//É isso mesmo que precisava, só tinha que dar tempo para a outra função contar.
 var delayy=4000; //4 segundos
 setTimeout(function(){
         alert("A quantidade de fotos na pasta interna é = "+fotosBaixadas2[0]);
