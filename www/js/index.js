@@ -25,11 +25,9 @@ var hexa_rosa_claro = "#db339e";
 
 //------ OUTRA FUNÇÃO QUE CONTA QUANTAS FOTOS TEM NA PASTA PARA NÃO PRECISAR MEXER NA OUTRA
 function deletaFoto(fotoDeletar) {
-		//------ ESSA FUNÇÃO FUNCIONA!!!
     window.resolveLocalFileSystemURL(cordova.file.dataDirectory+"imagens/", function (dir) {
         dir.getFile(fotoDeletar/*"CAPA.jpg"*/, {create: false}, function (fileEntry) {
             fileEntry.remove(function (file) {
-                //alert("DELETOU FOI POUCO!");
             }, function (error) {
                 alert("error occurred: " + error.code);
             }, function () {
