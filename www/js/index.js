@@ -269,8 +269,10 @@ function baixarFotos(response,i,qtd_fotos) {
 		
 		setInterval(function(){
 			if (contagem123 < 1) {
-				baixarFotos(response,i,qtd_fotos);
-				contagem123++;
+				if(downloadInterrompido[0] == 0) { //Só manda baixar as fotos se o download não tiver sido interrompido pelo erro
+					baixarFotos(response,i,qtd_fotos);
+					contagem123++;
+				}
 			}
 			else {
 				var tempoEspera = 17 * qtd_fotos; //17 segundos por foto
@@ -278,8 +280,10 @@ function baixarFotos(response,i,qtd_fotos) {
 					contagem123++;
 					var valorTeste = i - 4;
 					if (fotosBaixadasAteAgora[0] == valorTeste) {
-						i++;
-						baixarFotos(response,i,qtd_fotos);
+						if(downloadInterrompido[0] == 0) { //Só manda baixar as fotos se o download não tiver sido interrompido pelo erro
+							i++;
+							baixarFotos(response,i,qtd_fotos);
+						}
 					}
 				}
 			}
