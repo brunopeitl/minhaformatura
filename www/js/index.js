@@ -481,6 +481,7 @@ var app = {
 					if(baixado == "nao") {
 						document.getElementById("pagina_login").style.display = "block";
 						limparPasta(); // Chama função que limpa a pasta interna do app caso já tenha havido uma tentativa fracassada de baixar as fotos
+						downloadInterrompido[0] = 0; //Para ter certeza de que o download vai começar de novo quando cair nesssa tela
 					}
 					else {
 						document.getElementById("pagina_capa").style.display = "block";
