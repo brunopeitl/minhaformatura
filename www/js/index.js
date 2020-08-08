@@ -245,6 +245,8 @@ function baixarFotos(response,i,qtd_fotos) {
 						document.getElementById("retomarDownload").style.display = "block";
 						$("#fotos_baixadas").html(" ");
 						variaveisGlobais["parar_animacao"] = 1;
+						downloadInterrompido[0] = 1;
+						alert(downloadInterrompido[0]);
 					},
 										
 					false, {
