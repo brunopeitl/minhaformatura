@@ -295,6 +295,7 @@ var span = document.getElementsByClassName("close")[0];
 
 // When the user clicks on <span> (x), close the modal
 span.onclick = function() { 
+	menuPrincipal.style.display = "none";
 	modal.style.display = "none";
 	//menuVisual.style.display = "none";  //------------------------------Esse menu vai sair
 }
