@@ -17,7 +17,7 @@ var curso = localStorage.getItem("curso");
 var instituicao = localStorage.getItem("instituicao");
 
 //document.getElementById("tituloCurso").innerHTML = curso+" - <span>"+instituicao+"</span>";
-document.getElementById("tituloGaleria").innerHTML = curso+" - <span style=\" font-family: Tahoma; font-size:16pt; \">"+instituicao+"</span>";
+document.getElementById("tituloGaleria").innerHTML = curso+" - <span style=\" font-family: Tahoma; font-size:14pt; \">"+instituicao+"</span>";
 
 
 function pegarnumerofoto() {
