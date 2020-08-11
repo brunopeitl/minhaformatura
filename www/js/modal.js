@@ -8,8 +8,6 @@ transform: rotate(20deg);*/
 var conjuntoFotos = document.getElementById("conjuntoFotos");
 listaFotos = new Array();
 fotoAberta = new Array();
-var estadoZoom = [0]; //------------------------------------------------------ ISSO VAI SAIR
-var estadoRotacao = [1]; //------------------------------------------------------ ISSO VAI SAIR
 
 //Texto no topo da Tela de Galeria
 var cor = localStorage.getItem("cor");
@@ -100,6 +98,7 @@ function baixarFoto() {
 //------------------------------------------------------------------ DAQUI PRA BAIXO VAI DELETAR BASTANTE COISA ---
 //----------------------------------------------------------------------------------------------------------------
 
+/*
 //------ Essa função é uma gambiarra para centralizar a foto na tela quando dá zoom
 function centraliza(tamZoom) {
 	var largTela = window.innerWidth;
@@ -226,7 +225,7 @@ function zoomout() {
 
 //------------------------------------------------------------------ DAQUI PRA CIMA VAI DELETAR BASTANTE COISA ---
 //----------------------------------------------------------------------------------------------------------------
-
+*/
 
 
 
@@ -278,7 +277,7 @@ function insereFotosArray() {
 function modalizar(numero) {
 	fotoAberta[0] = numero;
 	modal.style.display = "block";
-	menuVisual.style.display = "block";  //------------------------------Esse menu vai sair
+	//menuVisual.style.display = "block";  //------------------------------Esse menu vai sair
 	menuPrincipal.style.display = "block";
 	modalImg.src = numero;
 }
@@ -286,7 +285,7 @@ function modalizar(numero) {
 // Get the modal
 var modal = document.getElementById("myModal");
 var modalImg = document.getElementById("img01");
-var menuVisual = document.getElementById("menuVisual");  //------------------------------Esse menu vai sair
+//var menuVisual = document.getElementById("menuVisual");  //------------------------------Esse menu vai sair
 var menuPrincipal = document.getElementById("menuPrincipal");
 var captionText = document.getElementById("caption");
 
@@ -297,12 +296,12 @@ var span = document.getElementsByClassName("close")[0];
 // When the user clicks on <span> (x), close the modal
 span.onclick = function() { 
 	modal.style.display = "none";
-	menuVisual.style.display = "none";  //------------------------------Esse menu vai sair
+	//menuVisual.style.display = "none";  //------------------------------Esse menu vai sair
 }
 
 function fecharModal() {
 	modal.style.display = "none";
-	menuVisual.style.display = "none"; //------------------------------Esse menu vai sair
+	//menuVisual.style.display = "none"; //------------------------------Esse menu vai sair
 	menuPrincipal.style.display = "none";
 }
 
