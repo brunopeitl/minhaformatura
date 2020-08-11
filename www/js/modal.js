@@ -8,8 +8,8 @@ transform: rotate(20deg);*/
 var conjuntoFotos = document.getElementById("conjuntoFotos");
 listaFotos = new Array();
 fotoAberta = new Array();
-var estadoZoom = [0];
-var estadoRotacao = [1];
+var estadoZoom = [0]; //------------------------------------------------------ ISSO VAI SAIR
+var estadoRotacao = [1]; //------------------------------------------------------ ISSO VAI SAIR
 
 //Texto no topo da Tela de Galeria
 var cor = localStorage.getItem("cor");
@@ -52,22 +52,14 @@ function createFolder(win, error) {
 }
 
 
-
-
-
 function baixarFoto() {
 	createFolder();
 	//alert("Baixar: "+fotoAberta[0]);
 	if (device.platform == "Android") {
 		//alert("O dispositivo é um Android");
 	}
-	//alert("A pasta externa é: "+cordova.file.externalDataDirectory);
-	
-	
-	
-	
-	
-	//----------------------------------------------
+
+
 	//COPY FILE
 	   var wwwDirEntry;
 
@@ -92,12 +84,21 @@ function baixarFoto() {
 		  });
 	     }, function (e) { alert(JSON.stringify(e)); });
 
-	
-	
-	
-	
-	//--------------------------------------------------
 }
+
+
+
+
+
+
+
+
+
+
+
+
+//------------------------------------------------------------------ DAQUI PRA BAIXO VAI DELETAR BASTANTE COISA ---
+//----------------------------------------------------------------------------------------------------------------
 
 //------ Essa função é uma gambiarra para centralizar a foto na tela quando dá zoom
 function centraliza(tamZoom) {
@@ -223,6 +224,22 @@ function zoomout() {
 	}
 }
 
+//------------------------------------------------------------------ DAQUI PRA CIMA VAI DELETAR BASTANTE COISA ---
+//----------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 function teste() {
   for (i = 0; i < listaFotos.length; i++) { 
   	conjuntoFotos.innerHTML += "<div class=\"fotoUnitPaisagem\" style=\"background-image: url('" + cordova.file.dataDirectory+"imagens/"+listaFotos[i] + "')\" onclick=\"modalizar('" + cordova.file.dataDirectory+"imagens/"+listaFotos[i] + "')\"></div>";
@@ -261,7 +278,7 @@ function insereFotosArray() {
 function modalizar(numero) {
 	fotoAberta[0] = numero;
 	modal.style.display = "block";
-	menuVisual.style.display = "block";
+	menuVisual.style.display = "block";  //------------------------------Esse menu vai sair
 	menuPrincipal.style.display = "block";
 	modalImg.src = numero;
 }
@@ -269,7 +286,7 @@ function modalizar(numero) {
 // Get the modal
 var modal = document.getElementById("myModal");
 var modalImg = document.getElementById("img01");
-var menuVisual = document.getElementById("menuVisual");
+var menuVisual = document.getElementById("menuVisual");  //------------------------------Esse menu vai sair
 var menuPrincipal = document.getElementById("menuPrincipal");
 var captionText = document.getElementById("caption");
 
@@ -280,12 +297,12 @@ var span = document.getElementsByClassName("close")[0];
 // When the user clicks on <span> (x), close the modal
 span.onclick = function() { 
 	modal.style.display = "none";
-	menuVisual.style.display = "none";
+	menuVisual.style.display = "none";  //------------------------------Esse menu vai sair
 }
 
 function fecharModal() {
 	modal.style.display = "none";
-	menuVisual.style.display = "none";
+	menuVisual.style.display = "none"; //------------------------------Esse menu vai sair
 	menuPrincipal.style.display = "none";
 }
 
